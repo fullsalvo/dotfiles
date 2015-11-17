@@ -1,0 +1,14 @@
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/usr/share/themes/Mist/gtk-2.0/gtkrc"
+
+style "user-font" {
+	font_name = "tewi 10"
+}
+
+widget_class "*" style "user-font"
+
+gtk-font-name="tewi 10"
+
+include "/home/fullsalvo/.gtkrc.mine"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT

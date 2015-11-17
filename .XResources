@@ -1,0 +1,73 @@
+URxvt.scrollBar: false
+!URxvt.font: xft:inconsolata:size=9
+URxvt.font: xft:tamsyn:pixelsize=11
+!URxvt.font: xft:candy-font:pixelsize=11
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+URxvt.internalBorder: 10
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common:default,clipboard
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                             Colors                                  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+*background: #1F1F1F
+*foreground: #F0F0F0
+
+!Black
+*color0:    #555555
+!*color8:    #888888
+*color8:    #3b3b3b
+
+!Red
+!*color1:    #9C3528
+*color1:    #ab2836
+*color9:    #ab2836
+!*color9:    #d64937
+!*color9:    #ff361a
+
+!Green
+*color2:    #61BC3B
+*color10:   #86DF5D
+
+!yellow
+*color3:    #F3B43A
+*color11:   #FDD75A
+
+!blue
+*color4:    #0D68A8
+*color12:   #0F75BD
+
+!Magenta
+*color5:    #744560
+*color13:   #9E5E83
+
+!Cyan
+*color6:    #288e9c
+*color14:   #37c3d6
+
+!White
+!*color7:    #A2A2A2
+*color7:    #d2d2d2
+*color15:   #f9f9f9
+
+!bogachev colors
+
+!*color0:  #525252
+!*color1:  #BF606B
+!*color2:  #BBBB87
+!*color3:  #876F6A
+!*color4:  #606B6F
+!*color5:  #908C9C
+!*color6:  #83B8B2
+!*color7:  #E8E5DC
+!*color8:  #707070 
+!*color9:  #8A7885
+!*color10: #BFAF72
+!*color11: #9F8985
+!*color12: #9FA6A8
+!*color13: #AAA7B4
+!*color14: #83B8B2 
+!*color15: #F5F5EB
