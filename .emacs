@@ -14,7 +14,8 @@
  '(font-latex-bold-face ((t (:inherit bold :foreground "purple3"))))
  '(font-latex-italic-face ((t (:inherit italic :foreground "medium spring green"))))
  '(font-latex-math-face ((t (:foreground "LightSteelBlue2"))))
- '(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1))))
+ '(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Terminus"))))
+ '(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1 :family "Terminus"))))
  '(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "turquoise2" :height 1.1))))
  '(font-latex-warning-face ((t (:inherit bold :foreground "#FF0000"))))
  '(font-lock-builtin-face ((t (:foreground "#696969"))))
@@ -86,3 +87,5 @@
 (scroll-bar-mode -1)
 (menu-bar-mode 0)
 (tool-bar-mode 0)
+
+(setq make-backup-files nil)

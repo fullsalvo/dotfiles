@@ -1,13 +1,17 @@
 URxvt.scrollBar: false
 !URxvt.font: xft:inconsolata:size=9
-URxvt.font: xft:tamsyn:pixelsize=11
-!URxvt.font: xft:candy-font:pixelsize=11
+!URxvt.font: xft:tamsyn:pixelsize=11
+URxvt.font: xft:candy-font:pixelsize=11
+URxvt.boldFont:
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
 URxvt.internalBorder: 10
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
-URxvt.perl-ext-common:default,clipboard
+
+! Clickable Links
+
+URxvt.perl-ext-common: default, matcher, tabbed
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !                             Colors                                  !
@@ -17,57 +21,96 @@ URxvt.perl-ext-common:default,clipboard
 *foreground: #F0F0F0
 
 !Black
-*color0:    #555555
+!!*color0:    #3b3b3b
+!!*color8:    #555555
 !*color8:    #888888
-*color8:    #3b3b3b
+*color0: #353540
+*color8: #545466
+
 
 !Red
 !*color1:    #9C3528
-*color1:    #ab2836
-*color9:    #ab2836
+!color1:    #ab2836
+!*color9:    #ab2836
+!*color9:    #d85a67
 !*color9:    #d64937
 !*color9:    #ff361a
+*color1: #8c5760
+*color9: #b26f7a
 
 !Green
-*color2:    #61BC3B
-*color10:   #86DF5D
+!!*color2:    #61BC3B
+!!*color10:   #86DF5D
+*color2: #7b8c58
+*color10: #9db270
 
 !yellow
-*color3:    #F3B43A
-*color11:   #FDD75A
+!!*color3:    #F3B43A
+!!*color11:   #FDD75A
+*color3: #8c6e43
+*color11: #b28c55
 
 !blue
-*color4:    #0D68A8
-*color12:   #0F75BD
+!!*color4:    #0D68A8
+!*color12:   #0F75BD
+!!*color12: #71bef4
+*color4: #58698c
+*color12: #7086b2
 
 !Magenta
-*color5:    #744560
-*color13:   #9E5E83
+!*color5:    #744560
+!*color5:    #8145ba !Sonic Purples
+!*color13:   #9E5E83
+!*color13:   #b48fd6 !Sonic Purples
+*color5: #7b5e7d
+*color13: #9c77b2
 
 !Cyan
-*color6:    #288e9c
-*color14:   #37c3d6
+!!*color6:    #288e9c
+!!*color14:   #37c3d6
+*color6: #66808c
+*color14: #82a2b2
 
 !White
 !*color7:    #A2A2A2
-*color7:    #d2d2d2
-*color15:   #f9f9f9
+!!*color7:    #d2d2d2
+!!*color15:   #f9f9f9
+*color7: #8c8b8b
+*color15: #b8b8c8
 
-!bogachev colors
+! special
+!*.foreground:   #d2deab
+!*.background:   #211b1c
+!*.cursorColor:  #d2deab
 
-!*color0:  #525252
-!*color1:  #BF606B
-!*color2:  #BBBB87
-!*color3:  #876F6A
-!*color4:  #606B6F
-!*color5:  #908C9C
-!*color6:  #83B8B2
-!*color7:  #E8E5DC
-!*color8:  #707070 
-!*color9:  #8A7885
-!*color10: #BFAF72
-!*color11: #9F8985
-!*color12: #9FA6A8
-!*color13: #AAA7B4
-!*color14: #83B8B2 
-!*color15: #F5F5EB
+! black
+!*.color0:       #44303c
+!*.color8:       #4d4550
+
+! red
+!*.color1:       #682931
+!*.color9:       #86343a
+
+! green
+!*.color2:       #b3383d
+!*.color10:      #d84146
+
+! yellow
+!*.color3:       #682931
+!*.color11:      #86343a
+
+! blue
+!*.color4:       #465769
+!*.color12:      #506c84
+
+! magenta
+!*.color5:       #2b3b4a
+!*.color13:      #4c596c
+
+! cyan
+!*.color6:       #465769
+!*.color14:      #506c84
+
+! white
+!*.color7:       #d2ceab
+!*.color15:      #d6d7b6

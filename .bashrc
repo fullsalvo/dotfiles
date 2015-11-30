@@ -75,7 +75,7 @@ RESET="${ESC}[0m"
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\[${RED}\][\[${RESET}\]${debian_chroot:+($debian_chroot)}\w\[${RED}\]]\[${RESET}\] '
+    PS1='\[${BLUE}\][\[${RESET}\]${debian_chroot:+($debian_chroot)}\w\[${BLUE}\]]\[${RESET}\] '
 fi
 unset color_prompt force_color_prompt
 
@@ -141,7 +141,7 @@ alias upgrade='sudo apt upgrade && sudo apt-get update && sudo apt-get autoremov
 alias aliases='sudo emacs ~/.bashrc'
 alias r='cd ~/Documents/UWF\ Research/'
 alias src='source ~/.bashrc'
-alias sf='Documents/Files/screenfetch-dev -c 160,'
+alias sf='/home/fullsalvo/Documents/Files/screenfetch-dev -c 12,'
 alias fsch='feh -. --zoom fill -g 938x506'
 alias LC='python LiquidCrystalMain.py'
 alias ff='firefox&'
@@ -155,3 +155,6 @@ alias colors='.bin/colortheme'
 alias cupd='xrdb ~/.XResources'
 alias scrot='scrot /home/fullsalvo/Pictures/Screenshots/%y-%b-%d_%H%M%S.png'
 alias blocks='.bin/candy'
+alias apts='apt-cache search'
+alias rec="ffmpeg -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
+alias fastrec="ffmpeg -f x11grab -s 1920x1080 -an -r 25 -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
