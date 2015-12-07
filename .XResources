@@ -17,15 +17,52 @@ URxvt.matcher.button: 1
 !                             Colors                                  !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-*background: #1F1F1F
-*foreground: #F0F0F0
+! special
+*.foreground:   #ecf0f0
+*.background:   #1f1f1f
+*.cursorColor:  #ecf0f0
+
+! black
+*.color0:       #3f3f45
+*.color8:       #56595f
+
+! red
+*.color1:       #a05353
+*.color9:       #d87676
+
+! green
+*.color2:       #919b3e
+*.color10:      #b3bd54
+
+! yellow
+*.color3:       #ded664
+*.color11:      #f9fba0
+
+! blue
+*.color4:       #4c789d
+*.color12:      #7a9fbe
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b08dbb
+
+! cyan
+*.color6:       #b7ebee
+*.color14:      #eefffc
+
+! white
+*.color7:       #b9c6d3
+*.color15:      #eef2f0
+
+!!!*background: #1F1F1F
+!!!*foreground: #F0F0F0
 
 !Black
 !!*color0:    #3b3b3b
 !!*color8:    #555555
 !*color8:    #888888
-*color0: #353540
-*color8: #545466
+!!!*color0: #353540
+!!!*color8: #545466
 
 
 !Red
@@ -35,48 +72,48 @@ URxvt.matcher.button: 1
 !*color9:    #d85a67
 !*color9:    #d64937
 !*color9:    #ff361a
-*color1: #8c5760
-*color9: #b26f7a
+!!!*color1: #8c5760
+!!!*color9: #b26f7a
 
 !Green
 !!*color2:    #61BC3B
 !!*color10:   #86DF5D
-*color2: #7b8c58
-*color10: #9db270
+!!!*color2: #7b8c58
+!!!*color10: #9db270
 
 !yellow
 !!*color3:    #F3B43A
 !!*color11:   #FDD75A
-*color3: #8c6e43
-*color11: #b28c55
+!!!*color3: #8c6e43
+!!!*color11: #b28c55
 
 !blue
 !!*color4:    #0D68A8
 !*color12:   #0F75BD
 !!*color12: #71bef4
-*color4: #58698c
-*color12: #7086b2
+!!!*color4: #58698c
+!!!*color12: #7086b2
 
 !Magenta
 !*color5:    #744560
 !*color5:    #8145ba !Sonic Purples
 !*color13:   #9E5E83
 !*color13:   #b48fd6 !Sonic Purples
-*color5: #7b5e7d
-*color13: #9c77b2
+!!!*color5: #7b5e7d
+!!!*color13: #9c77b2
 
 !Cyan
 !!*color6:    #288e9c
 !!*color14:   #37c3d6
-*color6: #66808c
-*color14: #82a2b2
+!!!*color6: #66808c
+!!!*color14: #82a2b2
 
 !White
 !*color7:    #A2A2A2
 !!*color7:    #d2d2d2
 !!*color15:   #f9f9f9
-*color7: #8c8b8b
-*color15: #b8b8c8
+!!!*color7: #8c8b8b
+!!!*color15: #b8b8c8
 
 ! special
 !*.foreground:   #d2deab

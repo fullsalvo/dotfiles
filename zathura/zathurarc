@@ -1,0 +1,8 @@
+#######################################################################
+#                        ZATHURA KEYBINDINGS                          #
+#######################################################################
+
+map <C-Space> toggle_statusbar
+map <C-'> toggle_inputbar
+map s width
+#set pages-per-row 2

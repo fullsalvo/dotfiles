@@ -10,9 +10,9 @@ class Default(ColorScheme):
 
 		elif context.in_browser:
 			if context.selected:
-				fg = white
 				attr = bold
 			else:
+                                fg = white
 				attr = normal
 			if context.empty or context.error:
 				fg = black
