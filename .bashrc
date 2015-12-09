@@ -75,7 +75,8 @@ RESET="${ESC}[0m"
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='\[${BLUE}\][\[${RESET}\]${debian_chroot:+($debian_chroot)}\w\[${BLUE}\]]\[${RESET}\] '
+    PS1='\[${BLUE}\]┌───┤\[${RESET}\]${debian_chroot:+($debian_chroot)}\w\[${BLUE}\]├──▶
+\[${BLUE}\]└─╼ \[${RESET}\]'
 fi
 unset color_prompt force_color_prompt
 

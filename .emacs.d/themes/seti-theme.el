@@ -52,7 +52,7 @@
       (input-text "#CCCCCC")
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
-      (intense-green "#8BE03C"))
+      (intense-green "#B3BD54"))
     
   (custom-theme-set-faces
    'seti

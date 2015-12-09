@@ -2,6 +2,8 @@ from ranger.gui.colorscheme import ColorScheme
 from ranger.gui.color import *
 
 class Default(ColorScheme):
+        '''Create an object in which context colors are defined.
+        Most things here are self-explanatory.'''
 	def use(self, context):
 		fg, bg, attr = default_colors
 
