@@ -1,0 +1,472 @@
+    @-moz-document domain("boards.4chan.org")  {
+     
+     
+     
+     
+    body {
+       
+      font-family: Erusfont !important;
+     
+      font-size: 12px !important;
+     
+      background:none !important;
+     
+      background-color:#1F1F1F !important;
+     
+      color:rgb(195, 195, 195) !important;
+     
+    }
+     
+      .post {
+       
+        border: 0px #000000!important;  
+       
+    }
+     
+      .replyContainer {
+       
+        padding: 4px !important;
+       
+    }  
+       
+      .post.reply {
+             
+        background-color: #1F1F1F;
+         
+        width:70%!important;
+     
+        margin-left:15%!important;
+     
+      }
+     
+      .postMessage {
+       
+        color: #8c8b8b !important;
+       
+      }
+     
+      div.opContainer {
+       
+        display: block !important;
+       
+       
+      }
+     
+      img#toggleMsgBtn.extButton{
+       
+        display: none !important;
+       
+      }
+     
+      div.navLinks.navLinksBot.desktop {
+       
+        color: transparent !important;
+         
+        margin-bottom: 0px !important;
+       
+        margin-top: 30px !important;
+       
+      }
+     
+        div.navLinks.navLinksBot.desktop a{
+       
+        color: #000000 !important;
+         
+        margin-bottom: 0px !important;
+       
+        margin-top: 30px !important;
+       
+      }
+     
+      #quickReply input[type="text"], #quickReply textarea, #quickReply #recaptcha_response_field {
+        border: 0px solid #AAA;
+        font-family: Erusfont;
+        font-size: 10pt;
+        outline: medium none;
+        width: 296px;
+        padding: 2px;
+        margin: 0px 0px 1px;
+    }
+     
+      div.recaptcha_input_area {
+        position: relative !important;
+        background: transparent none repeat scroll 0% 0% !important;
+    }
+     
+      input[type="password"]{
+        display: none !important;
+    }
+     
+       
+    div#qrHeader.drag.postblock {
+        background-color: #000000;
+        color: transparent !important;
+        font-family: Erusfont !important;
+        border: 0px solid #000;
+        padding: 0px 5px;
+        font-size: 10pt;
+     
+    }
+     
+      #quickReport, #quickReply {
+        display: block;
+        position: fixed;
+        padding: 2px;
+        font-size: 10pt;
+        border: 0px !important;
+            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, .3);
+    }
+     
+      .rc-anchor-normal {
+        background: #333333 none repeat scroll 0% 0%;
+        border: 0px solid #D3D3D3;
+        color: #000;
+    }
+     
+      #qrepClose, #qrClose {
+        background: url('http://i.imgur.com/TkuW5hs.png') !important;
+        float: right;
+    }
+     
+      .thread-stats {
+       
+       color: #212121 !important;
+       
+      }
+     
+      div.postMenu {
+           
+            background-color: #e5e3d8;
+     
+      }
+     
+    #quickReport, #quickReply {
+     
+      background-color: #212121 !important;
+     
+      color: #ffffff !important;
+     
+    }
+     
+      #qrepHeader, #qrHeader {
+       
+      background-color: #212121 !important;
+       
+      color: #ffffff !important;
+       
+    }
+       
+    .post.reply, .opContainer, .post.reply {
+     
+        padding: 15px !important;
+     
+        border: 0px !important;
+     
+        -moz-box-sizing:border-box!important;
+     
+    }    
+     
+        #quickReply textarea {
+         
+         background-color: #1F1F1F !important;
+         
+          color: #ffffff !important;
+         
+          border: 0px !important;
+         
+    }
+     
+    #threadWatcher {
+     
+      background-color: #212121 !important;
+     
+      color: #000000 !important;
+     
+      box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, .3);
+     
+      border: 0px !important;
+     
+    }
+     
+     
+     
+    .hasNewReplies {
+     
+      font-family: 'Erusfont'!important;
+     
+    }
+     
+    span.postNum a {
+     
+        padding-top: 12px !important;
+       
+      }
+     
+     
+     
+        #watchList li {
+       
+        color: #57595c !important;
+     
+    }
+     
+      #watchList a {
+       
+        color: #57595c !important;
+       
+        outline: 0 !important;
+     
+    }
+     
+        #watchList a:hover {
+       
+        color: #88a1ba !important;
+     
+               transition: color .5s ease-out;
+     
+    }
+     
+     
+      #twHeader {
+       
+        color: transparent !important;
+       
+        height: 2px !important;
+       
+      }
+     
+     
+      #threadWatcher {
+       
+        line-height: 18px !important;
+       
+        max-width: 200px;
+       
+        display: block;
+       
+        position: absolute;
+       
+        padding: 3px;
+       
+        text-decoration: none !important;
+       
+    }
+     
+      .yotsuba_b_new #watchList li:first-child {
+       
+        border-top: 0px solid #B7C5D9;
+       
+    }
+     
+     
+     
+        div.post div.postInfo span.postNum {
+         
+        background-color: #8c8b8b;
+         
+        float: right;
+         
+    }
+     
+      div.postInfo span.postNum a {
+       
+        font-family: 'Erusfont' !important;
+       
+        background-color: #1F1F1F!important;
+       
+        position: absolute;
+       
+        text-align: center !important;
+       
+        margin-left: -110px !important;
+       
+        color: #8c8b8b !important;
+       
+        height: 28px !important;
+       
+        width: 120px !important;
+       
+        margin-top: -10px !important;
+       
+        float: right;
+       
+    }  
+     
+      div.postInfo span.postNum a:hover {
+     
+     
+                transition: color .3s ease-out;
+       
+    }    
+     
+     
+     
+    .reply:target, .reply.highlight {
+     
+        background: #f0f0f0 none repeat scroll 0% 0% !important;
+     
+        border: 0px !important;
+     
+        padding: 2px;
+     
+    }
+     
+     
+      input[type=checkbox]{
+       
+          display: none !important;
+       
+      }
+     
+     
+      div.post div.file .fileThumb img {
+       
+        border: 0px none;
+       
+        padding-top: 13px !important;
+       
+        float: left;
+     
+    }
+     
+     
+      div.post div.file .fileThumb{
+       
+        outline: 0;
+       
+        opacity: 0.6;
+       
+        transition: opacity .5s ease-out;
+       
+      }
+     
+     
+      div.post div.file .fileThumb:Hover{
+       
+        outline: 0;
+       
+        opacity: 1;
+       
+      }
+     
+     span.name, span.postertrip {
+     
+       color: #8c8b8b  !important;
+       
+       font-weight: normal !important;
+       
+     }
+     
+     
+         
+     span.dateTime {
+       
+       display: none !important;
+       
+       color: #919191  !important;
+       
+     }
+     
+      div.post blockquote.postMessage {
+       
+        display: block;
+       
+        padding-top: 2px !important;
+       
+    }
+     
+         .fileText {
+       
+          opacity: 0 !important;
+           
+                transition: opacity .5s ease-out;
+       
+      }
+     
+        .fileText:hover {
+       
+         opacity: 1 !important;
+         
+          transition: opacity .5s ease-out; }
+       
+     
+      .quotelink {
+       
+         color: #8c5760  !important;
+       
+        text-decoration: none !important;
+       
+      }
+     
+     .backlink a {
+
+          opacity: 0 !important;
+           
+                transition: opacity .5s ease-out;
+       
+      }
+     
+     .backlink a:hover {
+       
+          opacity: 1 !important;
+       
+                transition: opacity .5s ease-out;
+       
+      }
+     
+         .postMenuBtn {
+       
+          opacity: 0 !important;
+           
+                transition: opacity .5s ease-out;
+       
+      }
+     
+        .postMenuBtn:hover {
+       
+         opacity: 1 !important;
+         
+                transition: opacity .5s ease-out;
+       
+      }
+     
+       .burichan_new .backlink a, .yotsuba_b_new .backlink a {
+         
+         color: #d85a67  !important;
+         
+         text-decoration: none !important;
+       
+      }
+     
+      span.quote {
+       
+        color: #58698c !important;
+       
+      }
+            
+      .shortcut-icons:root #shortcuts a .fa, .menu-button .fa, .hide-reply-button .fa, .hide-thread-button .fa {
+        display: none;
+      }
+            
+      a, a.quotelink, a:not(:hover), .boxcontent > ul, a:visited, a.replylink:not(:hover), div#absbot a:not(:hover) {
+              
+        color: #58698c !important;
+              
+      }
+            
+      div.post div.postInfo span.postNum a:hover,.posteruid .hand:hover, .post.reply.highlight, div.replay, span.subject, a.replylink, a.quotelink:hover, a:hover, div#absbot a {
+	      color: #7086b2 !important;
+      }
+          
+      div.navLinks.navLinksBot.desktop, a.qr-link-bottom {
+        display: none !important;
+      }
+     
+     
+      img.bottomad, .bottomad > div, .bottomad a img, .ad-plea, .topad,.boardBanner, .middlead, .aboveMidAd, #absbot, #boardNavDesktopFoot, .stylechanger, hr, .deleteform, #blotter-msgs, #blotter-desktop, .globalMessage, #boardNavDesktop,.form, #togglePostFormLink.desktop, #toggleBlotter, #blotter, .yotsuba-b:root div.boardTitle, .sideArrows, .center,   #twPrune   {
+      display: none !important;
+    }
+     
+     
+    }
+

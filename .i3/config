@@ -86,9 +86,6 @@ exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id mpd
 exec --no-startup-id compton
-#exec /home/fullsalvo/Documents/Files/SongChange.sh &
-#exec --no-startup-id xsetroot -solid "#4775D1"
-#exec --no-startup-id feh --bg-fill ~/Pictures/Different\ Res/Horizontal\ Images/WatercolourTears.jpg
 exec --no-startup-id $wallprog $walltype $wall
 exec xrdb ~/.XResources
 
@@ -242,13 +239,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bar {
 #    status_command    ~/.i3/status.sh
     status_command i3blocks
+    i3bar_command i3bar -t
     position          top
     workspace_buttons yes
     strip_workspace_numbers yes
     binding_mode_indicator yes
     
 #    font pango:Latin Modern Sans Quotation 10
-#    font pango: Inconsolata 10
      font pango:$barfont
     colors {
         background $background
