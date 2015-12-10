@@ -1,0 +1,27 @@
+#!/bin/bash
+if [[ -e "/sys/class/power_supply/BAT0/capacity" ]]; then
+  level=$(cat /sys/class/power_supply/BAT0/capacity)
+  ac=$(cat /sys/class/power_supply/AC/online)
+fi
+
+if [[ $level != "" ]]; then
+  outstr=""
+  
+  if [[ $ac == "1" ]]; then
+    outstr="${outstr}AC+: "
+  else
+    outstr="${outstr}BAT: "
+  fi
+
+  outstr="${outstr}${level}%"
+  
+  if [[ $level == "100" ]]; then
+      outstr="CHARGED!"
+  fi
+  
+  echo $outstr
+fi
+
+#if [[ ($level < "15" && $ac == "0" ]]; then
+#    exec notify-send -h string:bgcolor:"#1F1F1F" -h string:fgcolor:"#ab2836" 'Low Battery' 'Your battery is below 15%.'
+#fi

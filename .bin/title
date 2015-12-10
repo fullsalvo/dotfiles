@@ -1,0 +1,15 @@
+#!/bin/bash
+
+wintitle(){
+	title=$(/home/fullsalvo/Documents/Files/xtitle/xtitle)
+	}
+
+wintitle
+
+if [[ "$title" ]]; then
+   wint=$title
+else
+   wint="No Open Windows"
+fi
+
+echo $wint

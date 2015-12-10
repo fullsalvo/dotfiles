@@ -1,0 +1,11 @@
+#!/bin/bash
+
+WIN=$(xdotool getactivewindow)
+while :;do
+    if [ -n "$WIN" ]; 
+    then
+	hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/cultfit-valley.jpg 
+    else
+	hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/cultfit-valley.jpg -blur 50
+    fi
+done

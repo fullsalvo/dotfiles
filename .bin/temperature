@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+temp=$(cat /sys/class/hwmon/hwmon0/temp1_input)
+temp_head=${temp%[0-9]00}
+temp_tail=${temp#[0-9][0-9]}
+
+echo ${temp_head}.${temp_tail%%0}°C

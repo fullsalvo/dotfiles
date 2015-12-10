@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+  exit 1
+fi
+
+button=$1
+
+case $button in
+  1) amixer -D pulse set Master toggle # click
+    ;;
+  4) amixer -D pulse set Master 5%+ # scroll up
+    ;;
+  5) amixer -D pulse set Master 5%- #scroll down
+    ;;
+esac

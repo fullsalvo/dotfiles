@@ -1,0 +1,23 @@
+#!/bin/bash
+
+workspaces=$(i3-msg -t get_workspaces)
+
+workspaces=(${workspaces//,/ })
+
+needheight=0
+
+for i in ${workspaces[@]}; do
+  working=(${i//:/ })
+  if [[ ${working[0]} == "\"focused\"" ]]; then
+    if [[ ${working[1]} == "true" ]]; then
+      needheight=1
+    fi
+  fi
+  if [[ $needheight == 1 ]]; then
+    if [[ ${working[0]} == "\"height\"" ]]; then
+       out=${working[1]}
+       echo ${out//\}/}
+       needheight=0
+    fi
+  fi
+done

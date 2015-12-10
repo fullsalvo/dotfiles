@@ -1,0 +1,37 @@
+#!/bin/bash
+
+esc="$(echo -en '\e')"
+red="${esc}[31m"
+black="${esc}[30m"
+
+get_bat () {
+    if [ -e "/sys/class/power_supply/BAT0/capacity" ]; then
+	percent=$(cat /sys/class/power_supply/BAT0/capacity)
+	ac=$(cat /sys/class/power_supply/AC/online)
+    fi
+    if [[ $percent -eq "100" ]]; then
+	outstr="${red}♥♥♥♥♥♥♥♥♥♥"
+    elif [[ $percent -ge "90" ]]; then
+	outstr="${red}♥♥♥♥♥♥♥♥♥${black}♥"
+    elif [[ $percent -ge "80" ]]; then
+	outstr="${red}♥♥♥♥♥♥♥♥${black}♥♥"
+    elif [[ $percent -ge "70" ]]; then
+	outstr="${red}♥♥♥♥♥♥♥${black}♥♥♥"
+    elif [[ $percent -ge "60" ]]; then
+	outstr="${red}♥♥♥♥♥♥${black}♥♥♥♥"
+    elif [[ $percent -ge "50" ]]; then
+	outstr="${red}♥♥♥♥♥${black}♥♥♥♥♥"
+    elif [[ $percent -ge "40" ]]; then
+	outstr="${red}♥♥♥♥${black}♥♥♥♥♥♥"
+    elif [[ $percent -ge "30" ]]; then
+	outstr="${red}♥♥♥${black}♥♥♥♥♥♥♥"
+    elif [[ $percent -ge "20" ]]; then
+	outstr="${red}♥♥${black}♥♥♥♥♥♥♥♥"
+    elif [[ $percent -ge "10" ]]; then
+	outstr="${red}♥${black}♥♥♥♥♥♥♥♥♥"
+    elif [[ $percent -lt "10" ]]; then
+	outstr="${black}♥♥♥♥♥♥♥♥♥♥"
+    fi
+    echo $outstr
+}
+get_bat

@@ -237,9 +237,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 #######################################################################
 
 bar {
-#    status_command    ~/.i3/status.sh
     status_command i3blocks
-    i3bar_command i3bar -t
+#    i3bar_command i3bar -t
     position          top
     workspace_buttons yes
     strip_workspace_numbers yes

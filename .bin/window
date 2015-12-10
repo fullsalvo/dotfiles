@@ -1,0 +1,16 @@
+#!/bin/sh
+WIN=$(xdotool getactivewindow) 
+if [ -n "$WIN" ]; 
+then
+    title=$(/home/fullsalvo/Documents/Files/xtitle/xtitle)
+    echo $title #<span font='9' weight='light' foreground='#969696'>@</span>"
+#    hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/RockBeach.jpg -blur 5
+else
+#    hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/RockBeach.jpg
+    exit 0
+   fi
+
+#case $BLOCK_BUTTON in
+#  1) i3-msg floating toggle ;;
+#  3) i3-msg layout toggle split ;; 
+#esac

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+wireless_network(){
+	name=$(iwgetid -r)
+	}
+
+wireless_network
+
+if [[ "$name" ]]; then
+   networkname=$name
+else
+   networkname="No Network"
+fi
+
+echo $networkname

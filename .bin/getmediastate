@@ -1,0 +1,42 @@
+#!/bin/bash
+
+spotify_info(){
+    sp_trackname=$(.bin/spotify-control getTitle)
+    sp_artist=$(.bin/spotify-control getArtist)
+    sp_track="${sp_artist} - ${sp_trackname}"
+    sp_status=$(.bin/spotify-control getStatus)
+}
+
+mpd_info(){
+    mpd_track=$(mpc -f "[[%artist% - ]%title%]|[%file%]" current)
+    mpd_mpcstat=$(mpc)
+    mpd_status=$(echo $mpd_mpcstat | grep -oE "(\[p)(laying|aused)\]*")
+    mpd_tracktime=$(echo $mpd_mpcstat | grep -oE "([0-9]+)\:([0-9]+)/([0-9]+)\:([0-9]+)")
+}
+
+mpd_info
+#spotify_info
+
+#if [[ "${mpd_status}" == "[playing]" && "${mpd_tracktime}" < "0:11" ]]; then
+#    notify-send "${mpd_track}"
+#fi
+
+if [[ "${mpd_status}" == "[playing]" ]]; then
+  playstatus=$mpd_status
+  track=$mpd_track
+  tracktime=$mpd_tracktime
+elif [[ "${sp_status}" == "[playing]" || -z "${mpd_status}" ]]; then
+  playstatus=$sp_status
+  track=$sp_track
+  tracktime=""
+else # prefer local
+  playstatus=$mpd_status
+  track=$mpd_track
+  tracktime=$mpd_tracktime
+fi
+
+if [[ "${playstatus}" == "[playing]" ]]; then
+  echo  ${track} - ${tracktime}
+elif [[ "${playstatus}" == "[paused]" ]]; then
+  echo  ${track} - ${tracktime}
+fi
