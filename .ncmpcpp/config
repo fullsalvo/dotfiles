@@ -13,11 +13,12 @@ visualizer_in_stereo                  = "yes"
 visualizer_type                       = "ellipse"
 visualizer_color                      = "default, blue, white, black"
 #visualizer_type                       = "spectrum"
-visualizer_look                       = "**"
+#visualizer_look                       = "**"
 #visualizer_look                       = "●▮"
 #visualizer_look                       = "▋▋"
 #visualizer_look                       = "┄┄"
-#visualizer_look                       = "߸߹"
+visualizer_look                       = "߸߹"
+
 ############################################################
 #                    Modal Settings                        #
 ############################################################
@@ -46,7 +47,7 @@ discard_colors_if_item_is_selected    = "yes"
 ############################################################
 #                      Formatting                          #
 ############################################################
-song_list_format                      = "{$5%a$1 - }{$8%t}$1 - {$5%b}$R{$8%l}"
+song_list_format                      = "{$5%a$1 - }{$8%t}$1 $R{$8%l}"
 song_columns_list_format              = "(22)[blue]{ar} (39)[blue]{t|f} (25)[blue]{b} (7f)[white]{lr}"
 song_window_title_format              = "{%a - %t}"
 song_library_format                   = "%t"

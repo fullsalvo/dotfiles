@@ -76,7 +76,6 @@
 
 (require 'tex)
 (TeX-global-PDF-mode t)
-;;(defcustom tex-my-viewer "zathura --fork -s -x \"emacsclient --eval '(progn (switch-to-buffer  (file-name-nondirectory \"'\"'\"%{input}\"'\"'\")) (goto-line %{line}))'\""
 
 (scroll-bar-mode -1)
 (menu-bar-mode 0)
@@ -95,7 +94,18 @@
 (set-background-color "#1F1F1F")
 (add-to-list 'default-frame-alist '(background-color . "#1F1F1F"))
 (setq Buffer-menu-use-frame-buffer-list nil)
+
 ;; don't sleep emacs accidentally
 (global-set-key [(control z)] nil)
+(global-set-key [(control z)] 'undo)
+
 ;; toggle menu bar
 (global-set-key [f12] 'menu-bar-mode)
+
+;; powerline
+;;(add-to-list 'load-path "~/.emacs.d/powerline/")
+;;(add-to-list 'load-path "~/.emacs.d/spaceline/")
+;;(require 'powerline)
+;;(require 'spaceline-config)
+;;(spaceline-spacemacs-theme)
+;;(setq powerline-default-separator nil)
