@@ -1,8 +1,9 @@
 URxvt.scrollBar: false
 !URxvt.font: xft:inconsolata:size=9
 !URxvt.font: xft:tamsyn:pixelsize=11
-URxvt.font: xft:candy-font:pixelsize=11
+!URxvt.font: xft:candy-font:pixelsize=11
 !URxvt.font: xft:creep:pixelsize=8
+URxvt.font: xft:profont:pixelsize=11
 URxvt.boldFont:
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true

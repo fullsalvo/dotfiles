@@ -29,7 +29,7 @@ set $font       candy 9
 set $barfont    Roboto 8
 
 #set $wall       ~/Pictures/Different\ Res/Horizontal\ Images/Shore.jpg
-set $wall       ~/Pictures/wg/ForestHawk.jpg
+set $wall       ~/Pictures/wg/BlueMist.jpg
 #set $wall       ~/Pictures/Different\ Res/Horizontal\ Images/BottleBoat.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
