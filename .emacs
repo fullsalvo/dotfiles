@@ -109,3 +109,6 @@
 ;;(require 'spaceline-config)
 ;;(spaceline-spacemacs-theme)
 ;;(setq powerline-default-separator nil)
+
+;; Make window title filename regardless of number of buffers
+(setq frame-title-format "%b")

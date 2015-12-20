@@ -77,7 +77,7 @@ if [ "$color_prompt" = yes ]; then
 else
 #    PS1='\[${BLUE}\]┌───┤\[${RESET}\]${debian_chroot:+($debian_chroot)}\w\[${BLUE}\]├──▶
 #\[${BLUE}\]└─╼ \[${RESET}\]'
-    PS1='${debian_chroot:+($debian_chroot)}\w \[${BLUE}\]>> \[${RESET}\]'
+    PS1='${debian_chroot:+($debian_chroot)}\w\[${BLUE}\] :: \[${RESET}\]'
 fi
 unset color_prompt force_color_prompt
 
