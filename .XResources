@@ -1,10 +1,5 @@
 URxvt.scrollBar: false
-!URxvt.font: xft:inconsolata:size=9
-!URxvt.font: xft:tamsyn:pixelsize=11
-!URxvt.font: xft:candy-font:pixelsize=11
-!URxvt.font: xft:neep:pixelsize=11
-!URxvt.font: xft:profont:pixelsize=11
-URxvt.font: xft:leggie:pixelsize=11
+URxvt.font: xft:leggie:pixelsize=11:antialias=true,xft:Droid Sans Fallback:pixelsize=11:antialias=true
 URxvt.boldFont:
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
@@ -22,9 +17,9 @@ URxvt.matcher.button: 1
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #ecf0f0
-*.background:   #1f1f1f
-*.cursorColor:  #ecf0f0
+*.foreground:   #d1d0be
+*.background:   #1e2138
+*.cursorColor:  #d1d0be
 
 ! black
 *.color0:       #3f3f45
@@ -58,8 +53,15 @@ URxvt.matcher.button: 1
 *.color7:       #b9c6d3
 *.color15:      #eef2f0
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                           Dated Colours                             !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 !!!*background: #1F1F1F
 !!!*foreground: #F0F0F0
+!*.foreground:   #ecf0f0
+!*.background:   #1f1f1f
+!*.cursorColor:  #ecf0f0
 
 !Black
 !!*color0:    #3b3b3b

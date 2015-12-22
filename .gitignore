@@ -9,6 +9,7 @@
 
 # i3
 .i3/config.swp
+.i3/.config.swp
 .i3/status.sh
 
 # mpd

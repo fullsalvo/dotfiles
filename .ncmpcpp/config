@@ -15,7 +15,7 @@ visualizer_color                      = "default, blue, white, black"
 #visualizer_type                       = "spectrum"
 #visualizer_look                       = "**"
 #visualizer_look                       = "●▮"
-visualizer_look                       = "▋▋"
+visualizer_look                       = "★▋"
 #visualizer_look                       = "┄┄"
 #visualizer_look                       = "߸߹"
 

@@ -299,6 +299,6 @@ formats = {
   };
 };
 settings = {
-  core = { real_name = "Unknown"; user_name = "xero"; nick = "xero"; };
+  core = { real_name = "Unknown"; user_name = "fullsalvo"; nick = "fullsalvo"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };

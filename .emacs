@@ -10,7 +10,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Profont" :foundry "unknown" :slant normal :weight normal :height 80 :width normal))))
+ '(default ((t (:family "Leggie" :foundry "unknown" :slant normal :weight normal :height 80 :width normal))))
  
  ;;'(font-latex-bold-face ((t (:inherit bold :foreground "purple3"))))
  ;;'(font-latex-italic-face ((t (:inherit italic :slant italic))))
