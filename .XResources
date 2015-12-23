@@ -17,9 +17,9 @@ URxvt.matcher.button: 1
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #d1d0be
-*.background:   #1e2138
-*.cursorColor:  #d1d0be
+*.foreground:   #d7e2e0
+*.background:   #20333a
+*.cursorColor:  #d7e2e0
 
 ! black
 *.color0:       #3f3f45

@@ -17,19 +17,22 @@ set $tertiary   #222222
 set $warning    #e84f4f
 #set $border     #4c789d
 #set $border     #58698c
-set $border     #7a9fbe
+set $border     #d7e2e0
 #border ab2836 best red evr
 #set $border     #8145ba
 set $white      #FFFFFF
-set $ufocus     #d1d0be
+set $active     #20333a
+set $bartext    #20333a
+set $ufocus     #5f5150
 #set $ufocus     #1f1f1f
 
 #border 939393
 set $bordersize 2
 set $font       candy 9
 set $barfont    Roboto 8
+set $bheight    18
 
-set $wall       ~/Pictures/wg/Fractals.png
+set $wall       ~/Pictures/wg/Shore.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -68,7 +71,7 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
 bindsym $mod+Shift+M exec urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 100 -padding 500 -opacity 70 -bw 0 -bc "$border" -bg "$gray" -hlbg "$border" -font candy\ 11
+bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 50 -padding 100 -opacity 70 -bw 5 -bc "$border" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
 # Lock
 bindsym $win+l exec /home/fullsalvo/.bin/lock.sh &
 
@@ -98,27 +101,38 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #                            Workspaces                               #
 #######################################################################
 
-bindsym $mod+1 workspace 1:𝍠
-bindsym $mod+2 workspace 2:𝍡
-bindsym $mod+3 workspace 3:𝍢
-bindsym $mod+4 workspace 4:𝍣
-bindsym $mod+5 workspace 5:𝍤
-bindsym $mod+6 workspace 6:𝍥
-bindsym $mod+7 workspace 7:𝍦
-bindsym $mod+8 workspace 8:𝍧
-bindsym $mod+9 workspace 9:𝍨
-bindsym $mod+0 workspace 10:𝍩
+set $ws1 𝍠
+set $ws2 𝍡
+set $ws3 𝍢
+set $ws4 𝍣
+set $ws5 𝍤
+set $ws6 𝍥
+set $ws7 𝍦
+set $ws8 𝍧
+set $ws9 𝍨
+set $ws10 𝍩
 
-bindsym $mod+Shift+1 move container to workspace 1:𝍠
-bindsym $mod+Shift+2 move container to workspace 2:𝍡
-bindsym $mod+Shift+3 move container to workspace 3:𝍢
-bindsym $mod+Shift+4 move container to workspace 4:𝍣
-bindsym $mod+Shift+5 move container to workspace 5:𝍤
-bindsym $mod+Shift+6 move container to workspace 6:𝍥
-bindsym $mod+Shift+7 move container to workspace 7:𝍦
-bindsym $mod+Shift+8 move container to workspace 8:𝍧
-bindsym $mod+Shift+9 move container to workspace 9:𝍨
-bindsym $mod+Shift+0 move container to workspace 10:𝍩
+bindsym $mod+1 workspace 1:$ws1
+bindsym $mod+2 workspace 2:$ws2
+bindsym $mod+3 workspace 3:$ws3
+bindsym $mod+4 workspace 4:$ws4
+bindsym $mod+5 workspace 5:$ws5
+bindsym $mod+6 workspace 6:$ws6
+bindsym $mod+7 workspace 7:$ws7
+bindsym $mod+8 workspace 8:$ws8
+bindsym $mod+9 workspace 9:$ws9
+bindsym $mod+0 workspace 10:$ws10
+
+bindsym $mod+Shift+1 move container to workspace 1:$ws1
+bindsym $mod+Shift+2 move container to workspace 2:$ws2
+bindsym $mod+Shift+3 move container to workspace 3:$ws3
+bindsym $mod+Shift+4 move container to workspace 4:$ws4
+bindsym $mod+Shift+5 move container to workspace 5:$ws5
+bindsym $mod+Shift+6 move container to workspace 6:$ws6
+bindsym $mod+Shift+7 move container to workspace 7:$ws7
+bindsym $mod+Shift+8 move container to workspace 8:$ws8
+bindsym $mod+Shift+9 move container to workspace 9:$ws9
+bindsym $mod+Shift+0 move container to workspace 10:$ws10
 
 bindsym $win+q move scratchpad
 bindsym $win+a scratchpad show
@@ -236,18 +250,19 @@ bar {
     workspace_buttons yes
     strip_workspace_numbers yes
     binding_mode_indicator yes
+    height $bheight
     
     font pango:$barfont
     colors {
         background $background
-        statusline $primary
+        statusline $bartext
         separator  $background
 
 #       class                border      background  text
-        focused_workspace    $border     $background $white
-        active_workspace     $primary    $background $white
-        inactive_workspace   $background $background $white
-        urgent_workspace     $foreground $warning    $white
+        focused_workspace    $active     $background $bartext
+        active_workspace     $primary    $background $bartext
+        inactive_workspace   $background $background $bartext
+        urgent_workspace     $background $warning    $bartext
     }
 }
 
