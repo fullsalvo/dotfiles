@@ -8,6 +8,8 @@ set $win        Mod4
 set $ing        18
 set $oug        22
 
+set $home       /home/fullsalvo
+
 set $background #00000000
 set $foreground #d1d0be
 set $gray       #222222
@@ -18,7 +20,7 @@ set $warning    #e84f4f
 #set $border     #4c789d
 #set $border     #58698c
 set $border     #d7e2e0
-#border ab2836 best red evr
+#border ab2836
 #set $border     #8145ba
 set $white      #FFFFFF
 set $active     #20333a
@@ -32,7 +34,7 @@ set $font       candy 9
 set $barfont    Roboto 8
 set $bheight    18
 
-set $wall       ~/Pictures/wg/Shore.jpg
+set $wall       $home/Pictures/Walls/Shore.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -62,7 +64,7 @@ bindsym $mod+Shift+a exec emacs
 bindsym $mod+n exec urxvt -e ranger
 bindsym $mod+Shift+v exec vlc
 bindsym $mod+M exec urxvt -e ncmpcpp
-bindsym $mod+Shift+P exec feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill Pictures/FehPictures/
+bindsym $mod+Shift+P exec feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
 bindsym --whole-window $mod+Shift+button7 floating toggle
 bindsym $mod+Shift+T exec libreoffice
 # Floating Instances
@@ -73,7 +75,7 @@ bindsym $mod+Shift+N exec urxvt -name __special__ -e ranger
 # Launcher
 bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 50 -padding 100 -opacity 70 -bw 5 -bc "$border" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
 # Lock
-bindsym $win+l exec /home/fullsalvo/.bin/lock.sh &
+bindsym $win+l exec $home/.bin/lock.sh &
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -85,7 +87,7 @@ exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id mpd
 exec --no-startup-id compton
 exec --no-startup-id $wallprog $walltype $wall
-exec xrdb ~/.XResources
+exec xrdb $home/.XResources
 
 #######################################################################
 #                             i3 Keybindings                          #
@@ -101,16 +103,26 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #                            Workspaces                               #
 #######################################################################
 
-set $ws1 𝍠
-set $ws2 𝍡
-set $ws3 𝍢
-set $ws4 𝍣
-set $ws5 𝍤
-set $ws6 𝍥
-set $ws7 𝍦
-set $ws8 𝍧
-set $ws9 𝍨
-set $ws10 𝍩
+set $ws1 
+#𝍠
+set $ws2 
+#𝍡
+set $ws3 
+#𝍢
+set $ws4 
+#𝍣
+set $ws5 
+#𝍤
+set $ws6 
+#𝍥
+set $ws7 
+#𝍦
+set $ws8 
+#𝍧
+set $ws9 
+#𝍨
+set $ws10 
+#𝍩
 
 bindsym $mod+1 workspace 1:$ws1
 bindsym $mod+2 workspace 2:$ws2
@@ -134,6 +146,8 @@ bindsym $mod+Shift+8 move container to workspace 8:$ws8
 bindsym $mod+Shift+9 move container to workspace 9:$ws9
 bindsym $mod+Shift+0 move container to workspace 10:$ws10
 
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 bindsym $win+q move scratchpad
 bindsym $win+a scratchpad show
 
@@ -173,7 +187,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
-mode "resize" {
+mode "Resize" {
         bindsym j resize shrink width 1 px or 1 ppt
         bindsym k resize grow height 1 px or 1 ppt
         bindsym l resize shrink height 1 px or 1 ppt
@@ -188,7 +202,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 #######################################################################
 #                         Borders & Gaps                              #
@@ -251,6 +265,7 @@ bar {
     strip_workspace_numbers yes
     binding_mode_indicator yes
     height $bheight
+    tray_output none
     
     font pango:$barfont
     colors {
@@ -259,10 +274,10 @@ bar {
         separator  $background
 
 #       class                border      background  text
-        focused_workspace    $active     $background $bartext
-        active_workspace     $primary    $background $bartext
-        inactive_workspace   $background $background $bartext
-        urgent_workspace     $background $warning    $bartext
+        focused_workspace    $background $background $bartext
+        active_workspace     $background $background $bartext
+        inactive_workspace   $background $background $ufocus
+        urgent_workspace     $background $background $warning
     }
 }
 
@@ -271,8 +286,8 @@ bar {
 #######################################################################
 
 mode "System" {
-    bindsym e exec --no-startup-id /home/fullsalvo/.bin/i3exit logout, mode "default"
-    bindsym a exec --no-startup-id /home/fullsalvo/.bin/i3exit suspend, mode "default"
+    bindsym e exec --no-startup-id $home/.bin/i3exit logout, mode "default"
+    bindsym a exec --no-startup-id $home/.bin/i3exit suspend, mode "default"
     bindsym s exec poweroff
     bindsym r exec reboot
     

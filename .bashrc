@@ -161,3 +161,6 @@ alias rec="ffmpeg -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality 
 alias fastrec="ffmpeg -f x11grab -s 1920x1080 -an -r 25 -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet"
 alias info='/home/fullsalvo/.bin/info.sh'
 alias fig='figlet'
+alias networks='nmcli dev wifi'
+alias wifion='nmcli radio wifi on'
+alias wifioff='nmcli radio wifi off'
