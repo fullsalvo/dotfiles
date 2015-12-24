@@ -22,36 +22,36 @@ URxvt.matcher.button: 1
 *.cursorColor:  #d7e2e0
 
 ! black
-*.color0:       #3f3f45
-*.color8:       #56595f
+*.color0:       #3b404b
+*.color8:       #4c525f
 
 ! red
-*.color1:       #a05353
-*.color9:       #d87676
+*.color1:       #a06e6e
+*.color9:       #d88383
 
 ! green
-*.color2:       #919b3e
-*.color10:      #b3bd54
+*.color2:       #969b6a
+*.color10:      #b5bd6a
 
 ! yellow
-*.color3:       #ded664
-*.color11:      #f9fba0
+*.color3:       #ded997
+*.color11:      #fafbb9
 
 ! blue
-*.color4:       #4c789d
-*.color12:      #7a9fbe
+*.color4:       #71899d
+*.color12:      #8da7be
 
 ! magenta
-*.color5:       #85678f
-*.color13:      #b08dbb
+*.color5:       #8a7e8f
+*.color13:      #b49dbb
 
 ! cyan
-*.color6:       #b7ebee
-*.color14:      #eefffc
+*.color6:       #b2cccd
+*.color14:      #d6fff8
 
 ! white
-*.color7:       #b9c6d3
-*.color15:      #eef2f0
+*.color7:       #c3d3e6
+*.color15:      #d1e2f2
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !                           Dated Colours                             !
@@ -157,3 +157,40 @@ URxvt.matcher.button: 1
 ! white
 !*.color7:       #d2ceab
 !*.color15:      #d6d7b6
+
+! special
+!*.foreground:   #d7e2e0
+!*.background:   #20333a
+!*.cursorColor:  #d7e2e0
+
+! black
+!*.color0:       #3f3f45
+!*.color8:       #56595f
+
+! red
+!*.color1:       #a05353
+!*.color9:       #d87676
+
+! green
+!*.color2:       #919b3e
+!*.color10:      #b3bd54
+
+! yellow
+!*.color3:       #ded664
+!*.color11:      #f9fba0
+
+! blue
+!*.color4:       #4c789d
+!*.color12:      #7a9fbe
+
+! magenta
+!*.color5:       #85678f
+!*.color13:      #b08dbb
+
+! cyan
+!*.color6:       #b7ebee
+!*.color14:      #eefffc
+
+! white
+!*.color7:       #b9c6d3
+!*.color15:      #eef2f0

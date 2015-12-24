@@ -34,8 +34,8 @@ set $font       candy 9
 set $barfont    Roboto 8
 set $bheight    18
 
-set $wall       $home/Pictures/Walls/Shore.jpg
-set $walltype   --bg-fill
+set $wall       /home/fullsalvo/Pictures/Walls/Shore.jpg
+set $walltype   --bg-scale
 set $wallprog   feh
 
 #######################################################################

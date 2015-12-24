@@ -33,11 +33,11 @@
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
 
-(let ((blue "#4C789D")
-      (green "#919B3E")
-      (yellow "#DCCD69")
-      (red "#A05353")
-      (purple "#85678F")
+(let ((blue "#71899d")
+      (green "#969b6a")
+      (yellow "#ded997")
+      (red "#a06e6e")
+      (purple "#8a7e8f")
 ;;      (background "#1F1F1F")
       (background   "#20333a")
       (background-2 "#1E2326")      
