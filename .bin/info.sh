@@ -16,10 +16,10 @@ color=$(tput setaf 4)
 ## Custom Image
 
 # If usewall=1 then fetch will use a cropped version of your wallpaper as the img
-usewall=1
+usewall=0
 
 # The default image to use if usewall=0
-img="/home/fullsalvo/Pictures/Anime/Horizontal\ Images/HarunaDoves.jpg"
+default="/home/fullsalvo/Pictures/Anime/Horizontal/Warm.png"
 
 # Image width/height/offset
 width=128
@@ -39,7 +39,7 @@ pad="                        "
 title="$(whoami)"
 
 # Custom text to print at the bottom, configurable at launch with "-e"
-customtext=$()
+customtext=$(.bin/blocks)
 
 # Set up args
 while getopts ":c:e:w:h:t:p:x:y:" opt; do
@@ -74,6 +74,18 @@ if [[ $usewall == 1 ]]; then
 
     # The final image
     img="$walltempdir/$(basename $wallpaper)"
+fi
+
+if [[ $usewall == 0 ]]; then
+    walltempdir="$HOME/.wallpaper"
+
+    if [ ! -d "$walltempdir" ]; then
+	mkdir "$walltempdir" || echo "Failed to create wallpaper dir"; exit
+    fi
+
+    [[ -f "$walltempdir/$(basename $default)" ]] || convert -crop 1080x1080+480+0 "$default" "$walltempdir/$(basename $default)"
+
+    img="$walltempdir/$(basename $default)"
 fi
 
 # Underline title with length of title

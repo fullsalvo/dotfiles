@@ -1,16 +1,18 @@
 URxvt.scrollBar: false
 URxvt.font: xft:leggie:pixelsize=11:antialias=true,xft:Droid Sans Fallback:pixelsize=11:antialias=true
 URxvt.boldFont:
-URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
 URxvt.internalBorder: 10
 URxvt.saveLines: 8192
 
 ! Clickable Links
 
-URxvt.perl-ext-common: default, matcher, tabbed
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
+*perl-ext-common:	 default,matcher,clipboard
+*keysym.Shift-Control-V: perl:clipboard:paste
+*urlLauncher:		 firefox
+*matcher.button:	 1
+*url-select.underline:	 true
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !                             Colors                                  !
@@ -50,8 +52,8 @@ URxvt.matcher.button: 1
 *.color14:      #d6fff8
 
 ! white
-*.color7:       #c3d3e6
-*.color15:      #d1e2f2
+*.color7:       #9eb2cb
+*.color15:      #cae5ff
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !                           Dated Colours                             !

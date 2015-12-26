@@ -1,0 +1,6 @@
+#!/bin/bash
+# fullsalvo's wallpaper view script
+
+wallpaper=$(cat .fehbg | awk '/feh/ {printf $3}' | sed -e "s/'//g")
+
+feh -. --zoom fill $wallpaper &

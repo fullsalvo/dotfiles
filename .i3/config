@@ -35,7 +35,7 @@ set $barfont    Roboto 8
 set $bheight    18
 
 set $wall       /home/fullsalvo/Pictures/Walls/Shore.jpg
-set $walltype   --bg-scale
+set $walltype   --bg-fill
 set $wallprog   feh
 
 #######################################################################

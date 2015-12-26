@@ -19,7 +19,7 @@ class Default(ColorScheme):
 			if context.empty or context.error:
 				fg = black
 			if context.border:
-				attr = normal
+				attr = bold
 				fg = black
 			if context.media:
 				if context.image:
@@ -56,7 +56,7 @@ class Default(ColorScheme):
 				else:
 					fg = green
 			if not context.selected and (context.cut or context.copied):
-				fg = white
+				fg = red
 				attr |= bold
 			if context.main_column:
 				if context.selected:

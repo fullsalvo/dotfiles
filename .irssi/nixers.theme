@@ -190,7 +190,7 @@ abstracts = {
 
   # default background for all statusbars. You can also give
   # the default foreground color for statusbar items.
-  sb_background = "%z303030";
+  sb_background = "%zadc8d2%k";
 
   # background for prompt / input line
   sb_prompt_bg = "%n";
@@ -203,12 +203,12 @@ abstracts = {
   topicsbstart = "%k▓▒░$*";
   topicsbend = "$*%b%k░▒▓";
 
-  prompt = " %y$* »%n ";
+  prompt = " %B$* »%n ";
 
-  sb = " $* ";
-  sbmode = " %Z5F5F5F░ %g%g+%n$* %Z5F5F5F░";
+  sb = " %K$* ";
+  sbmode = " %k░ %g%g+%n$* %Z5F5F5F░";
   sbaway = " %g/* zZzZ */%n";
-  sbservertag = ":%g$0%n";
+  sbservertag = ":%R$0%n";
   sbnickmode = "$0";
 
   # Usercount

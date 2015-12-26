@@ -1,0 +1,10 @@
+#!/bin/bash
+# fullsalvo's wifi fetch block
+
+network=$(iwgetid -r)
+
+if [[ $network == "" ]];then
+    echo "Wifi Down"
+else
+    echo $network
+fi
