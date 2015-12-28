@@ -39,7 +39,7 @@ pad="                        "
 title="$(whoami)"
 
 # Custom text to print at the bottom, configurable at launch with "-e"
-customtext=$(.bin/blocks)
+customtext=$(.bin/hex 16)
 
 # Set up args
 while getopts ":c:e:w:h:t:p:x:y:" opt; do

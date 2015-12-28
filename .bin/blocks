@@ -6,13 +6,6 @@
 # https://github.com/dylanaraps/dotfiles
 # Edited by fullsalvo
 
-usage() {
-    echo "blocks"
-    echo "    -b: include bold"
-}
-
-
-
 number="0"
 
 echo
@@ -48,6 +41,11 @@ bold() {
     echo
     echo
     
+}
+
+usage() {
+    echo "blocks"
+    echo "    -b: include bold"
 }
 
 case $1 in

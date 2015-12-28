@@ -31,7 +31,7 @@ autocenter_mode                       = "yes"
 header_visibility                     = "no"
 statusbar_visibility                  = "yes"
 cyclic_scrolling                      = "yes"
-display_bitrate                       = "yes"
+display_bitrate                       = "no"
 ignore_leading_the                    = "no"
 enable_window_title                   = "yes"
 playlist_disable_highlight_delay      = "1"
@@ -47,7 +47,7 @@ discard_colors_if_item_is_selected    = "yes"
 ############################################################
 #                      Formatting                          #
 ############################################################
-song_list_format                      = "{$5%a$1 - }{$8%t}$1 $R{$5%l}"
+song_list_format                      = "{$8%4l}$1 | {$5%a}$1 - {$8%t}$1"
 song_columns_list_format              = "(22)[blue]{ar} (39)[blue]{t|f} (25)[blue]{b} (7f)[white]{lr}"
 song_window_title_format              = "{%a - %t}"
 song_library_format                   = "%t"

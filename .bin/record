@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# wildefyr - 2015 (c) wtfpl
+# record x11 desktop using ffmpeg
+
+usage() {
+    printf '%s\n' "usage: $(basename $0) [fks] <filename>"
+    exit 1
+}
+
+test -n "$1" || usage
+test -n "$2" && path=$2 || path=$1
+
+PIDNAME=recorder
+FRAMERATE=25
+RESOLUTION=$(xdpyinfo | grep dimensions | awk '/dimensions:/ {print $2}')
+AREA=":0.0"
+
+case $1 in
+    f) FRAMERATE=50; shift 1 ;;
+    k) kill $(pidof -s $PIDNAME); exit 0 ;;
+    s) 
+        eval $(slop -t 2 -b $BW '215,215,215,0.9')
+        RESOLUTION=$(echo $W x $H | sed 's# ##g')
+        AREA=$(echo "$AREA+$X,$Y")
+        ;;
+#    p|pfw) 
+#        W=$(wattr w $(pfw))
+#        H=$(wattr h $(pfw))
+#        X=$(wattr x $(pfw))
+#        Y=$(wattr y $(pfw))
+#        RESOLUTION=$(echo $W x $H | sed 's# ##g')
+#        AREA=$(echo "$AREA+$X,$Y")
+esac
+
+exec ffmpeg -f x11grab -s $RESOLUTION -an -r $FRAMERATE -i $AREA -c:v libvpx \
+-b:v 10M -crf 10 -quality realtime -y -loglevel quiet $path.webm
