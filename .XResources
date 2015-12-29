@@ -6,6 +6,12 @@ URxvt.cursorUnderline: true
 URxvt.internalBorder: 10
 URxvt.saveLines: 8192
 
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hintstyle: hintnone
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
 ! Clickable Links
 
 *perl-ext-common:	 default,matcher,clipboard
@@ -19,9 +25,9 @@ URxvt.saveLines: 8192
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #d7e2e0
-*.background:   #20333a
-*.cursorColor:  #d7e2e0
+*.foreground:   #dfdfdf
+*.background:   #242d34
+*.cursorColor:  #dfdfdf
 
 ! black
 *.color0:       #3b404b

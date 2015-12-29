@@ -1,0 +1,7 @@
+#!/bin/bash
+# fullsalvo's poweroff block
+
+case $BLOCK_BUTTON in
+  1) poweroff
+  ;;
+esac
