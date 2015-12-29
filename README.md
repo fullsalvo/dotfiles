@@ -1,6 +1,6 @@
 # Fullsalvo's Dotfiles
 
-### Images
+### Images (currently outdated)
 ![1](http://i.imgur.com/0GV5x0u.png)
 
 ### Relevant Information
