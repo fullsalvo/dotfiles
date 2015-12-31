@@ -61,7 +61,7 @@ if [[ $usewall == 1 ]]; then
     wallpaper=$(cat .fehbg | awk '/feh/ {printf $3}' | sed -e "s/'//g")
 
     # Directory to store cropped wallpapers.
-    walltempdir="$HOME/.wallpaper"
+    walltempdir="$HOME/.fetchimages"
 
     # Check if the directory exists
     if [ ! -d "$walltempdir" ]; then
@@ -77,7 +77,7 @@ if [[ $usewall == 1 ]]; then
 fi
 
 if [[ $usewall == 0 ]]; then
-    walltempdir="$HOME/.wallpaper"
+    walltempdir="$HOME/.fetchimages"
 
     if [ ! -d "$walltempdir" ]; then
 	mkdir "$walltempdir" || echo "Failed to create wallpaper dir"; exit

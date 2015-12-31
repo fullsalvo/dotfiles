@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Sends a dunstify notification with information from mpc -f.
+# Adapted from https://bbs.archlinux.org/viewtopic.php?pid=684807#p684807
+
+DUNSTIFY_ID="/tmp/mpc-notify_dunstify_id"
+ALBUM_ART="$(mktemp).png"
+ALBUM_ART_WIDTH="125"
+FMT_SUMMARY="[%title%]|[%file%]"
+FMT_BODY="[[%artist% - ]&%album%]|[%artist%]|[%album%]"
+
+mpc_format() {
+  args=("$@")
+  mpc -f "${args[0]}" current
+}
+
+# Get album art
+yes 2>/dev/null |\
+  ffmpeg -i "${XDG_MUSIC_DIR%%/}/$(mpc current --format '%file%')"\
+  "$ALBUM_ART" 2>/dev/null &&\
+  mogrify -resize "$ALBUM_ART_WIDTH" "$ALBUM_ART"
+
+# Get the dunstify id
+[ ! -z "$(cat "$DUNSTIFY_ID")" ] && id_arg="-r $(cat "$DUNSTIFY_ID")"
+
+summary="$(mpc_format "$FMT_SUMMARY")"
+body="$(mpc_format "$FMT_BODY")"
+
+# Summary/body can't start w/ -
+summary="${summary/#-/−}"
+body="${body/#-/−}"
+
+dunstify \
+  -a "ncmpcpp" \
+  -i "$ALBUM_ART" \
+  -p $id_arg > "$DUNSTIFY_ID" \
+  "${summary:=no tunes}" "$body"

@@ -28,7 +28,7 @@ set $font       candy 9
 set $barfont    Roboto 8
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Waves.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/PosedLook.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -67,11 +67,13 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
 bindsym $mod+Shift+M exec urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 50 -padding 100 -opacity 70 -bw 5 -bc "$border" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
+bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 100 -padding 475 -opacity 70 -bw 5 -bc "$border" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
 # Lock
 bindsym $win+l exec $home/.bin/lock.sh &
 bindsym $mod+Shift+w exec .bin/wallview
 bindsym $win+p exec i3-msg open
+bindsym $win+Shift+p exec $home/.bin/screencast
+bindsym $win+Shift+u exec killall ffmpeg
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -80,10 +82,11 @@ bindsym $win+p exec i3-msg open
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
+#exec $home/.bin/mpc-notify-daemon &
 exec --no-startup-id mpd
 exec --no-startup-id compton
 exec --no-startup-id $wallprog $walltype $wall
-exec xrdb $home/.XResources
+exec xrdb $home/.XResources 
 
 #######################################################################
 #                             i3 Keybindings                          #
@@ -99,25 +102,25 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #                            Workspaces                               #
 #######################################################################
 
-set $ws1 
+set $ws1 ■ 
 #𝍠
-set $ws2 
+set $ws2 ■ 
 #𝍡
-set $ws3 
+set $ws3 ■ 
 #𝍢
-set $ws4 
+set $ws4 ■ 
 #𝍣
-set $ws5 
+set $ws5 ■ 
 #𝍤
-set $ws6 
+set $ws6 ■ 
 #𝍥
-set $ws7 
+set $ws7 ■ 
 #𝍦
-set $ws8 
+set $ws8 ■ 
 #𝍧
-set $ws9 
+set $ws9 ■ 
 #𝍨
-set $ws10 
+set $ws10 ■ 
 #𝍩
 
 bindsym $mod+1 workspace 1:$ws1

@@ -1,0 +1,12 @@
+#!/bin/bash
+# fullsalvo's battery notification script
+
+while :; do
+    level=$(cat /sys/class/power_supply/BAT0/capacity)
+    ac=$(cat /sys/class/power_supply/AC/online)
+
+    if [[ $ac == "0" && $level -le "20" ]]; then
+	notify-send -t 5000 "Battery Low" "Connect Charger Soon!"
+    fi
+    sleep 60
+done

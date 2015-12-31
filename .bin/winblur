@@ -1,11 +1,11 @@
 #!/bin/bash
 
-WIN=$(xdotool getactivewindow)
 while :;do
+WIN=$(xdotool getactivewindow)
     if [ -n "$WIN" ]; 
     then
-	hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/cultfit-valley.jpg 
+	feh --bg-fill $HOME/Pictures/Walls/PosedLook.jpg
     else
-	hsetroot -fill /home/fullsalvo/Pictures/Different\ Res/Horizontal\ Images/cultfit-valley.jpg -blur 50
+	hsetroot -fill $HOME/Pictures/Walls/PosedLook.jpg -blur 50
     fi
 done

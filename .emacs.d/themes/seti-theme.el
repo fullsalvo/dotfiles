@@ -40,7 +40,6 @@
       (purple "#8a7e8f")
       (background   "#242d34")
       (background-2 "#1E2326")      
-;;      (background-3 "#333333")
       (background-3 "#d7e2e0")
       (background-4 "#101112")
       (text "#D4D7D6")
@@ -95,6 +94,16 @@
    `(font-lock-type-face ((t (:foreground ,yellow))))
    `(font-lock-variable-name-face ((t (:foreground ,blue))))
    `(font-lock-warning-face ((t (:weight bold :inherit (error)))))
+
+   ;; Fullsalvo Font Locks
+   ;;LaTeX
+   `(font-latex-math-face ((t (:foreground ,purple))))
+   `(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Terminus"))))
+   `(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1 :family "Terminus"))))
+   `(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "turquoise2" :height 1.1))))
+   ;;Shell
+   `(sh-quoted-exec ((t (:foreground ,red))))
+   `(sh-heredoc ((t (:foreground ,yellow))))
 
    ;; Parens
    `(show-paren-match ((t (:foreground ,text-2 :underline (:color ,dark-blue :style line)))))
