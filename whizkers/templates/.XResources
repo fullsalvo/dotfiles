@@ -1,0 +1,64 @@
+!General
+URxvt.scrollBar: false
+URxvt.saveLines: 8192
+URxvt.internalBorder: 10
+URxvt.cursorUnderline: true
+URxvt.cursorBlink: true
+URxvt.dynamicColors:on
+
+! Fonts
+URxvt.font:      {{ #term_fonts }}xft:{{ . }}:pixelsize={{ pixelsize }}:antialias=true,{{ /term_fonts }}
+URxvt.boldFont: 
+
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hintstyle: hintnone
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+! Clickable Links
+
+*perl-ext-common:	 default,matcher,clipboard
+*keysym.Shift-Control-V: perl:clipboard:paste
+*urlLauncher:		 firefox
+*matcher.button:	 1
+*url-select.underline:	 true
+
+! Colors
+*.borderColor:  {{ bgc }}
+*.background:   {{ bgc }}
+*.foreground:   {{ fgc }}
+*.cursorColor:  {{ csc }}
+
+! Black
+*.color0:       {{ n_black }}
+*.color8:       {{ b_black }}
+
+! Red
+*.color1:       {{ n_red }}
+*.color9:       {{ b_red }}
+
+! Green
+*.color2:       {{ n_green }}
+*.color10:      {{ b_green }}
+
+! Yellow
+*.color3:       {{ n_yellow }}
+*.color11:      {{ b_yellow }}
+
+! Blue
+*.color4:       {{ n_blue }}
+*.color12:      {{ b_blue }}
+
+! Magenta
+*.color5:       {{ n_magenta }}
+*.color13:      {{ b_magenta }}
+
+! Cyan
+*.color6:       {{ n_cyan }}
+*.color14:      {{ b_cyan }}
+
+! White
+*.color7:       {{ n_white }}
+*.color15:      {{ b_white }}
+

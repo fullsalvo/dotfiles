@@ -76,6 +76,8 @@
 ;; toggle menu bar
 (global-set-key [f12] 'menu-bar-mode)
 
+(define-key minibuffer-inactive-mode-map [mouse-1] nil)
+
 ;; powerline
 ;;(add-to-list 'load-path "~/.emacs.d/powerline/")
 ;;(add-to-list 'load-path "~/.emacs.d/spaceline/")
@@ -86,6 +88,11 @@
 
 ;; Make window title filename regardless of number of buffers
 (setq frame-title-format "%b")
+
+;; yaml mode
+(add-hook 'yaml-mode-hook
+	  (lambda ()
+            (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

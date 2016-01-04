@@ -89,15 +89,15 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%Z6A8C8C$*%n";
+  ownnick = "%b$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%N$*%n";
+  pubnick = "%W$*%n";
 
   # public highlighted message in channel
-  pubmsghinick = "{msgnick $0 $1}%y";
-  menick = "%y$*%n";
+  pubmsghinick = "{msgnick $0 $1}%R";
+  menick = "%R$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
@@ -190,7 +190,7 @@ abstracts = {
 
   # default background for all statusbars. You can also give
   # the default foreground color for statusbar items.
-  sb_background = "%zadc8d2%k";
+  sb_background = "%z303030%w";
 
   # background for prompt / input line
   sb_prompt_bg = "%n";
@@ -205,7 +205,7 @@ abstracts = {
 
   prompt = " %B$* »%n ";
 
-  sb = " %K$* ";
+  sb = " %W$* ";
   sbmode = " %k░ %g%g+%n$* %Z5F5F5F░";
   sbaway = " %g/* zZzZ */%n";
   sbservertag = ":%R$0%n";
@@ -249,7 +249,7 @@ formats = {
     nick_changed = "%Z5F5F5F{channick $[-13]0} %G>%n {channick $1}";
     your_nick_changed = "%Z5F5F5F          you %G>%n {channick $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \00313$[-11]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick $[-11]0}}$1";
 
     own_msg = "{ownmsgnick $2 {ownnick $[-11]0}}$1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $[-11]0}{msgchannel $1}}$2";

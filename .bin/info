@@ -1,13 +1,12 @@
 fetch () {
     $HOME/fetch/fetch.sh \
         --printcols 0 15 \
-	--titlecol 15 \
-	--subtitlecol 4 \
-	--coloncol 4\
-	--infocol 15 \
+	--colors 15 4 4 15 \
         --title "fullsalvo" \
         --nowrap \
         --nobold \
+	--smart-crop-mode fill \
+	--gap 0 \
         $@
 }
 

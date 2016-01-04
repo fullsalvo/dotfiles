@@ -1,5 +1,6 @@
 URxvt.scrollBar: false
-URxvt.font: xft:leggie:pixelsize=11:antialias=true,xft:Droid Sans Fallback:pixelsize=11:antialias=true
+URxvt.font: xft:leggie:pixelsize=11:antialias=true,xft:Kochi Gothic:pixelsize=11:antialias=true
+!Droid Sans Fallback
 URxvt.boldFont:
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true
@@ -25,13 +26,13 @@ Xft.rgba: rgb
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #dfdfdf
-*.background:   #242d34
-*.cursorColor:  #dfdfdf
+*.foreground:   #eeeeee
+*.background:   #2e2e2e
+*.cursorColor:  #eeeeee
 
 ! black
-*.color0:       #3b404b
-*.color8:       #4c525f
+*.color0:       #4b4b4b
+*.color8:       #5f5f5f
 
 ! red
 *.color1:       #a06e6e

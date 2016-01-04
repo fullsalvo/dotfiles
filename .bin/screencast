@@ -9,6 +9,8 @@
 #
 # TODO support uploading to teknik.io
 
+NOTIFYTIME="5000"
+
 MODE="desktop"                  # Default "desktop" ["window"|"desktop"]
 MARGIN=0                       # Margin in window mode (px)
 TITLEBAR=0                     # Titlebar height in window mode (px)
@@ -63,13 +65,13 @@ if [ "$MODE" = "window" ]; then
     WINH=$(($(echo $WINFO|grep -Po 'Height: \K[^ ]*')+($MARGIN*2+$TITLEBAR)))
 
     sleep 2 # Wait before recording begin
-    notify-send "Window is now being recorded. Stop by pressing Win+X."
+#    notify-send -t $NOTIFYTIME "Window is now being recorded."
 
     # Record Window
     ffmpeg -f x11grab -s "$WINW"x"$WINH" -r $FPS -i $DISPLAY"+$WINX,$WINY" -c:v libx264 -preset $PRESET -crf $CRF "$TMP" #|| ERROR=1
 else
     sleep 2 # Wait before recording begin
-    notify-send "Desktop is now being recorded. Stop by pressing Win+X."
+    notify-send -t $NOTIFYTIME "Desktop is now being recorded."
 
     # Record Fullscreen
     ffmpeg -f x11grab -s $FULLSCREEN -r $FPS -i $DISPLAY -c:v libx264 -preset $PRESET -crf $CRF "$TMP" #|| ERROR=1

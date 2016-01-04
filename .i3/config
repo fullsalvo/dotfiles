@@ -10,25 +10,25 @@ set $oug        22
 
 set $home       /home/fullsalvo
 
-set $background #00000000
+set $background #00000055
 set $foreground #d1d0be
 set $gray       #222222
 set $primary    #dddddd
 set $secondary  #ab2836
 set $tertiary   #222222
 set $warning    #e84f4f
-set $border     #dededc
+set $border     #eeeeee
 set $white      #FFFFFF
-set $active     #20333a
-set $bartext    #efebea
-set $ufocus     #3c4940
+set $active     #f9f9ea
+set $bartext    #eeeeee
+set $ufocus     #5c5c5c
 
-set $bordersize 2
+set $bordersize 3
 set $font       candy 9
 set $barfont    Roboto 8
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/PosedLook.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Wading2.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -39,6 +39,7 @@ set $wallprog   feh
 exec xinput set-prop 15 "Device Enabled" 0 &
 focus_follows_mouse no
 exec xset s off -dpms
+exec $home/.bin/batnotif &
 
 #######################################################################
 #                           Fallback Font                             #
@@ -67,13 +68,13 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
 bindsym $mod+Shift+M exec urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 100 -padding 475 -opacity 70 -bw 5 -bc "$border" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
+bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 70 -bw 5 -bc "$primary" -bg "$gray" -hlbg "$white" -hlfg "$gray" -font candy\ 11
 # Lock
 bindsym $win+l exec $home/.bin/lock.sh &
 bindsym $mod+Shift+w exec .bin/wallview
 bindsym $win+p exec i3-msg open
 bindsym $win+Shift+p exec $home/.bin/screencast
-bindsym $win+Shift+u exec killall ffmpeg
+bindsym $win+Shift+o exec killall ffmpeg
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -84,6 +85,7 @@ exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
 #exec $home/.bin/mpc-notify-daemon &
 exec --no-startup-id mpd
+exec --no-startup-id mpdscribble
 exec --no-startup-id compton
 exec --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.XResources 
@@ -97,30 +99,31 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $win+c exec i3-msg sticky toggle
 
 #######################################################################
 #                            Workspaces                               #
 #######################################################################
 
-set $ws1 ■ 
+set $ws1 ♦ 
 #𝍠
-set $ws2 ■ 
+set $ws2 ♦ 
 #𝍡
-set $ws3 ■ 
+set $ws3 ♦ 
 #𝍢
-set $ws4 ■ 
+set $ws4 ♦ 
 #𝍣
-set $ws5 ■ 
+set $ws5 ♦ 
 #𝍤
-set $ws6 ■ 
+set $ws6 ♦ 
 #𝍥
-set $ws7 ■ 
+set $ws7 ♦ 
 #𝍦
-set $ws8 ■ 
+set $ws8 ♦ 
 #𝍧
-set $ws9 ■ 
+set $ws9 ♦
 #𝍨
-set $ws10 ■ 
+set $ws10 ♦
 #𝍩
 
 bindsym $mod+1 workspace 1:$ws1
@@ -246,7 +249,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 2%
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 bindsym XF86AudioPlay exec mpc toggle
-bindsym Shift+XF86AudioPlay exec .bin/spotify-control play
+bindsym Shift+XF86AudioPlay exec .bin/spotify-control play 
 
 # Screen Brightness Controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10

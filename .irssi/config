@@ -21,7 +21,7 @@ settings = {
     nick = "fullsalvo";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "nixers.theme"; bell_beeps = "no"; };
+  "fe-common/core" = { theme = "nixers"; bell_beeps = "no"; };
 };
 
 servers = (
@@ -32,12 +32,18 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "no";
+  },
+  {
+    address = "irc.rizon.net";
+    chatnet = "rizon";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
-channels = ( 
-  { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; }
-);
+channels = ( { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; } );
 
 aliases = {
   J = "join";
@@ -89,4 +95,4 @@ aliases = {
   RESET = "set -default";
 };
 
-chatnets = { Iotek = { type = "IRC"; }; };
+chatnets = { Iotek = { type = "IRC"; }; rizon = { type = "IRC"; }; };

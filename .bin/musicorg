@@ -1,0 +1,73 @@
+#! /usr/bin/env python3
+# Copyright (C) 2015 mvdw <mvdw at airmail dot cc>
+# Distributed under terms of the MIT license.
+
+import os, os.path
+from tabulate import tabulate
+from PIL import Image
+
+class Color:
+    WARNING = '\033[93m'
+    SUCCESS = '\033[92m'
+    FAILURE = '\033[91m'
+    DARK = '\033[90m'
+    _ = '\033[0m'
+
+class Character:
+    SUCCESS = '✓'
+    WARNING = '✘'
+    FAILURE = '✘'
+
+def directory(*n):
+    local = os.path.join(*n)
+    return os.listdir(local) if os.path.isdir(local) else ""
+
+def merge(*n):
+    return os.path.expanduser(os.path.join(*n))
+
+music   = merge('~', 'Music')
+column  = map(lambda x: Color.DARK + x + Color._, ['Album', 'cover', 'sheet', 'removed', 'type'])
+row     = []
+
+for artist in os.listdir(music):
+    for album in directory(music, artist):
+        messages = []
+        current  = directory(artist, album)
+        remove   = []
+        types    = []
+
+        if 'Cover.jpg' in current:
+            Image \
+                .open(merge('~', music, artist, album, 'Cover.jpg')) \
+                .save(merge('~', music, artist, album, 'Cover.png'))
+            messages.append(Color.WARNING + Character.WARNING + Color._)
+        elif 'Cover.png' in current:
+            messages.append(Color.SUCCESS + Character.SUCCESS + Color._)
+        else:
+            messages.append(Color.FAILURE + Character.FAILURE + Color._)
+        if 'sheet.cue' in current:
+            os.rename(
+                merge('~', music, artist, album, 'sheet.cue'),
+                merge('~', music, artist, album, 'Sheet.cue'))
+            messages.append(Color.WARNING + Character.WARNING + Color._)
+        elif 'Sheet.cue' in current:
+            messages.append(Color.SUCCESS + Character.SUCCESS + Color._)
+        else:
+            messages.append(Color.FAILURE + Character.FAILURE + Color._)
+        for file in current:
+            if file.endswith(('.mp3', '.m4a', '.flac')):
+                types.append(file.split('.')[-1])
+            if file.endswith(('.jpg', '.log', '.png', '.cue')) and not file in ['Sheet.cue', 'Cover.png']:
+                os.remove(merge('~', music, artist, album, file))
+                remove.append(file)
+        if len(remove) == 0:
+            messages.append(Color.SUCCESS + Character.SUCCESS + Color._)
+        elif len(remove) > 0 and len(remove) < 3:
+            messages.append(Color.WARNING + Character.WARNING + Color._)
+        else:
+            messages.append(Color.FAILURE + Character.FAILURE + Color._)
+        messages[len(messages):] = [Color.DARK + '.' + max(set(types), key=types.count) + Color._]
+        messages[:0] = [album]
+        row.append(messages)
+
+print(tabulate(row, column, tablefmt='simple'))
