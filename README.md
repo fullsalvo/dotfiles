@@ -1,7 +1,7 @@
 # Fullsalvo's Dotfiles
 
-### Images (currently outdated)
-![1](http://i.imgur.com/0GV5x0u.png)
+### Images
+![1](http://i.imgur.com/pPZYh26.png)
 
 ### Relevant Information
 
@@ -13,3 +13,4 @@
 * Browser: Firefox
 * Startpage: My own [FFStartpage](https://github.com/fullsalvo/FFStartpage)
 * IRC: [irssi](https://github.com/irssi/irssi)
+* Recently started using [whizkers](https://github.com/metakirby5/whizkers). It's a great way to save schemes.
