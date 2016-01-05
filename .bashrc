@@ -134,6 +134,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#Add directories to $PATH
+
+export PATH="/home/fullsalvo/.bin:$PATH"
+
 # Selfmade Aliases
 
 alias c='clear'
@@ -170,6 +174,6 @@ alias wallview='.bin/wallview'
 alias commit='git commit -m "fullsalvo update"'
 alias hex='.bin/hex 16'
 alias i3o='i3-msg open'
-alias whip='whizkers && cupd'
+alias whip='whizkers && feh --bg-fill --no-fehbg ~/Pictures/Walls/Wading2.jpg'
 alias whi='whizkers'
 

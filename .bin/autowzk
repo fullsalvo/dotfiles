@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+# Runs colorz2 on an image file to get 6 colors, then stuffs those colors
+# through wzk.
+
+usage() {
+  echo "USAGE: autowzk [image file / URL] (primary color) (secondary color)"
+  echo "If image URL provided, image will be saved at \"~/.autowzk\"."
+  echo "Available colors: red,  green,   yellow,"
+  echo "                  blue, magenta, cyan"
+  echo "Defaults: primary = red, secondary = blue"
+  exit 1
+}
+
+SRC=~/.autowzk
+
+COLORS=(
+  red
+  green
+  yellow
+  blue
+  magenta
+  cyan
+)
+
+is_a_color() {
+  [[ " ${COLORS[*]} " == *" $1 "* ]]
+  return $?
+}
+
+read -r -d '' TEMPLATE << EOM
+wallpapers: "%s"
+
+colors:
+  name:         "%s"
+  primary:      "%s"
+  secondary:    "%s"
+  red:
+    normal:     "%s"
+    bold:       "%s"
+  green:
+    normal:     "%s"
+    bold:       "%s"
+  yellow:
+    normal:     "%s"
+    bold:       "%s"
+  blue:
+    normal:     "%s"
+    bold:       "%s"
+  magenta:
+    normal:     "%s"
+    bold:       "%s"
+  cyan:
+    normal:     "%s"
+    bold:       "%s"
+EOM
+
+# Sanity checks, getting args
+[ "$#" -lt 1 ] || [ "$#" -gt 3 ] && usage
+
+if [ ! -f "$1" ]; then
+  [[ "$1" != http* ]] && usage
+
+  curl "$1" -o "$SRC" 2>/dev/null || (echo "URL invalid." && exit 1)
+else
+  cp "$1" "$SRC" 2>/dev/null
+fi
+
+if [ -z "$2" ]; then
+  # Default
+  primary="red"
+else
+  is_a_color "$2" && primary="$2" || usage
+fi
+
+if [ -z "$3" ]; then
+  # Default
+  secondary="blue"
+else
+  is_a_color "$3" && secondary="$3" || usage
+fi
+
+# Starting...
+echo "Using primary = $primary, secondary = $secondary..."
+echo
+
+colors="$(colorz2 --no-preview -n 6 "$SRC")"
+[ "${PIPESTATUS[0]}" -ne 0 ] && exit 1
+
+yaml="$(echo \
+  "$(readlink -f "$SRC")" "$(basename "$1" | cut -f 1 -d .)" \
+  "$primary" "$secondary" \
+  "$colors" |\
+xargs printf "$TEMPLATE")"
+
+echo "Generated YAML:"
+echo "$yaml"
+echo
+
+feh --bg-fill --no-fehbg "$@"
+
+echo "Running wzk..."
+wzk <(echo "$yaml")

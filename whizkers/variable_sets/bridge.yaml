@@ -1,6 +1,6 @@
 colors:
   primary:      "red"
-  secondary:    "blue"
+  secondary:    "magenta"
   background:   "#293436"
   foreground:   "#abacae"
   cursor:       "#abacae"
