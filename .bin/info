@@ -1,13 +1,19 @@
-fetch () {
-    $HOME/fetch/fetch.sh \
-        --printcols 0 15 \
-	--colors 15 4 4 15 \
+info () {
+    fetch \
         --title "fullsalvo" \
-        --nowrap \
-        --nobold \
-	--smart-crop-mode fill \
-	--gap 0 \
+        --bold off \
+	--smart-crop-mode fill  \
+	--distro "Debian" \
+	--colors 15 4 4 0 15 \
+	--block_width 5 \
+	--block_range 0 15 \
+	--speed_type current \
+	--gap -20 \
+	--cpu "Intel(R) Core(TM) i7-4710MQ CPU @ 3.50GHz" \
+	--crop_mode fit \
+	--font_width 3 \
+	--line_wrap off \
         $@
 }
 
-fetch
+info

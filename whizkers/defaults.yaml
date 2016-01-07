@@ -5,6 +5,7 @@ term_fonts:
 pixelsize: 11
 
 # Colors
+name:           "fullsalvo"
 
 colors:
   primary:      "blue"
@@ -36,6 +37,24 @@ colors:
   white:
     normal:     "#9eb2cb"
     bold:       "#cae5ff"
+
+# Window Manager
+
+barback:        "#00000055"
+warning:        "#e84f4f"
+border:         "#eeeeee"
+bartext:        "#eeeeee"
+unfocused:      "#5c5c5c"
+dectext:        "#ffffff"
+rofibg:         "#222222"
+
+bordersize:     "3"
+mainfont:       "leggie 9"
+barfont:        "Roboto 8"
+barheight:      "18"
+
+wallpaper:      "/home/fullsalvo/Pictures/Walls/Buds.jpg"
+wallmode:       "--bg-fill"
 
 # Utility
 

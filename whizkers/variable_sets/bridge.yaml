@@ -1,3 +1,5 @@
+name:           "Bridge"
+
 colors:
   primary:      "red"
   secondary:    "magenta"

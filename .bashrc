@@ -174,6 +174,6 @@ alias wallview='.bin/wallview'
 alias commit='git commit -m "fullsalvo update"'
 alias hex='.bin/hex 16'
 alias i3o='i3-msg open'
-alias whip='whizkers && feh --bg-fill --no-fehbg ~/Pictures/Walls/Wading2.jpg'
+alias whip='whizkers && feh --bg-fill --no-fehbg ~/Pictures/Walls/Buds.jpg'
 alias whi='whizkers'
-
+alias ixio="curl -F 'f:l=<-' ix.io"
