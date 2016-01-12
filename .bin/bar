@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# bar - lemonbar output
+# (c) arcetera 2015 - wtfpl
+#
+
+desktop() {
+  groupstat | sed -e s/0//g -e s/1/'%{F#c1c4bc}%{F-}'/g
+}
+
+clock() {
+  date=$(date "+%a %d %b %l:%M")
+  printf '%s\n' "%{F#c1c4bc}%{F-} $date"
+}
+
+battery() {
+  bat=$(stdout < /sys/class/power_supply/BAT1/capacity)
+  printf '%s\n' "%{F#c1c4bc}%{F-} $bat%"
+}
+
+win() {
+  name=$(wname $(pfw))
+  if [ -z $name ]; then
+    if [ "$(winclass c $(pfw))" = "st-256color" ]; then
+	  name="st"
+	else
+      name="none"
+	fi
+  fi
+  printf '%s\n' "%{F#c1c4bc}%{F-} $name"
+}
+
+while :; do
+  buf=""
+  buf="${buf} $(clock)"
+  buf="${buf} %{r}$(battery) $(win) "
+  printf '%s\n' "$buf"
+  sleep 1
+done | lemonbar -B '#1f1f22' -F '#839496' -d -f '-kori-metis-normal-r-normal--11-90-75-75-p-58-iso10646-1' -f Siji:size=1 1

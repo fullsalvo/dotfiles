@@ -177,3 +177,4 @@ alias i3o='i3-msg open'
 alias whip='whizkers && feh --bg-fill --no-fehbg ~/Pictures/Walls/Buds.jpg'
 alias whi='whizkers'
 alias ixio="curl -F 'f:l=<-' ix.io"
+alias abacus="ssh ddb19@abacus.cs.uwf.edu"

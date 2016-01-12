@@ -1,8 +1,10 @@
 # Fonts
 term_fonts:
-  - "leggie"
+  - "Leggie"
   - "Kochi Gothic"
+antialias: "true"
 pixelsize: 11
+spacing: 0
 
 # Colors
 name:           "fullsalvo"
@@ -100,4 +102,3 @@ text_primary:         "{` {{ colors }}['primary'] `}"
 text_secondary:       "{` {{ colors }}['secondary'] `}"
 ncmpcpp_primary_n:    "{` {{ colornumbers }}[{{ colors }}['primary']] + 1 `}"
 ncmpcpp_secondary_n:  "{` {{ colornumbers }}[{{ colors }}['secondary']] + 1 `}"
-

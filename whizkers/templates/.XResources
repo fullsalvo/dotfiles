@@ -1,3 +1,7 @@
+! Fonts
+URxvt.font:      {{ #term_fonts }}xft:{{ . }}:pixelsize={{ pixelsize }}:antialias={{ antialias }},{{ /term_fonts }}
+URxvt.boldFont:
+
 !General
 URxvt.scrollBar: false
 URxvt.saveLines: 8192
@@ -5,10 +9,7 @@ URxvt.internalBorder: 10
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: true
 URxvt.dynamicColors:on
-
-! Fonts
-URxvt.font:      {{ #term_fonts }}xft:{{ . }}:pixelsize={{ pixelsize }}:antialias=true,{{ /term_fonts }}
-URxvt.boldFont: 
+URxvt.letterSpace: {{ spacing }}
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -61,4 +62,3 @@ Xft.rgba: rgb
 ! White
 *.color7:       {{ n_white }}
 *.color15:      {{ b_white }}
-

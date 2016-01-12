@@ -1,12 +1,12 @@
 #  ██                        ██
-# ░░                        ░░ 
+# ░░                        ░░
 #  ██ ██████  ██████  ██████ ██
 # ░██░░██░░█ ██░░░░  ██░░░░ ░██
 # ░██ ░██ ░ ░░█████ ░░█████ ░██
 # ░██ ░██    ░░░░░██ ░░░░░██░██
 # ░██░███    ██████  ██████ ░██
-# ░░ ░░░    ░░░░░░  ░░░░░░  ░░ 
-# 
+# ░░ ░░░    ░░░░░░  ░░░░░░  ░░
+#
 #  ▓▓▓▓▓▓▓▓▓▓
 # ░▓ author ▓ xero <x@xero.nu>
 # ░▓ code   ▓ http://code.xero.nu/dotfiles
@@ -96,8 +96,8 @@ abstracts = {
   pubnick = "%W$*%n";
 
   # public highlighted message in channel
-  pubmsghinick = "{msgnick $0 $1}%R";
-  menick = "%R$*%n";
+  pubmsghinick = "{msgnick $0 $1}%1";
+  menick = "%Y$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
@@ -299,6 +299,6 @@ formats = {
   };
 };
 settings = {
-  core = { real_name = "Unknown"; user_name = "fullsalvo"; nick = "fullsalvo"; };
+  core = { real_name = "fullsalvo"; user_name = "fullsalvo"; nick = "fullsalvo"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };

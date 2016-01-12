@@ -43,7 +43,10 @@ servers = (
   }
 );
 
-channels = ( { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; } );
+channels = (
+  { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; },
+  { name = "#rice"; chatnet = "rizon"; autojoin = "yes"; }
+);
 
 aliases = {
   J = "join";
@@ -95,4 +98,11 @@ aliases = {
   RESET = "set -default";
 };
 
-chatnets = { Iotek = { type = "IRC"; }; rizon = { type = "IRC"; }; };
+chatnets = {
+  Iotek = { type = "IRC"; };
+  rizon = {
+    type = "IRC";
+    autosendcmd = "/^msg nickserv identify Sch00l";
+  };
+};
+hilights = ( { text = "fullsalvo"; nick = "yes"; word = "yes"; } );

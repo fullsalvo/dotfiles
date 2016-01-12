@@ -30,3 +30,10 @@ colors:
   white:
     normal:     "#bcc0bf"
     bold:       "#ede3ca"
+
+barback:        "#293436FF"
+border:         "#ac896a"
+ufocus:         "#bed5db"
+
+wallpaper:      "/home/fullsalvo/Pictures/Walls/Bridge.jpg"
+wallmode:       "--bg-fill"

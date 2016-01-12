@@ -90,13 +90,15 @@
 (setq frame-title-format "%b")
 
 ;; yaml mode
+(require 'yaml-mode)
+    (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook 'yaml-mode-hook
 	  (lambda ()
             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; use custom font faces
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(default ((t (:family "Leggie" :foundry "unknown" :slant normal :weight normal :height 80 :width normal)))))
+
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

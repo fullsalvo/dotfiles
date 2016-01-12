@@ -59,6 +59,9 @@ focus_follows_mouse no
 exec xset s off -dpms
 exec $home/.bin/batnotif &
 
+bindsym $win+m exec xinput set-prop 15 "Device Enabled" 1 &
+bindsym $win+Shift+m exec xinput set-prop 15 "Device Enabled" 0 &
+
 #######################################################################
 #                           Fallback Font                             #
 #######################################################################
@@ -69,29 +72,27 @@ font pango: $font
 #                          Application Bindings                       #
 #######################################################################
 
-bindsym $mod+Return exec urxvt
-bindsym $mod+d exec dmenu_run
-bindsym $mod+Shift+f exec firefox
-bindsym $mod+Shift+s exec spotify
-bindsym $mod+Shift+a exec emacs
-bindsym $mod+n exec urxvt -e ranger
-bindsym $mod+Shift+v exec vlc
-bindsym $mod+M exec urxvt -e ncmpcpp
-bindsym $mod+Shift+P exec feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
-bindsym --whole-window $mod+Shift+button7 floating toggle
-bindsym $mod+Shift+T exec libreoffice
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+f exec --no-startup-id firefox
+bindsym $mod+Shift+s exec --no-startup-id spotify
+bindsym $mod+Shift+a exec --no-startup-id emacs
+bindsym $mod+n exec --no-startup-id urxvt -e ranger
+bindsym $mod+Shift+v --no-startup-id exec vlc
+bindsym $mod+M exec --no-startup-id urxvt -e ncmpcpp
+bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
+bindsym $mod+Shift+T exec --no-startup-id libreoffice
 # Floating Instances
 for_window [instance="__special__"] floating enable
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
-bindsym $mod+Shift+M exec urxvt -name __special__ -e ncmpcpp
-bindsym $mod+Shift+N exec urxvt -name __special__ -e ranger
+bindsym $mod+Shift+M exec --no-startup-id urxvt -name __special__ -e ncmpcpp
+bindsym $mod+Shift+N exec --no-startup-id urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 70 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font candy\ 11
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 70 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font candy\ 11
 # Lock
-bindsym $win+l exec $home/.bin/lock.sh &
-bindsym $mod+Shift+w exec .bin/wallview
-bindsym $win+p exec i3-msg open
-bindsym $win+Shift+p exec $home/.bin/screencast
+bindsym $win+l exec --no-startup-id $home/.bin/lock.sh &
+bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
+bindsym $win+p exec --no-startup-id i3-msg open
+bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec killall ffmpeg
 
 #######################################################################
@@ -101,12 +102,12 @@ bindsym $win+Shift+o exec killall ffmpeg
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
-#exec $home/.bin/mpc-notify-daemon &
+#exec --no-startup-id $home/.bin/mpc-notify-daemon &
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id compton
 exec --no-startup-id $wallprog $walltype $wall
-exec xrdb $home/.XResources 
+exec xrdb $home/.XResources
 
 #######################################################################
 #                             i3 Keybindings                          #
@@ -166,7 +167,7 @@ bindsym $win+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right 
+bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -245,12 +246,12 @@ bindsym --release Shift+Print exec --no-startup-id scrot -u /home/fullsalvo/Pict
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 2%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
-bindsym XF86AudioPlay exec mpc toggle
-bindsym Shift+XF86AudioPlay exec .bin/spotify-control play 
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym Shift+XF86AudioPlay exec --no-startup-id .bin/spotify-control play
 
 # Screen Brightness Controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 #######################################################################
 #                                Bar                                  #
@@ -265,7 +266,7 @@ bar {
     binding_mode_indicator yes
     height $bheight
     tray_output none
-    
+
     font pango:$barfont
     colors {
         background $background
@@ -289,7 +290,7 @@ mode "System" {
     bindsym a exec --no-startup-id $home/.bin/i3exit suspend, mode "default"
     bindsym s exec poweroff
     bindsym r exec reboot
-    
+
     # Back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
