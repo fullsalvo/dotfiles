@@ -87,13 +87,14 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
 bindsym $mod+Shift+M exec --no-startup-id urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec --no-startup-id urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 70 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font candy\ 11
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 70 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font leggie\ 11
 # Lock
 bindsym $win+l exec --no-startup-id $home/.bin/lock.sh &
 bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
 bindsym $win+p exec --no-startup-id i3-msg open
 bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec killall ffmpeg
+bindsym $win+Shift+Return exec x-terminal-emulator
 
 #######################################################################
 #                         Autostart Applications                      #
