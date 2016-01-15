@@ -1,4 +1,39 @@
+# Fonts
+term_fonts:
+  - "DejaVu Sans Mono"
+pixelsize: 9
+spacing: -1
+# Colors
 colors:
-  background:    "#eeeeee"
-  foreground:    "#2e2e2e"
-  cursor:        "#2e2e2e"
+  background:    "#e4e4ec"
+  foreground:    "#463706"
+  cursor:        "#463706"
+  black:
+    normal:     "#4b4b5e"
+    bold:       "#292a3a"
+  red:
+    normal:     "#753838"
+    bold:       "#722626"
+  green:
+    normal:     "#464832"
+    bold:       "#3b3f1a"
+  yellow:
+    normal:     "#a59f5e"
+    bold:       "#a8aa39"
+  blue:
+    normal:     "#59656f"
+    bold:       "#2d5271"
+  magenta:
+    normal:     "#594561"
+    bold:       "#48314f"
+  cyan:
+    normal:     "#426d70"
+    bold:       "#22474c"
+  white:
+    normal:     "#afc3c3"
+    bold:       "#8aa2a3"
+
+# Window Manager
+
+border:         "#4e3d07"
+unfocused:      "#a2a2a2"

@@ -94,6 +94,7 @@ bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
 bindsym $win+p exec --no-startup-id i3-msg open
 bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec killall ffmpeg
+bindsym $win+Shift+Return exec x-terminal-emulator
 
 #######################################################################
 #                         Autostart Applications                      #

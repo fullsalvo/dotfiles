@@ -105,4 +105,7 @@ chatnets = {
     autosendcmd = "/^msg nickserv identify Sch00l";
   };
 };
-hilights = ( { text = "fullsalvo"; nick = "yes"; word = "yes"; } );
+hilights = (
+  { text = "fullsalvo"; nick = "yes"; word = "yes"; },
+  { text = "salvo"; nick = "yes"; word = "yes"; }
+);
