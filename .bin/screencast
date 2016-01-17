@@ -58,14 +58,14 @@ done
 
 if [ "$MODE" = "window" ]; then
     WINFO=$(xwininfo)
-    
+
     WINX=$(($(echo $WINFO|grep -Po 'Absolute upper-left X: \K[^ ]*')-$MARGIN))
     WINY=$(($(echo $WINFO|grep -Po 'Absolute upper-left Y: \K[^ ]*')-$MARGIN-$TITLEBAR))
     WINW=$(($(echo $WINFO|grep -Po 'Width: \K[^ ]*')+($MARGIN*2)))
     WINH=$(($(echo $WINFO|grep -Po 'Height: \K[^ ]*')+($MARGIN*2+$TITLEBAR)))
 
     sleep 2 # Wait before recording begin
-#    notify-send -t $NOTIFYTIME "Window is now being recorded."
+    notify-send -t $NOTIFYTIME "Window is now being recorded."
 
     # Record Window
     ffmpeg -f x11grab -s "$WINW"x"$WINH" -r $FPS -i $DISPLAY"+$WINX,$WINY" -c:v libx264 -preset $PRESET -crf $CRF "$TMP" #|| ERROR=1

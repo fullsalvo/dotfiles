@@ -14,6 +14,7 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 #
+{{=<% %>=}}
 # default foreground color (%N) - -1 is the "default terminal color"
 default_color = "-1";
 
@@ -89,15 +90,15 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%r$*%n";
+  ownnick = "<% irssi_primary_n %>$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%w$*%n";
+  pubnick = "<% irssi_secondary_n %>$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}%1";
-  menick = "%W$*%n";
+  menick = "<% irssi_secondary_b %>$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";

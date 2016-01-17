@@ -374,7 +374,7 @@ getmemory () {
 }
 
 getscheme () {
-    scheme="fullsalvo"
+    scheme="RBW"
 }
 # Get song
 getsong () {

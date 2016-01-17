@@ -25,7 +25,7 @@ p,li,a{
 }
 
 .favorites p{
-    border-bottom:1px solid {{ n_blue }}; /* Changes the colours of the bars underneath favourites */
+    border-bottom:1px solid {{ startpage }}; /* Changes the colours of the bars underneath favourites */
     padding-right:100%
 }
 
@@ -47,7 +47,7 @@ a{
 
 a:hover{
     color:{{ bgc }};
-    background: {{ n_blue }} /* Changes the colours of the links when hovered */
+    background: {{ startpage }} /* Changes the colours of the links when hovered */
 }
 
 .googles{
@@ -60,7 +60,7 @@ a:hover{
     display:inline-block;
     width:22%;
     margin:10px 10px;
-    border:1px solid {{ n_blue }} /* Changes the colour of the Googles Buttons */
+    border:1px solid {{ startpage }} /* Changes the colour of the Googles Buttons */
 }
 
 form{
@@ -93,12 +93,12 @@ form{
 .go{height:27px;
     width:40px;
     background:{{ bgc }}; /* Go Symbol Background */
-    color:{{ n_blue }}; /* Changes the colour of the border of the Search Button. */
-    border:1px solid {{ n_blue }}
+    color:{{ startpage }}; /* Changes the colour of the border of the Search Button. */
+    border:1px solid {{ startpage }}
 }
 
 .go:hover{
-    background:{{ n_blue }}; /* Changes the Search Button hover colour. */
+    background:{{ startpage }}; /* Changes the Search Button hover colour. */
     color:{{ bgc }}; /* Highlighted Go Symbol Color */
     cursor:pointer
 }
