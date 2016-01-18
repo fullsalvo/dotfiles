@@ -374,7 +374,7 @@ getmemory () {
 }
 
 getscheme () {
-    scheme="RBW"
+    scheme="Spirited Away"
 }
 # Get song
 getsong () {

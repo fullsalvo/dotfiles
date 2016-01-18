@@ -19,8 +19,8 @@ colors:
     normal:     "#344167"
     bold:       "#4e5c84"
   magenta:
-    normal:     "#5b2a3d"
-    bold:       "#7b3952"
+    normal:     "#5b3645"
+    bold:       "#7b4d5f"
   cyan:
     normal:     "#446aaa"
     bold:       "#5889dc"
@@ -29,10 +29,10 @@ colors:
     bold:       "#f6f0f0"
 
 barback:        "#00000000"
-border:         "#b25164"
-unfocused:      "#d4d7e4"
+border:         "#d4d7e4"
+unfocused:      "#526181"
 
 bordersize:     "2"
 
-wallpaper:      "/home/fullsalvo/Pictures/Anime/Horizontal/RBW.png"
+wallpaper:      "/home/fullsalvo/Pictures/Anime/Horizontal/RBW1.png"
 prompt:         "RED"

@@ -1,0 +1,39 @@
+name:           "Spirited Away"
+colors:
+  primary:      "cyan"
+  secondary:    "magenta"
+  background:   "#494846"
+  black:
+    normal:     "#1b1b1b"
+    bold:       "#343434"
+  red:
+    normal:     "#b5845d"
+    bold:       "#e7a876"
+  green:
+    normal:     "#c6b69b"
+    bold:       "#f8e3c2"
+  yellow:
+    normal:     "#c6c6c0"
+    bold:       "#f8f8f0"
+  blue:
+    normal:     "#bec2b3"
+    bold:       "#eef4e1"
+  magenta:
+    normal:     "#a5aaa4"
+    bold:       "#d5dcd4"
+  cyan:
+    normal:     "#89aa8a"
+    bold:       "#b1dcb2"
+  white:
+    normal:     "#e0e0e0"
+    bold:       "#eeeeee"
+
+barback:        "#494846"
+border:         "#89aa9a"
+unfocused:      "#a5aaa4"
+
+bordersize:     "4"
+
+wallpaper:      "/home/fullsalvo/Pictures/Anime/Horizontal/SpiritedAway.png"
+
+prompt:         "CYAN"

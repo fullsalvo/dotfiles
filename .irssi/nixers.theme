@@ -89,15 +89,15 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%r$*%n";
+  ownnick = "%c$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%w$*%n";
+  pubnick = "%m$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}%1";
-  menick = "%W$*%n";
+  menick = "%M$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
