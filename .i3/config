@@ -11,7 +11,7 @@ set $oug        22
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #494846
+set $background #1f1f1faa
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour

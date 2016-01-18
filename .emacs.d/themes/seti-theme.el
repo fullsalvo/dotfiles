@@ -38,7 +38,7 @@
       (yellow "#c6c6c0")
       (red "#b5845d")
       (purple "#a5aaa4")
-      (background   "#494846")
+      (background   "#1f1f1f")
       (background-2 "#1E2326")      
       (background-3 "#d7e2e0")
       (background-4 "#101112")

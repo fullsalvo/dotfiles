@@ -2,10 +2,10 @@ name:           "Spirited Away"
 colors:
   primary:      "cyan"
   secondary:    "magenta"
-  background:   "#494846"
+  background:   "#1f1f1f"
   black:
-    normal:     "#1b1b1b"
-    bold:       "#343434"
+    normal:     "#303030"
+    bold:       "#474747"
   red:
     normal:     "#b5845d"
     bold:       "#e7a876"
@@ -28,7 +28,7 @@ colors:
     normal:     "#e0e0e0"
     bold:       "#eeeeee"
 
-barback:        "#494846"
+barback:        "#1f1f1faa"
 border:         "#89aa9a"
 unfocused:      "#a5aaa4"
 
