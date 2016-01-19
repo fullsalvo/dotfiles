@@ -3,6 +3,7 @@ term_fonts:
   - "DejaVu Sans Mono"
 pixelsize: 9
 spacing: -1
+
 # Colors
 colors:
   background:    "#e4e4ec"
@@ -18,8 +19,8 @@ colors:
     normal:     "#464832"
     bold:       "#3b3f1a"
   yellow:
-    normal:     "#a59f5e"
-    bold:       "#a8aa39"
+    normal:     "#d0c54e"
+    bold:       "#b0b32e"
   blue:
     normal:     "#59656f"
     bold:       "#2d5271"
@@ -37,3 +38,5 @@ colors:
 
 border:         "#4e3d07"
 unfocused:      "#a2a2a2"
+
+prompt:         "BLACK"

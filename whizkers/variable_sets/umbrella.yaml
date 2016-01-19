@@ -1,22 +1,31 @@
-name:         "RikkaColors"
+name:         "Umbrella"
 colors:
   primary:      "red"
-  secondary:    "blue"
+  secondary:    "white"
+  background:   "#080708"
+  black:
+    normal:     "#3c3c3c"
+    bold:       "#6d6d6d"
   red:
-    normal:     "#aa6b4a"
-    bold:       "#dc8a5f"
+    normal:     "#843136"
+    bold:       "#a23c42"
   green:
-    normal:     "#ad8559"
-    bold:       "#dfab72"
+    normal:     "#304d4f"
+    bold:       "#477275"
   yellow:
-    normal:     "#9eb8c5"
-    bold:       "#c6e6f7"
+    normal:     "#b5a241"
+    bold:       "#d2be57"
   blue:
-    normal:     "#5074ac"
-    bold:       "#6795de"
+    normal:     "#324f78"
+    bold:       "#4870ab"
   magenta:
-    normal:     "#7f70aa"
-    bold:       "#a490dc"
+    normal:     "#454064"
+    bold:       "#605a8c"
   cyan:
-    normal:     "#a7919c"
-    bold:       "#d9bcca"
+    normal:     "#7daeaf"
+    bold:       "#9ebbbb"
+  white:
+    normal:     "#c8c2c1"
+    bold:       "#ebe2e7"
+
+prompt:         "RED"

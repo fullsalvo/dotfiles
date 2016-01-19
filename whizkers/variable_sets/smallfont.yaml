@@ -1,4 +1,5 @@
 term_fonts:
-  - cure
-  - Kochi Gothic
-spacing: -1
+  - "cure"
+  - "Kochi Gothic"
+pixelsize: 9
+spacing: 0

@@ -11,22 +11,22 @@ set $oug        22
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #1f1f1faa
+set $background #00000000
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #89aa9a
+set $border     #d4d7e4
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #a5aaa4
+set $ufocus     #526181
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 4
+set $bordersize 2
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
@@ -34,7 +34,7 @@ set $barfont    Roboto 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/SpiritedAway.png
+set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/RBW1.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
