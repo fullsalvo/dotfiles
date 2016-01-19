@@ -1,0 +1,22 @@
+name:         "RikkaColors"
+colors:
+  primary:      "red"
+  secondary:    "blue"
+  red:
+    normal:     "#aa6b4a"
+    bold:       "#dc8a5f"
+  green:
+    normal:     "#ad8559"
+    bold:       "#dfab72"
+  yellow:
+    normal:     "#9eb8c5"
+    bold:       "#c6e6f7"
+  blue:
+    normal:     "#5074ac"
+    bold:       "#6795de"
+  magenta:
+    normal:     "#7f70aa"
+    bold:       "#a490dc"
+  cyan:
+    normal:     "#a7919c"
+    bold:       "#d9bcca"
