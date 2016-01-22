@@ -29,13 +29,13 @@
 / EDITOR MENU SCREENS /
 ///////////////////////
 */
-     
+
 .browserContainer > findbar {
     text-shadow: none;
     border: 0px !important;
     padding-bottom: 30px !important;
 }
-     
+
 .findbar-textbox, #header-search, .header-button, button {
     border: 0px !important;
 }
@@ -45,12 +45,12 @@
 /                           TAB CHANGES                              /
 //////////////////////////////////////////////////////////////////////
 */
-     
+
 #TabsToolbar {
     background: transparent !important;
     margin-bottom: 0 !important;
-}     
-     
+}
+
 #TabsToolbar .tabbrowser-tabs {
     min-height: 24px !important;
     margin-top: 0px !important;
@@ -61,7 +61,7 @@
 }
 
 /*Tab Width Spanning*/
-     
+
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
     min-width: 10px !important;
     max-width: 100% !important;
@@ -99,7 +99,7 @@
 }
 
 /* Tab separators */
-    
+
 .tabbrowser-tab::after, .tabbrowser-tab::before {
     background-image: none!important;
 }
@@ -123,24 +123,24 @@
     border-color: rgb(70,70,70) !important;
     border-radius: 0px !important;
 }
-     
+
 .subviewbutton.panel-subview-footer {
     padding-top: 9px !important;
     padding-bottom: 9px !important;
 }
-     
+
 /*styling*/
 #searchbar > .searchbar-textbox, #nav-bar {
-    background: {{ bgc }} !important; 
+    background: {{ bgc }} !important;
     border: 0px {{ bgc }}!important;
     box-shadow: none !important;
     height: 33px !important;
     position: fixed !important;
     bottom: 0 !important;
     width: 100% !important;
-    z-index: -1 !important;  
+    z-index: -1 !important;
 }
-        
+
 #urlbar {
     color: {{ b_white }}!important;
     text-align: center !important;
@@ -152,7 +152,7 @@
     padding-bottom: 15px !important;
     padding-left: 20px;
 }
-       
+
 #PanelUI-button, #customization-panel-container, #customization-panelWrapper .panel-arrow, #ctr_panelui-button, #wrapper-ctr_panelui-button {
     -moz-box-ordinal-group: 0
 }
@@ -180,12 +180,12 @@ tabbrowser tabpanels, #appcontent > #content {
 #browser-bottombox {
     border: none !important;
 }
-         
+
 #nav-bar {
     border: none !important;
     visibility: visible !important;
 }
-          
+
 #navigator-toolbox:after {
     height: 0px !important;
 }
@@ -217,7 +217,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 .autocomplete-richlistitem[selected="true"], .autocomplete-richlistiem:hover{
     background-color: #fff!important;
-    color: {{ b_white }} !important; 
+    color: {{ b_white }} !important;
     text-decoration: underline;
 }
 
@@ -228,7 +228,7 @@ tabbrowser tabpanels, #appcontent > #content {
     color: #fff;
 }
 
-/* 
+/*
 ///////////////
 / TAB COLOURS /
 ///////////////
@@ -245,17 +245,13 @@ tabbrowser tabpanels, #appcontent > #content {
 }
 
 /* Selected Tab Name */
-.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{ 
+.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
     background-color: {{ bgc }} !important;
-    border-bottom: solid 1px #cae5ff !important;
+    {{ ^floating }}border-bottom: solid 1px #cae5ff !important; {{ /floating }}
 }
 
 /* Unselected Tab Names */
 #TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) {
-/*    color: #0D68A8 !important;
-    color: #9c3526 !important;
-    color: #ab2836 !important;
-*/
     color: {{ n_white }} !important;
 }
 

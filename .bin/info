@@ -1,19 +1,15 @@
 info () {
     fetch \
         --title "fullsalvo" \
+	--exclude 'Kernel: getkernel' \
         --bold off \
-	--smart-crop-mode fill  \
-	--distro "Debian" \
-	--colors 15 4 4 0 15 \
-	--block_width 5 \
+	--speed_mode max \
+	--crop_mode fill  \
+	--block_width 4 \
 	--block_range 0 15 \
-	--speed_type current \
-	--gap -20 \
-	--cpu "Intel(R) Core(TM) i7-4710MQ CPU @ 3.50GHz" \
-	--crop_mode fit \
-	--font_width 3 \
+	--colors 15 1 1 1 7 15 \
 	--line_wrap off \
-        $@
+	$@
 }
 
 info

@@ -219,6 +219,14 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
+{{ #floating }}
+for_window [class=".*"] floating enable
+for_window [class=".*"] border normal $bordersize
+{{ /floating }}
+{{ ^floating }}
+for_window [class=".*"] border pixel $bordersize
+{{ /floating }}
+
 mode "Gaps" {
      bindsym plus gaps inner current plus 5
      bindsym minus gaps inner current minus 5

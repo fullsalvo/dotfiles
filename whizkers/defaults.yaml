@@ -6,6 +6,9 @@ antialias: "true"
 pixelsize: 11
 spacing: 0
 
+emacsfont:      "Leggie"
+emacsheight:    "80"
+
 # Colors
 name:           "fullsalvo"
 
@@ -44,11 +47,13 @@ colors:
 
 barback:        "#00000055"
 warning:        "#e84f4f"
-border:         "#eeeeee"
+border:         "#9eb2cb"
 bartext:        "#eeeeee"
 unfocused:      "#5c5c5c"
 dectext:        "#ffffff"
 rofibg:         "#222222"
+
+floating: false
 
 bordersize:     "3"
 mainfont:       "leggie 9"
