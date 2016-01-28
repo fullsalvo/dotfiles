@@ -1,7 +1,7 @@
 # Fullsalvo's Dotfiles
 
 ### Images
-|Schemes|(https://u.teknik.io/io9bal.webm)
+[[Schemes](https://u.teknik.io/MScgsQ.gif)](https://u.teknik.io/io9bal.webm)
 
 ### Relevant Information
 
