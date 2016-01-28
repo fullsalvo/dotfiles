@@ -9,7 +9,7 @@
 /* Set Font */
 
 #urlbar, #TabsToolbar .tabbrowser-tab, menu, .autocomplete-richlistbox, #menubar-items, statuspanel[type="overLink"] .statuspanel-label, toolbarbutton, #placeContent, #placesList, .editBMPanel_rowLabel, .textbox-input-box, .viewer-title.label.toolbar, .downloadTarget, .downloadDetails, #bookmarks-view-children, #sidebar-search-label, #sidebar-title, .menubar-text {
-    font-family: 'leggie'!important;
+    font-family: 'Roboto'!important;
     font-size: 11px !important;
     text-shadow: none !important;
     font-weight: normal !important

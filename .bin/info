@@ -3,7 +3,7 @@ info () {
         --title "fullsalvo" \
 	--exclude 'Kernel: getkernel' \
         --bold off \
-	--speed_mode max \
+	--speed_type max \
 	--crop_mode fill  \
 	--block_width 4 \
 	--block_range 0 15 \

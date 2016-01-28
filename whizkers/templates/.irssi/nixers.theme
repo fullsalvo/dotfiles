@@ -183,15 +183,15 @@ abstracts = {
   # text at the beginning of statusbars.
   sbstart = "%k─┄┄ ";
   # text at the end of statusbars.
-  sbend = "%k─┄┄";
+  sbend = "%k┄┄─";
 
   topicsbstart = "%k─┄┄$*";
-  topicsbend = "$*%b%k─┄┄";
+  topicsbend = "$*%b%k┄┄─";
 
-  prompt = " [[ irssi_primary_n ]]$* »%n ";
+  prompt = " [[ irssi_primary_n ]]$* ‣%n ";
 
   sb = " %n$* ";
-  sbmode = " %k░ %g%g+%n$* %Z5F5F5F░";
+  sbmode = " %k| %g%g+%n$* %k|";
   sbaway = " %g/* zZzZ */%n";
   sbservertag = ":%R$0%n";
   sbnickmode = "$0";

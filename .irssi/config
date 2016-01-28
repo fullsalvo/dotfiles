@@ -101,6 +101,7 @@ hilights = (
 statusbar = {
   default = {
     window = {
+    placement = "top";
       items = {
         barstart = { priority = "100"; };
         user = { };
@@ -111,5 +112,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    topic = { disabled = "yes"; };
   };
 };

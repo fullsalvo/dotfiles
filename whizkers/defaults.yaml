@@ -54,6 +54,7 @@ dectext:        "#ffffff"
 rofibg:         "#222222"
 
 floating: false
+shadows:        "false"
 
 bordersize:     "3"
 mainfont:       "leggie 9"

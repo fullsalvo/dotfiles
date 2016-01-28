@@ -1,0 +1,17 @@
+#!/bin/bash
+
+rotate () {
+    wzk rikka
+    sleep 3
+    wzk umbrella
+    sleep 3
+    wzk bridge
+    sleep 3
+    wzk SpiritedAway
+    sleep 3
+    wzk Warm
+    sleep 3
+    wzk
+}
+
+rotate

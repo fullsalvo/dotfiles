@@ -10,7 +10,7 @@
 
 (global-linum-mode 1)
 (setq linum-format "%d ")
-;; Makes *scratch* empty.
+;; Opens *scratch* as empty
 (setq initial-scratch-message "")
 
 ;; Removes *scratch* from buffer after the mode has been set.
@@ -102,3 +102,30 @@
 
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(defun buffer ()
+  (interactive)
+  (with-current-buffer (get-buffer buffer-name)
+    (let ((buffer-read-only nil)
+          (list-separator "\n\n"))
+      (goto-char (point-max))
+      (buffer/insert-page-break)
+      (mapc (lambda (el)
+              (cond
+               ((eq el 'recents)
+                (recentf-mode)
+                (when (buffer//insert-file-list "Recent Files:" (recentf-elements dotemacs-startup-recent-list-size))
+                  (emacs//insert--shortcut "r" "Recent Files:")
+                  (insert list-separator)))
+               ((eq el 'bookmarks)
+                (helm-mode)
+                (when (buffer//insert-bookmark-list "Bookmarks:" (bookmark-all-names))
+                  (emacs//insert--shortcut "b" "Bookmarks:")
+                  (insert list-separator)))
+               ((eq el 'projects)
+                (projectile-mode)
+                (when (buffer//insert-file-list "Projects:" (projectile-relevant-known-projects))
+                  (emacs//insert--shortcut "p" "Projects:")
+                  (insert list-separator))))) dotemacs-startup-lists))))
+
+(setq initial-buffer-choice 'buffer)

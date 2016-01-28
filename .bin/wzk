@@ -10,13 +10,11 @@ if [ "$?" -ne 0 ]; then
 fi
 
 if [ "$#" -eq 0 ]; then
-  selected=$(whizkers -l |\
-    dmenu -i -f -fn "Calibri:pixelsize=28" -sb "#3f91c0" -h 50 -t \
-    -p 'Whizkers')
-  [ -z "$selected" ] && exit 0
-  whizkers -e $selected >/dev/null
+    whizkers -e >/dev/null
+    wzwall
 else
-  whizkers -e "$@" >/dev/null
+    whizkers -e "$@" >/dev/null
+    wzwall "$1"
 fi
 
 [ "$?" -ne 0 ] && exit 1
@@ -25,4 +23,3 @@ reload-desktop
 [ "$#" -ne 0 ] && sleep 0.5
 
 exit 0
-
