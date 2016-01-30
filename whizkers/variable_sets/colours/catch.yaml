@@ -1,0 +1,31 @@
+name:         "Catch"
+colors:
+  primary:      "red"
+  secondary:    "blue"
+  red:
+    normal:     "#a95460"
+    bold:       "#db6c7c"
+  green:
+    normal:     "#aba65e"
+    bold:       "#ddd679"
+  yellow:
+    normal:     "#c5ac92"
+    bold:       "#f7d7b7"
+  blue:
+    normal:     "#c7bab0"
+    bold:       "#f9e8dc"
+  magenta:
+    normal:     "#ab776c"
+    bold:       "#dd998b"
+  cyan:
+    normal:     "#a98f8b"
+    bold:       "#dbb9b4"
+  white:
+    normal:     "#cccccc"
+    bold:       "#ffffff"
+
+wallpaper:      "/home/fullsalvo/Pictures/Walls/Catch.jpg"
+
+
+
+barback:        "#000000dd"

@@ -15,18 +15,18 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #9eb2cb
+set $border     #42a2a4
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5c5c5c
+set $ufocus     #4b4b4b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 3
+set $bordersize 2
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
@@ -34,7 +34,7 @@ set $barfont    Roboto 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Buds.jpg
+set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/Warm.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -107,7 +107,7 @@ exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id compton
-exec --no-startup-id $wallprog $walltype $wall
+exec_always --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.XResources
 
 #######################################################################

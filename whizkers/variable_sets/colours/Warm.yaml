@@ -21,4 +21,9 @@ colors:
     normal:     "#85a8a3"
     bold:       "#acdad3"
 
+border:         "#42a2a4"
+unfocused:      "#4b4b4b"
+
+bordersize:     "2"
+
 wallpaper:      "/home/fullsalvo/Pictures/Anime/Horizontal/Warm.png"

@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# name: teknik-upload
-# creator: KittyKatt
-# requires: bash 4.0+, curl
-
 files="$@"
 
 if [[ -z "${files}" ]]; then
@@ -13,15 +9,16 @@ else
 	n=1
 	for i in "$@"; do
 		printf "\nUploading file #${n} ... "
-		out=$(curl -sf -F file="@${i}" https://api.teknik.io/upload/post)
+		out=$(curl -sf -F file="@${i}" -F contentType="image" -F encrypt="true" -F savekey="true"  https://dev.teknik.io/v1/Upload?sub=api)
 		if [[ "${out}" =~ "error" ]]; then
 			printf 'error uploading file!\n'
 			exit 1
 		else
-			out="${out##*name\":\"}"
+			out="${out##*Name\":\"}"
 			out="${out%%\"*}"
-			printf "uploaded! Your file can be found at https://u.teknik.io/${out}\n"
+			printf "uploaded! Your file can be found at https://dev.teknik.io/${out}?sub=upload\n"
 		fi
+		printf "${out}\n"
 		((n++))
 	done
 fi

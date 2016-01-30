@@ -11,6 +11,7 @@ settings = {
     timestamps = "no";
     autolog = "yes";
   };
+  "perl/core/scripts" = { queryresume_lines = "20"; };
 };
 
 servers = (
@@ -101,7 +102,7 @@ hilights = (
 statusbar = {
   default = {
     window = {
-    placement = "top";
+      placement = "top";
       items = {
         barstart = { priority = "100"; };
         user = { };
@@ -115,3 +116,4 @@ statusbar = {
     topic = { disabled = "yes"; };
   };
 };
+logs = { };

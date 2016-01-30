@@ -96,7 +96,7 @@ echo "Generated YAML:"
 echo "$yaml"
 echo
 
-feh --bg-fill --no-fehbg "$@"
-
 echo "Running wzk..."
 wzk <(echo "$yaml")
+
+feh --bg-fill --no-fehbg "$@"

@@ -14,7 +14,7 @@ if [ "$#" -eq 0 ]; then
     wzwall
 else
     whizkers -e "$@" >/dev/null
-    wzwall "$1"
+#    wzwall "$1"
 fi
 
 [ "$?" -ne 0 ] && exit 1

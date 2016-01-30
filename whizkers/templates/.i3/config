@@ -107,7 +107,7 @@ exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id compton
-exec --no-startup-id $wallprog $walltype $wall
+exec_always --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.XResources
 
 #######################################################################

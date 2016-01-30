@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Script Name: rhisk
+# Written by fullsalvo
+# Loads wzk templates including those from subfolders
+
+out=""
+
+for i in "$@"; do
+    tem=$(whizkers -l | grep $i)
+    if [[ ! -z tem ]]; then
+	lines=$(echo "$tem" | wc -l)
+	if [[ lines -eq 1 ]]; then
+	    out+="${tem} "
+	fi
+    fi
+done
+
+wzk $out
