@@ -30,8 +30,8 @@ is_a_color() {
 read -r -d '' TEMPLATE << EOM
 wallpapers: "%s"
 
+name:           "%s"
 colors:
-  name:         "%s"
   primary:      "%s"
   secondary:    "%s"
   red:

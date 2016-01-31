@@ -55,7 +55,7 @@ sub sig_window_item_new ($$) {
     my $text;
     $text .= $_ foreach @data;
     $text =~ s/%/%%/g;
-    $witem->print(draw_box('QueryResume', $text, $filename, 1), MSGLEVEL_CLIENTCRAP) if $text;
+    $witem->print(draw_box('QueryResume', $text, 'End of Last Log', 1), MSGLEVEL_CLIENTCRAP) if $text;
 }
 
 Irssi::settings_add_int($IRSSI{name}, 'queryresume_lines', 10);

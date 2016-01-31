@@ -11,7 +11,7 @@ fi
 
 if [ "$#" -eq 0 ]; then
     whizkers -e >/dev/null
-    wzwall
+#    wzwall
 else
     whizkers -e "$@" >/dev/null
 #    wzwall "$1"

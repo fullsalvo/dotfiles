@@ -1,0 +1,39 @@
+# Colors
+name:           "Teenobu"
+
+colors:
+  primary:      "magenta"
+  secondary:    "blue"
+  background:   "#1a1313"
+  foreground:   "#c7c7c7"
+  black:
+    normal:     "#392925"
+    bold:       "#4f332b"
+  red:
+    normal:     "#89031c"
+    bold:       "#9c091c"
+  green:
+    normal:     "#ad4a3d"
+    bold:       "#df5f4e"
+  yellow:
+    normal:     "#c68d54"
+    bold:       "#f8b069"
+  blue:
+    normal:     "#c7b79f"
+    bold:       "#f9e4c6"
+  magenta:
+    normal:     "#c76497"
+    bold:       "#f97dbc"
+  cyan:
+    normal:     "#a83156"
+    bold:       "#e04781"
+  white:
+    normal:     "#cba28d"
+    bold:       "#ffcba3"
+
+wallpaper:      "/home/fullsalvo/Pictures/Anime/Horizontal/Teenobu.png"
+
+border:         "#89031c"
+unfocused:      "#4f332b"
+
+prompt:         "RED"

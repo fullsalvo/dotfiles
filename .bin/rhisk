@@ -4,13 +4,17 @@
 # Loads wzk templates including those from subfolders
 
 out=""
+direc="$HOME/.config/whizkers/variable_sets"
 
 for i in "$@"; do
-    tem=$(whizkers -l | grep $i)
-    if [[ ! -z tem ]]; then
-	lines=$(echo "$tem" | wc -l)
-	if [[ lines -eq 1 ]]; then
-	    out+="${tem} "
+    if [[ -e "${direc}/${i}.yaml" ]]; then
+	out+="${i} "
+    else
+	check=$(find $direc -name $i.yaml)
+	if [[ ! -z $check ]]; then
+	    check="${check##${direc}/}"
+	    check="${check%%.yaml}"
+	    out+="${check} "
 	fi
     fi
 done

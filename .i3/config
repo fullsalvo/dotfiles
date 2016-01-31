@@ -15,18 +15,18 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #42a2a4
+set $border     #89031c
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #4b4b4b
+set $ufocus     #4f332b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 3
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
@@ -34,7 +34,7 @@ set $barfont    Roboto 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/Warm.png
+set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/Teenobu.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
