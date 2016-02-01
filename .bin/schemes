@@ -1,17 +1,15 @@
 #!/bin/bash
 
-rotate () {
-    wzk rikka
-    sleep 3
-    wzk umbrella
-    sleep 3
-    wzk bridge
-    sleep 3
-    wzk SpiritedAway
-    sleep 3
-    wzk Warm
-    sleep 3
-    wzk
-}
+direc="$HOME/.config/whizkers/variable_sets/themes"
 
-rotate
+for i in ${direc}/*; do
+    name=$(basename $i .yaml)
+    name="themes/${name}"
+    wall=$(cat "${i}" | grep wallpaper: | sed 's/wallpaper\://; s/"//; s/"//')
+    if [ ! -z $wall ]; then
+        rhisk $name
+	sleep 2
+    fi
+done
+
+rhisk

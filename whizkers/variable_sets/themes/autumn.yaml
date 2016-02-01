@@ -6,7 +6,7 @@ colors:
   cursor:       "#cccccc"
   black:
     normal:     "#333333"
-    bold:       "#4d4d4d"  
+    bold:       "#4d4d4d"
   red:
     normal:     "#aa7c69"
     bold:       "#dca087"
@@ -28,3 +28,5 @@ colors:
   white:
     normal:     "#cbcbcb"
     bold:       "#ffffff"
+
+wallpaper:    "/home/fullsalvo/Pictures/Walls/Above.jpg"

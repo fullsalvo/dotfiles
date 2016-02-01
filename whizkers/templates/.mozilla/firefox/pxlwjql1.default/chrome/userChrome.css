@@ -236,7 +236,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 #tabbrowser-tabs, .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label, .ac-title, .ac-description, .ac-url-text, .ac-emphasize-text {
     background-color: {{ bgc }} !important;
-    color: #cae5ff !important;
+    color: {{ b_white }} !important;
 }
 
 /* Tab hovering */
@@ -247,7 +247,7 @@ tabbrowser tabpanels, #appcontent > #content {
 /* Selected Tab Name */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
     background-color: {{ bgc }} !important;
-    {{ ^floating }}border-bottom: solid 1px #cae5ff !important; {{ /floating }}
+    {{ ^floating }}border-bottom: solid 1px {{ b_white }} !important; {{ /floating }}
 }
 
 /* Unselected Tab Names */
