@@ -25,7 +25,7 @@
 ;;
 ;;; Commentary
 ;;
-;; Dark theme inspired by Atom's Seti 
+;; Dark theme inspired by Atom's Seti
 ;;
 ;; Tries to reproduce the feel of https://github.com/jesseweed/seti-ui
 ;;; Code
@@ -39,8 +39,8 @@
       (red "{{ n_red }}")
       (purple "{{ n_magenta }}")
       (background   "{{ bgc }}")
-      (background-2 "#1E2326")      
-      (background-3 "#d7e2e0")
+      (background-2 "{{ n_black }}")
+      (background-3 "{{ n_white }}")
       (background-4 "#101112")
       (text "{{ fgc }}")
       (text-2 "#858D8A")
@@ -53,7 +53,7 @@
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
       (intense-green "#B3BD54"))
-    
+
   (custom-theme-set-faces
    'seti
 
@@ -64,11 +64,11 @@
    `(minibuffer-prompt ((t (:foreground ,dark-blue :weight normal))))
    `(region ((t (:background ,text-region))))
    `(error ((t (:foreground ,red :weight bold :underline (:color ,red :style line)))))
- 
+
    `(isearch ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
    `(lazy-highlight ((t (:background ,background :foreground ,text-2 :box (:line-width 1 :color ,dark-blue)))))
    `(mode-line ((t (:foreground ,text-4 :background ,background-3 :underline (:color ,text-4 :style line)))))
-   `(mode-line-buffer-id ((t (:weight normal :foreground ,blue))))
+   `(mode-line-buffer-id ((t (:weight normal :foreground ,{{ text_primary }}))))
    `(mode-line-emphasis ((t (:weight bold))))
    `(mode-line-highlight ((t (:box (:line-width 1 :color ,dark-blue)))))
    `(mode-line-inactive ((t (:weight light :foreground ,text :background ,background-2))))
@@ -125,14 +125,14 @@
    `(left-margin ((t (nil))))
    `(hl-line ((t (:background ,background-4)))))
 
-  
+
 (custom-theme-set-variables
  'seti
- 
+
   `(cursor-type 'hbar)
   `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])
   `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])))
- 
+
 
 ;;;###autoload
 (and load-file-name

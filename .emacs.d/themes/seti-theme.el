@@ -25,7 +25,7 @@
 ;;
 ;;; Commentary
 ;;
-;; Dark theme inspired by Atom's Seti 
+;; Dark theme inspired by Atom's Seti
 ;;
 ;; Tries to reproduce the feel of https://github.com/jesseweed/seti-ui
 ;;; Code
@@ -33,16 +33,16 @@
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
 
-(let ((blue "#c7b79f")
-      (green "#ad4a3d")
-      (yellow "#c68d54")
-      (red "#89031c")
-      (purple "#c76497")
-      (background   "#1a1313")
-      (background-2 "#1E2326")      
-      (background-3 "#d7e2e0")
+(let ((blue "#2b85aa")
+      (green "#aa7c61")
+      (yellow "#ab9585")
+      (red "#aa4b43")
+      (purple "#42a2a4")
+      (background   "#2e2e2e")
+      (background-2 "#4b4b4b")
+      (background-3 "#9eb2cb")
       (background-4 "#101112")
-      (text "#c7c7c7")
+      (text "#eeeeee")
       (text-2 "#858D8A")
       (text-3 "#41535B")
       (text-4 "#2F3C42")
@@ -53,7 +53,7 @@
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
       (intense-green "#B3BD54"))
-    
+
   (custom-theme-set-faces
    'seti
 
@@ -64,7 +64,7 @@
    `(minibuffer-prompt ((t (:foreground ,dark-blue :weight normal))))
    `(region ((t (:background ,text-region))))
    `(error ((t (:foreground ,red :weight bold :underline (:color ,red :style line)))))
- 
+
    `(isearch ((t (:background ,background :foreground ,text :box (:line-width 1 :color ,dark-blue) :weight bold))))
    `(lazy-highlight ((t (:background ,background :foreground ,text-2 :box (:line-width 1 :color ,dark-blue)))))
    `(mode-line ((t (:foreground ,text-4 :background ,background-3 :underline (:color ,text-4 :style line)))))
@@ -125,14 +125,14 @@
    `(left-margin ((t (nil))))
    `(hl-line ((t (:background ,background-4)))))
 
-  
+
 (custom-theme-set-variables
  'seti
- 
+
   `(cursor-type 'hbar)
   `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])
   `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])))
- 
+
 
 ;;;###autoload
 (and load-file-name

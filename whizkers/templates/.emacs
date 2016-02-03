@@ -61,12 +61,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'seti t)
 
-(set-cursor-color "#FFFFFF")
-(set-mouse-color "#FFFFFF")
-
 (set-foreground-color "#FFFFFF")
-(set-background-color "#1F1F1F")
-(add-to-list 'default-frame-alist '(background-color . "#1F1F1F"))
 (setq Buffer-menu-use-frame-buffer-list nil)
 
 ;; don't sleep emacs accidentally
@@ -77,14 +72,6 @@
 (global-set-key [f12] 'menu-bar-mode)
 
 (define-key minibuffer-inactive-mode-map [mouse-1] nil)
-
-;; powerline
-;;(add-to-list 'load-path "~/.emacs.d/powerline/")
-;;(add-to-list 'load-path "~/.emacs.d/spaceline/")
-;;(require 'powerline)
-;;(require 'spaceline-config)
-;;(spaceline-spacemacs-theme)
-;;(setq powerline-default-separator nil)
 
 ;; Make window title filename regardless of number of buffers
 (setq frame-title-format "%b")

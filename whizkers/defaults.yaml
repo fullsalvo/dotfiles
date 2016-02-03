@@ -6,9 +6,6 @@ antialias: "true"
 pixelsize: 11
 spacing: 0
 
-emacsfont:      "Leggie"
-emacsheight:    "80"
-
 # Colors
 name:           "fullsalvo"
 
@@ -58,7 +55,8 @@ shadows:        "false"
 
 bordersize:     "3"
 mainfont:       "leggie 9"
-barfont:        "Roboto 8"
+barfont:        "Chivo 8"
+# Roboto is still a nice bar font
 barheight:      "18"
 
 wallpaper:      "/home/fullsalvo/Pictures/Walls/Buds.jpg"
@@ -112,6 +110,11 @@ ncmpcpp_secondary_n:  "{` {{ colornumbers }}[{{ colors }}['secondary']] + 1 `}"
 startpage:        "{` {{ colors }}[{{ colors }}['primary']]['normal'] `}"
 tmux:             "{` {{ colornumbers }}[{{ colors }}['primary']] `}"
 prompt:           "BLUE"
+
+# Emacs
+
+emacsfont:      "Leggie"
+emacsheight:    "80"
 
 # Irssi
 irssi_colors:

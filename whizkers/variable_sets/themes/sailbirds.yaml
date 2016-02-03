@@ -1,6 +1,6 @@
 colors:
-  primary:      "red"
-  secondary:    "blue"
+  primary:      "cyan"
+  secondary:    "green"
   red:
     normal:     "#bdbdb3"
     bold:       "#efefe2"
@@ -19,3 +19,6 @@ colors:
   cyan:
     normal:     "#6585aa"
     bold:       "#82acdc"
+
+wallpaper:      "/home/fullsalvo/Pictures/Walls/Variations.png"
+wallmode:       "--bg-tile"
