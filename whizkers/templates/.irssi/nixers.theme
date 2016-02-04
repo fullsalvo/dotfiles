@@ -81,7 +81,7 @@ abstracts = {
   pubnick = "[[ irssi_secondary_n ]]$*%n";
 
   # public highlighted message in channel
-  pubmsghinick = "{msgnick $0 $1}%1";
+  pubmsghinick = "{msgnick $0 $1}";
   menick = "[[ irssi_secondary_b ]]$*%n";
 
   # channel name is printed with message
@@ -106,7 +106,7 @@ abstracts = {
   action = "  %m$* %M* %m%|";
 
   # own action, both private/public
-  ownaction = "  %m$* %M*%N%m";
+  ownaction = "  %M$* %M✶%N%m";
 
   # own action with target, both private/public
   ownaction_target = "{action $*}";

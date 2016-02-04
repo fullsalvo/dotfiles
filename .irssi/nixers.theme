@@ -77,11 +77,11 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%m$*%n";
+  pubnick = "%r$*%n";
 
   # public highlighted message in channel
-  pubmsghinick = "{msgnick $0 $1}%1";
-  menick = "%M$*%n";
+  pubmsghinick = "{msgnick $0 $1}";
+  menick = "%R$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
@@ -105,7 +105,7 @@ abstracts = {
   action = "  %m$* %M* %m%|";
 
   # own action, both private/public
-  ownaction = "  %m$* %M*%N%m";
+  ownaction = "  %M$* %M✶%N%m";
 
   # own action with target, both private/public
   ownaction_target = "{action $*}";

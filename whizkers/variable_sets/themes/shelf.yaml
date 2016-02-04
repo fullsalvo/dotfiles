@@ -1,0 +1,39 @@
+name:          "Shelf"
+
+colors:
+  primary:     "blue"
+  secondary:   "red"
+  background:  "#121f1f"
+  foreground:  "#c3c4ab"
+  cursor:      "#c3c4ab"
+  black:
+    normal:    "#373738"
+    bold:      "#5f5f5f"
+  red:
+    normal:    "#d65757"
+    bold:      "#ffaeae"
+  green:
+    normal:    "#afd252"
+    bold:      "#b8bd85"
+  yellow:
+    normal:    "#cfad50"
+    bold:      "#f0dbb2"
+  blue:
+    normal:    "#5184ae"
+    bold:      "#95acbe"
+  magenta:
+    normal:    "#bc91ca"
+    bold:      "#b59fbb"
+  cyan:
+    normal:    "#8acec6"
+    bold:      "#95beb9"
+  white:
+    normal:    "#a1adb8"
+    bold:      "#c8c8c8"
+
+wallpaper:     "/home/fullsalvo/Pictures/Walls/Shelf.jpg"
+
+bordersize:    "2"
+
+border:        "#a1adb8"
+unfocused:     "#5f5f5f"

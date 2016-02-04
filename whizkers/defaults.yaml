@@ -1,7 +1,7 @@
 # Fonts
 term_fonts:
   - "Leggie"
-  - "Kochi Gothic"
+  - "JackeyFont"
 antialias: "true"
 pixelsize: 11
 spacing: 0
