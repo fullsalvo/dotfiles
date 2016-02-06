@@ -50,8 +50,10 @@ unfocused:      "#5c5c5c"
 dectext:        "#ffffff"
 rofibg:         "#222222"
 
+# Floats
 floating: false
 shadows:        "false"
+shadopac:       "0.15"
 
 bordersize:     "3"
 mainfont:       "leggie 9"

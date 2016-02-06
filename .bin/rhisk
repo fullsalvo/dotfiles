@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script Name: rhisk
 # Written by fullsalvo
-# Loads wzk templates including those from subfolders
+# Loads whizkers templates including those from subfolders
 
 out=""
 direc="$HOME/.config/whizkers/variable_sets"
