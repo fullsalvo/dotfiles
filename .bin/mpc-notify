@@ -33,4 +33,4 @@ dunstify \
   -a "ncmpcpp" \
   -i "$ALBUM_ART" \
   -p $id_arg > "$DUNSTIFY_ID" \
-  "${summary:=no tunes}" "$body"
+  "${summary:=No Tunes}" "$body"

@@ -4,12 +4,16 @@ direc="$HOME/.config/whizkers/variable_sets/themes"
 
 for i in ${direc}/*; do
     name=$(basename $i .yaml)
-    name="themes/${name}"
     wall=$(cat "${i}" | grep wallpaper: | sed 's/wallpaper\://; s/"//; s/"//')
     if [ ! -z $wall ]; then
-        rhisk $name
+	if [ "$#" -ne 0 ]; then
+	    for j in "$@"; do
+		name+=" ${j}"
+	    done
+	fi
+        rhisk ${name}
 	sleep 2
     fi
 done
 
-rhisk
+rhisk "$@"

@@ -48,8 +48,8 @@ sub notify {
 	$nodebugstr = '';
     }
     my $cmd = "EXEC " . $nodebugstr .
-	" ~/bin/irssi-notifier.sh " .
-	"dbus-send --session /org/irssi/Irssi org.irssi.Irssi.IrssiNotify" .
+	" ~/.bin/irssi-notify.sh " .
+	"notify-send --session /org/irssi/Irssi org.irssi.Irssi.IrssiNotify" .
 	" string:'" . $summary . "'" .
 	" string:'" . $message . "'";
     $server->command($cmd);

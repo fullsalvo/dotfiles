@@ -104,7 +104,7 @@ bindsym $win+Shift+Return exec x-terminal-emulator
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
-#exec --no-startup-id $home/.bin/mpc-notify-daemon &
+exec --no-startup-id mpc-notify-daemon &
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id compton

@@ -9,6 +9,8 @@ if [ "$?" -ne 0 ]; then
   exit 1
 fi
 
+unclutter -idle 0 -root &
+
 if [ "$#" -eq 0 ]; then
     whizkers -e >/dev/null
 #    wzwall
@@ -21,5 +23,7 @@ fi
 
 reload-desktop
 [ "$#" -ne 0 ] && sleep 0.5
+
+killall unclutter &
 
 exit 0
