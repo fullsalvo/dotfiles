@@ -14,12 +14,14 @@ usage() {
 SRC=~/.autowzk
 
 COLORS=(
+  black
   red
   green
   yellow
   blue
   magenta
   cyan
+  white
 )
 
 is_a_color() {
@@ -34,6 +36,9 @@ name:           "%s"
 colors:
   primary:      "%s"
   secondary:    "%s"
+  black:
+    normal:     "%s"
+    bold:       "%s"
   red:
     normal:     "%s"
     bold:       "%s"
@@ -50,6 +55,9 @@ colors:
     normal:     "%s"
     bold:       "%s"
   cyan:
+    normal:     "%s"
+    bold:       "%s"
+  white:
     normal:     "%s"
     bold:       "%s"
 EOM
@@ -83,7 +91,7 @@ fi
 echo "Using primary = $primary, secondary = $secondary..."
 echo
 
-colors="$(colorz2 --no-preview -n 6 "$SRC")"
+colors="$(colorz2 --no-preview -n 8 "$SRC")"
 [ "${PIPESTATUS[0]}" -ne 0 ] && exit 1
 
 yaml="$(echo \
@@ -99,4 +107,4 @@ echo
 echo "Running wzk..."
 wzk <(echo "$yaml")
 
-feh --bg-fill --no-fehbg "$@"
+feh --bg-fill --no-fehbg "$1"

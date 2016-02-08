@@ -14,20 +14,18 @@
 # Functions #
 #############
 
+err() {
+	printf "\e[31m$1\e[0m" >&2
+}
+
 reload-desktop ()
 {
-    # Reload the desktop
-
     killall compton dunst
-
     i3-msg 'restart' &>/dev/null &
     compton &>/dev/null &
     dunst &>/dev/null &
-
-    xrdb -merge ~/.Xresources &>/dev/null &
+    xrdb ~/.Xresources &>/dev/null &
     tmux source-file ~/.tmux.conf &>/dev/null &
-
-    # Reload colors, fonts, etc.
     for pts in /dev/pts/*; do
 	(echo -n "$(use-xresources < ~/.Xresources)" > $pts) 2>/dev/null &
     done &
@@ -70,7 +68,7 @@ theme ()
 		check="${check%%.yaml}"
 		out+="${check} "
 	    else
-		printf "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
+		err "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
 		exit 1
 	    fi
 	fi
@@ -82,10 +80,22 @@ theme ()
 
 options ()
 {
+    delim=""
     out=$(whizkers -l)
     printf "Options:\n"
     for line in $out; do
-	printf "%2s${line##*\/}\n"
+	if [[ $line =~ / ]]; then
+	    delim+="${line%%\/*}\n"
+	fi
+    done
+    delim=$(printf "${delim}" | uniq)
+    for line in $delim; do
+	printf "%2s${line##*\/}:\n"
+	for lines in $out; do
+	    if [[ $lines =~ ${line}/ ]]; then
+		printf "%4s${lines##*\/}\n"
+	    fi
+	done
     done
 }
 
@@ -114,12 +124,16 @@ while getopts ':ho?:' option; do
 	    options
 	    exit
 	    ;;
-	? | h)
+        h)
 	    usage
 	    exit
 	    ;;
     esac
 done
 shift $((OPTIND-1))
+
+########
+# Main #
+########
 
 theme "$@"
