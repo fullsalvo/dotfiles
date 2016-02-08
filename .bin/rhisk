@@ -97,6 +97,13 @@ options ()
 	    fi
 	done
     done
+    unorg=$(printf "$out" | grep -v "/")
+    if [[ ! -z $unorg ]]; then
+	printf "%2suncategorized:\n"
+	for line in $unorg; do
+	    printf "%4s${line}\n"
+	done
+    fi
 }
 
 usage ()
