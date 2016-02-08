@@ -3,6 +3,7 @@
 # Written by fullsalvo
 # Combined with scripts written by Ethan Chan - https://github.com/metakirby5
 # Loads whizkers templates including those from subfolders
+# Lists usable options based on category type
 
 ################
 # Declarations #
@@ -82,6 +83,10 @@ options ()
 {
     delim=""
     out=$(whizkers -l)
+    if [[ -z $out ]]; then
+	err "You have no templates to use.\n"
+	exit 1
+    fi
     printf "Options:\n"
     for line in $out; do
 	if [[ $line =~ / ]]; then

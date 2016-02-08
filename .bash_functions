@@ -1,1 +1,1 @@
-.bash_functions
+/home/fullsalvo/.bash_functions

@@ -1,1 +1,1 @@
-.bashrc
+/home/fullsalvo/.bashrc
