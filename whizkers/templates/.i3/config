@@ -95,7 +95,7 @@ bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
 bindsym $win+p exec --no-startup-id i3-msg open
 bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec --no-startup-id killall ffmpeg
-bindsym $win+Shift+Return exec x-terminal-emulator
+bindsym $win+Shift+Return exec --no-startup-id x-terminal-emulator
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -104,12 +104,12 @@ bindsym $win+Shift+Return exec x-terminal-emulator
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id mpc-notify-daemon &
 exec --no-startup-id mpd
 exec --no-startup-id mpdscribble
 exec --no-startup-id compton
 exec_always --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.XResources
+exec $home/.bin/mpc-notify-daemon &
 
 #######################################################################
 #                             i3 Keybindings                          #
