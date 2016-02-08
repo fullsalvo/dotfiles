@@ -1,22 +1,125 @@
 #!/usr/bin/env bash
 # Script Name: rhisk
 # Written by fullsalvo
+# Combined with scripts written by Ethan Chan - https://github.com/metakirby5
 # Loads whizkers templates including those from subfolders
 
-out=""
-direc="$HOME/.config/whizkers/variable_sets"
+################
+# Declarations #
+################
 
-for i in "$@"; do
-    if [[ -e "${direc}/${i}.yaml" ]]; then
-	out+="${i} "
-    else
-	check=$(find $direc -name $i.yaml)
-	if [[ ! -z $check ]]; then
-	    check="${check##${direc}/}"
-	    check="${check%%.yaml}"
-	    out+="${check} "
-	fi
+# None for now
+
+#############
+# Functions #
+#############
+
+reload-desktop ()
+{
+    # Reload the desktop
+
+    killall compton dunst
+
+    i3-msg 'restart' &>/dev/null &
+    compton &>/dev/null &
+    dunst &>/dev/null &
+
+    xrdb -merge ~/.Xresources &>/dev/null &
+    tmux source-file ~/.tmux.conf &>/dev/null &
+
+    # Reload colors, fonts, etc.
+    for pts in /dev/pts/*; do
+	(echo -n "$(use-xresources < ~/.Xresources)" > $pts) 2>/dev/null &
+    done &
+}
+
+wzk ()
+{
+    yes 2>/dev/null | relink-config >/dev/null
+
+    if [ "$?" -ne 0 ]; then
+	echo 'relink-config FAILED'
+	exit 1
     fi
-done
 
-wzk $out
+    if [ "$#" -eq 0 ]; then
+	whizkers -e >/dev/null
+    else
+	whizkers -e "$@" >/dev/null
+    fi
+
+    [ "$?" -ne 0 ] && exit 1
+
+    reload-desktop
+    [ "$#" -ne 0 ] && sleep 0.5
+
+    exit 0
+}
+
+theme ()
+{
+    out=""
+    direc="$HOME/.config/whizkers/variable_sets"
+    for i in "$@"; do
+	if [[ -e "${direc}/${i}.yaml" ]]; then
+	    out+="${i} "
+	else
+	    check=$(find $direc -name $i.yaml)
+	    if [[ ! -z $check ]]; then
+		check="${check##${direc}/}"
+		check="${check%%.yaml}"
+		out+="${check} "
+	    else
+		printf "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
+		exit 1
+	    fi
+	fi
+    done
+
+    wzk $out
+    exit 0
+}
+
+options ()
+{
+    out=$(whizkers -l)
+    printf "Options:\n"
+    for line in $out; do
+	printf "%2s${line##*\/}\n"
+    done
+}
+
+usage ()
+{
+    clear
+    more <<-'HELP'
+rhisk - whizkers theme switch script
+Usage:
+  rhisk [ optional args... ] - Rhisk
+
+Help Options:
+  -?, -h                  Show help options
+Theme Options:
+  -o                      Show theme options
+HELP
+}
+
+###########
+# Options #
+###########
+
+while getopts ':ho?:' option; do
+    case $option in
+	o)
+	    options
+	    exit
+	    ;;
+	? | h)
+	    usage
+	    exit
+	    ;;
+    esac
+done
+shift $((OPTIND-1))
+
+theme "$@"
