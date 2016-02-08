@@ -1,0 +1,1 @@
+/home/fullsalvo/.bash_functions
