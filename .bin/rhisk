@@ -5,12 +5,6 @@
 # Loads whizkers templates including those from subfolders
 # Lists usable options based on category type
 
-################
-# Declarations #
-################
-
-# None for now
-
 #############
 # Functions #
 #############
