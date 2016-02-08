@@ -28,13 +28,6 @@ reload-desktop ()
 
 wzk ()
 {
-    yes 2>/dev/null | relink-config >/dev/null
-
-    if [ "$?" -ne 0 ]; then
-	echo 'relink-config FAILED'
-	exit 1
-    fi
-
     if [ "$#" -eq 0 ]; then
 	whizkers -e >/dev/null
     else
@@ -52,20 +45,15 @@ wzk ()
 theme ()
 {
     out=""
-    direc="$HOME/.config/whizkers/variable_sets"
+
+    tem=$(whizkers -l)
     for i in "$@"; do
-	if [[ -e "${direc}/${i}.yaml" ]]; then
-	    out+="${i} "
+	opt=$(printf "${tem}" | grep "${i}$")
+	if [[ ! -z $opt ]]; then
+	    out+="${opt} "
 	else
-	    check=$(find $direc -name $i.yaml)
-	    if [[ ! -z $check ]]; then
-		check="${check##${direc}/}"
-		check="${check%%.yaml}"
-		out+="${check} "
-	    else
-		err "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
-		exit 1
-	    fi
+	    err "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
+	    exit 1
 	fi
     done
 

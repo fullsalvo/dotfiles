@@ -16,3 +16,26 @@ for i in "$@"; do
 done
 
 wzk $out
+
+
+
+out=""
+direc="$HOME/.config/whizkers/variable_sets"
+for i in "$@"; do
+    if [[ -e "${direc}/${i}.yaml" ]]; then
+	out+="${i} "
+    else
+	check=$(find $direc -name $i.yaml)
+	if [[ ! -z $check ]]; then
+	    check="${check##${direc}/}"
+	    check="${check%%.yaml}"
+	    out+="${check} "
+	else
+	    err "Template \'${i}\' doesn't exist. Please choose a valid template.\n"
+	    exit 1
+	fi
+    fi
+done
+
+wzk $out
+exit 0
