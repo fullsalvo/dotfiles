@@ -49,6 +49,9 @@ bartext:        "#eeeeee"
 unfocused:      "#5c5c5c"
 dectext:        "#ffffff"
 rofibg:         "#222222"
+inner:          "18"
+# Formerly 22
+outer:          "0"
 
 # Floats
 floating: false

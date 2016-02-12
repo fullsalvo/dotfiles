@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        18
-set $oug        22
+set $ing        {{ inner }}
+set $oug        {{ outer }}
 
 set $home       /home/fullsalvo
 

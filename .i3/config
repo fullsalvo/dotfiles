@@ -6,7 +6,7 @@
 set $mod        Mod1
 set $win        Mod4
 set $ing        18
-set $oug        22
+set $oug        0
 
 set $home       /home/fullsalvo
 
@@ -26,7 +26,7 @@ set $dectext    #ffffff
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 0
+set $bordersize 2
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
@@ -220,9 +220,7 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] floating enable
-for_window [class=".*"] border normal $bordersize
-for_window [class=".*"] title_format " %class"
+for_window [class=".*"] border pixel $bordersize
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5
