@@ -1,5 +1,5 @@
 colors:
-  primary:      "cyan"
+  primary:      "blue"
   secondary:    "green"
   red:
     normal:     "#bdbdb3"
