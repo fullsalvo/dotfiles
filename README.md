@@ -1,7 +1,7 @@
 # Fullsalvo's Dotfiles
 
 ### Images
-[Schemes](https://u.teknik.io/io9bal.webm)
+![1](http://i.imgur.com/gHeLD1G.png)
 
 ### Relevant Information
 
@@ -13,4 +13,4 @@
 * Browser: Firefox
 * Startpage: My own [FFStartpage](https://github.com/fullsalvo/FFStartpage)
 * IRC: [irssi](https://github.com/irssi/irssi)
-* Recently started using [whizkers](https://github.com/metakirby5/whizkers). It's a great way to save schemes.
+* Theming:[whizkers](https://github.com/metakirby5/whizkers). Also check out these [utilities](https://github.com/fullsalvo/wz-utils) that I've been working on.
