@@ -30,6 +30,24 @@
            (and (get-buffer buffer)
                 (kill-buffer buffer)))))
 
+;; Kill Other Buffers function
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
+;; Reload Emacs
+(defun reload-emacs ()
+  "Reload ~/.emacs."
+  (interactive)
+  (load-file "/home/fullsalvo/.emacs"))
+
+;; Reload buffers
+(defun revert-buf ()
+    "Revert buffer without confirmation."
+    (interactive)
+    (revert-buffer t t))
+
 ;; Don't show *Buffer list* when opening multiple files at the same time.
 (setq inhibit-startup-buffer-menu t)
 
@@ -67,6 +85,7 @@
 ;; don't sleep emacs accidentally
 (global-set-key [(control z)] nil)
 (global-set-key [(control z)] 'undo)
+(global-set-key [(control shift k)] 'kill-other-buffers)
 
 ;; toggle menu bar
 (global-set-key [f12] 'menu-bar-mode)
@@ -89,3 +108,9 @@
 
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))

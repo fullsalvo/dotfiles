@@ -11,17 +11,17 @@ set $oug        0
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #00000055
+set $background #00000000
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #42a2a4
+set $border     #d4d7e4
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #4b4b4b
+set $ufocus     #526181
 # Window Decoraction Text Colour
-set $dectext    #ffffff
+set $dectext    #29294b
 # Rofi Background Colour
 set $rofibg     #222222
 
@@ -34,7 +34,7 @@ set $barfont    Chivo 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/Warm.png
+set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/RBW1.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -77,7 +77,7 @@ bindsym $mod+Shift+f exec --no-startup-id firefox
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+a exec --no-startup-id emacs
 bindsym $mod+n exec --no-startup-id urxvt -e ranger
-bindsym $mod+Shift+v --no-startup-id exec vlc
+bindsym $mod+Shift+v exec vlc
 bindsym $mod+M exec --no-startup-id urxvt -e ncmpcpp
 bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
 bindsym $mod+Shift+T exec --no-startup-id libreoffice

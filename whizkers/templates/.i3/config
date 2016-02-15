@@ -77,7 +77,7 @@ bindsym $mod+Shift+f exec --no-startup-id firefox
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+a exec --no-startup-id emacs
 bindsym $mod+n exec --no-startup-id urxvt -e ranger
-bindsym $mod+Shift+v --no-startup-id exec vlc
+bindsym $mod+Shift+v exec vlc
 bindsym $mod+M exec --no-startup-id urxvt -e ncmpcpp
 bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
 bindsym $mod+Shift+T exec --no-startup-id libreoffice
