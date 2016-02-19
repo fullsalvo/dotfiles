@@ -1,48 +1,24 @@
 ;;; seti-theme.el --- A dark colored theme, inspired by Seti Atom Theme
-;;
-;;
-;; Author: Vlad Piersec <vlad.piersec@gmail.com>
-;; Version: 0.1
-;; Keywords: themes
+;; Original Author: Vlad Piersec
 ;; URL: https://github.com/caisah/seti-theme
-;;
-;; This file is not part of GNU Emacs.
-;;
-;; Licenese:
-;;
-;; This is free software; you can redistribute it and/or modify it under
-;; the terms of the GNU General Public License as published by the Free
-;; Software Foundation; either version 2, or (at your option) any later
-;; version.
-;;
-;; This is distributed in the hope that it will be useful, but WITHOUT
-;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-;; FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-;; for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with this file.  If not, see <http://www.gnu.org/licenses/>.
-;;
-;;; Commentary
-;;
-;; Dark theme inspired by Atom's Seti
-;;
-;; Tries to reproduce the feel of https://github.com/jesseweed/seti-ui
-;;; Code
+;; Heavily modified by fullsalvo
 
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
 
-(let ((blue "#5184ae")
-      (green "#afd252")
-      (yellow "#cfad50")
-      (red "#d65757")
-      (purple "#bc91ca")
-      (background   "#121f1f")
-      (background-2 "#373738")
-      (background-3 "#a1adb8")
+(let ((blue "#2b85aa")
+      (green "#aa7c61")
+      (yellow "#ab9585")
+      (red "#aa4b43")
+      (magenta "#42a2a4")
+      (cyan "#85a8a3")
+      (black "#4b4b4b")
+      (white "#9eb2cb")
+      (background   "#2e2e2e")
+      (background-2 "#4b4b4b")
+      (background-3 "#9eb2cb")
       (background-4 "#101112")
-      (text "#c3c4ab")
+      (text "#eeeeee")
       (text-2 "#858D8A")
       (text-3 "#41535B")
       (text-4 "#2F3C42")
@@ -79,7 +55,7 @@
    `(query-replace ((t (:inherit (isearch)))))
 
    ;; Font Lock
-   `(font-lock-builtin-face ((t (:foreground ,purple))))
+   `(font-lock-builtin-face ((t (:foreground ,magenta))))
    `(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
    `(font-lock-comment-face ((t (:foreground ,text-3))))
    `(font-lock-constant-face ((t (:foreground ,red))))
@@ -97,7 +73,7 @@
 
    ;; Fullsalvo Font Locks
    ;;LaTeX
-   `(font-latex-math-face ((t (:foreground ,purple))))
+   `(font-latex-math-face ((t (:foreground ,magenta))))
    `(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Terminus"))))
    `(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1 :family "Terminus"))))
    `(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "turquoise2" :height 1.1))))
@@ -130,8 +106,8 @@
  'seti
 
   `(cursor-type 'hbar)
-  `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])
-  `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])))
+  `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,magenta ,blue ,text])
+  `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,magenta ,blue ,text])))
 
 
 ;;;###autoload

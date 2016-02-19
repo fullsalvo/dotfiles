@@ -77,11 +77,11 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%r$*%n";
+  pubnick = "%m$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}";
-  menick = "%R$*%n";
+  menick = "%M$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";

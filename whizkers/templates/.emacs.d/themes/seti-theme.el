@@ -1,34 +1,7 @@
 ;;; seti-theme.el --- A dark colored theme, inspired by Seti Atom Theme
-;;
-;;
-;; Author: Vlad Piersec <vlad.piersec@gmail.com>
-;; Version: 0.1
-;; Keywords: themes
+;; Original Author: Vlad Piersec
 ;; URL: https://github.com/caisah/seti-theme
-;;
-;; This file is not part of GNU Emacs.
-;;
-;; Licenese:
-;;
-;; This is free software; you can redistribute it and/or modify it under
-;; the terms of the GNU General Public License as published by the Free
-;; Software Foundation; either version 2, or (at your option) any later
-;; version.
-;;
-;; This is distributed in the hope that it will be useful, but WITHOUT
-;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-;; FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-;; for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with this file.  If not, see <http://www.gnu.org/licenses/>.
-;;
-;;; Commentary
-;;
-;; Dark theme inspired by Atom's Seti
-;;
-;; Tries to reproduce the feel of https://github.com/jesseweed/seti-ui
-;;; Code
+;; Heavily modified by fullsalvo
 
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
@@ -37,7 +10,10 @@
       (green "{{ n_green }}")
       (yellow "{{ n_yellow }}")
       (red "{{ n_red }}")
-      (purple "{{ n_magenta }}")
+      (magenta "{{ n_magenta }}")
+      (cyan "{{ n_cyan }}")
+      (black "{{ n_black }}")
+      (white "{{ n_white }}")
       (background   "{{ bgc }}")
       (background-2 "{{ n_black }}")
       (background-3 "{{ n_white }}")
@@ -79,7 +55,7 @@
    `(query-replace ((t (:inherit (isearch)))))
 
    ;; Font Lock
-   `(font-lock-builtin-face ((t (:foreground ,purple))))
+   `(font-lock-builtin-face ((t (:foreground ,magenta))))
    `(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
    `(font-lock-comment-face ((t (:foreground ,text-3))))
    `(font-lock-constant-face ((t (:foreground ,red))))
@@ -97,7 +73,7 @@
 
    ;; Fullsalvo Font Locks
    ;;LaTeX
-   `(font-latex-math-face ((t (:foreground ,purple))))
+   `(font-latex-math-face ((t (:foreground ,magenta))))
    `(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Terminus"))))
    `(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1 :family "Terminus"))))
    `(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "turquoise2" :height 1.1))))
@@ -130,8 +106,8 @@
  'seti
 
   `(cursor-type 'hbar)
-  `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])
-  `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,text])))
+  `(ansi-color-names-vector [ ,background ,red ,green ,yellow ,blue ,magenta ,blue ,text])
+  `(ansi-term-color-vector [unspecified ,background ,red ,green ,yellow ,blue ,magenta ,blue ,text])))
 
 
 ;;;###autoload
