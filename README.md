@@ -1,9 +1,9 @@
 # Fullsalvo's Dotfiles
 
-### Images
+## Images
 ![1](http://i.imgur.com/gHeLD1G.png)
 
-### Relevant Information
+## Relevant Information
 
 * Window Manager: [i3-gaps](https://github.com/Airblader/i3)
 * Terminal Font: leggie
@@ -13,4 +13,5 @@
 * Browser: Firefox
 * Startpage: My own [FFStartpage](https://github.com/fullsalvo/FFStartpage)
 * IRC: [irssi](https://github.com/irssi/irssi)
-* Theming:[whizkers](https://github.com/metakirby5/whizkers). Also check out these [utilities](https://github.com/fullsalvo/wz-utils) that I've been working on.
+* Theming: [whizkers](https://github.com/metakirby5/whizkers).
+	* Also check out these [utilities](https://github.com/fullsalvo/wz-utils) that I've been working on.
