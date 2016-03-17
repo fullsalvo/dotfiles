@@ -1,0 +1,30 @@
+name:           "Pier"
+colors:
+  primary:      "cyan"
+  secondary:    "magenta"
+  background:   "#01232e"
+  red:
+    normal:     "#aba396"
+    bold:       "#ddd2c1"
+  green:
+    normal:     "#c4ba96"
+    bold:       "#f6e9bc"
+  yellow:
+    normal:     "#819fa7"
+    bold:       "#a7ced9"
+  blue:
+    normal:     "#1881aa"
+    bold:       "#1fa6dc"
+  magenta:
+    normal:     "#4d8faa"
+    bold:       "#63b9dc"
+  cyan:
+    normal:     "#a694a2"
+    bold:       "#d8c0d2"
+
+border:         "#4d8faa"
+unfocused:      "#aba396"
+bordersize:     "2"
+
+wallpaper:      "/home/fullsalvo/Pictures/Walls/Pier.jpg"
+prompt:         "CYAN"

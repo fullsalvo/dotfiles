@@ -64,7 +64,7 @@ abstracts = {
   # ban/ban exception/invite list mask is printed
   ban = "$*";
 
-  action_core = "%b─┄┄ %n$*";
+  action_core = "%c─┄┄ %n$*";
 
   ########### messages #################################
 
@@ -73,7 +73,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%b$*%n";
+  ownnick = "%c$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
@@ -102,7 +102,7 @@ abstracts = {
   ########## Actions (/ME stuff) #########################
 
   # generic one that's used by most actions
-  action = "  %m$* %M* %m%|";
+  action = "  %m$* %M✶ %m%|";
 
   # own action, both private/public
   ownaction = "  %M$* %M✶%N%m";
@@ -187,7 +187,7 @@ abstracts = {
   topicsbstart = "%k─┄┄$*";
   topicsbend = "$*%b%k┄┄─";
 
-  prompt = " %b$* ‣%n ";
+  prompt = " %c$* ‣%n ";
 
   sb = " %n$* ";
   sbmode = " %k| %g%g+%n$* %k|";
@@ -248,8 +248,6 @@ formats = {
     pubmsg_channel = "{pubmsgnick {pubnick %G$[-11]0}$2}$1";
     msg_private_query = "{privmsgnick $[-11]0}$2";
     new_topic = "        %ctopic %k= %|%B'$2' %non %b$1%n%k[set by {nick %y$0}]";
-
-    #endofnames = "%k░▒▓ %mtotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
     endofnames = "%k└┄┄ %mtotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
   };
   "fe-common/irc" = {

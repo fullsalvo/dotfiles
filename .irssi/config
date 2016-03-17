@@ -35,7 +35,9 @@ servers = (
 
 channels = (
   { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; },
-  { name = "#rice"; chatnet = "rizon"; autojoin = "yes"; }
+  { name = "#rice"; chatnet = "rizon"; autojoin = "yes"; },
+  { name = "#nanodesu"; chatnet = "rizon"; autojoin = "yes"; },
+  { name = "#tomoko"; chatnet = "rizon"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -86,6 +88,8 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  spoiler = "/msg ${C} \0031,1";
+  slap = "/me slaps $0 around with a large trout;";
 };
 
 chatnets = {
@@ -117,3 +121,37 @@ statusbar = {
   };
 };
 logs = { };
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rice";
+        tag = "rizon";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#nanodesu";
+        tag = "rizon";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#tomoko";
+        tag = "rizon";
+      }
+    );
+  };
+};
+mainwindows = { 1 = { first_line = "0"; lines = "38"; }; };

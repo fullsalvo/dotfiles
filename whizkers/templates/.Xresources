@@ -1,21 +1,26 @@
 ! Fonts
 URxvt.font:      {{ #term_fonts }}xft:{{ . }}:pixelsize={{ pixelsize }}:antialias={{ antialias }},{{ /term_fonts }}
 URxvt.boldFont:
+XTerm.font:      {{ #term_fonts }}xft:{{ . }}:pixelsize={{ pixelsize }}:antialias={{ antialias }},{{ /term_fonts }}
+XTerm.boldFont:
 
 !General
-URxvt.scrollBar: false
-URxvt.saveLines: 8192
-URxvt.internalBorder: 10
-URxvt.cursorUnderline: true
-URxvt.cursorBlink: true
-URxvt.dynamicColors:on
-URxvt.letterSpace: {{ spacing }}
+*.scrollBar: false
+*.saveLines: 8192
+*.internalBorder: 10
+*.cursorUnderline: true
+*.cursorBlink: true
+*.dynamicColors:on
+*.letterSpace: {{ spacing }}
 
 Xft.autohint: 0
 Xft.dpi: 96
 Xft.hintstyle: hintnone
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
+
+!Separate settings for emacs
+emacs.internalBorder: 0
 
 ! Clickable Links
 

@@ -1,23 +1,41 @@
+;; The following line is due to changes made for whizkers' utility
+;; fullsalvo's emacs initialization
+
+;; External setting file load calls
+
+(load-file "~/.emacs.d/functions.el")
+(load-file "~/.emacs.d/modes.el")
+
+(load "recentf-buffer")
+(global-set-key [?\C-c ?r ?f] 'recentf-open-files-in-simply-buffer)
+
+;; Colorscheme template
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'seti t)
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(fringe-mode 0 nil (fringe)))
-;; General emacs Configuration
-;(load-theme 'deeper-blue)
 
 (global-linum-mode 1)
 (setq linum-format "%d ")
-;; Opens *scratch* as empty
+
+(global-font-lock-mode 1)
+
+(add-hook 'prog-mode-hook
+	  (lambda()
+	    (local-set-key (kbd "C-c <right>") 'hs-show-block)
+	    (local-set-key (kbd "C-c <left>")  'hs-hide-block)
+	    (local-set-key (kbd "C-c <up>")    'hs-hide-all)
+	    (local-set-key (kbd "C-c <down>")  'hs-show-all)
+	    (setq hs-hide-comments-when-hiding-all nil)
+	    (hs-minor-mode t)))
+
+;; Makes *scratch* empty.
 (setq initial-scratch-message "")
 
-;; Removes *scratch* from buffer after the mode has been set.
-(defun remove-scratch-buffer ()
-  (if (get-buffer "*scratch*")
-      (kill-buffer "*scratch*")))
-(add-hook 'after-change-major-mode-hook 'remove-scratch-buffer)
+(add-hook 'prog-mode-hook 'remove-scratch-buffer)
 
 ;; Removes *messages* from the buffer.
 (setq-default message-log-max nil)
@@ -39,7 +57,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; Set Window Size & Prevent Annoyances
 (setq default-frame-alist
-'((width . 80) (height . 80)))
+'((width . 80) (height . 40)))
 (setq inhibit-splash-screen t)
 
 ;; LaTeX Configuration
@@ -58,43 +76,21 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'seti t)
-
-(set-cursor-color "#FFFFFF")
-(set-mouse-color "#FFFFFF")
-
 (set-foreground-color "#FFFFFF")
-(set-background-color "#1F1F1F")
-(add-to-list 'default-frame-alist '(background-color . "#1F1F1F"))
 (setq Buffer-menu-use-frame-buffer-list nil)
 
 ;; don't sleep emacs accidentally
 (global-set-key [(control z)] nil)
 (global-set-key [(control z)] 'undo)
+(global-set-key [(control shift k)] 'kill-other-buffers)
 
 ;; toggle menu bar
 (global-set-key [f12] 'menu-bar-mode)
 
 (define-key minibuffer-inactive-mode-map [mouse-1] nil)
 
-;; powerline
-;;(add-to-list 'load-path "~/.emacs.d/powerline/")
-;;(add-to-list 'load-path "~/.emacs.d/spaceline/")
-;;(require 'powerline)
-;;(require 'spaceline-config)
-;;(spaceline-spacemacs-theme)
-;;(setq powerline-default-separator nil)
-
 ;; Make window title filename regardless of number of buffers
 (setq frame-title-format "%b")
-
-;; yaml mode
-(require 'yaml-mode)
-    (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(add-hook 'yaml-mode-hook
-	  (lambda ()
-            (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; use custom font faces
 (custom-set-faces
@@ -102,3 +98,11 @@
 
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; use recentf
+;;(initial-buffer-choice nil)
+
+(global-set-key (kbd "C-x c") 'toggle-comment-on-line)
+(show-paren-mode t)
+(setq-default word-wrap t)
+(setq-default python-indent-offset 4)

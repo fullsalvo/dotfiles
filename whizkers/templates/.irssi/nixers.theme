@@ -103,7 +103,7 @@ abstracts = {
   ########## Actions (/ME stuff) #########################
 
   # generic one that's used by most actions
-  action = "  %m$* %M* %m%|";
+  action = "  %m$* %M✶ %m%|";
 
   # own action, both private/public
   ownaction = "  %M$* %M✶%N%m";
@@ -249,8 +249,6 @@ formats = {
     pubmsg_channel = "{pubmsgnick {pubnick %G$[-11]0}$2}$1";
     msg_private_query = "{privmsgnick $[-11]0}$2";
     new_topic = "        %ctopic %k= %|%B'$2' %non %b$1%n%k[set by {nick %y$0}]";
-
-    #endofnames = "%k░▒▓ %mtotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
     endofnames = "%k└┄┄ %mtotal: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
   };
   "fe-common/irc" = {

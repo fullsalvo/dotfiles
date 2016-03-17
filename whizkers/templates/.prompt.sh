@@ -15,4 +15,6 @@ NORMAL="${ESC}[0m"
 BOLD="${ESC}[1m"
 RESET="${ESC}[0m"
 
-PS1='\w\[${<% prompt %>}\] »» \[${RESET}\]'
+# PS1='\w\[${<% prompt %>}\] »» \[${RESET}\]'
+# PS1='\w\[${<% prompt %>}\] ─── \[${RESET}\]'
+PS1='\w\[${<% prompt %>}\] ┄─┄┄ \[${RESET}\]'

@@ -850,7 +850,7 @@ getmemory () {
 
 getscheme () {
     if [ -e $HOME/.bin/whizkers ]; then
-	scheme="Warm"
+	scheme="Pier"
     else
 	scheme="Unknown"
     fi

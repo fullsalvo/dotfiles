@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+# Script Name: sc
+# Author: fullsalvo
+# Controls spotify in terminal via dbus
+# Also provides information about the currently playing track
+
+# -- Declarations --
+
+declare send="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2"
+declare ctrl="$send org.mpris.MediaPlayer2.Player"
+declare info="$send org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata"
+declare verbose=0
+
+# -- Functions --
+
+err ()
+{
+    printf "\e[31m$1\e[0m\n" >&2
+}
+
+silent ()
+{
+    if [ $verbose -lt 1 ]; then
+	$@ >/dev/null
+    else
+	$@
+    fi
+}
+
+running ()
+{
+    if [ "$(pidof spotify)" = "" ]; then
+	err "Spotify is not running."
+	exit
+    fi
+}
+
+control ()
+{
+    case $@ in
+	"play" | "p")
+	    silent "$ctrl.PlayPause"
+	    ;;
+	"next" | "n")
+	    silent "$ctrl.Next"
+	    ;;
+	"prev" | "back" | "b")
+	    silent "$ctrl.Previous"
+	    ;;
+	*)
+	    err "\'$1\' is not a valid control option."
+    esac
+}
+
+getinfo ()
+{
+    $info
+}
+
+# -- Main --
+
+if [ $# -lt 1 ]; then
+    err "No command provided."
+    exit
+fi
+
+running
+
+for arg in "$@"; do
+    if [[ $arg == "-"* ]]; then
+	case $arg in
+	    -v|--verbose)
+		verbose=1
+		;;
+	    -c|--control)
+		control "$2"
+		shift
+		shift
+		;;
+	    -i|--info)
+		getinfo
+		;;
+	    *)
+		err "\'$arg\' is an invalid command type."
+		exit
+	esac
+    elif [[ "pnb" == *"$arg"* ]]; then
+	control $arg
+    else
+	err "\'$arg\' is invalid input type."
+    fi
+done
