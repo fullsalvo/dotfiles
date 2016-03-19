@@ -106,3 +106,5 @@
 (show-paren-mode t)
 (setq-default word-wrap t)
 (setq-default python-indent-offset 4)
+
+(global-hl-line-mode t)

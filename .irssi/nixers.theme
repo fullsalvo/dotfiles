@@ -64,7 +64,7 @@ abstracts = {
   # ban/ban exception/invite list mask is printed
   ban = "$*";
 
-  action_core = "%c─┄┄ %n$*";
+  action_core = "%b─┄┄ %n$*";
 
   ########### messages #################################
 
@@ -73,15 +73,15 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%c$*%n";
+  ownnick = "%b$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%m$*%n";
+  pubnick = "%r$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}";
-  menick = "%M$*%n";
+  menick = "%R$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
@@ -187,7 +187,7 @@ abstracts = {
   topicsbstart = "%k─┄┄$*";
   topicsbend = "$*%b%k┄┄─";
 
-  prompt = " %c$* ‣%n ";
+  prompt = " %b$* ‣%n ";
 
   sb = " %n$* ";
   sbmode = " %k| %g%g+%n$* %k|";

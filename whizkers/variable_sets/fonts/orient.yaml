@@ -1,7 +1,0 @@
-# Fonts
-term_fonts:
-  - "hlv"
-  - "Kochi Gothic"
-antialias: "false"
-pixelsize: "11"
-spacing: -3
