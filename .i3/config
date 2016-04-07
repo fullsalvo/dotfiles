@@ -5,7 +5,7 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        0
+set $ing        18
 set $oug        0
 
 set $home       /home/fullsalvo
@@ -15,26 +15,26 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #a1adb8
+set $border     #71899d
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5f5f5f
+set $ufocus     #5c5c5c
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 3
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
-set $barfont    Chivo 8
+set $barfont    bitbuntu 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Shelf.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/WindowRain.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -58,6 +58,8 @@ exec xinput set-prop 15 "Device Enabled" 0 &
 focus_follows_mouse no
 exec xset s off -dpms
 exec $home/.bin/batnotif &
+exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
+
 
 bindsym $win+m exec xinput set-prop 15 "Device Enabled" 1 &
 bindsym $win+Shift+m exec xinput set-prop 15 "Device Enabled" 0 &
@@ -261,6 +263,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 #######################################################################
 #                                Bar                                  #
 #######################################################################
+
+# exec $home/.bin/bar
 
 bar {
     i3bar_command i3bar -t

@@ -1,10 +1,47 @@
 ;; The following line is due to changes made for whizkers' utility
 ;; fullsalvo's emacs initialization
 
+;;modeline
+(setq-default mode-line-format
+			  (list " "
+					'mode-line-buffer-identification
+					'(mode-line-modified " [%+]    ")
+					'mode-name
+					'(line-number-mode "     %l, ")
+					'(column-number-mode "%c")))
+;;(require 'smart-mode-line)
+;;(sml/setup)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+
+(require 'evil)
+(evil-mode 1)
+(require 'evil-vimish-fold)
+(evil-vimish-fold-mode 1)
+(setq evil-insert-state-cursor '("#CCCCCC" (hbar . 2)))
+(require 'evil-leader)
+(global-evil-leader-mode t)
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+ "f" 'find-file
+ "k" 'kill-buffer
+ "r" 'recentf-open-files-in-simply-buffer
+ "c" 'comment-region
+ "SPC" 'execute-extended-command)
+;;(require 'evil-magit)
+
 ;; External setting file load calls
 
 (load-file "~/.emacs.d/functions.el")
 (load-file "~/.emacs.d/modes.el")
+
+;; Recently opened file list
 
 (load "recentf-buffer")
 (global-set-key [?\C-c ?r ?f] 'recentf-open-files-in-simply-buffer)
@@ -14,9 +51,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'seti t)
 
+(column-number-mode t)
 (custom-set-variables
- '(column-number-mode t)
- '(fringe-mode 0 nil (fringe)))
+' (fringe-mode 0 nil (fringe)))
 
 (global-linum-mode 1)
 (setq linum-format "%d ")
@@ -39,7 +76,7 @@
 
 ;; Removes *messages* from the buffer.
 (setq-default message-log-max nil)
-(kill-buffer "*Messages*")
+(if (not (eq nil (get-buffer "*Messages*"))) (kill-buffer "*Messages*"))
 
 ;; Removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
@@ -76,12 +113,11 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(set-foreground-color "#FFFFFF")
 (setq Buffer-menu-use-frame-buffer-list nil)
 
 ;; don't sleep emacs accidentally
-(global-set-key [(control z)] nil)
-(global-set-key [(control z)] 'undo)
+;;(global-set-key [(control z)] nil)
+;;(global-set-key [(control z)] 'undo)
 (global-set-key [(control shift k)] 'kill-other-buffers)
 
 ;; toggle menu bar
@@ -99,12 +135,14 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; use recentf
-;;(initial-buffer-choice nil)
-
 (global-set-key (kbd "C-x c") 'toggle-comment-on-line)
+(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (show-paren-mode t)
 (setq-default word-wrap t)
 (setq-default python-indent-offset 4)
 
 (global-hl-line-mode t)
+;;(global-set-key (kbd "TAB") 'self-insert-command)
+(global-set-key (kbd "C-x a") 'whitespace-mode)
+(setq default-tab-width 4)
+(c-set-offset 'substatement-open 0)

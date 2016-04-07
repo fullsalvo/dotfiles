@@ -3,9 +3,9 @@
 #######################################################################
 
 # emacs
-.emacs.d/elpa/
-.emacs.d/powerline/
-.emacs.d/spaceline/
+.emacs.d/recentf
+*elpa*
+.emacs.d/games
 
 # dunstify
 *dunstify*

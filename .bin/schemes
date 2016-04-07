@@ -1,6 +1,6 @@
 #!/bin/bash
 
-direc="$HOME/.config/whizkers/variable_sets/themes"
+direc="$HOME/.config/whizkers/variable_sets/themes/*/"
 
 for i in ${direc}/*; do
     name=$(basename $i .yaml)

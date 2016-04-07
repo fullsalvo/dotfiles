@@ -190,18 +190,18 @@ abstracts = {
   prompt = " %b$* ‣%n ";
 
   sb = " %n$* ";
-  sbmode = " %k| %g%g+%n$* %k|";
+  sbmode = "  %g%g+%n$* ";
   sbaway = " %g/* zZzZ */%n";
-  sbservertag = ":%R$0%n";
+  sbservertag = " %b$0%n";
   sbnickmode = "$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";
   sb_uc_ircops = "%_*%_$*";
-  sb_uc_ops = "%_@%r$*%n";
-  sb_uc_halfops = "%_%%%g$*%n";
-  sb_uc_voices = "%_+%y$*%n";
-  sb_uc_normal = "%w$*%n";
+  sb_uc_ops = "%_@%b$*%n";
+  sb_uc_halfops = "%_%%%b$*%n";
+  sb_uc_voices = "%_+%b$*%n";
+  sb_uc_normal = "%b$*%n";
   sb_uc_space = " ";
 
   # activity in statusbar

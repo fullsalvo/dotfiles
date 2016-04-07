@@ -3,6 +3,8 @@ settings = {
     real_name = "fullsalvo";
     user_name = "fullsalvo";
     nick = "fullsalvo";
+    quit_message = "ditching this popsicle stand";
+    hostname = " ";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
@@ -10,8 +12,13 @@ settings = {
     bell_beeps = "no";
     timestamps = "no";
     autolog = "yes";
+    completion_char = ",";
+    names_max_columns = "8";
   };
-  "perl/core/scripts" = { queryresume_lines = "20"; };
+  "perl/core/scripts" = { 
+    queryresume_lines = "20";
+    trackbar_string = "_";
+  };
 };
 
 servers = (
@@ -35,7 +42,7 @@ servers = (
 
 channels = (
   { name = "#nixers"; chatnet = "Iotek"; autojoin = "No"; },
-  { name = "#rice"; chatnet = "rizon"; autojoin = "yes"; },
+  { name = "#rice"; chatnet = "rizon"; autojoin = "no"; },
   { name = "#nanodesu"; chatnet = "rizon"; autojoin = "yes"; },
   { name = "#tomoko"; chatnet = "rizon"; autojoin = "yes"; }
 );
@@ -90,6 +97,7 @@ aliases = {
   RESET = "set -default";
   spoiler = "/msg ${C} \0031,1";
   slap = "/me slaps $0 around with a large trout;";
+  comment = "/msg ${C} \0033>";
 };
 
 chatnets = {
@@ -101,7 +109,8 @@ chatnets = {
 };
 hilights = (
   { text = "fullsalvo"; nick = "yes"; word = "yes"; },
-  { text = "salvo"; nick = "yes"; word = "yes"; }
+  { text = "salvo"; nick = "yes"; word = "yes"; },
+  { text = "fs"; nick = "yes"; word = "yes"; }
 );
 statusbar = {
   default = {
@@ -112,8 +121,9 @@ statusbar = {
         user = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
+        act = { priority = "10"; alignment = "right"; };
         more = { priority = "-1"; alignment = "right"; };
+        usercount = { alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
@@ -128,22 +138,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#rice";
-        tag = "rizon";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#nanodesu";
         tag = "rizon";
       }
     );
   };
-  4 = {
+  3 = {
     items = (
       {
         type = "CHANNEL";

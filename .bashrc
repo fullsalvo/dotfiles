@@ -58,6 +58,7 @@ fi
 
 . ~/.prompt.sh
 . ~/.bash_functions
+. ~/whizkers/autocomplete
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in

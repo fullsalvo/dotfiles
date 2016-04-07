@@ -28,7 +28,7 @@ system=$(cat /etc/os-release | sed '2,$d;s/NAME="//;s/"//')
 
 if [ -n "$DISPLAY" ]; then
     wmname=$(xprop -root _NET_WM_NAME|cut -d\" -f2)
-    termfn=$(cat $HOME/.XResources | grep -v ! | awk '/font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /;s/:antialias=true,xft:Droid//')
+    termfn=$(cat $HOME/.Xresources | grep -v ! | awk '/font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /;s/:antialias=true,xft*//')
     systfn=$(sed -n 's/^[gtk].*font.*"\(.*\)".*$/\1/p' ~/.gtkrc-2.0)
 else
     wmname="none"
@@ -50,16 +50,16 @@ ${c00}▉▉  | ${c15}OS ${f0}........... $f2$system
 ${c08}  ▉▉| ${c15}name ${f0}......... $f2$HOSTNAME
 ${c01}▉▉  | ${c15}birth day${f0}..... $f2$birthd
 ${c09}  ▉▉| ${c15}packages ${f0}..... $f2$pkgnum
-${c02}▉▉  | 
+${c02}▉▉  |
 ${c10}  ▉▉| ${c15}wm ${f0}........... $f2$wmname
 ${c03}▉▉  | ${c15}shell ${f0}........ $f2$SHELL
 ${c11}  ▉▉| ${c15}terminal ${f0}..... $f2$TERM
 ${c04}▉▉  | ${c15}term font ${f0}.... $f2$termfn
 ${c12}  ▉▉| ${c15}system font ${f0}.. $f2$systfn
-${c05}▉▉  | 
+${c05}▉▉  |
 ${c13}  ▉▉| ${c15}kernel ${f0}....... $f2$kernel
 ${c06}▉▉  | ${c15}processor ${f0}.... $f2$cpuspe
-${c14}  ▉▉| 
+${c14}  ▉▉|
 ${c07}▉▉  | ${c15}website ${f0}...... $f2$myblog
 ${c15}  ▉▉| ${c15}github ${f0}....... $f2$gitdir
 EOF

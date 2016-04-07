@@ -15,18 +15,26 @@ ix ()
     [[ -r ~/.netrc ]] && OPTS='-n';
     while getopts ":hd:l:i:n:" x; do
         case $x in
+			# Help
+			h)  echo "ix [-d ID] [-i ID] [-n N] [opts]"
+			    return
+				;;
+			# Delete Paste
             d)
                 $echo curl $OPTS -X DELETE ix.io/$OPTARG;
                 return
-            ;;
+				;;
+			#
             l)
                 curl -s http://ix.io/user/$OPTARG | grep -Po "\<a href=\"\/[a-zA-Z]*\"\>" | sed 's/<a href=\"/http:\/\/ix.io/g;s/\">//g';
                 return
-            ;;
+				;;
+			# Edit Paste
             i)
                 OPTS="$OPTS -X PUT";
                 local id="$OPTARG"
-            ;;
+				;;
+			#
             n)
                 OPTS="$OPTS -F read:1=$OPTARG"
             ;;

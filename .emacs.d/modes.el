@@ -17,3 +17,7 @@
 (add-hook 'yaml-mode-hook
 	  (lambda ()
             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; c indenting
+(c-set-offset 'substatement-open 0)
+(c-set-offset 'substatement 0)
