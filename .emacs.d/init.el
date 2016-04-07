@@ -1,4 +1,3 @@
-;; The following line is due to changes made for whizkers' utility
 ;; fullsalvo's emacs initialization
 
 ;;modeline
@@ -9,37 +8,21 @@
 					'mode-name
 					'(line-number-mode "     %l, ")
 					'(column-number-mode "%c")))
-;;(require 'smart-mode-line)
-;;(sml/setup)
 
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+			 '("melpa" . "https://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
 
-(require 'evil)
-(evil-mode 1)
-(require 'evil-vimish-fold)
-(evil-vimish-fold-mode 1)
-(setq evil-insert-state-cursor '("#CCCCCC" (hbar . 2)))
-(require 'evil-leader)
-(global-evil-leader-mode t)
-(evil-leader/set-leader "<SPC>")
-(evil-leader/set-key
- "f" 'find-file
- "k" 'kill-buffer
- "r" 'recentf-open-files-in-simply-buffer
- "c" 'comment-region
- "SPC" 'execute-extended-command)
-;;(require 'evil-magit)
-
 ;; External setting file load calls
 
 (load-file "~/.emacs.d/functions.el")
 (load-file "~/.emacs.d/modes.el")
+(load-file "~/.emacs.d/evil-init.el")
+(load-file "~/.emacs.d/whiz-ch.el")
 
 ;; Recently opened file list
 
@@ -60,15 +43,6 @@
 
 (global-font-lock-mode 1)
 
-(add-hook 'prog-mode-hook
-	  (lambda()
-	    (local-set-key (kbd "C-c <right>") 'hs-show-block)
-	    (local-set-key (kbd "C-c <left>")  'hs-hide-block)
-	    (local-set-key (kbd "C-c <up>")    'hs-hide-all)
-	    (local-set-key (kbd "C-c <down>")  'hs-show-all)
-	    (setq hs-hide-comments-when-hiding-all nil)
-	    (hs-minor-mode t)))
-
 ;; Makes *scratch* empty.
 (setq initial-scratch-message "")
 
@@ -80,10 +54,10 @@
 
 ;; Removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
-      '(lambda ()
-         (let ((buffer "*Completions*"))
-           (and (get-buffer buffer)
-                (kill-buffer buffer)))))
+	  '(lambda ()
+		 (let ((buffer "*Completions*"))
+		   (and (get-buffer buffer)
+				(kill-buffer buffer)))))
 
 ;; Don't show *Buffer list* when opening multiple files at the same time.
 (setq inhibit-startup-buffer-menu t)
@@ -115,9 +89,6 @@
 
 (setq Buffer-menu-use-frame-buffer-list nil)
 
-;; don't sleep emacs accidentally
-;;(global-set-key [(control z)] nil)
-;;(global-set-key [(control z)] 'undo)
 (global-set-key [(control shift k)] 'kill-other-buffers)
 
 ;; toggle menu bar
@@ -128,11 +99,6 @@
 ;; Make window title filename regardless of number of buffers
 (setq frame-title-format "%b")
 
-;; use custom font faces
-(custom-set-faces
- '(default ((t (:family "Leggie" :foundry "unknown" :slant normal :weight normal :height 80 :width normal)))))
-
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (global-set-key (kbd "C-x c") 'toggle-comment-on-line)
@@ -142,7 +108,5 @@
 (setq-default python-indent-offset 4)
 
 (global-hl-line-mode t)
-;;(global-set-key (kbd "TAB") 'self-insert-command)
 (global-set-key (kbd "C-x a") 'whitespace-mode)
 (setq default-tab-width 4)
-(c-set-offset 'substatement-open 0)
