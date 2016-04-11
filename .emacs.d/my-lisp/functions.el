@@ -8,7 +8,8 @@
 (defun reload-emacs ()
   "Reload ~/.emacs."
   (interactive)
-  (load-file "/home/fullsalvo/.emacs.d/init.el"))
+  (load-file "/home/fullsalvo/.emacs.d/init.el")
+  (load-directory "~/.emacs.d/my-lisp")
 
 ;; Reload buffers
 (defun revert-buf ()
