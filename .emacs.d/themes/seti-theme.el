@@ -6,15 +6,15 @@
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
 
-(let ((blue "#71899d")
-      (green "#969b6a")
-      (yellow "#ded997")
-      (red "#a06e6e")
-      (magenta "#8a7e8f")
-      (cyan "#b2cccd")
+(let ((blue "#a7a498")
+      (green "#a99770")
+      (yellow "#c7bbb4")
+      (red "#aa7b4f")
+      (magenta "#8c97ac")
+      (cyan "#c1c2c4")
       (black "#4b4b4b")
       (white "#9eb2cb")
-      (background   "#2e2e2e")
+      (background   "#181a13")
       (background-2 "#4b4b4b")
       (background-3 "#9eb2cb")
       (background-4 "#1f1f1f")
@@ -74,9 +74,13 @@
    ;; Fullsalvo Font Locks
    ;;LaTeX
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Terminus"))))
-   `(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "#FFFFFF" :height 1.1 :family "Terminus"))))
-   `(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "turquoise2" :height 1.1))))
+   `(font-latex-sectioning-1-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-warning-face ((t (:foreground "#FF0000"))))
+
    ;;Shell
    `(sh-quoted-exec ((t (:foreground ,red))))
    `(sh-heredoc ((t (:foreground ,yellow))))

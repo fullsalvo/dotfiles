@@ -11,5 +11,13 @@
  "k" 'kill-buffer
  "r" 'recentf-open-files-in-simply-buffer
  "c" 'comment-region
- "SPC" 'execute-extended-command)
+ "SPC" 'execute-extended-command
+ "b" 'vimish-fold
+ "n" 'vimish-fold-toggle
+ "d" 'vimish-fold-delete)
 ;;(require 'evil-magit)
+(define-key evil-normal-state-map (kbd "<SPC>") nil)
+(custom-set-faces
+'(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f"))))
+'(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee")))))
+(setq vimish-fold-header-width 120)

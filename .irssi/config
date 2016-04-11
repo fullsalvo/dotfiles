@@ -15,9 +15,10 @@ settings = {
     completion_char = ",";
     names_max_columns = "8";
   };
-  "perl/core/scripts" = { 
+  "perl/core/scripts" = {
     queryresume_lines = "20";
     trackbar_string = "_";
+    smartfilter_delay = "1200";
   };
 };
 

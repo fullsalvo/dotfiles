@@ -36,7 +36,13 @@
 
 (column-number-mode t)
 (custom-set-variables
-' (fringe-mode 0 nil (fringe)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-vimish-fold-mode t)
+ '(fringe-mode 0 nil (fringe))
+ '(vimish-fold-global-mode t))
 
 (global-linum-mode 1)
 (setq linum-format "%d ")
@@ -110,3 +116,11 @@
 (global-hl-line-mode t)
 (global-set-key (kbd "C-x a") 'whitespace-mode)
 (setq default-tab-width 4)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
+ '(vimish-fold-mouse-face ((t (:background "#4f4f4f" :weight bold))))
+ '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))

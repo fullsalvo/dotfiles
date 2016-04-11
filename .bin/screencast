@@ -26,7 +26,7 @@ TMP="$HOME/out.mkv"
 KEEP=false                      # Keep original mkv file after conversion [true|false]
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-    echo -e "Useage: $ sh screencast [OPTIONS]\n"
+    echo -e "Usage: $ sh screencast [OPTIONS]\n"
     echo "  -h|--help               Display this help"
     echo "  -m|--mode desktop       Set mode [\"desktop\"|\"window\"]"
     echo "  -s|--space 10           Set margin in window mode (px)"
