@@ -19,10 +19,9 @@
 
 ;; External setting file load calls
 
-(load-file "~/.emacs.d/functions.el")
-(load-file "~/.emacs.d/modes.el")
-(load-file "~/.emacs.d/evil-init.el")
-(load-file "~/.emacs.d/whiz-ch.el")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/load-directory/")
+(require 'load-directory)
+(load-directory "~/.emacs.d/my-lisp")
 
 ;; Recently opened file list
 

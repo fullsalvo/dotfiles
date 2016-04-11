@@ -54,7 +54,7 @@
 
 	  .postMessage {
 
-		color: #9eb2cb !important;
+		color: #c7bbb4 !important;
 
 	  }
 
@@ -223,13 +223,13 @@
 
 		#watchList li {
 
-			color: #a7a498 !important;
+			color: #8c97ac !important;
 
 	}
 
 	  #watchList a {
 
-		  color: #a7a498 !important;
+		  color: #8c97ac !important;
 
 		outline: 0 !important;
 
@@ -237,7 +237,7 @@
 
 		#watchList a:hover {
 
-			color: #d9d5c5 !important;
+			color: #b4c2de !important;
 
 			   transition: color .5s ease-out;
 
@@ -271,7 +271,7 @@
 
 	  .yotsuba_b_new #watchList li:first-child {
 
-		  border-top: 0px solid #a7a498;
+		  border-top: 0px solid #8c97ac;
 
 	}
 
@@ -281,7 +281,7 @@
 
 		div.post div.postInfo span.postNum{
 
-			background-color: #9eb2cb;
+			background-color: #c7bbb4;
 
 		float: right;
 
@@ -299,7 +299,7 @@
 
 		margin-left: -110px !important;
 
-		color: #9eb2cb !important;
+		color: #c7bbb4 !important;
 
 		height: 28px !important;
 
@@ -370,7 +370,7 @@
 
 	 span.name, span.postertrip {
 
-	 color: #cae5ff  !important;
+	 color: #f9e9e1  !important;
 
 	   font-weight: normal !important;
 
@@ -401,7 +401,7 @@
 
 	  .quotelink {
 
-		  color: #a7a498  !important;
+		  color: #8c97ac  !important;
 
 		text-decoration: none !important;
 
@@ -441,7 +441,7 @@
 
 	   .burichan_new .backlink a, .yotsuba_b_new .backlink a {
 
-		   color: #a7a498  !important;
+		   color: #8c97ac  !important;
 
 		 text-decoration: none !important;
 
@@ -449,7 +449,7 @@
 
 	  span.quote {
 
-		  color: #a7a498 !important;
+		  color: #8c97ac !important;
 
 	  }
 
@@ -459,12 +459,12 @@
 
 	  a, a.quotelink, a:not(:hover), .boxcontent > ul, a:visited, a.replylink:not(:hover), div#absbot a:not(:hover) {
 
-												   color: #a7a498 !important;
+												   color: #8c97ac !important;
 
 	  }
 
 	  div.post div.postInfo span.postNum a:hover,.posteruid .hand:hover, .post.reply.highlight, div.replay, span.subject, a.replylink, a.quotelink:hover, a:hover, div#absbot a {
-	  color: #9eb2cb !important;
+	  color: #c7bbb4 !important;
 	  }
 
 	  div.navLinks.navLinksBot.desktop, a.qr-link-bottom {
@@ -585,11 +585,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 .md a {
-	color: #a7a498 !important;
+	color: #8c97ac !important;
 }
 
 .md a:hover {
-	color: #d9d5c5 !important;
+	color: #b4c2de !important;
 }
 
 }
@@ -643,7 +643,7 @@ body {
 
 
 a {
-	color: #a7a498 !important;
+	color: #8c97ac !important;
 }
 
 
