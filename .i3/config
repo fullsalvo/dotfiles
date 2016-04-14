@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        18
-set $oug        0
+set $ing        4
+set $oug        4
 
 set $home       /home/fullsalvo
 
@@ -15,18 +15,18 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #a99770
+set $border     #ac8565
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5c5c5c
+set $ufocus     #c2b493
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 3
 # Default Fallback Font
 set $font       leggie 9
 # Default Bar Font
@@ -34,7 +34,7 @@ set $barfont    bitbuntu 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/OnTheRoadAgain.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/CanopyBed.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 

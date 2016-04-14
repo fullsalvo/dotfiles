@@ -14,7 +14,7 @@ echo
 
 regular() {
 
-    for color in $( xrdb -query | awk '/*.color[1-8]:/ {print $2}' ); do
+    for color in $( xrdb -query | awk '/*color[1-8]:/ {print $2}' ); do
 	echo -n "$(tput setaf "$number")$(tput smso)          $(tput sgr0)"
 	number=$((number+1))
     done
@@ -26,14 +26,14 @@ regular() {
 
 bold() {
 
-    for color in $( xrdb -query | awk '/*.color[1-8]:/ {print $2}' ); do
+    for color in $( xrdb -query | awk '/*color[1-8]:/ {print $2}' ); do
 	echo -n "$(tput setaf "$number")$(tput smso)          $(tput sgr0)"
         number=$((number + 1))
     done
 
     echo
 
-    for color in $( xrdb -query | awk '/*.color[1-8]:/ {print $2}' ); do
+    for color in $( xrdb -query | awk '/*color[1-8]:/ {print $2}' ); do
 	echo -n "$(tput setaf "$number")$(tput smso)          $(tput sgr0)"
         number=$((number + 1))
     done

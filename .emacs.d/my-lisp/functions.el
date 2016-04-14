@@ -9,7 +9,8 @@
   "Reload ~/.emacs."
   (interactive)
   (load-file "/home/fullsalvo/.emacs.d/init.el")
-  (load-directory "~/.emacs.d/my-lisp")
+  (mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el"))
+  (evil-leader-mode))
 
 ;; Reload buffers
 (defun revert-buf ()

@@ -64,7 +64,7 @@ abstracts = {
   # ban/ban exception/invite list mask is printed
   ban = "$*";
 
-  action_core = "%r─┄┄ %n$*";
+  action_core = "%y─┄┄ %n$*";
 
   ########### messages #################################
 
@@ -73,7 +73,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%r$*%n";
+  ownnick = "%y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
@@ -187,21 +187,21 @@ abstracts = {
   topicsbstart = "%k─┄┄$*";
   topicsbend = "$*%b%k┄┄─";
 
-  prompt = " %r$* -%n ";
+  prompt = " %y$* -%n ";
 
   sb = " %n$* ";
   sbmode = "  %g%g+%n$* ";
   sbaway = " %g/* zZzZ */%n";
-  sbservertag = " %r$0%n";
+  sbservertag = " %y$0%n";
   sbnickmode = "$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";
   sb_uc_ircops = "%_*%_$*";
-  sb_uc_ops = "%_@%r$*%n";
-  sb_uc_halfops = "%_%%%r$*%n";
-  sb_uc_voices = "%_+%r$*%n";
-  sb_uc_normal = "%r$*%n";
+  sb_uc_ops = "%_@%y$*%n";
+  sb_uc_halfops = "%_%%%y$*%n";
+  sb_uc_voices = "%_+%y$*%n";
+  sb_uc_normal = "%y$*%n";
   sb_uc_space = " ";
 
   # activity in statusbar
@@ -224,13 +224,13 @@ formats = {
     line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
-    join = "%G>%k>       join %g>%n {channick $0} %n"
+    join = "%G>%k>       join %g>%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    part = "%R<%k<       part %r<%n {channick $0} %n"
+    part = "%R<%k<       part %r<%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    kick = "%R<%k<     kicked %r<%n {channick $0} %n"
+    kick = "%R<%k<     kicked %r<%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    quit = "%R<%k<       quit %r<%n {channick $0} %k{reason $2}%n"
+    quit = "%R<%k<       quit %r<%n {channick $0} %k{reason %k$2}%n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 

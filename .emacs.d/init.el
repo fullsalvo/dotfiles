@@ -19,9 +19,7 @@
 
 ;; External setting file load calls
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp/load-directory/")
-(require 'load-directory)
-(load-directory "~/.emacs.d/my-lisp")
+(mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el"))
 
 ;; Recently opened file list
 
@@ -115,11 +113,3 @@
 (global-hl-line-mode t)
 (global-set-key (kbd "C-x a") 'whitespace-mode)
 (setq default-tab-width 4)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
- '(vimish-fold-mouse-face ((t (:background "#4f4f4f" :weight bold))))
- '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))

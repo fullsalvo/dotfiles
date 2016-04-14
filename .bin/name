@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+# Author: fullsalvo
+
+read -r -d '' user <<'TEMPLATE'
+·▄▄▄▄• ▄▌▄▄▌  ▄▄▌  .▄▄ ·  ▄▄▄· ▄▄▌   ▌ ▐·
+▐▄▄·█▪██▌██•  ██•  ▐█ ▀. ▐█ ▀█ ██•  ▪█·█▌▪
+██▪ █▌▐█▌██▪  ██▪  ▄▀▀▀█▄▄█▀▀█ ██▪  ▐█▐█• ▄█▀▄
+██▌.▐█▄█▌▐█▌▐▌▐█▌▐▌▐█▄▪▐█▐█ ▪▐▌▐█▌▐▌ ███ ▐█▌.▐▌
+▀▀▀  ▀▀▀ .▀▀▀ .▀▀▀  ▀▀▀▀  ▀  ▀ .▀▀▀ . ▀   ▀█▄▀▪\n
+TEMPLATE
+
+frameHeight=5
+((botline = $(tput lines) - 1))
+((topline = botline - frameHeight))
+nframes=2
+
+while true; do
+	tput civis
+    tput cup $topline 0
+	printf $user
+	tput cup $botline 0
+    sleep 0.5
+done
