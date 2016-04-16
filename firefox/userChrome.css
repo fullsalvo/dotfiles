@@ -149,6 +149,11 @@
     margin-right: 0px !important;
 }
 
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([visuallyselected="true"]) {
+	background-image: none !important;
+	background-color: #828282 !important;
+}
+
 /* #TabsToolbar { */
 /*     background: transparent !important; */
 /*     margin-bottom: 0 !important; */
@@ -327,7 +332,7 @@ tabbrowser tabpanels, #appcontent > #content {
 /* Selected text inside the URL bar */
 
 #urlbar *|*::-moz-selection {
-    background: #4b4b4b;
+    background: #636363;
     color: #fff;
 }
 

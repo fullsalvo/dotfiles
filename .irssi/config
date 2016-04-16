@@ -99,6 +99,7 @@ aliases = {
   spoiler = "/msg ${C} \0031,1";
   slap = "/me slaps $0 around with a large trout;";
   comment = "/msg ${C} \0033>";
+  np = "exec -o mpc -f \"is listening to %title% by %artist%.\" | head -n 1";
 };
 
 chatnets = {

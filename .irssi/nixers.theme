@@ -224,13 +224,14 @@ formats = {
     line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
-    join = "%G>%k>       join %g>%n {channick $0} %n";
+    join = "         join %g>%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    part = "%R<%k<       part %r<%n {channick $0} %n";
+    part = "         part %r<%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    kick = "%R<%k<     kicked %r<%n {channick $0} %n";
+    kick = "       kicked %r<%n {channick $0} %n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
-    quit = "%R<%k<       quit %r<%n {channick $0} %k{reason %k$2}%n";
+    quit = "         quit %r<%n {channick $0} %n";
+	# %k{reason %k$2}%n";
 	# %Z303030({nickhost %k$1}%Z303030)%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
@@ -282,5 +283,8 @@ formats = {
   };
   "Irssi::Script::ichat" = {
     ichat_timestamp = "%Y>%k>      $1 %y>%n";
+  "perl/core/scripts" = {
+  trackbar_style = "%%y";
+  };
   };
 };
