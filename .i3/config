@@ -15,11 +15,11 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #ac8565
+set $border     #53a4a1
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #c2b493
+set $ufocus     #ae9984
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
@@ -34,7 +34,7 @@ set $barfont    bitbuntu 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/CanopyBed.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Down.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -74,7 +74,7 @@ font pango: $font
 #                          Application Bindings                       #
 #######################################################################
 
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id urxvt -e tmux
 bindsym $mod+Shift+f exec --no-startup-id firefox
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+a exec --no-startup-id emacs
@@ -85,7 +85,7 @@ bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B bl
 bindsym $mod+Shift+T exec --no-startup-id libreoffice
 # Floating Instances
 for_window [instance="__special__"] floating enable
-bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__ -e tmux
 bindsym $mod+Shift+M exec --no-startup-id urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec --no-startup-id urxvt -name __special__ -e ranger
 # Launcher
