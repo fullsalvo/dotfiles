@@ -6,7 +6,6 @@ class Default(ColorScheme):
         Most things here are self-explanatory.'''
 	def use(self, context):
 		fg, bg, attr = default_colors
-
 		if context.reset:
 			return default_colors
 
@@ -35,7 +34,7 @@ class Default(ColorScheme):
 				fg = green
 			if context.directory:
 				attr |= normal
-				fg = blue
+				fg = cyan
 			elif context.executable and not \
 					any((context.media, context.container,
 						context.fifo, context.socket)):
@@ -48,7 +47,7 @@ class Default(ColorScheme):
 				if context.device:
 					attr |= bold
 			if context.link:
-				fg = context.good and white or red
+				fg = context.good and yellow
 			if context.tag_marker and not context.selected:
 				attr |= bold
 				if fg in (red, white):

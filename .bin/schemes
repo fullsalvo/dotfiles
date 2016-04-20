@@ -6,13 +6,12 @@ for i in ${direc}/*; do
     name=$(basename $i .yaml)
     wall=$(cat "${i}" | grep wallpaper: | sed 's/wallpaper\://; s/"//; s/"//')
     if [ ! -z $wall ]; then
-	if [ "$#" -ne 0 ]; then
-	    for j in "$@"; do
-		name+=" ${j}"
-	    done
-	fi
+		if [ "$#" -ne 0 ]; then
+			for j in "$@"; do
+				name+=" ${j}"
+			done
+		fi
         rhisk ${name}
-	sleep 2
     fi
 done
 

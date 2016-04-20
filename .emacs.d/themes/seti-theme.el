@@ -74,11 +74,11 @@
    ;; Fullsalvo Font Locks
    ;;LaTeX
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "Leggie" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "Leggie" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "Leggie" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "Leggie" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "Leggie" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "fxd" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "fxd" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "fxd" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "fxd" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "fxd" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;;Shell
