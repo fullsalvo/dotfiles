@@ -1,0 +1,12 @@
+#!/bin/sh
+# pallete.sh - dcat 2016
+
+c=0
+for i in `seq 16 255`
+do
+	c=$(($c+1))
+	[ $c -eq 12 ] && c=0
+	printf "\033[48;5;%dm\033[38;5;%dm %3d \033[0m" \
+		$i $i $i
+	[ $c -eq 0 ] && echo
+done

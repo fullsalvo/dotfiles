@@ -64,7 +64,7 @@ abstracts = {
   # ban/ban exception/invite list mask is printed
   ban = "$*";
 
-  action_core = "%c─┄┄ %n$*";
+  action_core = "%y─┄┄ %n$*";
 
   ########### messages #################################
 
@@ -73,15 +73,15 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%c$*%n";
+  ownnick = "%y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%y$*%n";
+  pubnick = "%b$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}";
-  menick = "%Y$*%n";
+  menick = "%B$*%n";
 
   # channel name is printed with message
   msgchannel = "%Z5F5F5F:%m$*%n";
@@ -187,21 +187,21 @@ abstracts = {
   topicsbstart = "%k─┄┄$*";
   topicsbend = "$*%b%k┄┄─";
 
-  prompt = " %c$* -%n ";
+  prompt = " %y$* -%n ";
 
   sb = " %n$* ";
   sbmode = "  %g%g+%n$* ";
   sbaway = " %g/* zZzZ */%n";
-  sbservertag = " %c$0%n";
+  sbservertag = " %y$0%n";
   sbnickmode = "$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";
   sb_uc_ircops = "%_*%_$*";
-  sb_uc_ops = "%_@%c$*%n";
-  sb_uc_halfops = "%_%%%c$*%n";
-  sb_uc_voices = "%_+%c$*%n";
-  sb_uc_normal = "%c$*%n";
+  sb_uc_ops = "%_@%y$*%n";
+  sb_uc_halfops = "%_%%%y$*%n";
+  sb_uc_voices = "%_+%y$*%n";
+  sb_uc_normal = "%y$*%n";
   sb_uc_space = " ";
 
   # activity in statusbar
@@ -224,15 +224,10 @@ formats = {
     line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
-    join = "         join %g>%n {channick $0} %n";
-	# %Z303030({nickhost %k$1}%Z303030)%n";
-    part = "         part %r<%n {channick $0} %n";
-	# %Z303030({nickhost %k$1}%Z303030)%n";
-    kick = "       kicked %r<%n {channick $0} %n";
-	# %Z303030({nickhost %k$1}%Z303030)%n";
-    quit = "         quit %r<%n {channick $0} %n";
-	# %k{reason %k$2}%n";
-	# %Z303030({nickhost %k$1}%Z303030)%n";
+    join = "         join %g>%n {channick $0} %k({nickhost %k$1}%k)%n";
+    part = "         part %r<%n {channick $0} %k({nickhost %k$1}%k)%n";
+    kick = "       kicked %r<%n {channick $0} %k({nickhost %k$1}%k)%n";
+    quit = "         quit %r<%n {channick $0} %k({nickhost %k$1}%k)%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
     nick_changed = "{channick $[-13]0} %G>%n {channick $1}";
@@ -284,7 +279,7 @@ formats = {
   "Irssi::Script::ichat" = {
     ichat_timestamp = "%Y>%k>      $1 %y>%n";
   "perl/core/scripts" = {
-  trackbar_style = "%%c";
+  trackbar_style = "%%y";
   };
   };
 };

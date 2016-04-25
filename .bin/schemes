@@ -12,6 +12,7 @@ for i in ${direc}/*; do
 			done
 		fi
         rhisk ${name}
+		sleep 4
     fi
 done
 

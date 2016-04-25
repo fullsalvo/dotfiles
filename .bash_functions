@@ -74,8 +74,27 @@ tekup ()
 		out="${out##*Name\":\"}"
 		out="${out%%\"*}"
 		printf "uploaded!\nYour file can be found at https://u.teknik.io/${out}\n"
+	    echo "https://u.teknik.io/${out}" | xclip
 	    fi
 	    ((n++))
 	done
     fi
+}
+
+log() {
+  git log --graph --color=always \
+      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+  fzf --ansi --no-sort --reverse --tiebreak=index --toggle-sort=\` \
+      --bind "ctrl-m:execute:
+                echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R'"
+}
+
+cp_p () {
+  rsync -WavP --human-readable --progress $1 $2
+}
+
+ixio () {
+	link=$(curl -sF f:1=@"$1" ix.io $1)
+	echo "$link" | xclip && xclip -o
 }
