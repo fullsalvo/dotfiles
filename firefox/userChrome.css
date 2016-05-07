@@ -10,7 +10,7 @@
 	/* Browser Features */
 	--scrollbar: -15px !important;
 	/* Fonts */
-	--font-family: 'fxd' !important;
+	--font-family: 'neep' !important;
 	--font-size: 11px !important;
 	/* Tabs */
 	--tab-height: 24px !important;
@@ -143,7 +143,7 @@
 
 .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([visuallyselected="true"]) {
 	background-image: none !important;
-	background-color: #828282 !important;
+	background-color: #5f5f5f !important;
 }
 
 /* #TabsToolbar { */
@@ -206,6 +206,10 @@
 
 /* Tab things we don't want to exist */
 
+.tabbrowser-tab[pinned] :-moz-any(.tab-icon-overlay[soundplaying]) {
+	display: none !important;
+}
+
 #tabbrowser-tabs tab .tab-close-button, .tabbrowser-tab:not([pinned]) .tab-icon-image, #TabsToolbar:not(:-moz-lwtheme)::after, .tab-background-start, .tab-background-end, #TabsToolbar .tabbrowser-tab[last-visible-tab]:after, .tab-throbber {
     display: none !important;
 }
@@ -217,7 +221,7 @@
 */
 
 #addon-bar, #PersonalToolbar, #nav-bar {
-    background: #383d36 !important;
+    background: #121f1f !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
     border-color: rgb(70,70,70) !important;
@@ -231,8 +235,8 @@
 
 /*styling*/
 #searchbar > .searchbar-textbox, #nav-bar {
-    background: #383d36 !important;
-    border: 0px #383d36!important;
+    background: #121f1f !important;
+    border: 0px #121f1f!important;
     box-shadow: none !important;
     height: calc(var(--url-height) + 9px) !important;
     position: fixed !important;
@@ -242,7 +246,7 @@
 }
 
 #urlbar {
-    color: #fbf1e2!important;
+    color: #c8c8c8!important;
     text-align: left !important;
     border-radius: 0px !important;
     border: none !important;
@@ -304,7 +308,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 /* MAIN GUI BACKGROUND COLOR */
 #main-window:not([chromehidden*="toolbar"])[sizemode="normal"], #TabsToolbar .tabbrowser-tab, .findbar-container, .browserContainer > findbar, .findbar-textbox, #editor-tools, .main-content, #header-search, .header-button, button, #urlbar {
-    background-color: #383d36 !important;
+    background-color: #121f1f !important;
 }
 
 /*
@@ -317,14 +321,14 @@ tabbrowser tabpanels, #appcontent > #content {
 
 .autocomplete-richlistitem[selected="true"], .autocomplete-richlistiem:hover{
     background-color: #fff!important;
-    color: #fbf1e2 !important;
+    color: #c8c8c8 !important;
     text-decoration: underline;
 }
 
 /* Selected text inside the URL bar */
 
 #urlbar *|*::-moz-selection {
-    background: #636363;
+    background: #373738;
     color: #fff;
 }
 
@@ -335,23 +339,23 @@ tabbrowser tabpanels, #appcontent > #content {
 */
 
 #tabbrowser-tabs, .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label, .ac-title, .ac-description, .ac-url-text, .ac-emphasize-text {
-    background-color: #383d36 !important;
-    color: #fbf1e2 !important;
+    background-color: #121f1f !important;
+    color: #c8c8c8 !important;
 }
 
 /* Tab hovering */
 .tabbrowser-tab:hover .tab-background-middle {
-    background-color: #383d36 !important;
+    background-color: #121f1f !important;
 }
 
 /* Selected Tab Name */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
-    background-color: #383d36 !important;
+    background-color: #121f1f !important;
 }
 
 /* Unselected Tab Names */
 #TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) {
-    color: #d0c8bb !important;
+    color: #a1adb8 !important;
 }
 
 /*

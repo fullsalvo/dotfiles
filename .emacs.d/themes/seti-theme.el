@@ -6,21 +6,21 @@
 (deftheme seti
   "Seti - A theme inspired by Seti Atom Theme")
 
-(let ((blue "#c2b493")
-      (green "#93aa7a")
-      (yellow "#aa9875")
-      (red "#ac8565")
-      (magenta "#a9a67f")
-      (cyan "#a2a890")
-      (black "#636363")
-      (white "#d0c8bb")
-      (background   "#383d36")
-      (background-2 "#636363")
-      (background-3 "#d0c8bb")
+(let ((blue "#5184ae")
+      (green "#afd252")
+      (yellow "#cfad50")
+      (red "#d65757")
+      (magenta "#bc91ca")
+      (cyan "#8acec6")
+      (black "#373738")
+      (white "#a1adb8")
+      (background   "#121f1f")
+      (background-2 "#373738")
+      (background-3 "#a1adb8")
       (background-4 "#1f1f1f")
-      (text "#eeeeee")
+      (text "#c3c4ab")
       (text-2 "#858D8A")
-      (text-3 "#636363")
+      (text-3 "#373738")
       (text-4 "#2F3C42")
       (text-highlight "#FFFFFF")
       (text-region "#434546")
@@ -54,6 +54,9 @@
    `(next-error ((t (:inherit (region)))))
    `(query-replace ((t (:inherit (isearch)))))
 
+   `(widget-button ((t (:weight normal))))
+   `(bold-italic ((t (:weight normal))))
+
    ;; Font Lock
    `(font-lock-builtin-face ((t (:foreground ,magenta))))
    `(font-lock-comment-delimiter-face ((t (:inherit (font-lock-comment-face)))))
@@ -69,16 +72,16 @@
    `(font-lock-string-face ((t (:foreground ,green))))
    `(font-lock-type-face ((t (:foreground ,yellow))))
    `(font-lock-variable-name-face ((t (:foreground ,blue))))
-   `(font-lock-warning-face ((t (:weight bold :inherit (error)))))
+   `(font-lock-warning-face ((t (:weight medium :inherit (error)))))
 
    ;; Fullsalvo Font Locks
    ;;LaTeX
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "fxd" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "fxd" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "fxd" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "fxd" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "fxd" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "neep" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;;Shell

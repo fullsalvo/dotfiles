@@ -114,3 +114,5 @@
 (global-hl-line-mode t)
 (global-set-key (kbd "C-x a") 'whitespace-mode)
 (setq default-tab-width 4)
+
+(set-face-bold-p 'bold nil)

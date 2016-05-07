@@ -2,6 +2,12 @@
 
 direc="$HOME/.config/whizkers/variable_sets/themes/*/"
 
+notify-send "Theme:" "Default"
+
+if [ "$@" == "floating" ]; then
+	clear && toilet -f future "Floated reloads" --gay
+fi
+
 for i in ${direc}/*; do
     name=$(basename $i .yaml)
     wall=$(cat "${i}" | grep wallpaper: | sed 's/wallpaper\://; s/"//; s/"//')
@@ -11,8 +17,10 @@ for i in ${direc}/*; do
 				name+=" ${j}"
 			done
 		fi
-        rhisk ${name}
-		sleep 4
+		rhisk ${name}
+		sleep 0.5
+		notify-send "Theme:" "${name}"
+		sleep 3.5
     fi
 done
 

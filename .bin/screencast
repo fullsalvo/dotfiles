@@ -65,13 +65,13 @@ if [ "$MODE" = "window" ]; then
     WINH=$(($(echo $WINFO|grep -Po 'Height: \K[^ ]*')+($MARGIN*2+$TITLEBAR)))
 
     sleep 2 # Wait before recording begin
-    notify-send -t $NOTIFYTIME "Window is now being recorded."
+    # notify-send -t $NOTIFYTIME "Window is now being recorded."
 
     # Record Window
     ffmpeg -f x11grab -s "$WINW"x"$WINH" -r $FPS -i $DISPLAY"+$WINX,$WINY" -c:v libx264 -preset $PRESET -crf $CRF "$TMP" #|| ERROR=1
 else
     sleep 2 # Wait before recording begin
-    notify-send -t $NOTIFYTIME "Desktop is now being recorded."
+    # notify-send -t $NOTIFYTIME "Desktop is now being recorded."
 
     # Record Fullscreen
     ffmpeg -f x11grab -s $FULLSCREEN -r $FPS -i $DISPLAY -c:v libx264 -preset $PRESET -crf $CRF "$TMP" #|| ERROR=1
