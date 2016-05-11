@@ -26,7 +26,7 @@ set $dectext    #ffffff
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 1
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
@@ -105,12 +105,13 @@ bindsym $win+Shift+Return exec --no-startup-id x-terminal-emulator
 
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
+exec --no-startup-id mpd
+exec --no-startup-id mpdscribble
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id compton
 exec --no-startup-id dunst
 exec_always --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.XResources
-exec $home/.bin/mpc-notify-daemon &
 
 #######################################################################
 #                             i3 Keybindings                          #
@@ -221,7 +222,9 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] border pixel $bordersize
+for_window [class=".*"] floating enable
+for_window [class=".*"] border normal $bordersize
+for_window [class=".*"] title_format " "
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5

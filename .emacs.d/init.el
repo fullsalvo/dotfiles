@@ -115,4 +115,7 @@
 (global-set-key (kbd "C-x a") 'whitespace-mode)
 (setq default-tab-width 4)
 
-(set-face-bold-p 'bold nil)
+(mapc
+(lambda (face)
+(set-face-attribute face nil :weight 'normal))
+(face-list))

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+	1) notify-send "Calendar" "`cal -h`"
+	   ;;
+esac
+
+out=$(date '+%a %b %d')
+
+echo $out

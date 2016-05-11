@@ -2,10 +2,10 @@
 
 direc="$HOME/.config/whizkers/variable_sets/themes/*/"
 
-notify-send "Theme:" "Default"
-
-if [ "$@" == "floating" ]; then
-	clear && toilet -f future "Floated reloads" --gay
+if [ ! "$@" == "floating" ]; then
+	notify-send "Theme:" "Default"
+else
+	notify-send "Theme:" "Default floating"
 fi
 
 for i in ${direc}/*; do
