@@ -7,7 +7,8 @@
 					'(mode-line-modified " [%+]    ")
 					'mode-name
 					'(line-number-mode "     %l, ")
-					'(column-number-mode "%c")))
+					'(column-number-mode "%c   ")
+					'(vc-mode vc-mode)))
 
 (require 'package)
 (add-to-list 'package-archives

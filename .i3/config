@@ -15,18 +15,18 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #a1adb8
+set $border     #53a4a1
 # Bar Text Colour
 set $bartext    #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5f5f5f
+set $ufocus     #ae9984
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 1
+set $bordersize 3
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
@@ -34,7 +34,7 @@ set $barfont    bitbuntu 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Shelf.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Down.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -222,9 +222,7 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] floating enable
-for_window [class=".*"] border normal $bordersize
-for_window [class=".*"] title_format " "
+for_window [class=".*"] border pixel $bordersize
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5

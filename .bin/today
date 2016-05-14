@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
+notify ()
+{
+	notify-send \
+		"To Do:" "$msg_out"
+}
+
+if [ -n "$(~/.bin/t)" ]; then
+	msg_out=$(~/.bin/t)
+else
+	msg_out="You have nothing to do!"
+fi
+
 case $BLOCK_BUTTON in
-	1) notify-send "Calendar" "`cal -h`"
-	   ;;
+	1) notify-send "Calendar" "`cal -h`" ;;
+    3) notify ;;
 esac
 
 out=$(date '+%a %b %d')
