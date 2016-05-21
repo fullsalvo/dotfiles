@@ -1,8 +1,5 @@
 # Fullsalvo's Dotfiles
 
-## Images
-![1](http://i.imgur.com/gHeLD1G.png)
-
 ## Relevant Information
 
 * Window Manager: [i3-gaps](https://github.com/Airblader/i3)
