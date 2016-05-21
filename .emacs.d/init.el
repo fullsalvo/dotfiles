@@ -120,3 +120,5 @@
 (lambda (face)
 (set-face-attribute face nil :weight 'normal))
 (face-list))
+
+(global-set-key (kbd "C-x n") 'revert-buf)

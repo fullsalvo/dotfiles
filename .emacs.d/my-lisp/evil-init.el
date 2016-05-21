@@ -21,4 +21,4 @@
 '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f"))))
 '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
 '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f")))))
-(setq vimish-fold-header-width 120)
+(setq vimish-fold-header-width 40)

@@ -592,6 +592,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 	color: #dbddd1 !important;
 }
 
+.newComments {
+	display: none !important;
+}
+
 }
 
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("wikiquote.org"), domain("wikibooks.org"), domain("wikisource.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikimediafoundation.org"), domain("mediawiki.org"), domain("wikivoyage.org"), domain("wiki.openstreetmap.org"), domain("wikidata.org"), domain("translatewiki.net"), url-prefix("http://www.baka-tsuki.org/project/") {

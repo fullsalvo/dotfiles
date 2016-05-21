@@ -26,7 +26,7 @@ set $dectext    #ffffff
 set $rofibg     #222222
 
 # Window Border Thickness
-set $bordersize 3
+set $bordersize 1
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
@@ -189,7 +189,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 mode "Resize" {
         bindsym j resize shrink width 1 px or 1 ppt
@@ -222,7 +222,9 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] border pixel $bordersize
+for_window [class=".*"] floating enable
+for_window [class=".*"] border normal $bordersize
+for_window [class=".*"] title_format " "
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5
