@@ -4,6 +4,11 @@ import os, re, sys, string, hashlib
 from operator import itemgetter
 from optparse import OptionParser as op, OptionGroup as og
 
+"""
+Improved t:
+"For people who get things done, not just organize them
+"""
+
 # Constants
 
 home = os.getenv('HOME')
@@ -33,9 +38,13 @@ class UnknownPrefix(Exception):
 
 def _taskid(text, tasks):
     """
-    Return an id for new tasks.
+    Return an id for new main tasks.
+
+    Finds the first whole number greater than zero not already in use and
+    uses that as an id.
     """
     ids = []
+    i = 1
 
     with open(tasks, "a+") as f:
         lines = f.readlines()
@@ -44,13 +53,17 @@ def _taskid(text, tasks):
             if num%1. == 0:
                 ids.append(num)
 
-    for i in range(1,1000):
+    while True:
         if float(i) not in ids:
             return float(i)
+        i += 1
 
 def _subtaskid(text, mainid, tasks):
     """
     Return an id for new subtasks.
+
+    Finds the first number from 1-26 (the number of letters used to
+    prefix subtasks) not in use for subtasks and returns it as an id.
     """
 
     ids = []
@@ -67,7 +80,7 @@ def _subtaskid(text, mainid, tasks):
 
 def _get_mainids(tasks):
     """
-    Returns a list containing currently used ids
+    Returns a list containing currently used main task ids.
     """
 
     ids = []
@@ -89,7 +102,7 @@ def _task_from_line(taskline):
 
     The task returned will be a dictionary such as:
 
-        { 'id': <hash id>,
+        { 'id': <id number>
           'text': <summary text>,
            ... other metadata ... }
 
@@ -128,7 +141,7 @@ def _tasklines_from_tasks(tasks):
 
 def _prefixes(ids):
     """
-    Return a mapping of ids to prefixes in O(n) time.
+    Return a mapping of ids to prefixes.
 
     Each prefix will be the shortest possible substring of the ID that
     can uniquely identify it among the given group of IDs.
@@ -150,7 +163,11 @@ def _prefixes(ids):
 def _ideval(prefix):
     """
     Determine the numeric id for a prefix, even when the prefix
-    is a combination of letters and numbers.
+    is a combination of letters and numbers (as they appear in
+    the regular interface).
+
+    Example:
+    4d --> 4.4
     """
 
     main = ""
@@ -163,7 +180,7 @@ def _ideval(prefix):
             sub += prefix[i]
 
     if sub:
-        for i in range(0,len(_alphabet)):
+        for i in range(len(_alphabet)):
             if sub == _alphabet[i]:
                 sub = str(i+1)
     else:
@@ -241,9 +258,9 @@ class TaskDict(object):
         path = os.path.join(self.taskdir, self.name)
         if float(prefix) not in _get_mainids(path):
             raise UnknownPrefix(prefix)
-        subtask_id = _subtaskid(text, prefix, tasks)
+        subtask_id = _subtaskid(text, prefix, path)
         subtask_id = prefix + "." + str(subtask_id)
-        self.tasks[str(subtask_id)] = {'id': subtask_id, 'text': text}
+        self.tasks[subtask_id] = {'id': subtask_id, 'text': text}
 
     def edit_task(self, prefix, text):
         """
@@ -273,8 +290,16 @@ class TaskDict(object):
         be raised.
         """
         prefix = _ideval(prefix)
-        task = self.tasks.pop(self[prefix]['id'])
-        self.done[task['id']] = task
+        if prefix[-1] == '0':
+            finished = []
+            for item in self.tasks.keys():
+                if item.startswith(prefix[0]):
+                    finished.append(self.tasks.pop(self[item]['id']))
+            for complete in finished:
+                self.done[complete['id']] = complete
+        else:
+            task = self.tasks.pop(self[prefix]['id'])
+            self.done[task['id']] = task
 
     def remove_task(self, prefix):
         """
@@ -285,7 +310,12 @@ class TaskDict(object):
         be raised.
         """
         prefix = _ideval(prefix)
-        self.tasks.pop(self[prefix]['id'])
+        if prefix[-1] == '0':
+            for item in self.tasks.keys():
+                if item.startswith(prefix[0]):
+                    self.tasks.pop(self[item]['id'])
+        else:
+            self.tasks.pop(self[prefix]['id'])
 
     def print_list(self, kind='tasks', verbose=False, quiet=False, grep=''):
         """

@@ -2,4 +2,4 @@
 
 ;; use custom font faces
 (custom-set-faces
- '(default ((t (:family "neep" :foundry "unknown" :slant normal :weight normal :height 80 :width normal)))))
+ '(default ((t (:family "Lime" :foundry "unknown" :slant normal :weight normal :height 80 :width normal)))))
