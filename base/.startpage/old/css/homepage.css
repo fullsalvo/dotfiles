@@ -1,0 +1,108 @@
+@import ;*{margin:0;padding:0}*::-webkit-input-placeholder{opacity:0.3}
+
+body{
+    background:#383d36; /*Main background */
+    padding-top:12%;
+    font-size:11px;width:88%;
+    margin:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -ms-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased
+}
+
+p,li,a{
+    color:#eeeeee;
+    font-family:leggie;
+    font-size:11px;letter-spacing:2px
+}
+
+.favorites{
+    width:90%;
+    margin:10px auto 0 auto;
+    text-align:center
+}
+
+.favorites p{
+    border-bottom:1px solid #aa9875; /* Changes the colours of the bars underneath favourites */
+    padding-right:100%
+}
+
+.list{
+    display:inline-block;
+    width:20%;
+    margin:0 15px;
+    vertical-align:text-top
+}
+
+.list ul{
+    list-style-type:none
+}
+
+a{
+    text-decoration:none;
+    display:block;padding:3px
+}
+
+a:hover{
+    color:#383d36;
+    background: #aa9875 /* Changes the colours of the links when hovered */
+}
+
+.googles{
+    width:90%;
+    margin:25px auto;
+    text-align:center
+}
+
+.googles p{
+    display:inline-block;
+    width:22%;
+    margin:10px 10px;
+    border:1px solid #aa9875 /* Changes the colour of the Googles Buttons */
+}
+
+form{
+    width:90%;
+    margin:auto;
+    padding:5px;
+    text-align:center;
+    position:relative
+}
+
+.search{
+    width:400px;
+    height:15px;
+    margin-right:-4px;
+    padding:5px;
+    background:#383d36; /* Search Background */
+    color:#eeeeee;
+    border:1px solid #636363
+}
+
+.search:hover{
+    border:1px solid #828282
+}
+
+.search:focus{
+    outline:none;
+    border:1px solid #828282 /* Changes the Colour of the Search Bar Outline */
+}
+
+.go{height:27px;
+    width:40px;
+    background:#383d36; /* Go Symbol Background */
+    color:#aa9875; /* Changes the colour of the border of the Search Button. */
+    border:1px solid #aa9875
+}
+
+.go:hover{
+    background:#aa9875; /* Changes the Search Button hover colour. */
+    color:#383d36; /* Highlighted Go Symbol Color */
+    cursor:pointer
+}
+
+.go:focus{
+    outline:none
+}

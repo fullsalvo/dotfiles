@@ -1,0 +1,130 @@
+//
+//	fonts
+//
+@import url(http://fonts.googleapis.com/css?family=Lato:300)
+
+
+//
+//	vars
+//
+$primary: #E26A6A
+$background: #222
+$search-border: #444
+$search-hover: #666
+
+
+//
+//	page setup
+//
+*
+	margin: 0
+	padding: 0
+
+*::-webkit-input-placeholder
+	opacity: 0.3
+
+body
+	background: $background
+	padding-top: 12%
+	font-size: 11px
+	width: 88%
+	margin: auto
+	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
+	-ms-font-smoothing: antialiased
+	-o-font-smoothing: antialiased
+	font-smoothing: antialiased
+
+p, li, a
+	color: $primary
+	font-family: Lato, Consolas
+	font-weight: 300
+	letter-spacing: 2px
+
+
+//
+//	favorites
+//
+.favorites
+	width: 90%
+	margin: 10px auto 0 auto
+	text-align: center
+
+.favorites p
+	border-bottom: 1px solid $primary
+	padding-right: 100%
+
+.list
+	display: inline-block
+	width: 20%
+	margin: 0 15px
+	vertical-align: text-top
+
+.list ul
+	list-style-type: none
+
+a
+	text-decoration: none
+	display: block
+	padding: 3px
+
+a:hover
+	color: $background
+	background: $primary
+
+
+//
+//	google pages
+//
+.googles
+	width: 90%
+	margin: 25px auto
+	text-align: center
+
+.googles p
+	display: inline-block
+	width: 22%
+	margin: 10px 10px
+	border: 1px solid $primary
+
+
+//
+//	search bars
+//
+form
+	width: 90%
+	margin: auto
+	padding: 5px
+	text-align: center
+	position: relative
+
+.search
+	width: 400px
+	height: 15px
+	margin-right: -4px
+	padding: 5px
+	background: $background
+	color: $primary
+	border: 1px solid $search-border
+
+.search:hover
+	border: 1px solid $search-hover
+
+.search:focus
+	outline: none
+	border: 1px solid $primary
+
+.go
+	height: 27px
+	width: 40px
+	background: $background
+	color: $primary
+	border: 1px solid $primary
+
+.go:hover
+	background: $primary
+	color: $background
+	cursor: pointer
+
+.go:focus
+	outline: none
