@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+wall=$(awk -F\' '/feh/ {printf $2}' "$HOME/.fehbg")
+blur=25
+type='fill'
+
+main() {
+	hsetroot -$type $wall -blur "$blur"
+}
+
+while getopts ':b:t:' option; do
+	case $option in
+		b)
+			blur="$OPTARG"
+			;;
+		t)
+			type="$OPTARG"
+			;;
+	esac
+done
+shift $((OPTIND-1))
+
+main

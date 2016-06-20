@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-killall lemonbar &>/dev/null
-
-bar | lemonbar -p -B "#55000000" -f "Bitbuntu:size=8" -f "FontAwesome-8" -f "Siji-7" #-g 1884x18+18+18 -d

@@ -1,0 +1,6 @@
+script load queryresume.pl
+script load trackbar.pl
+script load usercount.pl
+script load notify.pl
+script load rainbow.pl
+script load nickcolor.pl

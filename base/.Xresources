@@ -1,0 +1,69 @@
+! Fonts
+URxvt.font:      xft:neep:pixelsize=11:antialias=true,xft:JackeyFont:pixelsize=11:antialias=true,
+URxvt.boldFont:
+XTerm.font:      xft:neep:pixelsize=11:antialias=true,xft:JackeyFont:pixelsize=11:antialias=true,
+XTerm.boldFont:
+
+!General
+*.scrollBar: false
+*.saveLines: 8192
+*.internalBorder: 10
+*.cursorUnderline: true
+*.cursorBlink: true
+*.dynamicColors:on
+*.letterSpace: 0
+
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hintstyle: hintnone
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+!Separate settings for emacs
+emacs.internalBorder: 0
+
+! Clickable Links
+
+*perl-ext-common:	 default,matcher,clipboard
+*keysym.Shift-Control-V: perl:clipboard:paste
+*urlLauncher:		 firefox
+*matcher.button:	 1
+*url-select.underline:	 true
+
+! Colors
+*.borderColor:  #1c1c22
+*.background:   #1c1c22
+*.foreground:   #bcbcbc
+*.cursorColor:  #bcbcbc
+
+! Black
+*color0:       #313131
+*color8:       #434343
+
+! Red
+*color1:       #7e6565
+*color9:       #807171
+
+! Green
+*color2:       #72a89c
+*color10:      #93daca
+
+! Yellow
+*color3:       #90a996
+*color11:      #badbc2
+
+! Blue
+*color4:       #708ca2
+*color12:      #7faed0
+
+! Magenta
+*color5:       #817f98
+*color13:      #9b98b7
+
+! Cyan
+*color6:       #9aa7c0
+*color14:      #b2b7c0
+
+! White
+*color7:       #a7a59c
+*color15:      #d9d6ca

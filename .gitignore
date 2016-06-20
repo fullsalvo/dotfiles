@@ -1,7 +1,3 @@
-#######################################################################
-#                Files that don't need to be backed up                #
-#######################################################################
-
 # emacs
 *recentf*
 *elpa*
@@ -9,34 +5,8 @@
 *vimish-fold*
 *eshell*
 
-# dunstify
-*dunstify*
+# whizkers
+*whizkers*
 
-# i3
-.i3/config.swp
-.i3/.config.swp
-.i3/status.sh
-
-# irssi
-.irssi/config
-
-# mpd
-.mpd/
-
-# ncmpcpp
-.ncmpcpp/bindings
-.ncmpcpp/error.log
-
-# deluge
-deluge/
-
-# htop
-htop/
-
-# ranger
-ranger/bookmarks
-ranger/history
-ranger/tagged
-
-# vlc
-vlc/
+# logs
+*.log
