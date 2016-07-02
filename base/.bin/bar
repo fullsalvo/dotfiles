@@ -89,6 +89,6 @@ workspaces(){
 }
 
 while :; do
-    echo "%{c}$(date "+%a %d %b %l:%M %p")%{r}$(battery)     %{r}"
+    echo " $(workspaces)%{c}$(date "+%a %d %b %l:%M %p")%{r}$(battery)     %{r}"
 	sleep 1s
 done

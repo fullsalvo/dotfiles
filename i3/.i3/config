@@ -15,7 +15,7 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #708ca2
+set $border     #b9bda9
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
@@ -37,7 +37,7 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Endeavor.jpeg
+set $wall       /home/fullsalvo/Pictures/Walls/Scale.jpeg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -49,11 +49,6 @@ set $ws2        ♦
 set $ws3        ♦
 set $ws4        ♦
 set $ws5        ♦
-set $ws6        ♦
-set $ws7        ♦
-set $ws8        ♦
-set $ws9        ♦
-set $ws10       ♦
 
 #######################################################################
 #                           Miscellanious                             #
@@ -133,27 +128,17 @@ bindsym $win+c exec i3-msg sticky toggle
 #                            Workspaces                               #
 #######################################################################
 
-bindsym $mod+1 workspace 1:$ws1
-bindsym $mod+2 workspace 2:$ws2
-bindsym $mod+3 workspace 3:$ws3
-bindsym $mod+4 workspace 4:$ws4
-bindsym $mod+5 workspace 5:$ws5
-bindsym $mod+6 workspace 6:$ws6
-bindsym $mod+7 workspace 7:$ws7
-bindsym $mod+8 workspace 8:$ws8
-bindsym $mod+9 workspace 9:$ws9
-bindsym $mod+0 workspace 10:$ws10
+bindsym $mod+1 workspace 1$ws1
+bindsym $mod+2 workspace 2$ws2
+bindsym $mod+3 workspace 3$ws3
+bindsym $mod+4 workspace 4$ws4
+bindsym $mod+5 workspace 5$ws5
 
-bindsym $mod+Shift+1 move container to workspace 1:$ws1
-bindsym $mod+Shift+2 move container to workspace 2:$ws2
-bindsym $mod+Shift+3 move container to workspace 3:$ws3
-bindsym $mod+Shift+4 move container to workspace 4:$ws4
-bindsym $mod+Shift+5 move container to workspace 5:$ws5
-bindsym $mod+Shift+6 move container to workspace 6:$ws6
-bindsym $mod+Shift+7 move container to workspace 7:$ws7
-bindsym $mod+Shift+8 move container to workspace 8:$ws8
-bindsym $mod+Shift+9 move container to workspace 9:$ws9
-bindsym $mod+Shift+0 move container to workspace 10:$ws10
+bindsym $mod+Shift+1 move container to workspace 1$ws1
+bindsym $mod+Shift+2 move container to workspace 2$ws2
+bindsym $mod+Shift+3 move container to workspace 3$ws3
+bindsym $mod+Shift+4 move container to workspace 4$ws4
+bindsym $mod+Shift+5 move container to workspace 5$ws5
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev

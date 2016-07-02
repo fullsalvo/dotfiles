@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# colors
+cr='\033[0;31m'
+cg='\033[0;32m'
+co='\033[0;33m'
+cb='\033[0;34m'
+cm='\033[0;35m'
+cc='\033[0;36m'
+# light
+clr='\033[1;31m'
+clg='\033[1;32m'
+cy='\033[1;33m'
+clb='\033[1;34m'
+clm='\033[1;35m'
+clc='\033[1;36m'
+# reset
+c0='\033[0m' # No Color
+
+# bar
+b='█████████████'
+
+echo ""
+echo -e "${cr}${b}${cg}${b}${co}${b}${cb}${b}${cm}${b}${cc}${b}"
+echo -e "${cr}${b}${cg}${b}${co}${b}${cb}${b}${cm}${b}${cc}${b}"
+echo -e "${cr}${b}${cg}${b}${co}${b}${cb}${b}${cm}${b}${cc}${b}"
+echo -e "${cr}${b}${cg}${b}${co}${b}${cb}${b}${cm}${b}${cc}${b}"
+echo -e "${clr}${b}${clg}${b}${cy}${b}${clb}${b}${clm}${b}${clc}${b}"
+echo -e "${clr}${b}${clg}${b}${cy}${b}${clb}${b}${clm}${b}${clc}${b}"
+echo -e "${clr}${b}${clg}${b}${cy}${b}${clb}${b}${clm}${b}${clc}${b}"
+echo -e "${clr}${b}${clg}${b}${cy}${b}${clb}${b}${clm}${b}${clc}${b}"
+echo -e "${c0}"

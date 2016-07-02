@@ -31,39 +31,39 @@ emacs.internalBorder: 0
 *url-select.underline:	 true
 
 ! Colors
-*.borderColor:  #1c1c22
-*.background:   #1c1c22
-*.foreground:   #bcbcbc
-*.cursorColor:  #bcbcbc
+*.borderColor:  #191921
+*.background:   #191921
+*.foreground:   #eeeeee
+*.cursorColor:  #eeeeee
 
 ! Black
-*color0:       #313131
-*color8:       #434343
+*color0:       #4b4b4b
+*color8:       #5f5f5f
 
 ! Red
-*color1:       #7e6565
-*color9:       #807171
+*color1:       #a89297
+*color9:       #dabdb3
 
 ! Green
-*color2:       #72a89c
-*color10:      #93daca
+*color2:       #b6bd97
+*color10:      #e2efb4
 
 ! Yellow
-*color3:       #90a996
-*color11:      #badbc2
+*color3:       #b9bda9
+*color11:      #e9efd5
 
 ! Blue
-*color4:       #708ca2
-*color12:      #7faed0
+*color4:       #869baa
+*color12:      #b4cbdc
 
 ! Magenta
-*color5:       #817f98
-*color13:      #9b98b7
+*color5:       #b8bbc3
+*color13:      #e8eaf5
 
 ! Cyan
-*color6:       #9aa7c0
-*color14:      #b2b7c0
+*color6:       #93a0aa
+*color14:      #becfdc
 
 ! White
-*color7:       #a7a59c
-*color15:      #d9d6ca
+*color7:       #cbcbc1
+*color15:      #eeede1

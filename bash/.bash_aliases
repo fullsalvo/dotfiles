@@ -4,7 +4,7 @@
 alias c='clear'
 alias h='history'
 alias aptin='sudo apt-get install'
-alias upgrade='sudo apt upgrade && sudo apt-get update && sudo apt-get autoremove'
+alias upgrade='sudo apt-get update && sudo apt upgrade && sudo apt-get autoremove'
 # alias src='source ~/.bashrc'
 alias src='source ~/.zshrc'
 alias shutdown='poweroff'
@@ -39,7 +39,6 @@ alias block='$HOME/.bin/blocks'
 alias wallview='.bin/wallview'
 alias hex='$HOME/.bin/hex 16'
 alias i3o='i3-msg open'
-alias colors='$HOME/.bin/colortheme'
 alias rotate='clear && schemes'
 
 # Environment Variables

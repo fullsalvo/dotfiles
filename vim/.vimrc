@@ -14,4 +14,5 @@ nnoremap <space> za
 " }}}
 " {{{ Colors
 colorscheme fs
+syntax on
 " }}}

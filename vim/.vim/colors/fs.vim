@@ -7,18 +7,17 @@
 " Vim Color File
 " Author: fullsalvo
 
+hi clear
 set background=dark
-highlight clear
 
 if exists("syntax_on")
 	syntax reset
 endif
 
-set t_co=16
+set t_co=256
 let colors_name = "fs"
 
 " colors {{{
-
 " UI Colors {{{
 hi Folded ctermfg=0 ctermbg=7
 hi Error ctermbg=1
@@ -37,5 +36,7 @@ hi Comment ctermfg=8
 hi Title ctermfg=11
 hi Constant ctermfg=2
 hi Identifier ctermfg=4
+hi String ctermfg=2
+hi Function ctermfg=5
 " }}}
 " }}}
