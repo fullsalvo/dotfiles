@@ -77,7 +77,7 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%w$*%n";
+  pubnick = "%b$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}";

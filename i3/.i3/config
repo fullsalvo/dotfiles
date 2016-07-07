@@ -5,17 +5,17 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        4
-set $oug        4
+set $ing        20
+set $oug        50
 
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #00000055
+set $background #4a4b4d
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #b9bda9
+set $border     #63decd
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
@@ -29,7 +29,7 @@ set $rofibg     #222222
 
 
 # Window Border Thickness
-set $bordersize 8
+set $bordersize 2
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
@@ -37,9 +37,9 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Scale.jpeg
-set $walltype   --bg-fill
-set $wallprog   feh
+set $wall       "#b3b7bd"
+set $walltype   -solid
+set $wallprog   hsetroot
 
 set $maimbord   0.5,0.5,0.5
 
@@ -212,8 +212,7 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] floating enable
-for_window [class=".*"] title_format " "
+for_window [class=".*"] border pixel $bordersize
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5

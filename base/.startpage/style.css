@@ -1,16 +1,16 @@
 body {
-	background-color: #191921;
-	color: #a89297 !important;
+	background-color: #353945;
+	color: #e64c4c !important;
 	font-size: 16px;
 }
 
 a, a:link {
-	   color: #cbcbc1 !important;
+	   color: #aebbd3 !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #eeede1 !important;
+	color: #cdddfa !important;
 	text-decoration: none !important;
 }
 
@@ -30,7 +30,7 @@ ul li {
 }
 
 ul li:after {
-	color: #a89297 !important;
+	color: #e64c4c !important;
 	content: " //" !important;
 }
 
@@ -56,7 +56,7 @@ div.books {
 div.books2 {
 	margin-right: 70% !important;
 	text-align: right !important;
-	color: #eeeeee;
+	color: #becde7;
 	float: right;
 	display: table;
 

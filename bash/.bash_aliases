@@ -16,6 +16,7 @@ alias commit='git commit -m "fullsalvo update"'
 alias dir='pwd'
 alias rm='rm -I'
 alias ..="cd .."
+alias unstow="stow -D"
 
 # Research
 alias LC='python /home/fullsalvo/Research/LiquidCrystalMain.py'
