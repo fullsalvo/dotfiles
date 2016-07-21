@@ -141,8 +141,8 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
-(require 'tex)
-(TeX-global-PDF-mode t)
+;;(require 'tex)
+;;(TeX-global-PDF-mode t)
 
 ;; Python
 ;; ------

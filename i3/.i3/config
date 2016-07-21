@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        20
-set $oug        50
+set $ing        4
+set $oug        4
 
 set $home       /home/fullsalvo
 
@@ -29,7 +29,7 @@ set $rofibg     #222222
 
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 8
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
@@ -88,8 +88,7 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
 bindsym $mod+Shift+M exec --no-startup-id urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec --no-startup-id urxvt -name __special__ -e ranger
 # Launcher
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run -terminal urxvt -lines 3 -eh 2 -width 40 -padding 50 -opacity 90 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font leggie\ 11 -disable-history
-#bindsym $mod+d exec --no-startup-id rofi -dmenu -lines 3 -eh 2 -width 40 -padding 50 -opacity 90 -bw 5 -bc "$border" -bg "$rofibg" -hlbg "$dectext" -hlfg "$rofibg" -font leggie\ 11 -p ""
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 # Lock
 bindsym $win+l exec --no-startup-id $home/.bin/lock.sh &
 bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
@@ -212,7 +211,8 @@ client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
 
-for_window [class=".*"] border pixel $bordersize
+for_window [class=".*"] floating enable
+for_window [class=".*"] title_format " "
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5

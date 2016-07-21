@@ -580,6 +580,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 	background-color: #353945 !important;
 }
 
+.thing .title {
+	color: #becde7 !important;
+}
+
 .tabmenu li.selected a {
 	color: #e64c4c !important;
 }

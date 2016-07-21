@@ -17,6 +17,7 @@ alias dir='pwd'
 alias rm='rm -I'
 alias ..="cd .."
 alias unstow="stow -D"
+alias x="startx"
 
 # Research
 alias LC='python /home/fullsalvo/Research/LiquidCrystalMain.py'

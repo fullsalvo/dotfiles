@@ -1,10 +1,10 @@
 ! Fonts
-URxvt.font:      xft:neep:pixelsize=11:antialias=true,xft:JackeyFont:pixelsize=11:antialias=true,
+URxvt.font:      xft:neep:pixelsize=13:antialias=true,xft:JackeyFont:pixelsize=13:antialias=true,
 URxvt.boldFont:
-XTerm.font:      xft:neep:pixelsize=11:antialias=true,xft:JackeyFont:pixelsize=11:antialias=true,
+XTerm.font:      xft:neep:pixelsize=13:antialias=true,xft:JackeyFont:pixelsize=13:antialias=true,
 XTerm.boldFont:
 
-!General
+! General
 *.scrollBar: false
 *.saveLines: 8192
 *.internalBorder: 10
@@ -19,11 +19,24 @@ Xft.hintstyle: hintnone
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-!Separate settings for emacs
+! Separate settings for emacs
 emacs.internalBorder: 0
 
-! Clickable Links
+! Rofi
+rofi.opacity: 80
+rofi.width: 40
+rofi.lines: 3
+rofi.font: neep 8
+rofi.padding: 50
+rofi.bw: 8
+rofi.terminal: urxvt
+rofi.disable-history: true
+rofi.color-window: #222222, #63decd
+rofi.color-normal: #222222, #becde7, #222222, #63decd, #222222
+rofi.color-active: #222222, #becde7, #222222, white, #222222
+rofi.color-urgent: #222222, #becde7, #222222, #4591e7, #222222
 
+! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
 *keysym.Shift-Control-V: perl:clipboard:paste
 *urlLauncher:		 firefox

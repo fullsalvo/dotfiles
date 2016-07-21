@@ -35,12 +35,6 @@ if [ -f $HOME/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-# Use zsh-autosuggestions
-if [ -f $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-    fpath=(path/to/zsh-completions/src $fpath)
-fi
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -77,16 +71,25 @@ fi
 #Add directories to $PATH
 
 if [ -d $HOME/.bin ]; then
-    export PATH="$HOME/.bin:$PATH"
+    export PATH="$PATH:$HOME/.bin"
 fi
 
 # Allow for bash autocompletion
-autoload -U +X bashcompinit && bashcompinit
+# autoload -U +X bashcompinit && bashcompinit
 
-. ~/Dev/wz-utils/autocomplete
+# if [ -f ~/Dev/wz-utils/autocomplete ]; then
+# 	. ~/Dev/wz-utils/autocomplete
+# fi
 
 # Use fzf in zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set the stow directory
-export STOW_DIR="$HOME/dots"
+export STOW_DIR="$HOME/dotfiles"
+
+# Use zsh-autosuggestions
+if [ -f $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+	. ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fpath=(/home/fullsalvo/.zsh/zsh-completions/src $fpath)
+fi

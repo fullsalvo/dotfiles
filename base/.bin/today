@@ -13,7 +13,7 @@ else
 fi
 
 case $BLOCK_BUTTON in
-	1) notify-send "Calendar" "`cal -h`" ;;
+	1) notify-send "Calendar" "`ncal -h`" ;;
     3) notify ;;
 esac
 
