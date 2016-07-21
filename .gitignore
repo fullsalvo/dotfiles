@@ -1,12 +1,16 @@
 # emacs
 *recentf*
 *elpa*
-.emacs.d/games
+*.emacs.d/games*
+*auto-save-list*
 *vimish-fold*
 *eshell*
 
 # whizkers
 *whizkers*
+
+# zsh subdirs
+*.zsh/
 
 # misc
 *.log

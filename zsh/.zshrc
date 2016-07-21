@@ -75,11 +75,12 @@ if [ -d $HOME/.bin ]; then
 fi
 
 # Allow for bash autocompletion
-# autoload -U +X bashcompinit && bashcompinit
+autoload -U compaudit compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
-# if [ -f ~/Dev/wz-utils/autocomplete ]; then
-# 	. ~/Dev/wz-utils/autocomplete
-# fi
+if [ -f ~/Dev/wz-utils/autocomplete ]; then
+	. ~/Dev/wz-utils/autocomplete
+fi
 
 # Use fzf in zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
