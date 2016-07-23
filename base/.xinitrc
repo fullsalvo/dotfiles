@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xmodmap ~/.xmodmaprc
+
 # Stupid font things
 xset +fp /home/fullsalvo/.fonts
 xset fp rehash

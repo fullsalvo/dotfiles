@@ -15,13 +15,13 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #53a4a1
+set $border     #42a2a4
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #ae9984
+set $ufocus     #4b4b4b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
@@ -37,7 +37,7 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Down.jpg
+set $wall       /home/fullsalvo/Pictures/Anime/Horizontal/Warm.png
 set $walltype   --bg-fill
 set $wallprog   feh
 

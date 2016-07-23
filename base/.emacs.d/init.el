@@ -90,6 +90,10 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
+;; whitespace-cleanup-mode
+(require 'whitespace-cleanup-mode)
+(global-whitespace-cleanup-mode 1)
+
 ;; Modeline
 ;; ===========================
 

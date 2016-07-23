@@ -16,8 +16,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 	--scrollbar: -15px !important;
 
 	/* Fonts */
-	--font-family: 'neep' !important;
-	--font-size: 11px !important;
+	--font-family: 'Lemon' !important;
+	--font-size: 12px !important;
 
 	/* Tabs */
 	--tab-height: 24px !important;
@@ -229,7 +229,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 */
 
 #addon-bar, #PersonalToolbar, #nav-bar {
-    background: #1a2c2c !important;
+    background: #2e2e2e !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
     border-color: rgb(70,70,70) !important;
@@ -243,8 +243,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 /*styling*/
 #searchbar > .searchbar-textbox, #nav-bar {
-    background: #1a2c2c !important;
-    border: 0px #1a2c2c!important;
+    background: #2e2e2e !important;
+    border: 0px #2e2e2e!important;
     box-shadow: none !important;
     height: var(--url-height) !important;
     position: fixed !important;
@@ -316,7 +316,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 /* MAIN GUI BACKGROUND COLOR */
 #main-window:not([chromehidden*="toolbar"])[sizemode="normal"], #TabsToolbar .tabbrowser-tab, .findbar-container, .browserContainer > findbar, .findbar-textbox, #editor-tools, .main-content, #header-search, .header-button, button, #urlbar {
-    background-color: #1a2c2c !important;
+    background-color: #2e2e2e !important;
 }
 
 /*
@@ -347,18 +347,18 @@ tabbrowser tabpanels, #appcontent > #content {
 */
 
 #tabbrowser-tabs, .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label, .ac-title, .ac-description, .ac-url-text, .ac-emphasize-text {
-    background-color: #1a2c2c !important;
+    background-color: #2e2e2e !important;
     color: #cae5ff !important;
 }
 
 /* Tab hovering */
 .tabbrowser-tab:hover .tab-background-middle {
-    background-color: #1a2c2c !important;
+    background-color: #2e2e2e !important;
 }
 
 /* Selected Tab Name */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
-    background-color: #1a2c2c !important;
+    background-color: #2e2e2e !important;
 }
 
 /* Unselected Tab Names */

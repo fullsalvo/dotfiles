@@ -8,7 +8,7 @@
 
 	  background:none !important;
 
-	  background-color: #1a2c2c !important;
+	  background-color: #2e2e2e !important;
 
 	  color:rgb(195, 195, 195) !important;
 
@@ -18,8 +18,8 @@
 
 	.board {
 
-	background: #1a2c2c !important;
-	border-top: 1px solid #1a2c2c !important;
+	background: #2e2e2e !important;
+	border-top: 1px solid #2e2e2e !important;
 	margin-bottom: 50px;
 	padding-bottom: 25px;
 
@@ -44,7 +44,7 @@
 
 	  .post.reply, div.reply {
 
-		background-color: #1a2c2c !important;
+		background-color: #2e2e2e !important;
 
 		width:80%!important;
 
@@ -148,7 +148,7 @@
 	  }
 
 	  div.post {
-		  background: #1a2c2c !important;
+		  background: #2e2e2e !important;
 	  }
 
 	  div.postMenu {
@@ -159,7 +159,7 @@
 
 	#quickReport, #quickReply {
 
-	  background-color: #1a2c2c !important;
+	  background-color: #2e2e2e !important;
 
 	  color: #ffffff !important;
 
@@ -185,7 +185,7 @@
 
 		#quickReply textarea {
 
-			background-color: #1a2c2c !important;
+			background-color: #2e2e2e !important;
 
 		  color: #ffffff !important;
 
@@ -223,13 +223,13 @@
 
 		#watchList li {
 
-			color: #aaaba2 !important;
+			color: #2b85aa !important;
 
 	}
 
 	  #watchList a {
 
-		  color: #aaaba2 !important;
+		  color: #2b85aa !important;
 
 		outline: 0 !important;
 
@@ -237,7 +237,7 @@
 
 		#watchList a:hover {
 
-			color: #dbddd1 !important;
+			color: #37acdc !important;
 
 			   transition: color .5s ease-out;
 
@@ -271,7 +271,7 @@
 
 	  .yotsuba_b_new #watchList li:first-child {
 
-		  border-top: 0px solid #aaaba2;
+		  border-top: 0px solid #2b85aa;
 
 	}
 
@@ -291,7 +291,7 @@
 
 		font-family: 'Armata' !important;
 
-		background-color: #1a2c2c !important;
+		background-color: #2e2e2e !important;
 
 		position: absolute;
 
@@ -401,7 +401,7 @@
 
 	  .quotelink {
 
-		  color: #aaaba2  !important;
+		  color: #2b85aa  !important;
 
 		text-decoration: none !important;
 
@@ -441,7 +441,7 @@
 
 	   .burichan_new .backlink a, .yotsuba_b_new .backlink a {
 
-		   color: #aaaba2  !important;
+		   color: #2b85aa  !important;
 
 		 text-decoration: none !important;
 
@@ -449,7 +449,7 @@
 
 	  span.quote {
 
-		  color: #aaaba2 !important;
+		  color: #2b85aa !important;
 
 	  }
 
@@ -459,7 +459,7 @@
 
 	  a, a.quotelink, a:not(:hover), .boxcontent > ul, a:visited, a.replylink:not(:hover), div#absbot a:not(:hover) {
 
-												   color: #aaaba2 !important;
+												   color: #2b85aa !important;
 
 	  }
 
@@ -473,7 +473,7 @@
 
 	  textarea.field, input.field {
 			font-family: Armata !important;
-			background-color: #1a2c2c !important;
+			background-color: #2e2e2e !important;
 	  }
 
 	  #qr-no-file, .has-file #qr-filename {
@@ -481,11 +481,11 @@
 }
 
 	  #qr .field {
-	  background-color: #1a2c2c !important;
+	  background-color: #2e2e2e !important;
 }
 
 		  .rc-anchor-dark {
-		  background: #1a2c2c none repeat scroll 0% 0% !important;
+		  background: #2e2e2e none repeat scroll 0% 0% !important;
 	border: 0px solid #525252 !important;
 	color: #c9c9c9 !important;
 	font-family: Armata !important;
@@ -501,7 +501,7 @@
 }
 
 #header-bar.dialog {
-	background-color: #1a2c2c !important;;
+	background-color: #2e2e2e !important;;
 }
 
 #qr {
@@ -509,7 +509,7 @@
 }
 
 .dialog {
-	background-color: #1a2c2c !important;;
+	background-color: #2e2e2e !important;;
 	border-color: #111;
 }
 
@@ -526,11 +526,11 @@ span.fa.fa-minus-square-o {
 @-moz-document domain("reddit.com") {
 
 .res-nightmode .RES-keyNav-activeElement, .res-nightmode .RES-keyNav-activeElement .usertext-body, .res-nightmode .RES-keyNav-activeElement .usertext-body .md, .res-nightmode .RES-keyNav-activeElement .usertext-body .md p, .res-nightmode .commentarea .RES-keyNav-activeElement .noncollapsed, .res-nightmode .RES-keyNav-activeElement .noncollapsed .md, .res-nightmode .RES-keyNav-activeElement .noncollapsed .md p {
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, iframe {
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 	color: #eeeeee !important;
   font-family: "Roboto" !important;
   font-size: 8pt !important;
@@ -545,7 +545,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 .res-nightmode #header, .res-nightmode #header-bottom-left {
-	background: #1a2c2c none repeat scroll 0% 0% !important;
+	background: #2e2e2e none repeat scroll 0% 0% !important;
 }
 
 .pagename a{
@@ -572,12 +572,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 #sr-header-area a.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a{
-	color: #ab7253 !important;
+	color: #aa4b43 !important;
 }
 
 .tabmenu li a {
 	color: #eeeeee !important;
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 }
 
 .thing .title {
@@ -585,15 +585,15 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 .tabmenu li.selected a {
-	color: #ab7253 !important;
+	color: #aa4b43 !important;
 }
 
 .md a {
-	color: #aaaba2 !important;
+	color: #2b85aa !important;
 }
 
 .md a:hover {
-	color: #dbddd1 !important;
+	color: #37acdc !important;
 }
 
 .newComments {
@@ -606,7 +606,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 
 body {
 
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 
 }
 
@@ -627,7 +627,7 @@ body {
 
 .mw-content-ltr {
 
-	background-color: #1a2c2c!important;
+	background-color: #2e2e2e!important;
 
   padding: 40px !important;
 
@@ -643,7 +643,7 @@ body {
 
 #content {
 
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 
   border: 0 !important;
 
@@ -651,7 +651,7 @@ body {
 
 
 a {
-	color: #aaaba2 !important;
+	color: #2b85aa !important;
 }
 
 
@@ -685,7 +685,7 @@ a {
 
 #mw-page-base {
 
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 
   background-image: none !important;
 
@@ -697,7 +697,7 @@ a {
 
   background-image: none !important;
 
-  background-color: #1a2c2c !important;
+  background-color: #2e2e2e !important;
 
 }
 
@@ -715,7 +715,7 @@ a {
 
   opacity:0 !important;
 
-  background-color: #1a2c2c !important;
+  background-color: #2e2e2e !important;
 
 }
 
@@ -743,7 +743,7 @@ a {
 
 #p-logo {
 
-	background-color: #1a2c2c !important;
+	background-color: #2e2e2e !important;
 
 }
 
@@ -785,7 +785,7 @@ a {
 
   border: 0 !important;
 
-  background-color: #1a2c2c !important;
+  background-color: #2e2e2e !important;
 
 }
 
@@ -891,7 +891,7 @@ blockquote, .quotebox, pre, code, .mbox-small, .mbox-small-left, .tleft, .tright
 
   border: 0!important;
 
-  background-color: #1a2c2c !important;
+  background-color: #2e2e2e !important;
 
 }
 
@@ -1030,7 +1030,7 @@ td, span, i {
 /* fr */ img[src$="/Bluebg_rounded.png"] { visibility: hidden; }
 
   table {
-	  background-color: #1a2c2c !important;
+	  background-color: #2e2e2e !important;
   }
 
   #section {

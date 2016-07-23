@@ -1,5 +1,5 @@
 [global]
-    font = neep 8
+    font = Lemon 8
     allow_markup = yes
     format = "\n%s\n%b"
     sort = yes
@@ -26,25 +26,25 @@
 
 [frame]
     width = 1
-    color = "#53a4a1"
+    color = "#2b85aa"
 
 [shortcuts]
-    close = mod+x
-    close_all = mod+shift+x
+    close = mod4+x
+    close_all = mod4+shift+x
     history = ctrl+grave
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1a2c2c"
-    foreground = "#ae9984"
+    background = "#2e2e2e"
+    foreground = "#42a2a4"
     timeout = 5
 
 [urgency_normal]
-    background = "#1a2c2c"
-    foreground = "#53a4a1"
+    background = "#2e2e2e"
+    foreground = "#2b85aa"
     timeout = 10
 
 [urgency_critical]
-    background = "#1a2c2c"
+    background = "#2e2e2e"
     foreground = "#9eb2cb"
     timeout = 0

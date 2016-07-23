@@ -18,6 +18,7 @@ alias rm='rm -I'
 alias ..="cd .."
 alias unstow="stow -D"
 alias x="startx"
+alias qudb="sudo poweroff"
 
 # Research
 alias LC='python /home/fullsalvo/Research/LiquidCrystalMain.py'
@@ -44,5 +45,5 @@ alias i3o='i3-msg open'
 alias rotate='clear && schemes'
 
 # Environment Variables
-export WZK_IRC_PASS="Sch00l"
-export EDITOR="emacs -nw"
+export WZK_ZNC_PASS="Sch00l"
+export EDITOR="emacs"

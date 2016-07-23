@@ -82,6 +82,10 @@ if [ -f ~/Dev/wz-utils/autocomplete ]; then
 	. ~/Dev/wz-utils/autocomplete
 fi
 
+# mpd info
+export MPD_HOST=0.0.0.0
+export MPD_PORT=6667
+
 # Use fzf in zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

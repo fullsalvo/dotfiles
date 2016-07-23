@@ -1,7 +1,7 @@
 body {
-	background-color: #1a2c2c;
-	color: #ab7253 !important;
-	font-size: 16px;
+	background-color: #2e2e2e;
+	color: #aa4b43 !important;
+	font-size: 12px;
 }
 
 a, a:link {
@@ -30,7 +30,7 @@ ul li {
 }
 
 ul li:after {
-	color: #ab7253 !important;
+	color: #aa4b43 !important;
 	content: " //" !important;
 }
 
@@ -44,7 +44,7 @@ div.books {
 	padding-left: 0px;
 	display: table;
 
-	font-family: neep;
+	font-family: Lemon;
 	font-weight: 300;
 	font-size: 0.75em;
 
@@ -60,7 +60,7 @@ div.books2 {
 	float: right;
 	display: table;
 
-	font-family: neep;
+	font-family: Lemon;
 	font-weight: 300;
 	font-size: 0.75em;
 
