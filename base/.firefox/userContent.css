@@ -223,13 +223,13 @@
 
 		#watchList li {
 
-			color: #2b85aa !important;
+			color: #71899d !important;
 
 	}
 
 	  #watchList a {
 
-		  color: #2b85aa !important;
+		  color: #71899d !important;
 
 		outline: 0 !important;
 
@@ -237,7 +237,7 @@
 
 		#watchList a:hover {
 
-			color: #37acdc !important;
+			color: #8da7be !important;
 
 			   transition: color .5s ease-out;
 
@@ -271,7 +271,7 @@
 
 	  .yotsuba_b_new #watchList li:first-child {
 
-		  border-top: 0px solid #2b85aa;
+		  border-top: 0px solid #71899d;
 
 	}
 
@@ -401,7 +401,7 @@
 
 	  .quotelink {
 
-		  color: #2b85aa  !important;
+		  color: #71899d  !important;
 
 		text-decoration: none !important;
 
@@ -441,7 +441,7 @@
 
 	   .burichan_new .backlink a, .yotsuba_b_new .backlink a {
 
-		   color: #2b85aa  !important;
+		   color: #71899d  !important;
 
 		 text-decoration: none !important;
 
@@ -449,7 +449,7 @@
 
 	  span.quote {
 
-		  color: #2b85aa !important;
+		  color: #71899d !important;
 
 	  }
 
@@ -459,7 +459,7 @@
 
 	  a, a.quotelink, a:not(:hover), .boxcontent > ul, a:visited, a.replylink:not(:hover), div#absbot a:not(:hover) {
 
-												   color: #2b85aa !important;
+												   color: #71899d !important;
 
 	  }
 
@@ -572,7 +572,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 #sr-header-area a.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a{
-	color: #aa4b43 !important;
+	color: #a06e6e !important;
 }
 
 .tabmenu li a {
@@ -585,15 +585,15 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 .tabmenu li.selected a {
-	color: #aa4b43 !important;
+	color: #a06e6e !important;
 }
 
 .md a {
-	color: #2b85aa !important;
+	color: #71899d !important;
 }
 
 .md a:hover {
-	color: #37acdc !important;
+	color: #8da7be !important;
 }
 
 .newComments {
@@ -651,7 +651,7 @@ body {
 
 
 a {
-	color: #2b85aa !important;
+	color: #71899d !important;
 }
 
 

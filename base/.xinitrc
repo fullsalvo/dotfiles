@@ -9,6 +9,12 @@ xset fp rehash
 # Make X Terminal Emulator terms not ugly
 xrdb ~/.Xresources
 
+# MPD
+mpd
+mpdscribble
+sleep 5
+mpc-notify-daemon &
+
 # Load into a wm
 defaultwm=i3
 case "$1" in

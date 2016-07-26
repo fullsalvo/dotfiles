@@ -1,4 +1,4 @@
 
 ;; use custom font faces
-(set-default-font "Lime 10")
-(set-fontset-font "fontset-default" 'unicode '("Lime 10" . "UTF-8"))
+(set-default-font "neep 8")
+(set-fontset-font "fontset-default" 'unicode '("neep 8" . "UTF-8"))

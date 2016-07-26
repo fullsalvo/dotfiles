@@ -47,3 +47,4 @@ alias rotate='clear && schemes'
 # Environment Variables
 export WZK_ZNC_PASS="Sch00l"
 export EDITOR="emacs"
+export XDG_MUSIC_DIR=$HOME/Music

@@ -2,7 +2,7 @@
 # Daemon for mpc-notify.
 
 # Connect to socket
-exec 3<> /dev/tcp/localhost/6600
+exec 3<> /dev/tcp/localhost/6667
 
 last="$(mpc current)"
 

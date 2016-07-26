@@ -1,5 +1,5 @@
 [global]
-    font = Lemon 8
+    font = neep 8
     allow_markup = yes
     format = "\n%s\n%b"
     sort = yes
@@ -26,7 +26,7 @@
 
 [frame]
     width = 1
-    color = "#2b85aa"
+    color = "#71899d"
 
 [shortcuts]
     close = mod4+x
@@ -36,12 +36,12 @@
 
 [urgency_low]
     background = "#2e2e2e"
-    foreground = "#42a2a4"
+    foreground = "#a06e6e"
     timeout = 5
 
 [urgency_normal]
     background = "#2e2e2e"
-    foreground = "#2b85aa"
+    foreground = "#71899d"
     timeout = 10
 
 [urgency_critical]

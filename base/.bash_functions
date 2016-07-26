@@ -98,3 +98,7 @@ ixio () {
 	link=$(curl -sF f:1=@"$1" ix.io $1)
 	echo "$link" | xclip && xclip -o
 }
+
+albumart () {
+	ffmpeg -i "$1" -i "$2" -map 0:0 -map 1:0 -c copy -id3v2_version 3 "$3"
+}

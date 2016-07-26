@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:      xft:Lemon:pixelsize=8:antialias=false,xft:Kochi Gothic:pixelsize=8:antialias=false,
+URxvt.font:      xft:neep:pixelsize=12:antialias=true,xft:JackeyFont:pixelsize=12:antialias=true,
 URxvt.boldFont:
-XTerm.font:      xft:Lemon:pixelsize=8:antialias=false,xft:Kochi Gothic:pixelsize=8:antialias=false,
+XTerm.font:      xft:neep:pixelsize=12:antialias=true,xft:JackeyFont:pixelsize=12:antialias=true,
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: 1
+*.letterSpace: 0
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -26,15 +26,15 @@ emacs.internalBorder: 0
 rofi.opacity: 80
 rofi.width: 40
 rofi.lines: 3
-rofi.font: Lemon 8
+rofi.font: neep 8
 rofi.padding: 50
 rofi.bw: 2
 rofi.terminal: urxvt
 rofi.disable-history: true
-rofi.color-window: #222222, #42a2a4
-rofi.color-normal: #222222, #eeeeee, #222222, #2b85aa, #222222
-rofi.color-active: #222222, #eeeeee, #222222, #37acdc, #222222
-rofi.color-urgent: #222222, #eeeeee, #222222, #42a2a4, #222222
+rofi.color-window: #222222, #71899d
+rofi.color-normal: #222222, #eeeeee, #222222, #71899d, #222222
+rofi.color-active: #222222, #eeeeee, #222222, #8da7be, #222222
+rofi.color-urgent: #222222, #eeeeee, #222222, #a06e6e, #222222
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
@@ -54,28 +54,28 @@ rofi.color-urgent: #222222, #eeeeee, #222222, #42a2a4, #222222
 *color8:       #5f5f5f
 
 ! Red
-*color1:       #aa4b43
-*color9:       #dc6156
+*color1:       #a06e6e
+*color9:       #d88383
 
 ! Green
-*color2:       #aa7c61
-*color10:      #dca07d
+*color2:       #969b6a
+*color10:      #b5bd6a
 
 ! Yellow
-*color3:       #ab9585
-*color11:      #ddc0ab
+*color3:       #ded997
+*color11:      #fafbb9
 
 ! Blue
-*color4:       #2b85aa
-*color12:      #37acdc
+*color4:       #71899d
+*color12:      #8da7be
 
 ! Magenta
-*color5:       #42a2a4
-*color13:      #56d3d6
+*color5:       #8a7e8f
+*color13:      #b49dbb
 
 ! Cyan
-*color6:       #85a8a3
-*color14:      #acdad3
+*color6:       #b2cccd
+*color14:      #d6fff8
 
 ! White
 *color7:       #9eb2cb

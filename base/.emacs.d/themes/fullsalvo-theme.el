@@ -4,12 +4,12 @@
 (deftheme fullsalvo
   "Fullsalvo - A Custom Theme")
 
-(let ((blue "#2b85aa")
-      (green "#aa7c61")
-      (yellow "#ab9585")
-      (red "#aa4b43")
-      (magenta "#42a2a4")
-      (cyan "#85a8a3")
+(let ((blue "#71899d")
+      (green "#969b6a")
+      (yellow "#ded997")
+      (red "#a06e6e")
+      (magenta "#8a7e8f")
+      (cyan "#b2cccd")
       (black "#4b4b4b")
       (white "#9eb2cb")
       (background   "#2e2e2e")
@@ -81,11 +81,11 @@
    ;; LaTeX
    ;; -----
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "Lime" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "Lime" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "Lime" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "Lime" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "Lime" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "neep" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;; Markdown

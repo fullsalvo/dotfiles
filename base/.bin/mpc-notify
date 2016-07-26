@@ -4,7 +4,7 @@
 
 DUNSTIFY_ID="/tmp/mpc-notify_dunstify_id"
 ALBUM_ART="$(mktemp).png"
-ALBUM_ART_WIDTH="125"
+ALBUM_ART_WIDTH="75"
 FMT_SUMMARY="[%title%]|[%file%]"
 FMT_BODY="[[%artist% - ]&%album%]|[%artist%]|[%album%]"
 

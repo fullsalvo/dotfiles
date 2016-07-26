@@ -16,8 +16,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 	--scrollbar: -15px !important;
 
 	/* Fonts */
-	--font-family: 'Lemon' !important;
-	--font-size: 12px !important;
+	--font-family: 'neep' !important;
+	--font-size: 11px !important;
 
 	/* Tabs */
 	--tab-height: 24px !important;
