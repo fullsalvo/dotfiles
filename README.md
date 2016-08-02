@@ -2,7 +2,7 @@
 
 ## Images
 
-![Desktop 1][dtopgif]
+![Desktop 1][dtop1]
 
 ## Relevant Information
 
@@ -16,4 +16,4 @@
 * Theming: [whizkers](https://github.com/metakirby5/whizkers).
 	* Also check out these [utilities](https://github.com/fullsalvo/wz-utils) that I've been working on.
 
-[dtopgif]: https://i.imgur.com/ZYBKnLw.mp4 "Desktop 1"
+[dtop1]: https://u.teknik.io/hVCXM.png "Desktop 1"
