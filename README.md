@@ -16,4 +16,4 @@
 * Theming: [whizkers](https://github.com/metakirby5/whizkers).
 	* Also check out these [utilities](https://github.com/fullsalvo/wz-utils) that I've been working on.
 
-[dtop1]: https://u.teknik.io/hVCXM.png "Desktop 1"
+[dtop1]: https://u.teknik.io/hVCXM.png
