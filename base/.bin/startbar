@@ -2,4 +2,4 @@
 
 killall lemonbar &>/dev/null
 
-bar | lemonbar -p -B "#55000000" -f "Lime:size=7" -f "FontAwesome-8" -f "Siji-7" #-g 1884x18+18+18 -d
+bar | lemonbar -p -B "#55000000" -f "Lime:size=7" -f "FontAwesome:size=8" -f "Siji-7"

@@ -1,21 +1,12 @@
 #!/usr/bin/env bash
 # Daemon for mpc-notify.
 
-# Connect to socket
-exec 3<> /dev/tcp/localhost/6667
-
+sleep 5
 last="$(mpc current)"
-
 # Enter message loop
-while read -u3 msg; do
-	# If we got an OK
-	if [[ "$msg" == OK* ]]; then
-		# Check if the song changed
-		song="$(mpc current)"
-		[[ "$song" != "$last" ]] && mpc-notify
-		last="$song"
-
-		# Listen for next change
-		echo 'idle player playlist' >&3
-	fi
+while mpc idle > /dev/null; do
+	# Check if the song changed
+	song="$(mpc current)"
+	[[ "$song" != "$last" ]] && mpc-notify
+	last="$song"
 done

@@ -141,12 +141,12 @@
 ;; LaTeX
 ;; -----
 
+(require 'tex)
 (setq TeX-PDF-mode t)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
-;;(require 'tex)
-;;(TeX-global-PDF-mode t)
+(TeX-global-PDF-mode t)
 
 ;; Python
 ;; ------
@@ -182,3 +182,18 @@
 
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((TeX-master . t))))
+ '(vimish-fold-global-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
+ '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f"))))
+ '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))

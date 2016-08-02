@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+	1) mpc-notify ;;
+esac
+
+out=$(mpc "current")
+
+echo $out

@@ -70,22 +70,14 @@ battery () {
     printf "%s" "$battery"
 }
 
-workspaces(){
-	cur=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
-
-
-	if [ $cur  = 0 ]
-		then
-			echo "        "
-	elif [ $cur = 1 ]
-		then
-			echo "        "
-	elif [ $cur = 2 ]
-		then
-			echo "        "
-	else
-			echo "        "
-	fi
+workspaces() {
+	cur=$(xprop -root -notype _NET_CURRENT_DESKTOP)
+	cur=$(echo $cur | cut -d= -f2)
+	case $cur in
+		0)
+			printf "  1 2 3 4 5"
+			;;
+	esac
 }
 
 while :; do

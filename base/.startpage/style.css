@@ -1,16 +1,20 @@
 body {
-	background-color: #2e2e2e;
-	color: #a06e6e !important;
-	font-size: 16px;
+	background-color: #181a13;
+	color: #aa7b4f !important;
+}
+
+div[class^="books"], div [class*="books"] {
+	font-family: "neep" !important;
+	font-size: 11px !important;
 }
 
 a, a:link {
-	   color: #9eb2cb !important;
+	   color: #c7bbb4 !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #cae5ff !important;
+	color: #f9e9e1 !important;
 	text-decoration: none !important;
 }
 
@@ -30,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #a06e6e !important;
+	color: #aa7b4f !important;
 	content: " //" !important;
 }
 
@@ -44,10 +48,6 @@ div.books {
 	padding-left: 0px;
 	display: table;
 
-	font-family: neep;
-	font-weight: 300;
-	font-size: 0.75em;
-
 	position: absolute;
 	left: 0px;
 	top: 30%;
@@ -59,10 +59,6 @@ div.books2 {
 	color: #eeeeee;
 	float: right;
 	display: table;
-
-	font-family: neep;
-	font-weight: 300;
-	font-size: 0.75em;
 
 	position: absolute;
 	right: 0px;

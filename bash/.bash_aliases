@@ -18,10 +18,8 @@ alias rm='rm -I'
 alias ..="cd .."
 alias unstow="stow -D"
 alias x="startx"
-alias qudb="sudo poweroff"
 
 # Research
-alias LC='python /home/fullsalvo/Research/LiquidCrystalMain.py'
 alias abacus="ssh ddb19@abacus.cs.uwf.edu"
 
 # Applications/Tools
@@ -30,7 +28,7 @@ alias music='ncmpcpp'
 alias cupd='xrdb ~/.Xresources'
 alias scrot='maim --format png /home/fullsalvo/Pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png -b 3 -n -c 0.4,0.4,0.4'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-alias mpv='mpv --input-unix-socket=/tmp/mpvsocket --geometry 1280x720'
+alias mpv='mpv --geometry 1280x720'
 
 # Fun
 alias lc='lolcat'

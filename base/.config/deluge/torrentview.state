@@ -78,7 +78,7 @@ sg5
 S'Name'
 p21
 sg7
-I464
+I307
 sg8
 I01
 sg9
@@ -94,7 +94,7 @@ Nsg5
 S'Size'
 p24
 sg7
-I83
+I59
 sg8
 I01
 sg9
@@ -142,7 +142,7 @@ Nsg5
 S'Progress'
 p33
 sg7
-I164
+I125
 sg8
 I01
 sg9
@@ -206,7 +206,7 @@ Nsg5
 S'Down Speed'
 p45
 sg7
-I80
+I94
 sg8
 I01
 sg9
@@ -222,7 +222,7 @@ Nsg5
 S'Up Speed'
 p48
 sg7
-I932
+I1146
 sg8
 I01
 sg9

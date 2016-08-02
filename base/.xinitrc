@@ -1,7 +1,5 @@
 #!/bin/sh
 
-xmodmap ~/.xmodmaprc
-
 # Stupid font things
 xset +fp /home/fullsalvo/.fonts
 xset fp rehash
@@ -12,8 +10,7 @@ xrdb ~/.Xresources
 # MPD
 mpd
 mpdscribble
-sleep 5
-mpc-notify-daemon &
+mpd-notify-daemon &
 
 # Load into a wm
 defaultwm=i3
@@ -21,4 +18,3 @@ case "$1" in
 	*)
 		exec $defaultwm ;;
 esac
-exec compton

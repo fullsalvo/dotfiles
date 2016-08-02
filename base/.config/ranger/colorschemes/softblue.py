@@ -34,7 +34,7 @@ class Default(ColorScheme):
 				fg = green
 			if context.directory:
 				attr |= normal
-				fg = blue
+				fg = red
 			elif context.executable and not \
 					any((context.media, context.container,
 						context.fifo, context.socket)):
@@ -47,7 +47,7 @@ class Default(ColorScheme):
 				if context.device:
 					attr |= bold
 			if context.link:
-				fg = context.good and red
+				fg = context.good and blue
 			if context.tag_marker and not context.selected:
 				attr |= bold
 				if fg in (red, white):

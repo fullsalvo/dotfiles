@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        20
-set $oug        50
+set $ing        4
+set $oug        4
 
 set $home       /home/fullsalvo
 
@@ -15,7 +15,7 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #71899d
+set $border     #a99770
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
@@ -37,7 +37,7 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/WindowRain.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/OnTheRoadAgain.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -54,14 +54,11 @@ set $ws5        ♦
 #                           Miscellanious                             #
 #######################################################################
 
-exec xinput set-prop 15 "Device Enabled" 0 &
+exec $home/.bin/disablemouse &
 focus_follows_mouse no
 exec xset s off -dpms
 exec $home/.bin/batnotif &
 exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
-
-bindsym $win+m exec xinput set-prop 15 "Device Enabled" 1 &
-bindsym $win+Shift+m exec xinput set-prop 15 "Device Enabled" 0 &
 
 #######################################################################
 #                           Fallback Font                             #

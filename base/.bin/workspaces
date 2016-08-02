@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+active="#c2454e"
+inactive="#2e3340"
+
+xprop -spy -root -notype _NET_CURRENT_DESKTOP | while read space; do
+	space=$(echo $space | cut -d= -f2)
+	case $space in
+		0)
+			echo "  %{F$active}1 %{F$inactive}2 3 4 5"
+			;;
+		1)
+			echo "  %{F$inactive}1 %{F$active}2 %{F$inactive}3 4 5"
+			;;
+		2)
+			echo "  %{F$inactive}1 2 %{F$active}3 %{F$inactive}4 5"
+			;;
+		3)
+			echo "  %{F$inactive}1 2 3 %{F$active}4 %{F$inactive}5"
+			;;
+		4)
+			echo "  %{F$inactive}1 2 3 4 %{F$active}5"
+			;;
+	esac
+done

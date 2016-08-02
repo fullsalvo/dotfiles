@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mousepadid=$(xinput | grep 'SynPS/2' | awk '{printf $6}')
+xinput set-prop "${mousepadid##*=}" 'Device Enabled' 0 &
