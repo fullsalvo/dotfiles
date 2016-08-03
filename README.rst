@@ -7,6 +7,8 @@ Images
 
 |dtop1|
 
+|dtop2|
+
 Relevant Information
 ====================
 
@@ -21,6 +23,8 @@ Relevant Information
 	* Also check out these `utilities`_ that I've been working on.
 
 .. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
+.. |dtop2| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop.gif
+
 .. _i3-gaps: https://github.com/Airblader/i3
 .. _irssi: https://github.com/irssi/irssi
 .. _mpd: http://musicpd.org/
