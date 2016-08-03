@@ -24,6 +24,8 @@ Relevant Information
 
 .. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
 .. |dtop2| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop.gif
+   :target: https://u.teknik.io/1CulJ.webm
+   :alt: The theming engine used, whizkers, in action.
 
 .. _i3-gaps: https://github.com/Airblader/i3
 .. _irssi: https://github.com/irssi/irssi
