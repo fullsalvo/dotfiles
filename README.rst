@@ -20,7 +20,7 @@ Relevant Information
 * Theming: `whizkers`_
 	* Also check out these `utilities`_ that I've been working on.
 
-.. |dtop1| image:: https://u.teknik.io/hVCXM.png
+.. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
 .. _i3-gaps: https://github.com/Airblader/i3
 .. _irssi: https://github.com/irssi/irssi
 .. _mpd: http://musicpd.org/
