@@ -1,6 +1,6 @@
 body {
-	background-color: #181a13;
-	color: #aa7b4f !important;
+	background-color: #1a2c2c;
+	color: #ab7253 !important;
 }
 
 div[class^="books"], div [class*="books"] {
@@ -9,12 +9,12 @@ div[class^="books"], div [class*="books"] {
 }
 
 a, a:link {
-	   color: #c7bbb4 !important;
+	   color: #9eb2cb !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #f9e9e1 !important;
+	color: #cae5ff !important;
 	text-decoration: none !important;
 }
 
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #aa7b4f !important;
+	color: #ab7253 !important;
 	content: " //" !important;
 }
 

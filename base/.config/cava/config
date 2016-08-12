@@ -72,7 +72,7 @@ source = /tmp/mpd.fifo
 
 # supported colors are: red, green, yellow, magenta, cyan, white, blue, black.
 ; background = black
-foreground = red
+foreground = cyan
 
 
 [smoothing]

@@ -9,7 +9,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "275x5-8+26"
+    geometry = "275x5-0+18"
     shrink = no
     transparency = 0
     idle_threshold = 120
@@ -26,7 +26,7 @@
 
 [frame]
     width = 1
-    color = "#aa7b4f"
+    color = "#53a4a1"
 
 [shortcuts]
     close = mod4+x
@@ -35,16 +35,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#181a13"
-    foreground = "#8c97ac"
+    background = "#1a2c2c"
+    foreground = "#ae9984"
     timeout = 5
 
 [urgency_normal]
-    background = "#181a13"
-    foreground = "#aa7b4f"
+    background = "#1a2c2c"
+    foreground = "#53a4a1"
     timeout = 10
 
 [urgency_critical]
-    background = "#181a13"
-    foreground = "#c7bbb4"
+    background = "#1a2c2c"
+    foreground = "#9eb2cb"
     timeout = 0

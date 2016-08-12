@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        4
-set $oug        4
+set $ing        0
+set $oug        0
 
 set $home       /home/fullsalvo
 
@@ -15,13 +15,13 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #a99770
+set $border     #53a4a1
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5c5c5c
+set $ufocus     #ae9984
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
@@ -37,7 +37,7 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/OnTheRoadAgain.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Down.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -238,6 +238,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 2%
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym Shift+XF86AudioPlay exec --no-startup-id .bin/spotify-control play
+
+# Screen Brightness Controls
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 #######################################################################
 #                                Bar                                  #
