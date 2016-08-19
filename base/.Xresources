@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:      xft:neep:pixelsize=12:antialias=true,xft:JackeyFont:pixelsize=12:antialias=true,
+URxvt.font:      xft:bitbuntu:pixelsize=8:antialias=true,xft:JackeyFont:pixelsize=8:antialias=true,
 URxvt.boldFont:
-XTerm.font:      xft:neep:pixelsize=12:antialias=true,xft:JackeyFont:pixelsize=12:antialias=true,
+XTerm.font:      xft:bitbuntu:pixelsize=8:antialias=true,xft:JackeyFont:pixelsize=8:antialias=true,
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: 0
+*.letterSpace: 1
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -26,15 +26,15 @@ emacs.internalBorder: 0
 rofi.opacity: 80
 rofi.width: 40
 rofi.lines: 3
-rofi.font: neep 8
+rofi.font: bitbuntu 8
 rofi.padding: 50
 rofi.bw: 2
 rofi.terminal: urxvt
 rofi.disable-history: true
-rofi.color-window: #222222, #53a4a1
-rofi.color-normal: #222222, #eeeeee, #222222, #53a4a1, #222222
-rofi.color-active: #222222, #eeeeee, #222222, #6cd6d2, #222222
-rofi.color-urgent: #222222, #eeeeee, #222222, #ae9984, #222222
+rofi.color-window: #222222, #708ca2
+rofi.color-normal: #222222, #bcbcbc, #222222, #708ca2, #222222
+rofi.color-active: #222222, #bcbcbc, #222222, #7faed0, #222222
+rofi.color-urgent: #222222, #bcbcbc, #222222, #a7a59c, #222222
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
@@ -44,39 +44,39 @@ rofi.color-urgent: #222222, #eeeeee, #222222, #ae9984, #222222
 *url-select.underline:	 true
 
 ! Colors
-*.borderColor:  #1a2c2c
-*.background:   #1a2c2c
-*.foreground:   #eeeeee
-*.cursorColor:  #eeeeee
+*.borderColor:  #1c1c22
+*.background:   #1c1c22
+*.foreground:   #bcbcbc
+*.cursorColor:  #bcbcbc
 
 ! Black
-*color0:       #4b4b4b
-*color8:       #5f5f5f
+*color0:       #313131
+*color8:       #434343
 
 ! Red
-*color1:       #ab7253
-*color9:       #dd936b
+*color1:       #7e6565
+*color9:       #807171
 
 ! Green
-*color2:       #b28667
-*color10:      #e4ab83
+*color2:       #72a89c
+*color10:      #93daca
 
 ! Yellow
-*color3:       #ae9984
-*color11:      #e0c4a9
+*color3:       #90a996
+*color11:      #badbc2
 
 ! Blue
-*color4:       #aaaba2
-*color12:      #dbddd1
+*color4:       #708ca2
+*color12:      #7faed0
 
 ! Magenta
-*color5:       #81a7a5
-*color13:      #a7d9d6
+*color5:       #817f98
+*color13:      #9b98b7
 
 ! Cyan
-*color6:       #53a4a1
-*color14:      #6cd6d2
+*color6:       #9aa7c0
+*color14:      #b2b7c0
 
 ! White
-*color7:       #9eb2cb
-*color15:      #cae5ff
+*color7:       #a7a59c
+*color15:      #d9d6ca

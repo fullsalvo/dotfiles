@@ -13,7 +13,7 @@
 (evil-leader/set-key
  "f" 'find-file
  "k" 'kill-buffer
- "r" 'recentf-open-files-in-simply-buffer
+ "r" 'recentf-open-more-files
  "c" 'comment-region
  "SPC" 'execute-extended-command
  "b" 'vimish-fold

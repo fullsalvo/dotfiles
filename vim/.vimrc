@@ -16,3 +16,8 @@ nnoremap <space> za
 colorscheme fs
 syntax on
 " }}}
+" {{{ Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'metakirby5/codi.vim'
+call plug#end()
+" }}}

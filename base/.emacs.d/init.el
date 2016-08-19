@@ -14,14 +14,15 @@
 (if (file-accessible-directory-p "~/.emacs.d/my-lisp")
 	(mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el")))
 
-;; Recently opened file list
-(load "recentf-buffer")
-(global-set-key [?\C-c ?r ?f] 'recentf-open-files-in-simply-buffer)
-
 ;; Apply a custom color scheme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (if (display-graphic-p)
     (load-theme 'fullsalvo t))
+
+;; add MRU buffer capabilities
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 30)
 
 ;; Add/Remove GUI Features
 ;; ===========================
@@ -183,17 +184,5 @@
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(safe-local-variable-values (quote ((TeX-master . t))))
  '(vimish-fold-global-mode t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
- '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f"))))
- '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))

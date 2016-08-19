@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+declare activeWorkspace="* %s"
+declare inactiveWorkspace="%s"
+declare separator=" | "
+
+xprop -spy -root | awk -F' = ' '
+  function printWorkspace(current, names) {
+	++current;
+	gsub("\"", "", names);
+	n=split(names, a, ", ");
+	for(i = 0; ++i <= n;) {
+	  if(current == i) {
+		printf activeWorkspace, a[i];
+	  } else {
+		printf inactiveWorkspace, a[i];
+	  }
+	  if(i != n) { printf separator; }
+	}
+	printf "\n"
+  }
+
+  BEGIN { active=0; workspaces=""; }
+  "_NET_DESKTOP_NAMES(UTF8_STRING)" == $1 { workspaces=$2; printWorkspace(active, workspaces); }
+  "_NET_CURRENT_DESKTOP(CARDINAL)" == $1 { active=$2; printWorkspace(active, workspaces); }
+' inactiveWorkspace="$inactiveWorkspace" activeWorkspace="$activeWorkspace" separator="$separator"

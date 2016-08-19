@@ -16,3 +16,7 @@
 *.log
 *.swp
 *~
+
+# vim
+*/.vim/autoload*
+*/.vim/plugged*

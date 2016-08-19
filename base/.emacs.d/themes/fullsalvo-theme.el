@@ -4,21 +4,21 @@
 (deftheme fullsalvo
   "Fullsalvo - A Custom Theme")
 
-(let ((blue "#aaaba2")
-      (green "#b28667")
-      (yellow "#ae9984")
-      (red "#ab7253")
-      (magenta "#81a7a5")
-      (cyan "#53a4a1")
-      (black "#4b4b4b")
-      (white "#9eb2cb")
-      (background   "#1a2c2c")
-      (background-2 "#4b4b4b")
-      (background-3 "#9eb2cb")
+(let ((blue "#708ca2")
+      (green "#72a89c")
+      (yellow "#90a996")
+      (red "#7e6565")
+      (magenta "#817f98")
+      (cyan "#9aa7c0")
+      (black "#313131")
+      (white "#a7a59c")
+      (background   "#1c1c22")
+      (background-2 "#313131")
+      (background-3 "#a7a59c")
       (background-4 "#1f1f1f")
-      (text "#eeeeee")
+      (text "#bcbcbc")
       (text-2 "#858D8A")
-      (text-3 "#4b4b4b")
+      (text-3 "#313131")
       (text-4 "#2F3C42")
       (text-highlight "#FFFFFF")
       (text-region "#434546")
@@ -81,11 +81,11 @@
    ;; LaTeX
    ;; -----
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "neep" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "neep" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "neep" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "neep" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "neep" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "bitbuntu" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "bitbuntu" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "bitbuntu" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "bitbuntu" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "bitbuntu" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;; Markdown
@@ -107,13 +107,13 @@
 
    ;; Dired
    ;; -----
-   `(dired-directory ((t (:foreground ,text :weight extrabold))))
-   `(dired-header ((t (:foreground "white"  :background ,blue :weight bold))))
+   `(dired-directory ((t (:foreground ,green))))
+   `(dired-header ((t (:foreground "white"  :background ,blue))))
    `(dired-ignored ((t (:foreground ,text-3))))
    `(dired-flagged ((t (:foreground ,red :weight bold))))
    `(dired-marked ((t (:background ,blue :foreground "white" :weight normal))))
    `(dired-perm-write ((t (:foreground ,yellow :weight ultra-bold))))
-   `(dired-symlink ((t (:foreground ,light-blue :weight normal))))
+   `(dired-symlink ((t (:foreground ,magenta :weight normal))))
    `(dired-warning ((t (:inherit (font-lock-warning-face)))))
 
    ;; Lines

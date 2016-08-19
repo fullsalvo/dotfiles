@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        0
-set $oug        0
+set $ing        20
+set $oug        50
 
 set $home       /home/fullsalvo
 
@@ -15,13 +15,13 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #53a4a1
+set $border     #708ca2
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #ae9984
+set $ufocus     #5c5c5c
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
@@ -37,7 +37,7 @@ set $barfont    lime 6
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Down.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Endeavor.jpeg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -180,10 +180,10 @@ mode "Resize" {
 	 bindsym l resize shrink height 1 px or 1 ppt
 	 bindsym semicolon resize grow width 1 px or 1 ppt
 
-	 bindsym Left resize shrink width 1px or 1ppt
-	 bindsym Down resize grow height 1px or 1ppt
-	 bindsym Up resize shrink height 1px or 1ppt
-	 bindsym Right resize grow width 1px or 1ppt
+	 bindsym Left resize shrink width 1 px or 1 ppt
+	 bindsym Down resize grow height 1 px or 1 ppt
+	 bindsym Up resize shrink height 1 px or 1 ppt
+	 bindsym Right resize grow width 1 px or 1 ppt
 
 	 bindsym Return mode "default"
 	 bindsym Escape mode "default"
