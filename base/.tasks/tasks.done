@@ -1,4 +1,10 @@
 Remove subtasks with Main | id:2.0
+Review Old Textbooks | id:3.0
+Taylor Mechanics | id:3.1
+Griffiths E&M | id:3.2
+Griffiths Quantum | id:3.3
+Boas MathPhys | id:3.4
+Blundell Thermo | id:3.5
 Muse-bot Regex | id:7.0
 Allow for multireplace | id:7.1
 Fix backslash after literal slash | id:7.2

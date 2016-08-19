@@ -1,26 +1,40 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-declare activeWorkspace="* %s"
-declare inactiveWorkspace="%s"
-declare separator=" | "
+import sys, re, i3ipc
 
-xprop -spy -root | awk -F' = ' '
-  function printWorkspace(current, names) {
-	++current;
-	gsub("\"", "", names);
-	n=split(names, a, ", ");
-	for(i = 0; ++i <= n;) {
-	  if(current == i) {
-		printf activeWorkspace, a[i];
-	  } else {
-		printf inactiveWorkspace, a[i];
-	  }
-	  if(i != n) { printf separator; }
-	}
-	printf "\n"
-  }
+# Create the Connection object that can be used to send commands and subscribe
+# to events.
+i3 = i3ipc.Connection()
+coloractive = '%{F#eeeeee}'
+colorinactive = '%{F#5c5c5c}'
+symbols = ['♦']*5
 
-  BEGIN { active=0; workspaces=""; }
-  "_NET_DESKTOP_NAMES(UTF8_STRING)" == $1 { workspaces=$2; printWorkspace(active, workspaces); }
-  "_NET_CURRENT_DESKTOP(CARDINAL)" == $1 { active=$2; printWorkspace(active, workspaces); }
-' inactiveWorkspace="$inactiveWorkspace" activeWorkspace="$activeWorkspace" separator="$separator"
+# Define a callback to be called when you switch workspaces.
+def on_workspace_focus(self, e):
+    workspace_string = '  '
+    workspaces = i3.get_workspaces()
+
+    ws_nums = []
+
+    # Retreive the relevant information from the dicts
+    for n in workspaces:
+        ws = eval(str(n))
+        if ws['visible'] == True:
+            focused = int(ws['num'])
+        ws = int(ws['num'])
+        ws_nums.append(ws)
+
+    # Create the output workspace string
+    for n in ws_nums:
+        if focused == n:
+            workspace_string += coloractive + symbols[n-1] + ' '
+        else:
+            workspace_string += colorinactive + symbols[n-1] + ' '
+
+    print(workspace_string, flush=True)
+
+# Subscribe to events
+i3.on('workspace::focus', on_workspace_focus)
+
+# Start the main loop and wait for events to come in.
+i3.main()

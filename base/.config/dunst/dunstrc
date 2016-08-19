@@ -9,7 +9,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "275x5-9+27"
+    geometry = "275x5-0+18"
     shrink = no
     transparency = 0
     idle_threshold = 120

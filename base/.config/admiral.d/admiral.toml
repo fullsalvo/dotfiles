@@ -1,0 +1,37 @@
+[admiral]
+items = ["left", "workspaces",
+         "center", "clock",
+         "right", "volume",
+		 "separator", "battery"]
+
+[workspaces]
+path = "~/.bin/workspace"
+
+[clock]
+path = "date '+%a %d %b %H:%M'"
+reload = 1
+
+[battery]
+path = "~/.bin/battery"
+reload = 60
+
+[volume]
+path = "~/.bin/lbvolume"
+reload = 5
+
+# Used for formatting lemonbar
+[left]
+path = "echo '%{l}'"
+static = true
+
+[center]
+path = "echo '%{c} %{F-}'"
+static = true
+
+[right]
+path = "echo '%{r}'"
+static = true
+
+[separator]
+path = "echo '  |  '"
+static = true

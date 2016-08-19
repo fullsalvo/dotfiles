@@ -71,7 +71,7 @@ fi
 #Add directories to $PATH
 
 if [ -d $HOME/.bin ]; then
-    export PATH="$PATH:$HOME/.bin"
+    export PATH="$PATH:$HOME/.bin:$HOME/.local/bin"
 fi
 
 # Allow for bash autocompletion
