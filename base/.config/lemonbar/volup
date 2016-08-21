@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+MIXER="default"
+SCONTROL="$(amixer -D $MIXER scontrols |
+				  sed -n "s/Simple mixer control '\([A-Za-z ]*\)',0/\1/p" |
+				  head -n1
+				)"
+STEP="${1:-2%}"
+
+capability() { # Return "Capture" if the device is a capture device
+  amixer -D $MIXER get $SCONTROL |
+	sed -n "s/  Capabilities:.*cvolume.*/Capture/p"
+}
+
+amixer -q -D $MIXER sset $SCONTROL $(capability) ${STEP}+ unmute

@@ -116,6 +116,9 @@
 ;; Open a blank buffer when opening scratch
 (setq initial-scratch-message "")
 
+;; Open to init file by default
+(setq initial-buffer-choice "~")
+
 ;; Close the scratch buffer when entering a programming mode
 (add-hook 'prog-mode-hook 'remove-scratch-buffer)
 

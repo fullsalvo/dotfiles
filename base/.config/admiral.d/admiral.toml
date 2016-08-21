@@ -1,14 +1,19 @@
 [admiral]
-items = ["left", "workspaces",
-         "center", "clock",
-         "right", "volume",
+items = ["left", "wsfw", "wsbk", "workspaces", "closeclick", "closeclick",
+		 "modes", "center", "reset", "todo", "calendar",
+		 "clock", "closeclick", "closeclick", "right",
+		 "volup", "voldn", "mute", "volume",
+		 "closeclick", "closeclick", "closeclick",
 		 "separator", "battery"]
 
 [workspaces]
 path = "~/.bin/workspace"
 
+[modes]
+path = "~/.bin/modes"
+
 [clock]
-path = "date '+%a %d %b %H:%M'"
+path = "date '+%a %d %b %H:%M:%S'"
 reload = 1
 
 [battery]
@@ -16,8 +21,45 @@ path = "~/.bin/battery"
 reload = 60
 
 [volume]
-path = "~/.bin/lbvolume"
-reload = 5
+path = "~/.bin/soundstate"
+reload = 0.1
+
+# Clickable Regions
+[todo]
+path = "echo '%{A:~/.bin/todo:}'"
+static = true
+
+[calendar]
+path = "echo '%{A3:notify-send \"Calendar\" \"`ncal -h`\":}'"
+static = true
+
+[nowplaying]
+path = "echo '%{A:~/.bin/mpc-notify:}'"
+static = true
+
+[wsbk]
+path = "echo '%{A5:~/.bin/wsbk:}'"
+static = true
+
+[wsfw]
+path = "echo '%{A4:~/.bin/wsfw:}'"
+static = true
+
+[volup]
+path = "echo '%{A4:~/.config/lemonbar/volup:}'"
+static = true
+
+[voldn]
+path = "echo '%{A5:~/.config/lemonbar/voldn:}'"
+static = true
+
+[mute]
+path = "echo '%{A3:~/.config/lemonbar/mute:}'"
+static = true
+
+[closeclick]
+path = "echo '%{A}'"
+static = true
 
 # Used for formatting lemonbar
 [left]
@@ -25,11 +67,15 @@ path = "echo '%{l}'"
 static = true
 
 [center]
-path = "echo '%{c} %{F-}'"
+path = "echo '%{c}'"
 static = true
 
 [right]
 path = "echo '%{r}'"
+static = true
+
+[reset]
+path = "echo '%{F-}'"
 static = true
 
 [separator]

@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        0
-set $oug        0
+set $ing        20
+set $oug        50
 
 set $home       /home/fullsalvo
 
@@ -44,11 +44,11 @@ set $wallprog   feh
 set $maimbord   0.5,0.5,0.5
 
 # Workspace Labels
-set $ws1        ♦
-set $ws2        ♦
-set $ws3        ♦
-set $ws4        ♦
-set $ws5        ♦
+set $ws1        
+set $ws2        
+set $ws3        
+set $ws4        
+set $ws5        
 
 #######################################################################
 #                           Miscellanious                             #
@@ -247,31 +247,31 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 #                                Bar                                  #
 #######################################################################
 
-# exec $home/.bin/bar
+exec_always $home/.bin/startbar
 
-bar {
-    i3bar_command i3bar -t
-    status_command i3blocks
-    position          top
-    workspace_buttons yes
-    strip_workspace_numbers yes
-    binding_mode_indicator yes
-    height $bheight
-    tray_output none
+# bar {
+#     i3bar_command i3bar -t
+#     status_command i3blocks
+#     position          top
+#     workspace_buttons yes
+#     strip_workspace_numbers yes
+#     binding_mode_indicator yes
+#     height $bheight
+#     tray_output none
 
-    font pango:$barfont
-    colors {
-        background $background
-        statusline $bartext
-        separator  $background
+#     font pango:$barfont
+#     colors {
+#         background $background
+#         statusline $bartext
+#         separator  $background
 
-#       class                border      background  text
-        focused_workspace    $background $background $barfoc
-        active_workspace     $background $background $barfoc
-        inactive_workspace   $background $background $ufocus
-        urgent_workspace     $background $background $warning
-    }
-}
+# #       class                border      background  text
+#         focused_workspace    $background $background $barfoc
+#         active_workspace     $background $background $barfoc
+#         inactive_workspace   $background $background $ufocus
+#         urgent_workspace     $background $background $warning
+#     }
+# }
 
 #######################################################################
 #                           Sleep Modes                               #

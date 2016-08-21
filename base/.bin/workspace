@@ -7,7 +7,28 @@ import sys, re, i3ipc
 i3 = i3ipc.Connection()
 coloractive = '%{F#eeeeee}'
 colorinactive = '%{F#5c5c5c}'
-symbols = ['♦']*5
+symbols = ['']*5
+
+workspace_string = '  '
+workspaces = i3.get_workspaces()
+
+ws_nums = []
+
+for n in workspaces:
+    ws = eval(str(n))
+    if ws['visible'] == True:
+        focused = int(ws['num'])
+    ws = int(ws['num'])
+    ws_nums.append(ws)
+
+for n in ws_nums:
+    if focused == n:
+        workspace_string += coloractive + symbols[n-1] + '  '
+    else:
+        workspace_string += colorinactive + symbols[n-1] + '  '
+
+workspace_string += '  '
+print(workspace_string, flush=True)
 
 # Define a callback to be called when you switch workspaces.
 def on_workspace_focus(self, e):
@@ -27,10 +48,11 @@ def on_workspace_focus(self, e):
     # Create the output workspace string
     for n in ws_nums:
         if focused == n:
-            workspace_string += coloractive + symbols[n-1] + ' '
+            workspace_string += coloractive + symbols[n-1] + '  '
         else:
-            workspace_string += colorinactive + symbols[n-1] + ' '
+            workspace_string += colorinactive + symbols[n-1] + '  '
 
+    workspace_string += '  '
     print(workspace_string, flush=True)
 
 # Subscribe to events

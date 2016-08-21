@@ -9,18 +9,24 @@ err() {
 	printf "\e[31m$1\e[0m" >&2
 }
 
+# notify ()
+# {
+#	[ ! -z "$(cat "$DUNSTIFY_ID")" ] && id_arg="-r $(cat "$DUNSTIFY_ID")"
+
+#	dunstify \
+#		-a "todo" \
+#		-p $id_arg > "$DUNSTIFY_ID" \
+#		"To Do:" "$msg_out"
+# }
+
 notify ()
 {
-	[ ! -z "$(cat "$DUNSTIFY_ID")" ] && id_arg="-r $(cat "$DUNSTIFY_ID")"
-
-	dunstify \
-		-a "todo" \
-		-p $id_arg > "$DUNSTIFY_ID" \
+	notify-send \
 		"To Do:" "$msg_out"
 }
 
-if [ -n "$(t)" ]; then
-	msg_out=$(t)
+if [ -n "$(~/.bin/t)" ]; then
+	msg_out=$(~/.bin/t)
 else
 	msg_out="You have nothing to do!"
 fi

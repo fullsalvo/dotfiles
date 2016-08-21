@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-killall lemonbar &>/dev/null
+pkill admiral &>/dev/null
+pkill lemonbar &>/dev/null
 
-admiral | lemonbar -p -B "#55000000" -F "#eeeeee" -f "Lime:size=7" -f "FontAwesome:size=8" -f "Siji-7" -f "Symbola-8" -g 1920x18+0+0
+$HOME/.local/bin/admiral | lemonbar -p -B "#55000000" -F "#eeeeee" -f "Lime:size=7" -f "FontAwesome:size=8" -f "Siji-7" -f "Symbola-8" -g 1920x18+0+0 | sh
