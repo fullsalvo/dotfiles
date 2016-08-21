@@ -1,0 +1,15 @@
+#!/bin/bash
+
+outstr=""
+volout=$($HOME/.bin/volume)
+
+if [[ "${volout}" != "MUTE" ]]; then
+  outstr="${outstr} "
+else
+  outstr="${outstr} "
+fi
+
+outstr=${outstr}${volout}
+
+
+echo ${outstr}

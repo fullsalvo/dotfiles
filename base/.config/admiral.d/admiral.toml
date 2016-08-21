@@ -7,17 +7,17 @@ items = ["left", "wsfw", "wsbk", "workspaces", "closeclick", "closeclick",
 		 "separator", "battery"]
 
 [workspaces]
-path = "~/.bin/workspace"
+path = "~/.config/lemonbar/workspace"
 
 [modes]
-path = "~/.bin/modes"
+path = "~/.config/lemonbar/modes"
 
 [clock]
 path = "date '+%a %d %b %H:%M:%S'"
 reload = 1
 
 [battery]
-path = "~/.bin/battery"
+path = "~/.config/lemonbar/battery"
 reload = 60
 
 [volume]
@@ -38,11 +38,11 @@ path = "echo '%{A:~/.bin/mpc-notify:}'"
 static = true
 
 [wsbk]
-path = "echo '%{A5:~/.bin/wsbk:}'"
+path = "echo '%{A5:~/.config/lemonbar/wsbk:}'"
 static = true
 
 [wsfw]
-path = "echo '%{A4:~/.bin/wsfw:}'"
+path = "echo '%{A4:~/.config/lemonbar/wsfw:}'"
 static = true
 
 [volup]
