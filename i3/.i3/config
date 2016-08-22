@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        20
-set $oug        50
+set $ing        4
+set $oug        4
 
 set $home       /home/fullsalvo
 
@@ -15,7 +15,7 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #708ca2
+set $border     #71899d
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
@@ -33,11 +33,11 @@ set $bordersize 2
 # Default Fallback Font
 set $font       leggie 16
 # Default Bar Font
-set $barfont    lime 6
+set $barfont    lime
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Endeavor.jpeg
+set $wall       /home/fullsalvo/Pictures/Walls/WindowRain.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -247,7 +247,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 #                                Bar                                  #
 #######################################################################
 
-exec_always $home/.bin/startbar
+exec_always $home/.config/lemonbar/startbar &
 
 # bar {
 #     i3bar_command i3bar -t
