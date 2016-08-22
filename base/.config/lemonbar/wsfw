@@ -6,7 +6,6 @@ i3 = i3ipc.Connection()
 
 ws = i3.get_workspaces()
 workspaces = [n['name'] for n in ws]
-ws_nums = [n['num'] for n in ws]
 focused = [n['visible'] for n in ws].index(True)
 if focused > 0:
     i3.command("workspace %s" % workspaces[focused - 1])
