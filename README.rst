@@ -13,13 +13,21 @@ Relevant Information
 ====================
 
 * Window Manager: `i3-gaps`_
+
 * Terminal Font: neep
+
 * Text Editor: `emacs`_
+
 * File Manager: `ranger`_
+
 * Music Player: `mpd`_ + `ncmpcpp`_
+
 * Browser: Firefox
+
 * IRC: `irssi`_
+
 * Theming: `whizkers`_
+
 	* Also check out these `utilities`_ that I've been working on.
 
 .. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
