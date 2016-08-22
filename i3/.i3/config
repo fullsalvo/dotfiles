@@ -15,7 +15,7 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #71899d
+set $border     #b9bda9
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
@@ -37,7 +37,7 @@ set $barfont    lime
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/WindowRain.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Scale.jpeg
 set $walltype   --bg-fill
 set $wallprog   feh
 

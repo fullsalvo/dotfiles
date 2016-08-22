@@ -4,18 +4,9 @@ import i3ipc
 
 i3 = i3ipc.Connection()
 
-workspaces = i3.get_workspaces()
-ws_nums = []
-
-for n in workspaces:
-    ws = eval(str(n))
-    if ws['visible'] == True:
-        focused = int(ws['num'])
-    ws_nums.append(int(ws['num']))
-
-for n in range(len(ws_nums)):
-    if ws_nums[n] == focused:
-        focused = n
-
-if focused != (len(ws_nums)-1):
-    i3.command("workspace %s" % (str(ws_nums[focused + 1]) + ''))
+ws = i3.get_workspaces()
+workspaces = [n['name'] for n in ws]
+ws_nums = [n['num'] for n in ws]
+focused = [n['visible'] for n in ws].index(True)
+if focused < len(ws) - 1:
+    i3.command("workspace %s" % workspaces[focused + 1])
