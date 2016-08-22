@@ -28,7 +28,7 @@ Relevant Information
 
 * Theming: `whizkers`_
 
-	* Also check out these `utilities`_ that I've been working on.
+  * Also check out these `utilities`_ that I've been working on.
 
 .. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
 .. |dtop2| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop.gif
