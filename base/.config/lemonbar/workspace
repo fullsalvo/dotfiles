@@ -7,55 +7,50 @@ import i3ipc
 i3 = i3ipc.Connection()
 coloractive = '%{F#eeeeee}'
 colorinactive = '%{F#5c5c5c}'
-symbols = ['']*5
-
-workspace_string = '  '
-workspaces = i3.get_workspaces()
-
-ws_nums = []
-
-for n in workspaces:
-    ws = eval(str(n))
-    if ws['visible'] == True:
-        focused = int(ws['num'])
-    ws = int(ws['num'])
-    ws_nums.append(ws)
-
-for n in ws_nums:
-    if focused == n:
-        workspace_string += coloractive + symbols[n-1] + '  '
-    else:
-        workspace_string += colorinactive + symbols[n-1] + '  '
-
-workspace_string += '  '
-print(workspace_string, flush=True)
+colorwarning = '%{F#e84f4f}'
 
 # Define a callback to be called when you switch workspaces.
 def on_workspace_focus(self, e):
     workspace_string = '  '
     workspaces = i3.get_workspaces()
 
-    ws_nums = []
+    ws_nums = [int(n['num']) for n in workspaces]
+    focused = [n['visible'] for n in workspaces].index(True)
+    urg = [n for n, _ in enumerate(workspaces) if workspaces[n]['urgent'] == True]
+    names = [''.join([i for i in n['name'] if not i.isdigit()]) for n in workspaces]
 
-    # Retreive the relevant information from the dicts
-    for n in workspaces:
-        ws = eval(str(n))
-        if ws['visible'] == True:
-            focused = int(ws['num'])
-        ws = int(ws['num'])
-        ws_nums.append(ws)
-
-    for n in ws_nums:
+    for n in range(len(ws_nums)):
         if focused == n:
-            workspace_string += coloractive + symbols[n-1] + '  '
+            workspace_string += coloractive + names[n] + '  '
+        elif n in urg:
+            workspace_string += colorwarning + names[n] + '  '
         else:
-            workspace_string += colorinactive + symbols[n-1] + '  '
+            workspace_string += colorinactive + names[n] + '  '
 
     workspace_string += '  '
     print(workspace_string, flush=True)
 
+workspace_string = '  '
+workspaces = i3.get_workspaces()
+
+ws_nums = [int(n['num']) for n in workspaces]
+focused = [n['visible'] for n in workspaces].index(True)
+urg = [n for n, _ in enumerate(workspaces) if workspaces[n]['urgent'] == True]
+names = [''.join([i for i in n['name'] if not i.isdigit()]) for n in workspaces]
+
+for n in range(len(ws_nums)):
+    if focused == n:
+        workspace_string += coloractive + names[n] + '  '
+    elif n in urg:
+        workspace_string += colorwarning + names[n] + '  '
+    else:
+        workspace_string += colorinactive + names[n] + '  '
+
+workspace_string += '  '
+print(workspace_string, flush=True)
+
 # Subscribe to events
-i3.on('workspace::focus', on_workspace_focus)
+i3.on('workspace', on_workspace_focus)
 
 # Start the main loop and wait for events to come in.
 i3.main()
