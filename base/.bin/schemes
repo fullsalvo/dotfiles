@@ -1,12 +1,6 @@
 #!/bin/bash
 
-direc="$HOME/.config/whizkers/variable_sets/themes/*/"
-
-# if [ ! "floating" in "$@" ]; then
-# 	notify-send "Theme:" "Default"
-# else
-# 	notify-send "Theme:" "Default floating"
-# fi
+direc="$HOME/.config/whizkers/variable_sets/themes/3d/"
 
 for i in ${direc}/*; do
     name=$(basename $i .yaml)
@@ -20,7 +14,7 @@ for i in ${direc}/*; do
 		rhisk ${name}
 		sleep 0.5
 		# notify-send "Theme:" "${name}"
-		sleep 3.5
+		sleep 1.5
     fi
 done
 

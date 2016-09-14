@@ -8,7 +8,7 @@ DUNSTIFY_ID="/tmp/irssi-notify_dunstify_id"
 # Get the dunstify id
 [ ! -z "$(cat "$DUNSTIFY_ID")" ] && id_arg="-r $(cat "$DUNSTIFY_ID")"
 
-dunstify \
+$HOME/.bin/dunstify \
     -a "irssi"\
     -p $id_arg > "$DUNSTIFY_ID" \
     "You have been highlighted."

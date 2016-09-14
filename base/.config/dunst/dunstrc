@@ -1,5 +1,5 @@
 [global]
-    font = bitbuntu 8
+    font = hlv 8
     allow_markup = yes
     format = "\n%s\n%b"
     sort = yes

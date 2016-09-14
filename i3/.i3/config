@@ -15,17 +15,17 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #b9bda9
+set $border     #b8bbc3
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #5c5c5c
+set $ufocus     #4b4b4b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
-set $rofibg     #222222
+set $rofibg     #191921
 
 
 # Window Border Thickness
@@ -59,6 +59,7 @@ focus_follows_mouse no
 exec xset s off -dpms
 exec $home/.bin/batnotif &
 exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
+for_window [class="Lxappearance"] floating enable
 
 #######################################################################
 #                           Fallback Font                             #
@@ -93,6 +94,7 @@ bindsym $win+p exec --no-startup-id i3-msg open
 bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec --no-startup-id killall ffmpeg
 bindsym $win+Shift+Return exec --no-startup-id x-terminal-emulator
+bindsym $mod+Shift+i exec --no-startup-id $home/.bin/sc p
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -174,6 +176,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
+
 mode "Resize" {
 	 bindsym j resize shrink width 1 px or 1 ppt
  	 bindsym k resize grow height 1 px or 1 ppt
@@ -189,6 +192,7 @@ mode "Resize" {
 	 bindsym Escape mode "default"
 }
 
+
 bindsym $mod+r mode "Resize"
 
 #######################################################################
@@ -197,15 +201,17 @@ bindsym $mod+r mode "Resize"
 
 gaps inner $ing
 gaps outer $oug
-for_window [class="^.*"] border pixel $bordersize
+
+
+
+for_window [class=".*"] border pixel $bordersize
+
 
 # class                 border   backgr.  text      indicator
 client.focused          $border  $border  $dectext  $border
 client.unfocused        $ufocus  $ufocus  $dectext  $ufocus
 client.focused_inactive $ufocus  $ufocus  $dectext  $ufocus
 client.urgent           $dectext $dectext $dectext  $dectext
-
-for_window [class=".*"] border pixel $bordersize
 
 mode "Gaps" {
      bindsym plus gaps inner current plus 5
@@ -247,7 +253,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 #                                Bar                                  #
 #######################################################################
 
-exec_always $home/.config/lemonbar/startbar &
+exec_always --no-startup-id $home/.config/lemonbar/startbar &
 
 # bar {
 #     i3bar_command i3bar -t

@@ -184,6 +184,9 @@
 ;; Reload file when changes have been made
 (global-set-key (kbd "C-x n") 'revert-buf)
 
+;; Indent to a column
+(global-set-key (kbd "C-c z") 'indent-to-column)
+
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
 (custom-set-variables

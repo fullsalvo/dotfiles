@@ -6,7 +6,7 @@ import i3ipc
 # to events.
 i3 = i3ipc.Connection()
 coloractive = '%{F#eeeeee}'
-colorinactive = '%{F#5c5c5c}'
+colorinactive = '%{F#b6bd97}'
 colorwarning = '%{F#e84f4f}'
 
 # Define a callback to be called when you switch workspaces.
@@ -27,7 +27,6 @@ def on_workspace_focus(self, e):
         else:
             workspace_string += colorinactive + names[n] + '  '
 
-    workspace_string += '  '
     print(workspace_string, flush=True)
 
 workspace_string = '  '
@@ -46,7 +45,6 @@ for n in range(len(ws_nums)):
     else:
         workspace_string += colorinactive + names[n] + '  '
 
-workspace_string += '  '
 print(workspace_string, flush=True)
 
 # Subscribe to events

@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:      xft:bitbuntu:pixelsize=8:antialias=true,xft:JackeyFont:pixelsize=8:antialias=true,
+URxvt.font:xft:hlv:pixelsize=7:antialias=True,xft:JackeyFont:pixelsize=7:antialias=True
 URxvt.boldFont:
-XTerm.font:      xft:bitbuntu:pixelsize=8:antialias=true,xft:JackeyFont:pixelsize=8:antialias=true,
+XTerm.font:xft:hlv:pixelsize=7:antialias=True,xft:JackeyFont:pixelsize=7:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: 1
+*.letterSpace: -3
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -23,18 +23,18 @@ Xft.rgba: rgb
 emacs.internalBorder: 0
 
 ! Rofi
-rofi.opacity: 80
+rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: bitbuntu 8
+rofi.font: hlv 8
 rofi.padding: 50
 rofi.bw: 2
 rofi.terminal: urxvt
 rofi.disable-history: true
-rofi.color-window: #222222, #b9bda9
-rofi.color-normal: #222222, #eeeeee, #222222, #93a0aa, #222222
-rofi.color-active: #222222, #eeeeee, #222222, #becfdc, #222222
-rofi.color-urgent: #222222, #eeeeee, #222222, #cbcbc1, #222222
+rofi.color-window: #191921, #b8bbc3
+rofi.color-normal: #191921, #eeeeee, #191921, #93a0aa, #191921
+rofi.color-active: #191921, #eeeeee, #191921, #becfdc, #191921
+rofi.color-urgent: #191921, #eeeeee, #191921, #cbcbc1, #191921
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard

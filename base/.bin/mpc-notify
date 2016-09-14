@@ -7,6 +7,7 @@ ALBUM_ART="$(mktemp).png"
 ALBUM_ART_WIDTH="75"
 FMT_SUMMARY="[%title%]|[%file%]"
 FMT_BODY="[[%artist% - ]&%album%]|[%artist%]|[%album%]"
+XDG_MUSIC_DIR="$HOME/Music/"
 
 mpc_format() {
   args=("$@")
@@ -29,7 +30,7 @@ body="$(mpc_format "$FMT_BODY")"
 summary="${summary/#-/−}"
 body="${body/#-/−}"
 
-dunstify \
+/home/fullsalvo/.bin/dunstify \
   -a "ncmpcpp" \
   -i "$ALBUM_ART" \
   -p $id_arg > "$DUNSTIFY_ID" \

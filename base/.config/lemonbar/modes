@@ -7,7 +7,7 @@ colormode = '%{F#e84f4f}'
 
 def on_mode(self, e):
     if e.change != 'default':
-        modestr = colormode + e.change
+        modestr = colormode + '  ' + e.change
     else:
         modestr = ' '
     print(modestr, flush=True)

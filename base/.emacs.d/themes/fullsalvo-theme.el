@@ -23,10 +23,11 @@
       (text-highlight "#FFFFFF")
       (text-region "#434546")
       (text-dired "#A0A0A0")
-      (input-text "#CCCCCC")
+      (input-text "#eeeeee")
       (light-blue "#75E5F4")
       (dark-blue "#4F99D3")
-      (intense-green "#B3BD54"))
+      (intense-green "#B3BD54")
+	  (linehl "#1f1f1f"))
 
   (custom-theme-set-faces
    'fullsalvo
@@ -81,11 +82,11 @@
    ;; LaTeX
    ;; -----
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "bitbuntu" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "bitbuntu" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "bitbuntu" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "bitbuntu" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "bitbuntu" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "hlv" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "hlv" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "hlv" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "hlv" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "hlv" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;; Markdown
@@ -121,7 +122,7 @@
    `(linum ((t (:foreground ,text-3  :weight light :height 0.9))))
    `(fringe ((t (:background ,background-3 :foreground ,text-4))))
    `(left-margin ((t (nil))))
-   `(hl-line ((t (:background , background-4)))))
+   `(hl-line ((t (:background , linehl)))))
 
 
 (custom-theme-set-variables

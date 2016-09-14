@@ -16,7 +16,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 	--scrollbar: -15px !important;
 
 	/* Fonts */
-	--font-family: 'bitbuntu' !important;
+	--font-family: 'hlv' !important;
 	--font-size: 10px !important;
 
 	/* Tabs */
@@ -254,7 +254,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 }
 
 #urlbar {
-    color: #eeede1!important;
+    color: #cbcbc1!important;
     text-align: left !important;
     border-radius: 0px !important;
     border: none !important;
@@ -329,7 +329,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 .autocomplete-richlistitem[selected="true"], .autocomplete-richlistiem:hover{
     background-color: #fff!important;
-    color: #eeede1 !important;
+    color: #cbcbc1 !important;
     text-decoration: underline;
 }
 

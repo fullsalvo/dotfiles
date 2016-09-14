@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+load=(
+	down
+	journey
+	tools
+	bridge
+	canopy
+	stool
+)
+
+for i in ${load[@]}; do
+	rhisk "$i"
+	sleep 2
+done
+
+rhisk

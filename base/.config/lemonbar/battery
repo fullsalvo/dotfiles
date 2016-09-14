@@ -6,7 +6,7 @@ battery () {
 
 	case "$battery" in
 		[0-9]|10)
-			battery="${battery}%  "
+			battery="${battery}%  "
 		;;
 
 		1[0-9]|2[0-5])

@@ -4,7 +4,7 @@ body {
 }
 
 div[class^="books"], div [class*="books"] {
-	font-family: "bitbuntu" !important;
+	font-family: "hlv" !important;
 	font-size: 10px !important;
 }
 

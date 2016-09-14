@@ -46,3 +46,4 @@ alias rotate='clear && schemes'
 export WZK_ZNC_PASS="Sch00l"
 export EDITOR="emacs"
 export XDG_MUSIC_DIR=$HOME/Music
+export RHISK_COMM='zenbu'

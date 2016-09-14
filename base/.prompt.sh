@@ -1,7 +1,5 @@
 #Define colors in an easier-to-use syntax
 
-#Define colors in an easier-to-use syntax
-
 # ESC="$(echo -en '\e')"
 # BLACK="${ESC}[30m"
 # RED="${ESC}[31m"
@@ -19,4 +17,4 @@
 # PS1='\w\[${BLUE}\] »» \[${RESET}\]'
 # PS1='\w\[${BLUE}\] ─── \[${RESET}\]'
 PS1='%F{blue} ┄─┄┄ %F{reset_color}'
-RPROMPT=' %~'
+ RPROMPT=' %~'

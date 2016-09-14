@@ -1,10 +1,10 @@
 [admiral]
-items = ["left", "wsfw", "wsbk", "workspaces", "closeclick", "closeclick",
-		 "modes", "center", "reset", "todo", "calendar",
-		 "clock", "closeclick", "closeclick", "right",
-		 "volup", "voldn", "mute", "volume",
+items = ["left", "modes", "reset", "center", "wsfw", "wsbk", "workspaces",
+		 "closeclick", "closeclick",
+		 "right", "reset", "volup", "voldn", "mute", "volume",
 		 "closeclick", "closeclick", "closeclick",
-		 "separator", "battery"]
+		 "separator", "todo", "calendar",
+		 "clock", "closeclick", "closeclick", "separator", "battery"]
 
 [workspaces]
 path = "~/.config/lemonbar/workspace"
