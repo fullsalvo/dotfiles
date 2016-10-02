@@ -18,6 +18,9 @@
 	  (lambda ()
             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; toml mode
+(require 'toml-mode)
+
 ;; c indenting
 (c-set-offset 'substatement-open 0)
 (c-set-offset 'substatement 0)

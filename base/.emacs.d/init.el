@@ -17,7 +17,8 @@
 ;; Apply a custom color scheme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (if (display-graphic-p)
-    (load-theme 'fullsalvo t))
+    (load-theme 'fullsalvo t)
+  (load-theme 'fsterm t))
 
 ;; add MRU buffer capabilities
 (require 'recentf)
@@ -190,5 +191,20 @@
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+	("214d6fa0731110c9a51b81ddea4440db56a97a8fb922ad5f0de407666f407bc7" "ef6b2267d97226e8ba0e7da3755d56d07abd0f62f17a204174390b94fe2297ba" "c296f93fe09ead94a2e12fc21884941062be3dea684d8420f2ca970243c51d66" "7ffb9a8b0b5e66f1370a78f46fe67fe62503158229d3d910c5f25d6a9856f5a9" "d7276b7e607f441b71fea9011e09b0913bffedbd598f25653952b7d06e65ec71" "623eccab7ef1d801ab19936259b10fa46a9b4832a91cbbbc58400a3f836c3787" "736fe5e547cf700c58520bd6cc038c3528fd7d1ba7fad8504de73e3ac13b9b2a" "24e4c38c730cee901ebeb62bdcbac7041c6b9f378b548d14cf45f48cade845da" "acd81fd5e7ae9d4e2204927867d7e3d95d09f058dce5d952a679d3bfb31a9b69" default)))
  '(safe-local-variable-values (quote ((TeX-master . t))))
  '(vimish-fold-global-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
+ '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f"))))
+ '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))
