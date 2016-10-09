@@ -5,6 +5,7 @@ set cursorline
 set showcmd
 set laststatus=2
 set statusline=%t\ %m%=Line:\ %l,\ Column:\ %c
+set backspace=indent,eol,start
 " }}} 
 " {{{ Folding
 set foldenable

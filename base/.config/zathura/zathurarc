@@ -5,5 +5,8 @@
 map <C-Space> toggle_statusbar
 map <C-'> toggle_inputbar
 map s width
+remap j scroll half-down
+remap k scroll half-up
 
+set window-title-basename
 set font "leggie 9"

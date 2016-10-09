@@ -122,8 +122,11 @@
    `(linum ((t (:foreground ,text-3  :weight light :height 0.9))))
    `(fringe ((t (:background ,background-3 :foreground ,text-4))))
    `(left-margin ((t (nil))))
-   `(hl-line ((t (:background , linehl)))))
+   `(hl-line ((t (:background , linehl))))
 
+   ;; Custom
+   '(evil-mode-face ((t (:foreground ,background :background ,text))))
+   )
 
 (custom-theme-set-variables
  'fullsalvo

@@ -26,7 +26,7 @@
 
 [frame]
     width = 1
-    color = "#93a0aa"
+    color = "#708ca2"
 
 [shortcuts]
     close = mod4+x
@@ -35,16 +35,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#191921"
-    foreground = "#cbcbc1"
+    background = "#1c1c22"
+    foreground = "#a7a59c"
     timeout = 5
 
 [urgency_normal]
-    background = "#191921"
-    foreground = "#93a0aa"
+    background = "#1c1c22"
+    foreground = "#708ca2"
     timeout = 10
 
 [urgency_critical]
-    background = "#191921"
-    foreground = "#cbcbc1"
+    background = "#1c1c22"
+    foreground = "#a7a59c"
     timeout = 0

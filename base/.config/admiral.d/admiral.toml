@@ -1,5 +1,5 @@
 [admiral]
-items = ["left", "modes", "reset", "center", "wsfw", "wsbk", "workspaces",
+items = ["left", "space", "greet", "modes", "reset", "center", "wsfw", "wsbk", "workspaces",
 		 "closeclick", "closeclick",
 		 "right", "reset", "volup", "voldn", "mute", "volume",
 		 "closeclick", "closeclick", "closeclick",
@@ -23,6 +23,10 @@ reload = 60
 [volume]
 path = "~/.bin/soundstate"
 reload = 0.1
+
+[greet]
+path = "echo '  fullsalvo'"
+static = true
 
 # Clickable Regions
 [todo]
@@ -80,4 +84,8 @@ static = true
 
 [separator]
 path = "echo '  |  '"
+static = true
+
+[space]
+path = "echo '  '"
 static = true

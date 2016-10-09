@@ -78,6 +78,9 @@ fi
 autoload -U compaudit compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
+# Remove homedir coredumps
+ulimit -Sc 0
+
 if [ -f ~/Dev/wz-utils/autocomplete ]; then
 	. ~/Dev/wz-utils/autocomplete
 fi

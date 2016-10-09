@@ -34,7 +34,7 @@ class Default(ColorScheme):
 				fg = green
 			if context.directory:
 				attr |= normal
-				fg = cyan
+				fg = blue
 			elif context.executable and not \
 					any((context.media, context.container,
 						context.fifo, context.socket)):
