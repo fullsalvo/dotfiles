@@ -1,6 +1,6 @@
 #!/bin/bash
 
-direc="$HOME/.config/whizkers/variable_sets/themes/3d/"
+direc="$HOME/.config/zenbu/variable_sets/themes/3d/"
 
 for i in ${direc}/*; do
     name=$(basename $i .yaml)
@@ -12,9 +12,7 @@ for i in ${direc}/*; do
 			done
 		fi
 		rhisk ${name}
-		sleep 0.5
-		# notify-send "Theme:" "${name}"
-		sleep 1.5
+		sleep 1
     fi
 done
 

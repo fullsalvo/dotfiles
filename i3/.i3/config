@@ -15,17 +15,17 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #708ca2
+set $border     #538d82
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #313131
+set $ufocus     #393939
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
-set $rofibg     #1c1c22
+set $rofibg     #171f1c
 
 
 # Window Border Thickness
@@ -37,7 +37,7 @@ set $barfont    lime 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/Pictures/Walls/Endeavor.jpeg
+set $wall       /home/fullsalvo/Pictures/Walls/Blurs/Bench.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -178,15 +178,15 @@ bindsym $mod+d focus child
 
 
 mode "Resize" {
-	 bindsym h resize shrink width 1 px or 1 ppt
- 	 bindsym j resize grow height 1 px or 1 ppt
-	 bindsym k resize shrink height 1 px or 1 ppt
-	 bindsym l resize grow width 1 px or 1 ppt
+	 bindsym h resize shrink width 10 px or 10 ppt
+ 	 bindsym j resize grow height 10 px or 10 ppt
+	 bindsym k resize shrink height 10 px or 10 ppt
+	 bindsym l resize grow width 10 px or 10 ppt
 
-	 bindsym Left resize shrink width 1 px or 1 ppt
-	 bindsym Down resize grow height 1 px or 1 ppt
-	 bindsym Up resize shrink height 1 px or 1 ppt
-	 bindsym Right resize grow width 1 px or 1 ppt
+	 bindsym Left resize shrink width 10 px or 10 ppt
+	 bindsym Down resize grow height 10 px or 10 ppt
+	 bindsym Up resize shrink height 10 px or 10 ppt
+	 bindsym Right resize grow width 10 px or 10 ppt
 
 	 bindsym Return mode "default"
 	 bindsym Escape mode "default"
@@ -201,6 +201,10 @@ bindsym $mod+r mode "Resize"
 
 gaps inner $ing
 gaps outer $oug
+
+
+for_window [class=".*"] floating enable
+for_window [class=".*"] title_format " "
 
 
 
