@@ -229,7 +229,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 */
 
 #addon-bar, #PersonalToolbar, #nav-bar {
-    background: #171f1c !important;
+    background: #2e2e2e !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
     border-color: rgb(70,70,70) !important;
@@ -243,8 +243,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 /*styling*/
 #searchbar > .searchbar-textbox, #nav-bar {
-    background: #171f1c !important;
-    border: 0px #171f1c!important;
+    background: #2e2e2e !important;
+    border: 0px #2e2e2e!important;
     box-shadow: none !important;
     height: var(--url-height) !important;
     position: fixed !important;
@@ -254,7 +254,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 }
 
 #urlbar {
-    color: #9f9f9f!important;
+    color: #9eb2cb!important;
     text-align: left !important;
     border-radius: 0px !important;
     border: none !important;
@@ -316,7 +316,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 /* MAIN GUI BACKGROUND COLOR */
 #main-window:not([chromehidden*="toolbar"])[sizemode="normal"], #TabsToolbar .tabbrowser-tab, .findbar-container, .browserContainer > findbar, .findbar-textbox, #editor-tools, .main-content, #header-search, .header-button, button, #urlbar {
-    background-color: #171f1c !important;
+    background-color: #2e2e2e !important;
 }
 
 /*
@@ -329,14 +329,14 @@ tabbrowser tabpanels, #appcontent > #content {
 
 .autocomplete-richlistitem[selected="true"], .autocomplete-richlistiem:hover{
     background-color: #fff!important;
-    color: #9f9f9f !important;
+    color: #9eb2cb !important;
     text-decoration: underline;
 }
 
 /* Selected text inside the URL bar */
 
 #urlbar *|*::-moz-selection {
-    background: #393939;
+    background: #4b4b4b;
     color: #fff;
 }
 
@@ -347,28 +347,28 @@ tabbrowser tabpanels, #appcontent > #content {
 */
 
 #tabbrowser-tabs, .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label, .ac-title, .ac-description, .ac-url-text, .ac-emphasize-text {
-    background-color: #171f1c !important;
-    color: #d7d7d7 !important;
+    background-color: #2e2e2e !important;
+    color: #cae5ff !important;
 }
 
 /* Tab hovering */
 .tabbrowser-tab:hover .tab-background-middle {
-    background-color: #171f1c !important;
+    background-color: #2e2e2e !important;
 }
 
 /* Selected Tab Name */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
-    background-color: #171f1c !important;
+    background-color: #2e2e2e !important;
 }
 
 /* Unselected Tab Names */
 #TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) {
-    color: #9f9f9f !important;
+    color: #9eb2cb !important;
 							   }
 
 /* Flash From New Tabs */
 browser, browser.display.background_color, tabbrowser tabpanels {
-    background-color: #171f1c !important;
+    background-color: #2e2e2e !important;
 }
 
 /*

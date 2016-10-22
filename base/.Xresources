@@ -28,13 +28,13 @@ rofi.width: 40
 rofi.lines: 3
 rofi.font: hlv 8
 rofi.padding: 50
-rofi.bw: 5
+rofi.bw: 2
 rofi.terminal: urxvt
 rofi.disable-history: true
-rofi.color-window: #171f1c, #538d82
-rofi.color-normal: #171f1c, #d2d2d2, #171f1c, #538d82, #171f1c
-rofi.color-active: #171f1c, #d2d2d2, #171f1c, #6ab4a6, #171f1c
-rofi.color-urgent: #171f1c, #d2d2d2, #171f1c, #634d41, #171f1c
+rofi.color-window: #2e2e2e, #71899d
+rofi.color-normal: #2e2e2e, #eeeeee, #2e2e2e, #71899d, #2e2e2e
+rofi.color-active: #2e2e2e, #eeeeee, #2e2e2e, #8da7be, #2e2e2e
+rofi.color-urgent: #2e2e2e, #eeeeee, #2e2e2e, #a06e6e, #2e2e2e
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
@@ -45,43 +45,43 @@ rofi.color-urgent: #171f1c, #d2d2d2, #171f1c, #634d41, #171f1c
 
 ! Extra
 
-*.color254:     #171f1c
-*.color255:     #d2d2d2
+*.color254:     #2e2e2e
+*.color255:     #eeeeee
 
 ! Colors
-*.borderColor:  #171f1c
-*.background:   #171f1c
-*.foreground:   #d2d2d2
-*.cursorColor:  #d2d2d2
+*.borderColor:  #2e2e2e
+*.background:   #2e2e2e
+*.foreground:   #eeeeee
+*.cursorColor:  #eeeeee
 
 ! Black
-*color0:       #393939
+*color0:       #4b4b4b
 *color8:       #5f5f5f
 
 ! Red
-*color1:       #634d41
-*color9:       #806452
+*color1:       #a06e6e
+*color9:       #d88383
 
 ! Green
-*color2:       #599061
-*color10:      #6db177
+*color2:       #969b6a
+*color10:      #b5bd6a
 
 ! Yellow
-*color3:       #787b54
-*color11:      #a0a470
+*color3:       #ded997
+*color11:      #fafbb9
 
 ! Blue
-*color4:       #538d82
-*color12:      #6ab4a6
+*color4:       #71899d
+*color12:      #8da7be
 
 ! Magenta
-*color5:       #748695
-*color13:      #8a9fb1
+*color5:       #8a7e8f
+*color13:      #b49dbb
 
 ! Cyan
-*color6:       #6f8e7c
-*color14:      #8bb19a
+*color6:       #b2cccd
+*color14:      #d6fff8
 
 ! White
-*color7:       #9f9f9f
-*color15:      #d7d7d7
+*color7:       #9eb2cb
+*color15:      #cae5ff

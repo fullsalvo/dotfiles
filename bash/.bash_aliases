@@ -22,6 +22,7 @@ alias x="startx"
 # Research
 alias abacus="ssh ddb19@abacus.cs.uwf.edu"
 alias feral="ssh fullsalvo@leto.feralhosting.com"
+alias ferf="sftp fullsalvo@leto.feralhosting.com"
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'

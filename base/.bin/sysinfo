@@ -30,7 +30,7 @@ host=`hostname`
 battery=/sys/class/power_supply/BAT0
 distro="Debian Stretch"
 kernel=`uname -r`
-colors='bench'
+colors='fullsalvo'
 font='hlv'
 wm='i3'
 

@@ -13,17 +13,19 @@ inoremap <C-v> <C-v><C-v>
 inoremap <S-Insert> <C-v><C-v>
 inoremap <C-x> <C-v><C-x>
 nnoremap t t<CR>
+nnoremap T t
 set hintchars=asdfhjkl
 
 highlight ContentSeparator border: none;
-highlight CmdLine background: #171f1c; color: #d2d2d2;
-highlight StatusLine background: #171f1c; color: #d2d2d2; font-family: hlv;
-highlight Normal background: #171f1c;
-highlight ModeMsg background: #538d82; color: #d2d2d2; font-family: hlv;
+highlight CmdLine background: #2e2e2e; color: #eeeeee;
+highlight StatusLine background: #2e2e2e; color: #eeeeee; font-family: hlv;
+highlight Normal background: #2e2e2e;
+highlight ModeMsg background: #71899d; color: #eeeeee; font-family: hlv;
 highlight CmdLine>* font-family: "hlv";
-highlight Hint font-family: "hlv"; background: #d2d2d2; color: #171f1c;
-highlight HintActive background-color: #634d41;
-highlight HintElem backgroud-color: #787b54;
+highlight Hint font-family: "hlv"; background: #eeeeee; color: #2e2e2e;
+highlight HintActive background-color: #a06e6e;
+highlight HintElem background-color: #ded997;
+highlight InfoMsg background-color: #2e2e2e; color: #a06e6e; font-family: "hlv";
 
 iunmap <C-q>
 nnoremap <C-q> :js toggle_bottombar()<CR>

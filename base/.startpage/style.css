@@ -1,6 +1,6 @@
 body {
-	background-color: #171f1c;
-	color: #634d41 !important;
+	background-color: #2e2e2e;
+	color: #a06e6e !important;
 }
 
 div[class^="books"], div [class*="books"] {
@@ -9,12 +9,12 @@ div[class^="books"], div [class*="books"] {
 }
 
 a, a:link {
-	   color: #9f9f9f !important;
+	   color: #9eb2cb !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #d7d7d7 !important;
+	color: #cae5ff !important;
 	text-decoration: none !important;
 }
 
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #634d41 !important;
+	color: #a06e6e !important;
 	content: " //" !important;
 }
 
@@ -56,7 +56,7 @@ div.books {
 div.books2 {
 	margin-right: 70% !important;
 	text-align: right !important;
-	color: #d2d2d2;
+	color: #eeeeee;
 	float: right;
 	display: table;
 
