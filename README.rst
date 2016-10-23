@@ -5,8 +5,6 @@ Fullsalvo's Dotfiles
 Images
 ======
 
-|dtop1|
-
 |dtop2|
 
 Relevant Information
