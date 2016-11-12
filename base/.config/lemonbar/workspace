@@ -6,7 +6,7 @@ import i3ipc
 # to events.
 i3 = i3ipc.Connection()
 coloractive = '%{F#eeeeee}'
-colorinactive = '%{F#4b4b4b}'
+colorinactive = '%{F#93a0aa}'
 colorwarning = '%{F#e84f4f}'
 
 # Define a callback to be called when you switch workspaces.

@@ -64,7 +64,7 @@ abstracts = {
   # ban/ban exception/invite list mask is printed
   ban = "$*";
 
-  action_core = "%b─┄┄ %n$*";
+  action_core = "%c─┄┄ %n$*";
 
   ########### messages #################################
 
@@ -73,11 +73,11 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
-  ownnick = "%b$*%n";
+  ownnick = "%c$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1}";
-  pubnick = "%r$*%n";
+  pubnick = "%w$*%n";
 
   # public highlighted message in channel
   pubmsghinick = "{msgnick $0 $1}";
@@ -187,21 +187,21 @@ abstracts = {
   topicsbstart = "%k─┄┄$*";
   topicsbend = "$*%b%k┄┄─";
 
-  prompt = " %b$* -%n ";
+  prompt = " %c$* -%n ";
 
   sb = " %n$* ";
   sbmode = "  %g%g+%n$* ";
   sbaway = " %g/* zZzZ */%n";
-  sbservertag = " %b$0%n";
+  sbservertag = " %c$0%n";
   sbnickmode = "$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";
   sb_uc_ircops = "%_*%_$*";
-  sb_uc_ops = "%_@%b$*%n";
-  sb_uc_halfops = "%_%%%b$*%n";
-  sb_uc_voices = "%_+%b$*%n";
-  sb_uc_normal = "%_%b$*%n";
+  sb_uc_ops = "%_@%c$*%n";
+  sb_uc_halfops = "%_%%%c$*%n";
+  sb_uc_voices = "%_+%c$*%n";
+  sb_uc_normal = "%_%c$*%n";
   sb_uc_space = " ";
 
   # activity in statusbar

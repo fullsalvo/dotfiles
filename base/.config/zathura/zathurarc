@@ -9,4 +9,4 @@ remap j scroll half-down
 remap k scroll half-up
 
 set window-title-basename
-set font "leggie 9"
+set font "lime 7"

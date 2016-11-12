@@ -18,7 +18,7 @@ reload = 1
 
 [battery]
 path = "~/.config/lemonbar/battery"
-reload = 60
+reload = 10
 
 [volume]
 path = "~/.bin/soundstate"

@@ -1,5 +1,6 @@
 use strict;
 use vars qw($VERSION %IRSSI);
+use Irssi;
 
 $VERSION = '1.00';
 %IRSSI = (
@@ -14,17 +15,27 @@ $VERSION = '1.00';
 sub send_notification {
     my($msg) = @_;
     $msg = add_slashes($msg);
-    system("notify -l \"$msg\" &");
+    system("notify-send \"$msg\" &");
+}
+
+sub print_text_notify {
+	my ($dest, $text, $stripped) = @_;
+	my $server = $dest->{server};
+
+	return if (!$server || !($dest->{level} & MSGLEVEL_HILIGHT));
+	my $sender = $stripped;
+    $sender =~ s/([\w]+).*/$1/;
+	$sender =~ s/.{2}/$2/;
+    $stripped =~ s/.{2}\S+ - // ;
+	my $channel = $dest->{target};
+	send_notification("Mentioned in $channel by $sender: $stripped");
 }
 
 sub event_privmsg {
     my ($server, $data, $nick, $address) = @_;
-    my $own_nick = $server->{nick};
-    
-    if($data =~ /$own_nick/i && $data =~ /^(.*?):(.*)/) {
-        my($source, $msg) = split(':', $data, 2);
-        send_notification("Mentioned in ${source}by $nick: $msg");
-    }
+
+	return if (!$server);
+	send_notification("Private message from $nick: $data");
 }
 
 sub add_slashes {
@@ -34,4 +45,6 @@ sub add_slashes {
     $text =~ s/\\0/\\\\0/g;
     return $text;
 }
-Irssi::signal_add("event privmsg", "event_privmsg")
+
+Irssi::signal_add('print text', 'print_text_notify');
+Irssi::signal_add('message private', 'event_privmsg');
