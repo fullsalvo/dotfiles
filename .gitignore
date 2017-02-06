@@ -23,3 +23,12 @@
 # vim
 */.vim/autoload*
 */.vim/plugged*
+
+# logs
+*.log
+
+# irssi
+*.irssi/config*
+
+# mpdscribble
+*.mpdscribble*
