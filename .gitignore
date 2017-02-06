@@ -34,4 +34,4 @@
 *.mpdscribble*
 
 # mpd
-*.mpd/mpdstate
+*mpdstate*
