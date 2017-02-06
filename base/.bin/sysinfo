@@ -30,8 +30,8 @@ host=`hostname`
 battery=/sys/class/power_supply/BAT0
 distro="Debian Stretch"
 kernel=`uname -r`
-colors='Tools'
-font='hlv'
+colors='fullsalvo'
+font='ProfontIIx'
 wm='i3'
 
 #█▓▒░ progress bar

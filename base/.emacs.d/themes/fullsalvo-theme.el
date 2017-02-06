@@ -4,17 +4,17 @@
 (deftheme fullsalvo
   "Fullsalvo - A Custom Theme")
 
-(let ((blue "#869baa")
-      (green "#b6bd97")
-      (yellow "#b9bda9")
-      (red "#a89297")
-      (magenta "#b8bbc3")
-      (cyan "#93a0aa")
+(let ((blue "#71899d")
+      (green "#969b6a")
+      (yellow "#ded997")
+      (red "#a06e6e")
+      (magenta "#8a7e8f")
+      (cyan "#b2cccd")
       (black "#4b4b4b")
-      (white "#cbcbc1")
-      (background   "#191921")
+      (white "#9eb2cb")
+      (background   "#2e2e2e")
       (background-2 "#4b4b4b")
-      (background-3 "#cbcbc1")
+      (background-3 "#9eb2cb")
       (background-4 "#1f1f1f")
       (text "#eeeeee")
       (text-2 "#858D8A")
@@ -82,11 +82,11 @@
    ;; LaTeX
    ;; -----
    `(font-latex-math-face ((t (:foreground ,magenta))))
-   `(font-latex-sectioning-1-face ((t (:family "hlv" :height 80))))
-   `(font-latex-sectioning-2-face ((t (:family "hlv" :height 80))))
-   `(font-latex-sectioning-3-face ((t (:family "hlv" :height 80))))
-   `(font-latex-sectioning-4-face ((t (:family "hlv" :height 80))))
-   `(font-latex-sectioning-5-face ((t (:family "hlv" :height 80))))
+   `(font-latex-sectioning-1-face ((t (:family "ProfontIIx" :height 80))))
+   `(font-latex-sectioning-2-face ((t (:family "ProfontIIx" :height 80))))
+   `(font-latex-sectioning-3-face ((t (:family "ProfontIIx" :height 80))))
+   `(font-latex-sectioning-4-face ((t (:family "ProfontIIx" :height 80))))
+   `(font-latex-sectioning-5-face ((t (:family "ProfontIIx" :height 80))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;; Markdown

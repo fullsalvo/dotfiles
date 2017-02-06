@@ -20,5 +20,6 @@ syntax on
 " {{{ Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'metakirby5/codi.vim'
+Plug 'mhinz/vim-startify'
 call plug#end()
 " }}}

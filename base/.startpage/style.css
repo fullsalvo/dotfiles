@@ -1,20 +1,20 @@
 body {
-	background-color: #191921;
-	color: #a89297 !important;
+	background-color: #2e2e2e;
+	color: #a06e6e !important;
 }
 
 div[class^="books"], div [class*="books"] {
-	font-family: "hlv" !important;
+	font-family: "ProfontIIx" !important;
 	font-size: 10px !important;
 }
 
 a, a:link {
-	   color: #cbcbc1 !important;
+	   color: #9eb2cb !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #eeede1 !important;
+	color: #cae5ff !important;
 	text-decoration: none !important;
 }
 
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #a89297 !important;
+	color: #a06e6e !important;
 	content: " //" !important;
 }
 

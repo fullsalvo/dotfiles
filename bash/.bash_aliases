@@ -18,6 +18,7 @@ alias rm='rm -I'
 alias ..="cd .."
 alias unstow="stow -D"
 alias x="startx"
+alias fdisk="sudo fdisk"
 
 # Research
 alias abacus="ssh ddb19@abacus.cs.uwf.edu"
