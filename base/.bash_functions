@@ -7,7 +7,7 @@ mime ()
   echo "${mime%%;*}"
 }
 
-ix ()
+ixup ()
 {
     local OPTIND;
     local OPTS;

@@ -1,21 +1,11 @@
 use strict;
-use vars qw($VERSION %IRSSI);
 use Irssi;
-
-$VERSION = '1.00';
-%IRSSI = (
-    authors     => 'Erwin Atuli',
-    contact     => 'erwinatuli\@gmail.com',
-    name        => 'Notify',
-    description => 'This script allows forwarding notifications' .
-                    'to notification engine',
-    license     => 'Public Domain',
-);
 
 sub send_notification {
     my($msg) = @_;
     $msg = add_slashes($msg);
-    system("notify-send \"$msg\" &");
+    $msg = quote_strings($msg);
+    system("~/.bin/inotify.py \"$msg\" &");
 }
 
 sub print_text_notify {
@@ -43,6 +33,12 @@ sub add_slashes {
     $text =~ s/\\/\\\\/g;
     $text =~ s/"/\\"/g;
     $text =~ s/\\0/\\\\0/g;
+    return $text;
+}
+
+sub quote_strings {
+    my($text) = shift;
+    $text =~ s/`/\\`/g;
     return $text;
 }
 

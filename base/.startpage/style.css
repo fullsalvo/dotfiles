@@ -4,8 +4,8 @@ body {
 }
 
 div[class^="books"], div [class*="books"] {
-	font-family: "ProfontIIx" !important;
-	font-size: 10px !important;
+	font-family: "Fira Mono" !important;
+	font-size: 11px !important;
 }
 
 a, a:link {

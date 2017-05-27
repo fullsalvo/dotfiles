@@ -28,7 +28,7 @@
 *.log
 
 # irssi
-*.irssi/config*
+*/.irssi/config*
 
 # mpdscribble
 *.mpdscribble*

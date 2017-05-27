@@ -16,8 +16,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 	--scrollbar: -15px !important;
 
 	/* Fonts */
-	--font-family: 'ProfontIIx' !important;
-	--font-size: 10px !important;
+	--font-family: 'Fira Mono' !important;
+	--font-size: 11px !important;
 
 	/* Tabs */
 	--tab-height: 24px !important;
@@ -262,7 +262,11 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
     height: var(--url-height);
     width: 2000px !important;
     padding-bottom: calc((var(--url-height) - var(--font-size)) / 2) !important;
-    padding-left: 15px !important;
+    padding-left: 5px !important;
+}
+
+.urlbar-input-box, #urlbar-stop-button {
+    border-image-slice: 0 !important;
 }
 
 #PanelUI-button, #customization-panel-container, #customization-panelWrapper .panel-arrow, #ctr_panelui-button, #wrapper-ctr_panelui-button {

@@ -50,18 +50,17 @@ sub notify {
     my $cmd = "EXEC " . $nodebugstr .
 	" ~/.bin/irssi-notify.sh " .
 	"notify-send --session /org/irssi/Irssi org.irssi.Irssi.IrssiNotify" .
-	" string:'" . $summary . "'" .
-	" string:'" . $message . "'";
+	" string: $(printf '%q' '" . $summary . "')" .
+	" string: $printf '%q' '" . $message . "')";
     $server->command($cmd);
 
     my $remote = Irssi::settings_get_str('notify_remote');
     if ($remote ne '') {
 	my $cmd = "EXEC " . $nodebugstr . "ssh -q " . $remote . " \"".
-	    " ~/.bin/irssi-notifier.sh".
+	    " ~/.bin/irssi-notify.sh".
 	    " dbus-send --session /org/irssi/Irssi org.irssi.Irssi.IrssiNotify" .
 	    " string:'" . $summary . "'" .
 	    " string:'" . $message . "'\"";
-	#print $cmd;
 	$server->command($cmd);
     }
 

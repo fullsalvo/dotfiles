@@ -31,7 +31,7 @@ battery=/sys/class/power_supply/BAT0
 distro="Debian Stretch"
 kernel=`uname -r`
 colors='fullsalvo'
-font='ProfontIIx'
+font='Fira Mono'
 wm='i3'
 
 #█▓▒░ progress bar

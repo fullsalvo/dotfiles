@@ -25,7 +25,7 @@ path = "~/.bin/soundstate"
 reload = 0.1
 
 [greet]
-path = "echo '  fullsalvo'"
+path = "echo '  fullsalvo'"
 static = true
 
 # Clickable Regions
