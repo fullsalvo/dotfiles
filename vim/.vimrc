@@ -23,3 +23,12 @@ Plug 'metakirby5/codi.vim'
 Plug 'mhinz/vim-startify'
 call plug#end()
 " }}}
+" {{{ Startify
+let g:startify_custom_header =
+			\ [ '    m    m mmmmm  m    m'
+			\ , '    "m  m"   #    ##  ##'
+			\ , '     #  #    #    # ## #'
+			\ , '     "mm"    #    # "" #'
+			\ , '      ##   mm#mm  #    #'
+			\ ]
+" }}}

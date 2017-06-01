@@ -366,9 +366,9 @@ tabbrowser tabpanels, #appcontent > #content {
 }
 
 /* Unselected Tab Names */
-#TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) {
+#TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) , #TabsToolbar .tab-icon-sound {
     color: #9eb2cb !important;
-							   }
+}
 
 /* Flash From New Tabs */
 browser, browser.display.background_color, tabbrowser tabpanels {
