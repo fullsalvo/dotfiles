@@ -24,8 +24,10 @@
 */.vim/autoload*
 */.vim/plugged*
 
-# logs
+# irc
+*weechat/irc.conf
 *.log
+*.weechatlog
 
 # irssi
 */.irssi/config*
@@ -35,3 +37,6 @@
 
 # mpd
 *mpdstate*
+
+# spacemacs
+*spacemacs*
