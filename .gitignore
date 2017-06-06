@@ -25,7 +25,7 @@
 */.vim/plugged*
 
 # irc
-*weechat/irc.conf
+*/.weechat/irc.conf*
 *.log
 *.weechatlog
 
