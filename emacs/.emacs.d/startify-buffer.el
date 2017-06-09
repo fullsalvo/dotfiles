@@ -156,6 +156,7 @@ REFRESH if the buffer should be redrawn."
   (interactive)
   (let ((buffer-exists (buffer-live-p (get-buffer startify-buffer-name)))
 	(save-line nil))
+    (setq buffer-read-only nil)
     (when (or (not buffer-exists)
 	      refresh)
       (with-current-buffer (get-buffer-create startify-buffer-name)
