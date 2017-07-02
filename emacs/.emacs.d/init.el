@@ -4,7 +4,7 @@
 ;; Allows use of MELPA
 (require 'package)
 (add-to-list 'package-archives
-			 '("melpa" . "https://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
@@ -12,7 +12,7 @@
 
 ;; External setting file load calls
 (if (file-accessible-directory-p "~/.emacs.d/my-lisp")
-	(mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el")))
+    (mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el")))
 
 ;; Apply a custom color scheme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -20,12 +20,24 @@
     (load-theme 'fullsalvo t)
   (load-theme 'fsterm t))
 
+(let ((default-directory  "/usr/local/share/emacs/site-lisp"))
+  (setq load-path
+        (append
+         (let ((load-path  (copy-sequence load-path))) ;; Shadow
+           (normal-top-level-add-subdirs-to-load-path))
+         load-path)))
+
 ;; add MRU buffer capabilities
 (require 'recentf)
-(recentf-mode 1) (setq recentf-max-menu-items 30)
+(require 'startify-buffer)
+(recentf-mode 1)
+(setq recentf-max-menu-items 30)
 
 ;; Add/Remove GUI Features
 ;; ===========================
+
+;; company-mode
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Window title always displays current file name.
 (setq frame-title-format "%b")
@@ -95,6 +107,9 @@
 (require 'whitespace-cleanup-mode)
 (global-whitespace-cleanup-mode 1)
 
+;; projectile mode
+(projectile-global-mode)
+
 ;; smoother scrolling
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
@@ -102,6 +117,19 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq scroll-conservatively 100000)
 (setq scroll-preserve-screen-position 1)
+
+;; Restrict minibuffer to one line
+(setq max-mini-window-height 0.01)
+
+;; Save Place
+(save-place-mode 1)
+
+;; Set startify-buffer title
+(setq startify-title "     .d88b. 88888b.d88b.  8888b.  .d8888b.d8888b
+    d8P  Y8b888 `888 `88b    `88bd88P'   88K
+    88888888888  888  888.d888888888     `Y8888b.
+    Y8b.    888  888  888888  888Y88b.        X88
+     `Y8888 888  888  888`Y888888 `Y8888P 88888P' ")
 
 ;; Modeline
 ;; ===========================
@@ -114,19 +142,19 @@
                    ((evil-operator-state-p) (format " OPERATOR " ))
                    ((evil-motion-state-p)   (format " MOTION " ))
                    ((evil-replace-state-p)  (format " REPLACE " )))))
-	(propertize
-	 str
-	 'face 'evil-mode-face)))
+    (propertize
+     str
+     'face 'evil-mode-face)))
 
 (setq-default mode-line-format
-			  (list " "
-					'mode-line-buffer-identification
-					'(:eval (evil-mode-state))
-					'(mode-line-modified " [%+]    ")
-					'mode-name
-					'(line-number-mode "     %l, ")
-					'(column-number-mode "%c   ")
-					'(vc-mode vc-mode)))
+	      (list " "
+		    'mode-line-buffer-identification
+		    '(:eval (evil-mode-state))
+		    '(mode-line-modified " [%+]    ")
+		    'mode-name
+		    '(line-number-mode "     %l, ")
+		    '(column-number-mode "%c   ")
+		    '(vc-mode vc-mode)))
 
 ;; Buffer Changes
 ;; ===========================
@@ -150,9 +178,9 @@
 ;; Removes *Completions* from buffer after you've opened a file.
 (add-hook 'minibuffer-exit-hook
 	  '(lambda ()
-		 (let ((buffer "*Completions*"))
-		   (and (get-buffer buffer)
-				(kill-buffer buffer)))))
+	     (let ((buffer "*Completions*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
 
 ;; Hide the Buffer List when switching buffer.
 (setq Buffer-menu-use-frame-buffer-list nil)
@@ -184,7 +212,7 @@
     ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
  '(package-selected-packages
    (quote
-    (toml-mode evil-vimish-fold evil-leader auctex)))
+    (projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex)))
  '(vimish-fold-global-mode t))
 
 ;; Python
@@ -224,8 +252,19 @@
 
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
+
+;; Custom variables
+;; ================
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
  '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f"))))
  '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))
+
+;; Special Functions
+;; =================
+
+(start-startify)

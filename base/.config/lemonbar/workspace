@@ -6,44 +6,44 @@ import i3ipc
 # to events.
 i3 = i3ipc.Connection()
 coloractive = '%{F#eeeeee}'
-colorinactive = '%{F#4b4b4b}'
+colorinactive = '%{F#7e8798}'
 colorwarning = '%{F#e84f4f}'
 
 # Define a callback to be called when you switch workspaces.
 def on_workspace_focus(self, e):
-    workspace_string = '  '
+    workspace_string = '    '
     workspaces = i3.get_workspaces()
 
     ws_nums = [int(n['num']) for n in workspaces]
     focused = [n['visible'] for n in workspaces].index(True)
     urg = [n for n, _ in enumerate(workspaces) if workspaces[n]['urgent'] == True]
-    names =[''.join([i for i in n['name'] if not i.isdigit()]) for n in workspaces]
+    names =len(ws_nums)*['▰']
 
     for n in range(len(ws_nums)):
         if focused == n:
-            workspace_string += coloractive + names[n] + '  '
+            workspace_string += coloractive + names[n] + ''
         elif n in urg:
-            workspace_string += colorwarning + names[n] + '  '
+            workspace_string += colorwarning + names[n] + ''
         else:
-            workspace_string += colorinactive + names[n] + '  '
+            workspace_string += colorinactive + names[n] + ''
 
     print(workspace_string, flush=True)
 
-workspace_string = '  '
+workspace_string = '    '
 workspaces = i3.get_workspaces()
 
 ws_nums = [int(n['num']) for n in workspaces]
 focused = [n['visible'] for n in workspaces].index(True)
 urg = [n for n, _ in enumerate(workspaces) if workspaces[n]['urgent'] == True]
-names =[''.join([i for i in n['name'] if not i.isdigit()]) for n in workspaces]
+names =len(ws_nums)*['▰']
 
 for n in range(len(ws_nums)):
     if focused == n:
-        workspace_string += coloractive + names[n] + '  '
+        workspace_string += coloractive + names[n] + ''
     elif n in urg:
-        workspace_string += colorwarning + names[n] + '  '
+        workspace_string += colorwarning + names[n] + ''
     else:
-        workspace_string += colorinactive + names[n] + '  '
+        workspace_string += colorinactive + names[n] + ''
 
 print(workspace_string, flush=True)
 

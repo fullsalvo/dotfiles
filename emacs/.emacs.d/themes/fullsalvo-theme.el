@@ -20,7 +20,7 @@
       (text-2 "#858D8A")
       (text-3 "#7e8798")
       (text-4 "#2F3C42")
-      (text-highlight "#FFFFFF")
+      (text-highlight "#dddddd")
       (text-region "#434546")
       (text-dired "#A0A0A0")
       (input-text "#becde7")
@@ -101,6 +101,20 @@
 
    ;; Mode-Specific Font Locks
    ;; ============================
+
+   ;; Company
+   ;; -------
+   `(company-echo-common ((t (:foreground ,text-3))))
+   `(company-preview ((t (:background nil :foreground ,text-3))))
+   `(company-preview-common ((t (:inherit company-preview))))
+   `(company-preview-search ((t (:inherit company-preview))))
+   `(company-scrollbar-bg ((t (:background ,text-highlight))))
+   `(company-scrollbar-fg ((t (:background ,text-3))))
+   `(company-template-field ((t (:background nil :foreground ,text-3))))
+   `(company-tooltip ((t (:background nil :foreground ,text))))
+   `(company-tooltip-annotation ((t (:foreground ,text-3))))
+   `(company-tooltip-common ((t (:foreground ,red))))
+   `(company-tooltip-selection ((t (:background ,text-3))))
 
    ;; Parens
    ;; ------

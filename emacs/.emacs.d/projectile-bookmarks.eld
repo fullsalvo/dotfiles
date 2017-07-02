@@ -1,0 +1,1 @@
+("~/Documents/GradWork/Research/soft-matter/lcmc-code/" "~/Documents/GradWork/Research/soft-matter/associate-polymer/" "~/.config/zenbu/" "~/dotfiles/" "~/Dev/montecarlo/" "~/Documents/GradWork/Research/soft-matter/lcmc-code/src/fp/" "~/Documents/GradWork/Research/soft-matter/lcmc-code/fp/" "~/Documents/Files/programs/ncmpcpp/" "~/Dev/muse/" "~/Dev/wz-utils/")

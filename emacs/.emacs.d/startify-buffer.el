@@ -27,6 +27,9 @@
     map)
   "emacs-startify keymap")
 
+(defvar startify-max-list-len 12
+  "Maximum startup list length")
+
 (with-eval-after-load 'evil
   (evil-make-overriding-map startify-buffer-mode-map 'motion))
 
@@ -117,7 +120,7 @@ LIST: a list of string pathnames made interactive in this function."
 			   (abbreviate-file-name el)))
 	  list)))
 
-(defun startify//subseq (seq start end)
+(defun startify-subseq (seq start end)
   "Adapted version of `cl-subseq'.
 Use `cl-subseq', but accounting for end points greater than the size of the
 list.  Return entire list if end is omitted.
@@ -129,13 +132,19 @@ SEQ, START and END are the same arguments as for `cl-subseq'"
 (defun startify-do-insert-startupify-lists ()
   "Insert the startup lists in the current buffer."
   (recentf-mode)
-  (let ((list-separator "\n")
-	(list-size recentf-max-menu-items))
+  (let ((list-separator "\n\n")
+	(list-size startify-max-list-len))
     (when (startify-insert-file-list
-	   "Recent Files:"
-	   (startify//subseq recentf-list 0 list-size))
+	   "  Recent Files:"
+	   (startify-subseq recentf-list 0 list-size))
       (startify-add-shortcut "r" "Recent Files:")
-      (insert list-separator))))
+      (insert list-separator))
+    (when (startify-insert-file-list
+	   "  Projects:"
+	   (startify-subseq (projectile-relevant-known-projects)
+			    0 list-size))
+      (startify-add-shortcut "p" "Projects:")
+      (insert "\n"))))
 
 (defun startify-insert-startup-lists ()
   "Insert startup lists in home buffer."

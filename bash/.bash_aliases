@@ -5,8 +5,6 @@ alias c='clear'
 alias h='history'
 alias aptin='sudo apt-get install'
 alias upgrade='sudo apt-get update && sudo apt upgrade && sudo apt-get autoremove'
-# alias src='source ~/.bashrc'
-alias src='source ~/.zshrc'
 alias shutdown='poweroff'
 alias apts='apt-cache search'
 alias networks='nmcli dev wifi'
@@ -24,6 +22,9 @@ alias fdisk="sudo fdisk"
 alias abacus="ssh ddb19@abacus.cs.uwf.edu"
 alias feral="ssh fullsalvo@leto.feralhosting.com"
 alias ferf="sftp fullsalvo@leto.feralhosting.com"
+alias elena="ssh -i $HOME/.ssh/id_rsa_dim dimmy@137.99.20.238"
+alias felena="sftp -i $HOME/.ssh/id_rsa_dim dimmy@137.99.20.238"
+
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'
@@ -36,7 +37,6 @@ alias mpv='mpv --geometry 1280x720'
 # Fun
 alias lc='lolcat'
 alias fig='figlet'
-alias info='/home/fullsalvo/.bin/info'
 alias blocks='.bin/candy'
 alias color='$HOME/.bin/colors'
 alias block='$HOME/.bin/blocks'

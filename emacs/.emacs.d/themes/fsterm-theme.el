@@ -35,11 +35,11 @@
 
    `(isearch ((t (:box nil :underline (:color ,fground :style line)))))
    `(lazy-highlight ((t :background ,fground :foreground ,bground :box nil :weight normal)))
-   `(mode-line ((t (:foreground ,fground :background ,bground :overline ,fground :underline (:color ,fground :style line)))))
-   `(mode-line-buffer-id ((t (:weight normal :foreground ,fground))))
-   `(mode-line-emphasis ((t (:weight bold))))
-   `(mode-line-highlight ((t (:box (:line-width 1 :color ,fground)))))
-   `(mode-line-inactive ((t (:weight light :foreground ,bground :distant-foreground ,bground :background ,fground :overline ,fground))))
+   ;; `(mode-line ((t (:foreground ,fground :background ,bground :overline ,fground :underline (:color ,fground :style line)))))
+   ;; `(mode-line-buffer-id ((t (:weight normal :foreground ,fground))))
+   ;; `(mode-line-emphasis ((t (:weight bold))))
+   ;; `(mode-line-highlight ((t (:box (:line-width 1 :color ,fground)))))
+   ;; `(mode-line-inactive ((t (:weight light :foreground ,bground :distant-foreground ,bground :background ,fground :overline ,fground))))
 
 
    `(match ((t :box nil (:weight normal :foreground ,fground :background ,bground))))

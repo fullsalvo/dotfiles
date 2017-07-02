@@ -2,6 +2,7 @@
 *recentf*
 *elpa*
 *.emacs.d/games*
+*emacs/.emacs.d/places*
 *auto-save-list*
 *vimish-fold*
 *eshell*
