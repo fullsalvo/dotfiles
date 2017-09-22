@@ -16,8 +16,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 	--scrollbar: -15px !important;
 
 	/* Fonts */
-	--font-family: 'Lemon' !important;
-	--font-size: 10px !important;
+	--font-family: 'Fira Mono' !important;
+	--font-size: 11px !important;
 
 	/* Tabs */
 	--tab-height: 24px !important;
@@ -151,66 +151,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([visuallyselected="true"]) {
 	background-image: none !important;
-	background-color: #919498 !important;
+	background-color: #616161 !important;
 }
-
-/* #TabsToolbar { */
-/*     background: transparent !important; */
-/*     margin-bottom: 0 !important; */
-/* } */
-
-/* #TabsToolbar .tabbrowser-tabs { */
-/*     min-height: 24px !important; */
-/*     margin-top: 0px !important; */
-/*     margin-bottom: -2px !important; */
-/*     text-align: center !important; */
-/*     margin-left: -17px !important; */
-/*     margin-right: -17px !important; */
-/* } */
-
-/* /\*Tab Width Spanning*\/ */
-
-/* .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] { */
-/*     min-width: 10px !important; */
-/*     max-width: 100% !important; */
-/* } */
-
-/* #TabsToolbar .tabbrowser-tab { */
-/*     -moz-border-top-colors: none !important; */
-/*     -moz-border-left-colors: none !important; */
-/*     -moz-border-right-colors: none !important; */
-/*     -moz-border-bottom-colors: none !important; */
-/*     border-style:  solid !important; */
-/*     border-width: 0px 0px 0px 0px !important; */
-/*     text-shadow: 0 0 4px rgba(80,80,80,.2) !important; */
-/*     padding: 0px 0px !important; */
-/*     border-radius: 0px !important; */
-/*     background-clip: padding-box !important; */
-/*     transition: all .1s !important; */
-/*     margin-left: 0px !important; */
-/*     border-color: #aaaaaa !important; */
-/* } */
-
-/* #tabbrowser-tabs{ /\* Tab container*\/ */
-/*     margin-left:-10px; /\* Flush with the side of the window *\/ */
-/*     margin-right: -15px; /\* You need like 5-7 tabs open for this to come into effect *\/ */
-/*     margin-bottom: -10px; /\* Since we shrink the tab size, we have to shrink the container to match *\/ */
-/* } */
-/* .tabbrowser-tab{ /\* Actual tabs *\/ */
-/*     max-height:16px; */
-/*     margin: 0 0px; */
-/*     padding: 0; */
-/* } */
-
-/* .tab-background-middle{ */
-/*     background-image: none!important; */
-/* } */
-
-/* /\* Tab separators *\/ */
-
-/* .tabbrowser-tab::after, .tabbrowser-tab::before { */
-/*     background-image: none!important; */
-/* } */
 
 /* Tab things we don't want to exist */
 
@@ -229,7 +171,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 */
 
 #addon-bar, #PersonalToolbar, #nav-bar {
-    background: #353945 !important;
+    background: #0f1f24 !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
     border-color: rgb(70,70,70) !important;
@@ -243,8 +185,8 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 /*styling*/
 #searchbar > .searchbar-textbox, #nav-bar {
-    background: #353945 !important;
-    border: 0px #353945!important;
+    background: #0f1f24 !important;
+    border: 0px #0f1f24!important;
     box-shadow: none !important;
     height: var(--url-height) !important;
     position: fixed !important;
@@ -254,7 +196,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 }
 
 #urlbar {
-    color: #aebbd3!important;
+    color: #dae0d8!important;
     text-align: left !important;
     border-radius: 0px !important;
     border: none !important;
@@ -270,7 +212,7 @@ url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 }
 
 #PanelUI-button, #customization-panel-container, #customization-panelWrapper .panel-arrow, #ctr_panelui-button, #wrapper-ctr_panelui-button {
-    -moz-box-ordinal-group: 0
+    -moz-box-ordinal-group: 0;
 }
 
 #PanelUI-button {
@@ -308,7 +250,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 /* URL/Navbar things we don't want to exist */
 
-#nav-bar  #back-button > .toolbarbutton-icon, #forward-button, #PanelUI-button .button-icon, #PanelUI-button .button-text, #identity-box, #dropmarker-icon, #historydropmarker, #autocomplete-history-dropmarker, #urlbar-history-dropmarker, #dropmarker, #autocomplete-history-dropmarker, #urlbar-history-dropmarker, #urlbar-reload-button, .autocomplete-history-dropmarker.urlbar-history-dropmarker, #plugins-notification-icon, #notification-anchor-icon, #notification-popup-box, .scrollbutton-up, .scrollbutton-down, #alltabs-button,.tabs-newtab-button, #browser-border-end, #browser-border-start, #go-button, #urlbar-go-button {
+#nav-bar  #back-button > .toolbarbutton-icon, #forward-button, #PanelUI-button .button-icon, #PanelUI-button .button-text, #identity-box, #dropmarker-icon, #historydropmarker, #autocomplete-history-dropmarker, #urlbar-history-dropmarker, #dropmarker, #autocomplete-history-dropmarker, #urlbar-history-dropmarker, #reload-button, .autocomplete-history-dropmarker.urlbar-history-dropmarker, #plugins-notification-icon, #notification-anchor-icon, #notification-popup-box, .scrollbutton-up, .scrollbutton-down, #alltabs-button,.tabs-newtab-button, #browser-border-end, #browser-border-start, #go-button, #urlbar-go-button {
     display: none !important;
 }
 
@@ -320,7 +262,7 @@ tabbrowser tabpanels, #appcontent > #content {
 
 /* MAIN GUI BACKGROUND COLOR */
 #main-window:not([chromehidden*="toolbar"])[sizemode="normal"], #TabsToolbar .tabbrowser-tab, .findbar-container, .browserContainer > findbar, .findbar-textbox, #editor-tools, .main-content, #header-search, .header-button, button, #urlbar {
-    background-color: #353945 !important;
+    background-color: #0f1f24 !important;
 }
 
 /*
@@ -333,14 +275,14 @@ tabbrowser tabpanels, #appcontent > #content {
 
 .autocomplete-richlistitem[selected="true"], .autocomplete-richlistiem:hover{
     background-color: #fff!important;
-    color: #aebbd3 !important;
+    color: #dae0d8 !important;
     text-decoration: underline;
 }
 
 /* Selected text inside the URL bar */
 
 #urlbar *|*::-moz-selection {
-    background: #7e8798;
+    background: #434343;
     color: #fff;
 }
 
@@ -351,28 +293,28 @@ tabbrowser tabpanels, #appcontent > #content {
 */
 
 #tabbrowser-tabs, .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label, .ac-title, .ac-description, .ac-url-text, .ac-emphasize-text {
-    background-color: #353945 !important;
-    color: #cdddfa !important;
+    background-color: #0f1f24 !important;
+    color: #eeffdf !important;
 }
 
 /* Tab hovering */
 .tabbrowser-tab:hover .tab-background-middle {
-    background-color: #353945 !important;
+    background-color: #0f1f24 !important;
 }
 
 /* Selected Tab Name */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
-    background-color: #353945 !important;
+    background-color: #0f1f24 !important;
 }
 
 /* Unselected Tab Names */
 #TabsToolbar .tabbrowser-tabs, #TabsToolbar .tabbrowser-tab:not([selected]) , #TabsToolbar .tab-icon-sound {
-    color: #aebbd3 !important;
+    color: #dae0d8 !important;
 }
 
 /* Flash From New Tabs */
 browser, browser.display.background_color, tabbrowser tabpanels {
-    background-color: #353945 !important;
+    background-color: #0f1f24 !important;
 }
 
 /*

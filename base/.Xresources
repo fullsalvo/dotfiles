@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:xft:Lemon:pixelsize=8:antialias=False,xft:Kochi Gothic:pixelsize=8:antialias=False
+URxvt.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:Lemon:pixelsize=8:antialias=False,xft:Kochi Gothic:pixelsize=8:antialias=False
+XTerm.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: 1
+*.letterSpace: -1
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -26,63 +26,62 @@ emacs.internalBorder: 0
 rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: Lemon 8
+rofi.font: Fira Mono 8
 rofi.padding: 50
-rofi.bw: 1
+rofi.bw: 5
 rofi.terminal: urxvt
-rofi.disable-history: true
-rofi.color-window: #353945, #63decd
-rofi.color-normal: #353945, #becde7, #353945, #63decd, #353945
-rofi.color-active: #353945, #becde7, #353945, #90ded3, #353945
-rofi.color-urgent: #353945, #becde7, #353945, #4591e7, #353945
+rofi.color-window: #0f1f24, #7e95f0
+rofi.color-normal: #0f1f24, #92a19a, #0f1f24, #7e95f0, #0f1f24
+rofi.color-active: #0f1f24, #92a19a, #0f1f24, #999eeb, #0f1f24
+rofi.color-urgent: #0f1f24, #92a19a, #0f1f24, #dae0d8, #0f1f24
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
 *keysym.Shift-Control-V: perl:clipboard:paste
-*url-launcher:		 /usr/bin/firefox
+*url-launcher:		 /usr/bin/vivaldi
 *matcher.button:	 1
 *url-select.underline:	 true
 *.matcher.rend.0:        Uline Bold fg4
 
 ! Extra
 
-*.color254:     #353945
-*.color255:     #becde7
+*.color254:     #0f1f24
+*.color255:     #92a19a
 
 ! Colors
-*.borderColor:  #353945
-*.background:   #353945
-*.foreground:   #becde7
-*.cursorColor:  #eeeeee
+*.borderColor:  #0f1f24
+*.background:   #0f1f24
+*.foreground:   #92a19a
+*.cursorColor:  #92a19a
 
 ! Black
-*color0:       #7e8798
-*color8:       #919498
+*color0:       #434343
+*color8:       #616161
 
 ! Red
-*color1:       #e64c4c
-*color9:       #e67676
+*color1:       #ac8a8a
+*color9:       #b39e9e
 
 ! Green
-*color2:       #36eb8c
-*color10:      #79ebaf
+*color2:       #79c490
+*color10:      #93e3b7
 
 ! Yellow
-*color3:       #c2f139
-*color11:      #d3f17b
+*color3:       #bfd491
+*color11:      #d8f4a2
 
 ! Blue
-*color4:       #4591e7
-*color12:      #79ace7
+*color4:       #7e95f0
+*color12:      #999eeb
 
 ! Magenta
-*color5:       #9e3f69
-*color13:      #9e607c
+*color5:       #af91da
+*color13:      #b4a2f4
 
 ! Cyan
-*color6:       #63decd
-*color14:      #90ded3
+*color6:       #acced6
+*color14:      #c1d1cf
 
 ! White
-*color7:       #aebbd3
-*color15:      #cdddfa
+*color7:       #dae0d8
+*color15:      #eeffdf

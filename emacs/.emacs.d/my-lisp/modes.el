@@ -40,3 +40,7 @@
 (setq c-default-style "linux"
       c-basic-offset 8)
 (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
+
+;; latex-mode
+;; disable prompts for environment labels
+;; broke things, will figure out later

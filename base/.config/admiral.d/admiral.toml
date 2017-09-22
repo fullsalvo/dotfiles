@@ -21,11 +21,13 @@ path = "~/.config/lemonbar/battery"
 reload = 10
 
 [volume]
-path = "~/.bin/soundstate"
+path = "~/.config/lemonbar/soundstate"
 reload = 0.1
 
 [greet]
-path = "echo '  fullsalvo'"
+
+path = "echo ' fullsalvo'"
+
 static = true
 
 # Clickable Regions

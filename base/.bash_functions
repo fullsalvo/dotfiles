@@ -105,3 +105,7 @@ albumart () {
 spectral () {
     sox "$1" -n spectrogram
 }
+
+twitch () {
+    mpv --ytdl-format=bestvideo[height<=?480]+bestaudio/best "https://twitch.tv/$1"
+}
