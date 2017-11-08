@@ -52,7 +52,7 @@
 (global-linum-mode 1)
 
 ;; Set Line Number Format
-(setq linum-format "  %d ")
+(setq linum-format " %d ")
 
 ;; Always Use Stylized Colors
 (global-font-lock-mode 1)
@@ -135,16 +135,18 @@
 ;; ===========================
 
 (defun evil-mode-state ()
-  (let ((str (cond ((evil-normal-state-p)   (format " NORMAL " ))
-                   ((evil-visual-state-p)   (format " VISUAL " ))
-                   ((evil-insert-state-p)   (format " INSERT " ))
-                   ((evil-emacs-state-p)    (format " EMACS " ))
+  (let ((str (cond ((evil-normal-state-p)   (format " NORMAL   " ))
+                   ((evil-visual-state-p)   (format " VISUAL   " ))
+                   ((evil-insert-state-p)   (format " INSERT   " ))
+                   ((evil-emacs-state-p)    (format " EMACS    " ))
                    ((evil-operator-state-p) (format " OPERATOR " ))
-                   ((evil-motion-state-p)   (format " MOTION " ))
-                   ((evil-replace-state-p)  (format " REPLACE " )))))
-    (propertize
-     str
-     'face 'evil-mode-face)))
+                   ((evil-motion-state-p)   (format " MOTION   " ))
+                   ((evil-replace-state-p)  (format " REPLACE  " )))))
+    (propertize str 'face 'mode-line-face)))
+
+(defun mode-space ()
+  (let ((str (format "  ")))
+  (propertize str 'face 'mode-line-face)))
 
 (setq-default mode-line-format
 	      (list " "
@@ -152,9 +154,10 @@
 		    '(:eval (evil-mode-state))
 		    '(mode-line-modified " [%+]    ")
 		    'mode-name
+		    '(:eval (mode-space))
+		    '(vc-mode vc-mode)
 		    '(line-number-mode "     %l, ")
-		    '(column-number-mode "%c   ")
-		    '(vc-mode vc-mode)))
+		    '(column-number-mode "%c   ")))
 
 ;; Buffer Changes
 ;; ===========================

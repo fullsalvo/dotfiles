@@ -20,11 +20,6 @@ alias fdisk="sudo fdisk"
 
 # Research
 alias abacus="ssh ddb19@abacus.cs.uwf.edu"
-alias feral="ssh fullsalvo@leto.feralhosting.com"
-alias ferf="sftp fullsalvo@leto.feralhosting.com"
-alias elena="ssh -i $HOME/.ssh/id_rsa_dim dimmy@137.99.20.238"
-alias felena="sftp -i $HOME/.ssh/id_rsa_dim dimmy@137.99.20.238"
-
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'
@@ -35,18 +30,12 @@ alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias mpv='mpv --geometry 1280x720'
 
 # Fun
-alias lc='lolcat'
-alias fig='figlet'
-alias blocks='.bin/candy'
-alias color='$HOME/.bin/colors'
-alias block='$HOME/.bin/blocks'
-alias wallview='.bin/wallview'
-alias hex='$HOME/.bin/hex 16'
+alias hex='hex 16'
 alias i3o='i3-msg open'
-alias rotate='clear && schemes'
 
 # Environment Variables
 export WZK_ZNC_PASS="Sch00l"
 export EDITOR="emacs"
 export XDG_MUSIC_DIR=$HOME/Music
 export RHISK_COMM='zenbu'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'

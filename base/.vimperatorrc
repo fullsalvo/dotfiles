@@ -9,14 +9,14 @@ set hintchars=asdfhjkl
 
 highlight ContentSeparator border: none;
 highlight CmdLine background: #0f1f24; color: #92a19a;
-highlight StatusLine background: #0f1f24; color: #92a19a; font-family: Fira Mono;
+highlight StatusLine background: #0f1f24; color: #92a19a; font-family: montecarlo;
 highlight Normal background: #0f1f24; color: #92a19a;
-highlight ModeMsg background: #7e95f0; color: #92a19a; font-family: Fira Mono;
-highlight CmdLine>* font-family: "Fira Mono";
-highlight Hint font-family: "Fira Mono"; background: #92a19a; color: #0f1f24;
-highlight HintActive background-color: #ac8a8a;
+highlight ModeMsg background: #95b3ba; color: #92a19a; font-family: montecarlo;
+highlight CmdLine>* font-family: "montecarlo";
+highlight Hint font-family: "montecarlo"; background: #92a19a; color: #0f1f24;
+highlight HintActive background-color: #ac5252;
 highlight HintElem background-color: #bfd491;
-highlight InfoMsg background-color: #0f1f24; color: #ac8a8a; font-family: "Fira Mono";
+highlight InfoMsg background-color: #0f1f24; color: #ac5252; font-family: "montecarlo";
 
 iunmap <C-q>
 nnoremap <C-q> :js toggle_bottombar()<CR>

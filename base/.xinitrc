@@ -8,11 +8,8 @@ xset fp rehash
 xrdb ~/.Xresources
 
 # MPD
-sleep 2 && (
-	mpd
-	mpdscribble
-	$HOME/.bin/mpd-notify-daemon &
-) &
+mpd
+mpdscribble
 
 # Load into a wm
 defaultwm=i3

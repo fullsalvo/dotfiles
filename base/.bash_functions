@@ -109,3 +109,8 @@ spectral () {
 twitch () {
     mpv --ytdl-format=bestvideo[height<=?480]+bestaudio/best "https://twitch.tv/$1"
 }
+
+chatty () {
+    java -jar "$(locate Chatty | grep '.jar')" &
+    disown
+}

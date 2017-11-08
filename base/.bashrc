@@ -71,7 +71,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto -N'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -114,6 +114,6 @@ fi
 
 #Add directories to $PATH
 
-export PATH="/home/fullsalvo/.bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

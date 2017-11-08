@@ -1,7 +1,7 @@
 # emacs
 *recentf*
 *elpa*
-*.emacs.d/games*
+*/games/*
 *emacs/.emacs.d/places*
 *auto-save-list*
 *vimish-fold*

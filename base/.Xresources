@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+URxvt.font:xft:montecarlo:pixelsize=9:antialias=True,xft:Kochi Gothic:pixelsize=9:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+XTerm.font:xft:montecarlo:pixelsize=9:antialias=True,xft:Kochi Gothic:pixelsize=9:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: -1
+*.letterSpace: 0
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -19,21 +19,18 @@ Xft.hintstyle: hintnone
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-! Separate settings for emacs
-emacs.internalBorder: 0
-
 ! Rofi
 rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: Fira Mono 8
+rofi.font: montecarlo 8
 rofi.padding: 50
 rofi.bw: 5
 rofi.terminal: urxvt
-rofi.color-window: #0f1f24, #7e95f0
-rofi.color-normal: #0f1f24, #92a19a, #0f1f24, #7e95f0, #0f1f24
-rofi.color-active: #0f1f24, #92a19a, #0f1f24, #999eeb, #0f1f24
-rofi.color-urgent: #0f1f24, #92a19a, #0f1f24, #dae0d8, #0f1f24
+rofi.color-window: #0f1f24, #95b3ba
+rofi.color-normal: #0f1f24, #92a19a, #0f1f24, #ac5252, #0f1f24
+rofi.color-active: #0f1f24, #92a19a, #0f1f24, #ca6e6e, #0f1f24
+rofi.color-urgent: #0f1f24, #92a19a, #0f1f24, #79c490, #0f1f24
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
@@ -59,8 +56,8 @@ rofi.color-urgent: #0f1f24, #92a19a, #0f1f24, #dae0d8, #0f1f24
 *color8:       #616161
 
 ! Red
-*color1:       #ac8a8a
-*color9:       #b39e9e
+*color1:       #ac5252
+*color9:       #ca6e6e
 
 ! Green
 *color2:       #79c490
@@ -72,14 +69,14 @@ rofi.color-urgent: #0f1f24, #92a19a, #0f1f24, #dae0d8, #0f1f24
 
 ! Blue
 *color4:       #7e95f0
-*color12:      #999eeb
+*color12:      #b6bbff
 
 ! Magenta
 *color5:       #af91da
 *color13:      #b4a2f4
 
 ! Cyan
-*color6:       #acced6
+*color6:       #95b3ba
 *color14:      #c1d1cf
 
 ! White

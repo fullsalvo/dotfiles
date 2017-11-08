@@ -1,11 +1,11 @@
 body {
 	background-color: #0f1f24;
-	color: #ac8a8a !important;
+	color: #ac5252 !important;
 }
 
 div[class^="books"], div [class*="books"] {
-	font-family: "Fira Mono" !important;
-	font-size: 11px !important;
+	font-family: "montecarlo" !important;
+	font-size: 10px !important;
 }
 
 a, a:link {
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #ac8a8a !important;
+	color: #ac5252 !important;
 	content: " //" !important;
 }
 

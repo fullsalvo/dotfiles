@@ -167,7 +167,7 @@
     }
 
     #watchList a:hover {
-	color: #999eeb !important;
+	color: #b6bbff !important;
 	transition: color .5s ease-out;
     }
 
@@ -413,7 +413,7 @@
     }
 
     #sr-header-area a.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a{
-	color: #ac8a8a !important;
+	color: #ac5252 !important;
     }
 
     .tabmenu li a {
@@ -430,7 +430,7 @@
     }
 
     .tabmenu li.selected a {
-	color: #ac8a8a !important;
+	color: #ac5252 !important;
     }
 
     .md a {
@@ -438,7 +438,7 @@
     }
 
     .md a:hover {
-	color: #999eeb !important;
+	color: #b6bbff !important;
     }
 
     .newComments {

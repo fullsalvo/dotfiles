@@ -1,10 +1,13 @@
 [admiral]
-items = ["left", "space", "greet", "modes", "reset", "center", "wsfw", "wsbk", "workspaces",
-		 "closeclick", "closeclick",
-		 "right", "reset", "volup", "voldn", "mute", "volume",
+
+items = ["left", "space", "timeicon", "todo", "calendar",
+		 "clock", "closeclick", "closeclick",
+                 "wsfw", "wsbk", "workspaces",
+		 "closeclick", "closeclick", "modes", "reset",
+ 		 "right", "reset", "volup", "voldn", "mute", "volume",
 		 "closeclick", "closeclick", "closeclick",
-		 "separator", "todo", "calendar",
-		 "clock", "closeclick", "closeclick", "separator", "battery"]
+		 "separator", "battery"]
+
 
 [workspaces]
 path = "~/.config/lemonbar/workspace"
@@ -12,8 +15,15 @@ path = "~/.config/lemonbar/workspace"
 [modes]
 path = "~/.config/lemonbar/modes"
 
+[timeicon]
+
+path = "echo '  '"
+
+static = true
+
 [clock]
-path = "date '+%a %d %b %H:%M:%S'"
+# path = "date '+%a %d %b %H:%M:%S'"
+path = "date '+%a %d %b %H:%M'"
 reload = 1
 
 [battery]
@@ -26,7 +36,7 @@ reload = 0.1
 
 [greet]
 
-path = "echo ' fullsalvo'"
+path = "echo '  fullsalvo'"
 
 static = true
 

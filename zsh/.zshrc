@@ -9,8 +9,8 @@ esac
 HISTCONTROL=ignoreboth
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-SAVEHIST=2000
+HISTSIZE=-1
+SAVEHIST=-1
 HISTFILE=~/.history
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -38,7 +38,7 @@ fi
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto -N'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
