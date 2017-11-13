@@ -1,5 +1,5 @@
 [global]
-    font = montecarlo 8
+    font = Office Code Pro 9
     markup = yes
     format = "%s\n%b"
     sort = yes
@@ -24,7 +24,7 @@
     startup_notification = false
     icon_position = left
     frame_width = 1
-    frame_color = "#95b3ba"
+    frame_color = "#71899d"
 
 [shortcuts]
     close = mod4+x
@@ -33,16 +33,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#0f1f24"
-    foreground = "#79c490"
+    background = "#2e2e2e"
+    foreground = "#b2cccd"
     timeout = 5
 
 [urgency_normal]
-    background = "#0f1f24"
-    foreground = "#ac5252"
+    background = "#2e2e2e"
+    foreground = "#71899d"
     timeout = 15
 
 [urgency_critical]
-    background = "#0f1f24"
-    foreground = "#dae0d8"
+    background = "#2e2e2e"
+    foreground = "#9eb2cb"
     timeout = 0

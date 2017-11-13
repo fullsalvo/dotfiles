@@ -35,7 +35,7 @@ alias i3o='i3-msg open'
 
 # Environment Variables
 export WZK_ZNC_PASS="Sch00l"
-export EDITOR="emacs"
+export EDITOR="emacs -nw"
 export XDG_MUSIC_DIR=$HOME/Music
 export RHISK_COMM='zenbu'
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'

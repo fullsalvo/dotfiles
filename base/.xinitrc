@@ -4,6 +4,9 @@
 xset +fp /home/fullsalvo/.fonts
 xset fp rehash
 
+# Java Options
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+
 # Make X Terminal Emulator terms not ugly
 xrdb ~/.Xresources
 

@@ -41,6 +41,8 @@
       c-basic-offset 8)
 (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
 
+(require 'git-modes)
+
 ;; latex-mode
 ;; disable prompts for environment labels
 ;; broke things, will figure out later

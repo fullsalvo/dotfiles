@@ -17,7 +17,7 @@ path = "~/.config/lemonbar/modes"
 
 [timeicon]
 
-path = "echo '  '"
+path = "echo '  '"
 
 static = true
 
@@ -36,7 +36,7 @@ reload = 0.1
 
 [greet]
 
-path = "echo '  fullsalvo'"
+path = "echo ' fullsalvo'"
 
 static = true
 

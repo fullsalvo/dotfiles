@@ -5,9 +5,9 @@ volout=$($HOME/.bin/volume)
 
 if [[ "${volout}" != "MUTE" ]]; then
 
-  outstr=" ${outstr} "
+  outstr=" ${outstr} "
 else
-  outstr=" ${outstr} "
+  outstr=" ${outstr} "
 
 fi
 

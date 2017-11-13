@@ -9,8 +9,8 @@ esac
 HISTCONTROL=ignoreboth
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=-1
-SAVEHIST=-1
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.history
 
 # If set, the pattern "**" used in a pathname expansion context will

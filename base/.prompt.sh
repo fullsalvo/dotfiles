@@ -16,5 +16,5 @@
 
 # PS1='\w\[${BLUE}\] »» \[${RESET}\]'
 # PS1='\w\[${BLUE}\] ─── \[${RESET}\]'
-PS1='%F{red} ┄─┄┄ %F{reset_color}'
+PS1='%F{blue} ┄─┄┄ %F{reset_color}'
  RPROMPT=' %~'

@@ -215,7 +215,7 @@
     ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
  '(package-selected-packages
    (quote
-    (projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex)))
+    (evil-magit projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex)))
  '(vimish-fold-global-mode t))
 
 ;; Python
