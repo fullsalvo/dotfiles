@@ -3,11 +3,14 @@
 import i3ipc
 
 i3 = i3ipc.Connection()
-colormode = '%{F#e84f4f}'
+
+colormode = '%{B#e84f4f}%{F#271e1f}'
+
+uncol = '%{F-}%{B-}'
 
 def on_mode(self, e):
     if e.change != 'default':
-        modestr = colormode + '  ' + e.change
+        modestr = colormode + '  ' + e.change + '  ' + uncol
     else:
         modestr = ' '
     print(modestr, flush=True)

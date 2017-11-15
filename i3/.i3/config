@@ -11,33 +11,33 @@ set $oug        0
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #00000055
+set $background #271e1fff
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #71899d
+set $border     #8a7e8f
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
-set $barfoc     #eeeeee
+set $barfoc     #b49dbb
 # Unfocused Window/Workspace Colour
 set $ufocus     #4b4b4b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
-set $rofibg     #2e2e2e
+set $rofibg     #271e1f
 
 
 # Window Border Thickness
-set $bordersize 1
+set $bordersize 5
 # Default Fallback Font
-set $font       Fira Code Bold 7
+set $font       Fira 9
 # Default Bar Font
-set $barfont    Roboto Condensed Regular 8
+set $barfont    Fira 8
 # Bar Height
-set $bheight    18
+set $bheight    26
 
-set $wall       /home/fullsalvo/Pictures/Walls/WindowRain.jpg
+set $wall       /home/fullsalvo/Pictures/Walls/Wires.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 

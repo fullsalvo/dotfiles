@@ -1,12 +1,13 @@
 [admiral]
 
-items = ["left", "space", "timeicon", "todo", "calendar",
-		 "clock", "closeclick", "closeclick",
-                 "wsfw", "wsbk", "workspaces",
-		 "closeclick", "closeclick", "modes", "reset",
- 		 "right", "reset", "volup", "voldn", "mute", "volume",
-		 "closeclick", "closeclick", "closeclick",
-		 "separator", "battery"]
+items = ["left", "greet", "wsfw", "wsbk", "workspaces",
+         "closeclick", "closeclick", "endbar",
+         "right", "modes", "volup", "voldn", "mute",
+         "prim", "volume", "space",
+         "closeclick", "closeclick", "closeclick",
+         "sec", "todo", "calendar", "clock",
+         "closeclick", "closeclick", "endbar",
+         "hilite", "space", "battery", "endbar"]
 
 
 [workspaces]
@@ -36,8 +37,26 @@ reload = 0.1
 
 [greet]
 
-path = "echo ' fullsalvo'"
 
+path = "echo '%{B#af6a82}%{F#271e1f}    %{F-}%{B-}%{B#8a7e8f}%{F#271e1f}    fullsalvo   '%{F-}%{B-}"
+
+
+static = true
+
+[prim]
+path = "echo '%{B#8a7e8f}%{F#271e1f}  '"
+static = true
+
+[sec]
+path = "echo '%{B#af6a82}%{F#271e1f}  '"
+static = true
+
+[hilite]
+path = "echo '%{B#70a2cb}%{F#271e1f}  '"
+static = true
+
+[endbar]
+path = "echo '  %{B-}%{F-}'"
 static = true
 
 # Clickable Regions

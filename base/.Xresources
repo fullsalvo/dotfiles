@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:xft:Office Code Pro:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True
+URxvt.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:Office Code Pro:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True
+XTerm.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -23,14 +23,14 @@ Xft.rgba: rgb
 rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: Office Code Pro 9
+rofi.font: Fira Mono 9
 rofi.padding: 50
-rofi.bw: 1
+rofi.bw: 5
 rofi.terminal: urxvt
-rofi.color-window: #2e2e2e, #71899d
-rofi.color-normal: #2e2e2e, #eeeeee, #2e2e2e, #71899d, #2e2e2e
-rofi.color-active: #2e2e2e, #eeeeee, #2e2e2e, #8da7be, #2e2e2e
-rofi.color-urgent: #2e2e2e, #eeeeee, #2e2e2e, #b2cccd, #2e2e2e
+rofi.color-window: #271e1f, #8a7e8f
+rofi.color-normal: #271e1f, #bbafbe, #271e1f, #8a7e8f, #271e1f
+rofi.color-active: #271e1f, #bbafbe, #271e1f, #b49dbb, #271e1f
+rofi.color-urgent: #271e1f, #bbafbe, #271e1f, #af6a82, #271e1f
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
@@ -42,34 +42,34 @@ rofi.color-urgent: #2e2e2e, #eeeeee, #2e2e2e, #b2cccd, #2e2e2e
 
 ! Extra
 
-*.color254:     #2e2e2e
-*.color255:     #eeeeee
+*.color254:     #271e1f
+*.color255:     #bbafbe
 
 ! Colors
-*.borderColor:  #2e2e2e
-*.background:   #2e2e2e
-*.foreground:   #eeeeee
-*.cursorColor:  #eeeeee
+*.borderColor:  #271e1f
+*.background:   #271e1f
+*.foreground:   #bbafbe
+*.cursorColor:  #bbafbe
 
 ! Black
 *color0:       #4b4b4b
 *color8:       #5f5f5f
 
 ! Red
-*color1:       #a06e6e
-*color9:       #d88383
+*color1:       #af6a82
+*color9:       #d89cb5
 
 ! Green
-*color2:       #969b6a
-*color10:      #b5bd6a
+*color2:       #adb092
+*color10:      #e0e6ad
 
 ! Yellow
-*color3:       #ded997
-*color11:      #fafbb9
+*color3:       #e1cd8a
+*color11:      #ded4b4
 
 ! Blue
-*color4:       #71899d
-*color12:      #8da7be
+*color4:       #70a2cb
+*color12:      #97a8b7
 
 ! Magenta
 *color5:       #8a7e8f
@@ -80,5 +80,5 @@ rofi.color-urgent: #2e2e2e, #eeeeee, #2e2e2e, #b2cccd, #2e2e2e
 *color14:      #d6fff8
 
 ! White
-*color7:       #9eb2cb
-*color15:      #cae5ff
+*color7:       #cad0d0
+*color15:      #f0f7fe
