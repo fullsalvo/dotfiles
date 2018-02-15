@@ -18,7 +18,7 @@ path = "~/.config/lemonbar/modes"
 
 [timeicon]
 
-path = "echo '  '"
+path = "echo '  '"
 
 static = true
 
@@ -38,21 +38,21 @@ reload = 0.1
 [greet]
 
 
-path = "echo '%{B#af6a82}%{F#271e1f}    %{F-}%{B-}%{B#8a7e8f}%{F#271e1f}    fullsalvo   '%{F-}%{B-}"
+path = "echo '%{B#b79d7d}%{F#18292e}    %{F-}%{B-}%{B#78aaa4}%{F#18292e}    fullsalvo   '%{F-}%{B-}"
 
 
 static = true
 
 [prim]
-path = "echo '%{B#8a7e8f}%{F#271e1f}  '"
+path = "echo '%{B#78aaa4}%{F#18292e}  '"
 static = true
 
 [sec]
-path = "echo '%{B#af6a82}%{F#271e1f}  '"
+path = "echo '%{B#b79d7d}%{F#18292e}  '"
 static = true
 
 [hilite]
-path = "echo '%{B#70a2cb}%{F#271e1f}  '"
+path = "echo '%{B#9eb2cb}%{F#18292e}  '"
 static = true
 
 [endbar]

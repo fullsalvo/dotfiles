@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# run as root
+
+cd /opt/vivaldi/resources/vivaldi/style/
+sed -i '1i@import "custom.css"' common.css
+cd ..

@@ -4,7 +4,7 @@ import i3ipc
 
 i3 = i3ipc.Connection()
 
-colormode = '%{B#e84f4f}%{F#271e1f}'
+colormode = '%{B#e84f4f}%{F#18292e}'
 
 uncol = '%{F-}%{B-}'
 

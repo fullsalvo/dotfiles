@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xrandr --output DP-2 --rotate left
+xrandr --output eDP-1 --auto --pos 0x840 --output DP-2 --auto --pos 1920x0
