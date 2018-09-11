@@ -1,4 +1,20 @@
 #!/usr/bin/env bash
 
-xrandr --output DP-2 --rotate left
-xrandr --output eDP-1 --auto --pos 0x840 --output DP-2 --auto --pos 1920x0
+# Create an array of the names of displays which are currently connected.
+displines="$(grep '\sconnected' <<< `xrandr`)"
+displays=(
+    `awk '{printf $1"\n"}' <<< $displines`
+)
+
+# If the DisplayPort is being used, rotate the monitor to a vertical position
+# and align the bottom of the laptop to the bottom of the external display.
+for display in ${displays[@]}
+do
+    echo "$display"
+    if [[ "$display" == "DP-2" ]]
+    then
+	xrandr --output DP-2 --rotate left
+	xrandr --output eDP-1 --auto --pos 0x840 --output DP-2 --auto --pos 1920x0
+	i3-msg restart
+    fi
+done

@@ -1,20 +1,20 @@
 body {
-	background-color: #18292e;
-	color: #ea7c67 !important;
+	background-color: #271e1f;
+	color: #af6a82 !important;
 }
 
 div[class^="books"], div [class*="books"] {
-	font-family: "ProfontIIx" !important;
+	font-family: "Fira Mono" !important;
 	font-size: 10px !important;
 }
 
 a, a:link {
-	   color: #9eb2cb !important;
+	   color: #cad0d0 !important;
 	   text-decoration: none !important;
 }
 
 a:hover {
-	color: #cae5ff !important;
+	color: #f0f7fe !important;
 	text-decoration: none !important;
 }
 
@@ -34,7 +34,7 @@ ul li {
 }
 
 ul li:after {
-	color: #ea7c67 !important;
+	color: #af6a82 !important;
 	content: " //" !important;
 }
 
@@ -56,7 +56,7 @@ div.books {
 div.books2 {
 	margin-right: 70% !important;
 	text-align: right !important;
-	color: #eeeeee;
+	color: #bbafbe;
 	float: right;
 	display: table;
 

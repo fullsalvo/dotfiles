@@ -8,7 +8,6 @@
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
 
 ;; External setting file load calls
 (if (file-accessible-directory-p "~/.emacs.d/my-lisp")
@@ -198,25 +197,13 @@
 ;; -----
 
 (require 'tex)
-(setq TeX-PDF-mode t)
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq-default TeX-master nil)
-(setq TeX-view-program-list '(("zathura" "zathura %o")))
-(setq TeX-view-program-selection '((output-pdf "zathura")))
-(TeX-global-PDF-mode t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(font-latex-math-environments
-   (quote
-    ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
- '(package-selected-packages
-   (quote
-    (evil-magit projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex)))
- '(vimish-fold-global-mode t))
+;; (setq-default TeX-master nil)
+(setq TeX-PDF-mode t
+      TeX-auto-save t
+      TeX-parse-self t
+      TeX-view-program-list '(("zathura" "zathura %o"))
+      TeX-view-program-selection '((output-pdf "zathura"))
+      TeX-global-PDF-mode t)
 
 ;; Python
 ;; ------
@@ -256,18 +243,19 @@
 ;; Update packages (To be used in the package-list-packages buffer)
 (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
 
-;; Custom variables
-;; ================
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
- '(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f"))))
- '(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f")))))
+;; Move variables from 'customize'
+(setq custom-file (make-temp-file "emacs-custom"))
+(load custom-file)
+
+;; User-defined custom variables
+(custom-set-variables
+ '(font-latex-math-environments
+   (quote
+    ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
+ '(package-selected-packages
+   (quote
+    (evil-magit projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex))))
 
 ;; Special Functions
 ;; =================
-
 (start-startify)

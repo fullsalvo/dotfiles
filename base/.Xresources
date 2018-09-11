@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:xft:ProfontIIx:pixelsize=9:antialias=True,xft:JackeyFont:pixelsize=9:antialias=True
+URxvt.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:ProfontIIx:pixelsize=9:antialias=True,xft:JackeyFont:pixelsize=9:antialias=True
+XTerm.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: 0
+*.letterSpace: -1
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -23,62 +23,62 @@ Xft.rgba: rgb
 rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: ProfontIIx 8
+rofi.font: Fira Mono 9
 rofi.padding: 50
-rofi.bw: 5
+rofi.bw: 2
 rofi.terminal: urxvt
-rofi.color-window: #18292e, #78aaa4
-rofi.color-normal: #18292e, #eeeeee, #18292e, #78aaa4, #18292e
-rofi.color-active: #18292e, #eeeeee, #18292e, #9bdcd3, #18292e
-rofi.color-urgent: #18292e, #eeeeee, #18292e, #b79d7d, #18292e
+rofi.color-window: #271e1f, #8a7e8f
+rofi.color-normal: #271e1f, #bbafbe, #271e1f, #8a7e8f, #271e1f
+rofi.color-active: #271e1f, #bbafbe, #271e1f, #b49dbb, #271e1f
+rofi.color-urgent: #271e1f, #bbafbe, #271e1f, #af6a82, #271e1f
 
 ! Clickable Links
 *perl-ext-common:	 default,matcher,clipboard
 *keysym.Shift-Control-V: perl:clipboard:paste
-*url-launcher:		 /usr/bin/vivaldi
+*url-launcher:		 /usr/bin/google-chrome-stable
 *matcher.button:	 1
 *url-select.underline:	 true
 *.matcher.rend.0:        Uline Bold fg4
 
 ! Extra
 
-*.color254:     #18292e
-*.color255:     #eeeeee
+*.color254:     #271e1f
+*.color255:     #bbafbe
 
 ! Colors
-*.borderColor:  #18292e
-*.background:   #18292e
-*.foreground:   #eeeeee
-*.cursorColor:  #eeeeee
+*.borderColor:  #271e1f
+*.background:   #271e1f
+*.foreground:   #bbafbe
+*.cursorColor:  #bbafbe
 
 ! Black
-*color0:       #3d3d3d
-*color8:       #4b4b4b
+*color0:       #4b4b4b
+*color8:       #5f5f5f
 
 ! Red
-*color1:       #ea7c67
-*color9:       #ea9e90
+*color1:       #af6a82
+*color9:       #d89cb5
 
 ! Green
-*color2:       #78aaa4
-*color10:      #9bdcd3
+*color2:       #adb092
+*color10:      #e0e6ad
 
 ! Yellow
-*color3:       #b79d7d
-*color11:      #e9cfaf
+*color3:       #e1cd8a
+*color11:      #ded4b4
 
 ! Blue
-*color4:       #3288aa
-*color12:      #40b0dc
+*color4:       #70a2cb
+*color12:      #97a8b7
 
 ! Magenta
-*color5:       #837ca3
-*color13:      #9c98ae
+*color5:       #8a7e8f
+*color13:      #b49dbb
 
 ! Cyan
-*color6:       #569aa9
-*color14:      #6fc7db
+*color6:       #b2cccd
+*color14:      #d6fff8
 
 ! White
-*color7:       #9eb2cb
-*color15:      #cae5ff
+*color7:       #cad0d0
+*color15:      #f0f7fe

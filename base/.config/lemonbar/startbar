@@ -3,4 +3,4 @@
 pkill admiral &>/dev/null
 pkill lemonbar &>/dev/null
 
-$HOME/.local/bin/admiral | lemonbar -u 2 -p -B "#ff18292e" -F "#eeeeee" -f "lime:size=7" -o -1 -f "FontAwesome:size=8" -f "Siji-7" -f "Symbola-7" -g 1920x18+0+0 | sh
+$HOME/.local/bin/admiral | lemonbar -u 3 -p -B "#ff271e1f" -F "#eeeeee" -f "Fira:size=8" -o -1 -f "FontAwesome:size=9" -f "Siji-8" -f "Symbola-8" -g 1920x26+0+0 | sh

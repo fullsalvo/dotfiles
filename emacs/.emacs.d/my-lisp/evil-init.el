@@ -23,9 +23,9 @@
 (define-key evil-normal-state-map (kbd "<SPC>") nil)
 ;; Customize the appearance of vimish folds
 (custom-set-faces
-'(vimish-fold-overlay ((t (:inherit nil :background "#1f1f1f"))))
-'(vimish-fold-fringe ((t (:inherit nil :foreground "#eeeeee"))))
-'(vimish-fold-mouse-face ((t (:inherit nil :foreground "#1f1f1f" :background "#4f4f4f")))))
+'(vimish-fold-overlay ((t (:inherit nil :background "##271e1f"))))
+'(vimish-fold-fringe ((t (:inherit nil :foreground "##bbafbe"))))
+'(vimish-fold-mouse-face ((t (:inherit nil :foreground "##271e1f" :background "##bbafbe")))))
 (custom-set-variables
  '(vimish-fold-global-mode t))
 (setq vimish-fold-header-width 40)

@@ -7,6 +7,8 @@ set $mod        Mod1
 set $win        Mod4
 set $ing        0
 set $oug        0
+set $hor        0
+set $ver        0
 
 set $home       /home/fullsalvo
 
@@ -29,7 +31,7 @@ set $rofibg     #271e1f
 
 
 # Window Border Thickness
-set $bordersize 5
+set $bordersize 2
 # Default Fallback Font
 set $font       Fira 9
 # Default Bar Font
@@ -37,7 +39,7 @@ set $barfont    Fira 8
 # Bar Height
 set $bheight    26
 
-set $wall       /home/fullsalvo/Pictures/Walls/Wires.jpg
+set $wall       /home/fullsalvo/pictures/Walls/Wires.jpg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -59,6 +61,7 @@ focus_follows_mouse no
 exec xset s off -dpms
 exec $home/.bin/batnotif &
 exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
+exec $home/.bin/work
 for_window [class="Lxappearance"] floating enable
 
 #######################################################################
@@ -72,13 +75,13 @@ font pango: $font
 #######################################################################
 
 bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+f exec --no-startup-id vivaldi
+bindsym $mod+Shift+f exec --no-startup-id google-chrome-stable
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+a exec --no-startup-id emacs
 bindsym $mod+n exec --no-startup-id urxvt -e ranger
 bindsym $mod+Shift+v exec vlc
 bindsym $mod+M exec --no-startup-id urxvt -e ncmpcpp
-bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/Pictures/FehPictures/
+bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/pictures/FehPictures/
 bindsym $mod+Shift+T exec --no-startup-id libreoffice
 # Floating Instances
 for_window [instance="__special__"] floating enable
@@ -204,6 +207,8 @@ bindsym $win+m swap container with mark swapper
 
 gaps inner $ing
 gaps outer $oug
+gaps horizontal $hor
+gaps vertical $ver
 
 
 
@@ -238,9 +243,9 @@ bindsym $mod+g mode "Gaps"
 #######################################################################
 
 # Screenshot Commands
-bindsym --release Print exec --no-startup-id maim --format png /home/fullsalvo/Pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
-bindsym --release Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -n --format png /home/fullsalvo/Pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
-bindsym Ctrl+Print exec --no-startup-id "maim -s -n -c $maimbord -b 3 --format png /home/fullsalvo/Pictures/Screenshots/$(date '+%y-%b-%d_%H%M%S').png"
+bindsym --release Print exec --no-startup-id maim --format png /home/fullsalvo/pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
+bindsym --release Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -n --format png /home/fullsalvo/pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
+bindsym Ctrl+Print exec --no-startup-id "maim -s -n -c $maimbord -b 3 --format png /home/fullsalvo/pictures/Screenshots/$(date '+%y-%b-%d_%H%M%S').png"
 
 # Pulse Audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 2%+

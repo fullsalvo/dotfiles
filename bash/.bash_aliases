@@ -13,13 +13,8 @@ alias wifioff='nmcli radio wifi off'
 alias commit='git commit -m "fullsalvo update"'
 alias dir='pwd'
 alias rm='rm -I'
-alias ..="cd .."
 alias unstow="stow -D"
-alias x="startx"
 alias fdisk="sudo fdisk"
-
-# Research
-alias abacus="ssh ddb19@abacus.cs.uwf.edu"
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'
@@ -34,8 +29,11 @@ alias hex='hex 16'
 alias i3o='i3-msg open'
 
 # Environment Variables
-export WZK_ZNC_PASS="Sch00l"
 export EDITOR="emacs -nw"
-export XDG_MUSIC_DIR=$HOME/Music
+export XDG_MUSIC_DIR=$HOME/music
+export XDG_DOWNLOAD_DIR=$HOME/downloads
+export XDG_PICTURES_DIR=$HOME/pictures
+export XDG_VIDEOS_DIR=$HOME/videos
+export XDG_DOCUMENTS_DIR=$HOME/documents
 export RHISK_COMM='zenbu'
-# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+export TERM='rxvt-256color'

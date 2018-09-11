@@ -35,7 +35,7 @@
    ;; Basics
    ;; ============================
 
-   `(default ((t (:background ,background :foreground ,text))))
+   `(default ((t (:background ,background :foreground ,text :family "Fira Code" :height 80))))
    `(cursor ((t (:background ,input-text :foreground ,background))))
    `(highlight ((t (:background ,text-highlight))))
    `(minibuffer-prompt ((t (:foreground ,dark-blue :weight normal))))

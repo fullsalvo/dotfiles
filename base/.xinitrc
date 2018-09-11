@@ -15,7 +15,7 @@ mpd
 mpdscribble
 
 # Load into a wm
-defaultwm=i3
+defaultwm=/usr/bin/i3
 case "$1" in
 	*)
 		exec $defaultwm ;;

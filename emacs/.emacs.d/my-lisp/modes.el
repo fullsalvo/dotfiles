@@ -13,7 +13,7 @@
 
 ;; yaml mode
 (require 'yaml-mode)
-    (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook 'yaml-mode-hook
 	  (lambda ()
             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
@@ -21,26 +21,7 @@
 ;; toml mode
 (require 'toml-mode)
 
-;; cc-mode
-;; c indenting
-(defun my-c-lineup-inclass (langelem)
-  (let ((inclass (assoc 'inclass c-syntactic-context)))
-    (save-excursion
-      (goto-char (c-langelem-pos inclass))
-      (if (or (looking-at "struct")
-              (looking-at "typedef struct"))
-          '+
-        '++))))
-
-(c-set-offset 'substatement-open 0)
-(c-set-offset 'access-label '-)
-(c-set-offset 'inclass 'my-c-lineup-inclass)
-;; (c-set-offset 'substatement 0)
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-(setq c-default-style "linux"
-      c-basic-offset 8)
-(add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
-
+;; git
 (require 'git-modes)
 
 ;; latex-mode
