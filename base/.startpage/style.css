@@ -1,81 +1,78 @@
-body {
-	background-color: #271e1f;
-	color: #af6a82 !important;
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-div[class^="books"], div [class*="books"] {
-	font-family: "Fira Mono" !important;
-	font-size: 10px !important;
+body {
+    background-color: #1c1c22;
+    font-family: "Fira Mono";
+    color: #bcbcbc;
+    font-size: 10px;
+}
+
+#content {
+    max-width: 800px;
+    min-width: 400px;
+    margin: auto;
+    height: 100%;
+    position: relative;
 }
 
 a, a:link {
-	   color: #cad0d0 !important;
-	   text-decoration: none !important;
+    color: #708ca2;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #f0f7fe !important;
-	text-decoration: none !important;
+    color: #7faed0;
+    text-decoration: none;
 }
 
 li {
-	list-style: none;
+    list-style: none;
 }
 
 ul {
-	text-align: left !important;
-	padding-left: 13px !important;
+    text-align: left;
+    padding-left: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 ul li {
-	list-style: none;
-	display: inline;
-	text-align: left;
+    list-style: none;
+    display: inline;
+    text-align: left;
 }
 
-ul li:after {
-	color: #af6a82 !important;
-	content: " //" !important;
+.directory {
+    overflow: hidden;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 45%;
 }
 
-ul li:last-child:after {
-	content: "" !important;
+.directory tr {
+    vertical-align: center;
+    line-height: 15px;
 }
 
-div.books {
-	margin-left: 30% !important;
-	text-align: left !important;
-	padding-left: 0px;
-	display: table;
-
-	position: absolute;
-	left: 0px;
-	top: 30%;
+.directory tr td:first-child {
+    text-align: right;
 }
 
-div.books2 {
-	margin-right: 70% !important;
-	text-align: right !important;
-	color: #bbafbe;
-	float: right;
-	display: table;
-
-	position: absolute;
-	right: 0px;
-	top: 30%;
+.directory ul li:after {
+    color: #7e6565;
+    content: " //";
 }
 
-ul li#books2 {
-	float: right !important;
-}
-
-ul li#books2:after {
-	content: "" !important;
+.directory ul li:last-child:after {
+    content: "";
 }
 
 .mascot {
-	width: 30%;
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }

@@ -103,7 +103,19 @@ albumart () {
 }
 
 spectral () {
-    sox "$1" -n spectrogram
+    sox "$1" -n spectrogram 
+}
+
+spectrify () {
+	for i in $1/*.flac;do
+		sox "$i" -o "${i%.*}.png" -t "${i%.*}" -x 1000
+	done
+}
+
+ddepth () {
+	for i in $(pwd)/*.flac; do
+		sox "$i" -G -b 16 "$1/$i" rate -v -L 44100 dither
+	done
 }
 
 twitch () {
@@ -117,4 +129,29 @@ chatty () {
 
 twchk () {
 	youtube-dl -F "https://twitch.tv/$1"
+}
+
+ixi () {
+    local opts
+    local OPTIND
+    [ -f "$HOME/.netrc" ] && opts='-n'
+    while getopts ":hd:i:n:" x; do
+        case $x in
+            h) echo "ix [-d ID] [-i ID] [-n N] [opts]"; return;;
+            d) $echo curl $opts -X DELETE ix.io/$OPTARG; return;;
+            i) opts="$opts -X PUT"; local id="$OPTARG";;
+            n) opts="$opts -F read:1=$OPTARG";;
+        esac
+    done
+    shift $(($OPTIND - 1))
+    [ -t 0 ] && {
+        local filename="$1"
+        shift
+        [ "$filename" ] && {
+            curl $opts -F f:1=@"$filename" $* ix.io/$id
+            return
+        }
+        echo "^C to cancel, ^D to send."
+    }
+    curl $opts -F f:1='<-' $* ix.io/$id
 }

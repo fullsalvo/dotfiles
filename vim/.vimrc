@@ -71,4 +71,5 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 " }}}
 " {{{ autocmd
 autocmd VimEnter * Goyo
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " }}}

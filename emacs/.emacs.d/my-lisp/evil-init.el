@@ -5,7 +5,7 @@
 (require 'evil-vimish-fold)
 (evil-vimish-fold-mode 1)
 ;; Make the cursor the bar, rather than the default
-(setq evil-insert-state-cursor '("#bbafbe" (hbar . 2)))
+(setq evil-insert-state-cursor '("#bcbcbc" (hbar . 2)))
 ;; Use Evil-Leader and set keybinds
 (require 'evil-leader)
 (global-evil-leader-mode t)
@@ -23,9 +23,9 @@
 (define-key evil-normal-state-map (kbd "<SPC>") nil)
 ;; Customize the appearance of vimish folds
 (custom-set-faces
-'(vimish-fold-overlay ((t (:inherit nil :background "##271e1f"))))
-'(vimish-fold-fringe ((t (:inherit nil :foreground "##bbafbe"))))
-'(vimish-fold-mouse-face ((t (:inherit nil :foreground "##271e1f" :background "##bbafbe")))))
+'(vimish-fold-overlay ((t (:inherit nil :background "##1c1c22"))))
+'(vimish-fold-fringe ((t (:inherit nil :foreground "##bcbcbc"))))
+'(vimish-fold-mouse-face ((t (:inherit nil :foreground "##1c1c22" :background "##bcbcbc")))))
 (custom-set-variables
  '(vimish-fold-global-mode t))
 (setq vimish-fold-header-width 40)

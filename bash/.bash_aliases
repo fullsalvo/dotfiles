@@ -11,7 +11,6 @@ alias networks='nmcli dev wifi'
 alias wifion='nmcli radio wifi on'
 alias wifioff='nmcli radio wifi off'
 alias commit='git commit -m "fullsalvo update"'
-alias dir='pwd'
 alias rm='rm -I'
 alias unstow="stow -D"
 alias fdisk="sudo fdisk"
@@ -24,10 +23,6 @@ alias scrot='maim --format png /home/fullsalvo/Pictures/Screenshots/$(date "+%y-
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias mpv='mpv --geometry 1280x720'
 
-# Fun
-alias hex='hex 16'
-alias i3o='i3-msg open'
-
 # Environment Variables
 export EDITOR="emacs -nw"
 export XDG_MUSIC_DIR=$HOME/music
@@ -35,5 +30,6 @@ export XDG_DOWNLOAD_DIR=$HOME/downloads
 export XDG_PICTURES_DIR=$HOME/pictures
 export XDG_VIDEOS_DIR=$HOME/videos
 export XDG_DOCUMENTS_DIR=$HOME/documents
+export GOPATH=$HOME/dev/go
 export RHISK_COMM='zenbu'
 export TERM='rxvt-256color'

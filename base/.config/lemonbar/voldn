@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MIXER="default"
+MIXER="pulse"
 SCONTROL="$(amixer -D $MIXER scontrols |
 				  sed -n "s/Simple mixer control '\([A-Za-z ]*\)',0/\1/p" |
 				  head -n1

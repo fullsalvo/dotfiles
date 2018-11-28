@@ -38,6 +38,7 @@
 
 # mpd
 *mpdstate*
+*.m3u
 
 # spacemacs
 *spacemacs*

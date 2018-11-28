@@ -3,14 +3,14 @@
 	font-family: Armata !important;
 	font-size: 11px !important;
 	background:none !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	color:rgb(195, 195, 195) !important;
 	jpadding-bottom: 70px !important;
     }
 
     .board {
-	background: #271e1f !important;
-	border-top: 1px solid #271e1f !important;
+	background: #1c1c22 !important;
+	border-top: 1px solid #1c1c22 !important;
 	margin-bottom: 50px;
 	padding-bottom: 25px;
     }
@@ -29,13 +29,13 @@
     }
 
     .post.reply, div.reply {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	width:80%!important;
 	margin-left:10%!important;
     }
 
     .postMessage {
-	color: #cad0d0 !important;
+	color: #a7a59c !important;
     }
 
     div.opContainer {
@@ -113,7 +113,7 @@
     }
 
     div.post {
-	background: #271e1f !important;
+	background: #1c1c22 !important;
     }
 
     div.postMenu {
@@ -121,7 +121,7 @@
     }
 
     #quickReport, #quickReply {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	color: #ffffff !important;
     }
 
@@ -137,7 +137,7 @@
     }
 
     #quickReply textarea {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	color: #ffffff !important;
 	border: 0px !important;
     }
@@ -158,16 +158,16 @@
     }
 
     #watchList li {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
     }
 
     #watchList a {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
 	outline: 0 !important;
     }
 
     #watchList a:hover {
-	color: #97a8b7 !important;
+	color: #7faed0 !important;
 	transition: color .5s ease-out;
     }
 
@@ -186,7 +186,7 @@
     }
 
     .yotsuba_b_new #watchList li:first-child {
-	border-top: 0px solid #70a2cb;
+	border-top: 0px solid #708ca2;
     }
 
     span.dateTime{
@@ -194,17 +194,17 @@
     }
 
     div.post div.postInfo span.postNum{
-	background-color: #cad0d0;
+	background-color: #a7a59c;
 	float: right;
     }
 
     div.postInfo span.postNum a {
 	font-family: 'Armata' !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	position: absolute;
 	text-align: center !important;
 	margin-left: -110px !important;
-	color: #cad0d0 !important;
+	color: #a7a59c !important;
 	height: 28px !important;
 	width: 120px !important;
 	margin-top: -10px !important;
@@ -243,7 +243,7 @@
     }
 
     span.name, span.postertrip {
-	color: #f0f7fe  !important;
+	color: #d9d6ca  !important;
 	font-weight: normal !important;
     }
 
@@ -263,7 +263,7 @@
     }
 
     .quotelink {
-	color: #70a2cb  !important;
+	color: #708ca2  !important;
 	text-decoration: none !important;
     }
 
@@ -288,12 +288,12 @@
     }
 
     .burichan_new .backlink a, .yotsuba_b_new .backlink a {
-	color: #70a2cb  !important;
+	color: #708ca2  !important;
 	text-decoration: none !important;
     }
 
     span.quote {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
     }
 
     .shortcut-icons:root #shortcuts a .fa, .menu-button .fa, .hide-reply-button .fa, .hide-thread-button .fa {
@@ -301,11 +301,11 @@
     }
 
     a, a.quotelink, a:not(:hover), .boxcontent > ul, a:visited, a.replylink:not(:hover), div#absbot a:not(:hover) {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
     }
 
     div.post div.postInfo span.postNum a:hover,.posteruid .hand:hover, .post.reply.highlight, div.replay, span.subject, a.replylink, a.quotelink:hover, a:hover, div#absbot a {
-	color: #cad0d0 !important;
+	color: #a7a59c !important;
     }
 
     div.navLinks.navLinksBot.desktop, a.qr-link-bottom {
@@ -314,7 +314,7 @@
 
     textarea.field, input.field {
 	font-family: Armata !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     #qr-no-file, .has-file #qr-filename {
@@ -322,11 +322,11 @@
     }
 
     #qr .field {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     .rc-anchor-dark {
-	background: #271e1f none repeat scroll 0% 0% !important;
+	background: #1c1c22 none repeat scroll 0% 0% !important;
 	border: 0px solid #525252 !important;
 	color: #c9c9c9 !important;
 	font-family: Armata !important;
@@ -343,20 +343,20 @@
     }
 
     #header-bar.dialog {
-	background-color: #271e1f !important;;
+	background-color: #1c1c22 !important;;
     }
 
     #qr {
-	background-color: #4b4b4b !important;
+	background-color: #313131 !important;
     }
 
     .dialog {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	border-color: #111;
     }
 
     #thread-watcher {
-	background-color: #4b4b4b !important;
+	background-color: #313131 !important;
     }
 
     span.fa.fa-minus-square-o {
@@ -367,12 +367,12 @@
 
 @-moz-document domain("reddit.com") {
     .res-nightmode .RES-keyNav-activeElement, .res-nightmode .RES-keyNav-activeElement .usertext-body, .res-nightmode .RES-keyNav-activeElement .usertext-body .md, .res-nightmode .RES-keyNav-activeElement .usertext-body .md p, .res-nightmode .commentarea .RES-keyNav-activeElement .noncollapsed, .res-nightmode .RES-keyNav-activeElement .noncollapsed .md, .res-nightmode .RES-keyNav-activeElement .noncollapsed .md p {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, iframe {
-	background-color: #271e1f !important;
-	color: #bbafbe !important;
+	background-color: #1c1c22 !important;
+	color: #bcbcbc !important;
 	font-family: "Roboto" !important;
 	font-size: 8pt !important;
     }
@@ -386,15 +386,15 @@
     }
 
     .res-nightmode #header, .res-nightmode #header-bottom-left {
-	background: #271e1f none repeat scroll 0% 0% !important;
+	background: #1c1c22 none repeat scroll 0% 0% !important;
     }
 
     .pagename a{
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     .sr-bar a {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     .link .rank, .rank-spacer {
@@ -409,36 +409,36 @@
     }
 
     #srList thead td, #srList td.RESvisited, #srList td.RESshortcut {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     #sr-header-area a.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a{
-	color: #af6a82 !important;
+	color: #7e6565 !important;
     }
 
     .tabmenu li a {
-	color: #bbafbe !important;
-	background-color: #271e1f !important;
+	color: #bcbcbc !important;
+	background-color: #1c1c22 !important;
     }
 
     .tabmenu::before {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     .thing .title {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     .tabmenu li.selected a {
-	color: #af6a82 !important;
+	color: #7e6565 !important;
     }
 
     .md a {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
     }
 
     .md a:hover {
-	color: #97a8b7 !important;
+	color: #7faed0 !important;
     }
 
     .newComments {
@@ -453,7 +453,7 @@
 
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("wikiquote.org"), domain("wikibooks.org"), domain("wikisource.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikimediafoundation.org"), domain("mediawiki.org"), domain("wikivoyage.org"), domain("wiki.openstreetmap.org"), domain("wikidata.org"), domain("translatewiki.net"), url-prefix("http://www.baka-tsuki.org/project/") {
     body {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     #bodyContent {
@@ -462,24 +462,24 @@
     }
 
     .mw-body {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     .mw-content-ltr {
-	background-color: #271e1f!important;
+	background-color: #1c1c22!important;
 	padding: 40px !important;
-	/* border: 1px solid #5f5f5f !important; */
+	/* border: 1px solid #434343 !important; */
 	max-width: 940px;
 	margin: 0 auto;
     }
 
     #content {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	border: 0 !important;
     }
 
     a {
-	color: #70a2cb !important;
+	color: #708ca2 !important;
     }
 
     #mw-content-text {
@@ -496,13 +496,13 @@
     }
 
     #mw-page-base {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
 	background-image: none !important;
     }
 
     .vectorTabs ul li {
 	background-image: none !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     .vectorTabs, .vectorTabs span, .vectorTabs ul {
@@ -511,7 +511,7 @@
 
     #mw-head, #mw-panel {
 	opacity:0 !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     #mw-head:hover, #mw-panel:hover {
@@ -525,7 +525,7 @@
     }
 
     #p-logo {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     #firstHeading {
@@ -552,11 +552,11 @@
 
     .infobox {
 	border: 0 !important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     span.toctext {
-	color: #5f5f5f !important;
+	color: #434343 !important;
     }
 
     #toc, .toc {
@@ -569,12 +569,12 @@
     #toc h2 {display: none !important;}
 
     h1 {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
 	border-bottom: 0 !important;
     }
 
     h2 {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
 	border-bottom: 0 !important;
 	opacity: 0.9;
     }
@@ -584,12 +584,12 @@
     }
 
     h3, h4 , h5, h6 {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
 	opacity: 0.9;
     }
 
     pre, .mw-code{
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     .mw-editsection, .toctoggle {
@@ -607,12 +607,12 @@
     }
 
     #content p, .infobox, .wikitable, #content ul, #content ol, .thumbcaption {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     blockquote, .quotebox, pre, code, .mbox-small, .mbox-small-left, .tleft, .tright, .tright table, .navbox, #editpage-specialchars, .editOptions {
 	border: 0!important;
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     blockquote p {
@@ -643,7 +643,7 @@
     }
 
     td, span, i {
-	color: #5f5f5f !important;
+	color: #434343 !important;
     }
 
     .magnify {
@@ -731,11 +731,11 @@
     }
 
     table {
-	background-color: #271e1f !important;
+	background-color: #1c1c22 !important;
     }
 
     #section {
-	color: #bbafbe !important;
+	color: #bcbcbc !important;
     }
 
     #footer {

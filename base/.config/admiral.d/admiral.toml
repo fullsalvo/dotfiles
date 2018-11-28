@@ -1,13 +1,11 @@
 [admiral]
 
-items = ["left", "greet", "wsfw", "wsbk", "workspaces",
-         "closeclick", "closeclick", "endbar",
-         "right", "modes", "volup", "voldn", "mute",
-         "prim", "volume", "space",
-         "closeclick", "closeclick", "closeclick",
-         "sec", "todo", "calendar", "clock",
-         "closeclick", "closeclick", "endbar",
-         "hilite", "space", "battery", "endbar"]
+items = ["left", "space", "greet", "modes", "reset", "center", "wsfw", "wsbk", "workspaces",
+		 "closeclick", "closeclick",
+		 "right", "reset", "volup", "voldn", "mute", "volume",
+		 "closeclick", "closeclick", "closeclick",
+		 "separator", "todo", "calendar",
+		 "clock", "closeclick", "closeclick", "separator", "battery"]
 
 
 [workspaces]
@@ -38,21 +36,21 @@ reload = 0.1
 [greet]
 
 
-path = "echo '%{B#d89cb5}%{F#271e1f}    %{F-}%{B-}%{B#8a7e8f}%{F#271e1f}    fullsalvo   '%{F-}%{B-}"
+path = "echo '   fullsalvo'"
 
 
 static = true
 
 [prim]
-path = "echo '%{B#8a7e8f}%{F#271e1f}  '"
+path = "echo '%{B#708ca2}%{F#000000}  '"
 static = true
 
 [sec]
-path = "echo '%{B#d89cb5}%{F#271e1f}  '"
+path = "echo '%{B#a7a59c}%{F#000000}  '"
 static = true
 
 [hilite]
-path = "echo '%{B#af6a82}%{F#271e1f}  '"
+path = "echo '%{B#72a89c}%{F#000000}  '"
 static = true
 
 [endbar]

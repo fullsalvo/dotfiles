@@ -20,11 +20,13 @@ Relevant Information
 
 * Browser: Firefox
 
-* IRC: `irssi`_
+* IRC: `irssi`_ *
 
 * Theming: `zenbu`_
 
   * Also check out these `utilities`_ that I've been working on.
+
+*I now use weechat.
 
 .. |dtop1| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop1.png
 .. |dtop2| image:: https://raw.githubusercontent.com/fullsalvo/dotfiles/master/images/dtop.gif

@@ -11,7 +11,7 @@ else
 
 fi
 
-outstr=${volout}${outstr}
+# outstr=${volout}${outstr}
 
 
 echo ${outstr}

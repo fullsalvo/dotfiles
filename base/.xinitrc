@@ -1,11 +1,8 @@
 #!/bin/sh
 
 # Stupid font things
-xset +fp /home/fullsalvo/.fonts
-xset fp rehash
-
-# Java Options
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+# xset +fp /home/fullsalvo/.fonts
+# xset fp rehash
 
 # Make X Terminal Emulator terms not ugly
 xrdb ~/.Xresources
@@ -20,3 +17,6 @@ case "$1" in
 	*)
 		exec $defaultwm ;;
 esac
+
+# Java Options
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'

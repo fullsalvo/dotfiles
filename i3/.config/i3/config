@@ -5,41 +5,41 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        0
+set $ing        20
 set $oug        0
-set $hor        0
+set $hor        80
 set $ver        0
 
 set $home       /home/fullsalvo
 
 # Bar Background Text
-set $background #271e1fff
+set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #8a7e8f
+set $border     #708ca2
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
-set $barfoc     #b49dbb
+set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #4b4b4b
+set $ufocus     #313131
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
-set $rofibg     #271e1f
+set $rofibg     #1c1c22
 
 
 # Window Border Thickness
-set $bordersize 2
+set $bordersize 5
 # Default Fallback Font
-set $font       Fira 9
+set $font       Fira Code Bold 7
 # Default Bar Font
-set $barfont    Fira 8
+set $barfont    Fira Mono 8
 # Bar Height
-set $bheight    26
+set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/Walls/Wires.jpg
+set $wall       /home/fullsalvo/pictures/Walls/Endeavor.jpeg
 set $walltype   --bg-fill
 set $wallprog   feh
 
@@ -75,7 +75,7 @@ font pango: $font
 #######################################################################
 
 bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+f exec --no-startup-id google-chrome-stable
+bindsym $mod+Shift+f exec --no-startup-id vivaldi-stable
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+a exec --no-startup-id emacs
 bindsym $mod+n exec --no-startup-id urxvt -e ranger
@@ -205,6 +205,7 @@ bindsym $win+m swap container with mark swapper
 #                         Borders & Gaps                              #
 #######################################################################
 
+
 gaps inner $ing
 gaps outer $oug
 gaps horizontal $hor
@@ -212,8 +213,8 @@ gaps vertical $ver
 
 
 
-for_window [class=".*"] border normal $bordersize
-for_window [class=".*"] title_format "  %class"
+
+for_window [class=".*"] border pixel $bordersize
 
 
 # class                 border   backgr.  text      indicator
