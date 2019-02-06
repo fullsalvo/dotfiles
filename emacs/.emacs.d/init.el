@@ -94,6 +94,8 @@
 
 ;; Do not automatically save files
 (setq auto-save-default nil)
+(setq auto-save-timeout 0)
+(setq auto-save-interval 0)
 
 ;; Disable bold fonts
 (mapc (lambda (face) (set-face-attribute face nil :weight 'normal)) (face-list))

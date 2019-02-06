@@ -8,15 +8,15 @@ nnoremap T t
 set hintchars=asdfhjkl
 
 highlight ContentSeparator border: none;
-highlight CmdLine background: #1c1c22; color: #bcbcbc;
-highlight StatusLine background: #1c1c22; color: #bcbcbc; font-family: Fira Mono;
-highlight Normal background: #1c1c22; color: #bcbcbc;
-highlight ModeMsg background: #708ca2; color: #bcbcbc; font-family: Fira Mono;
+highlight CmdLine background: #2e2e2e; color: #eeeeee;
+highlight StatusLine background: #2e2e2e; color: #eeeeee; font-family: Fira Mono;
+highlight Normal background: #2e2e2e; color: #eeeeee;
+highlight ModeMsg background: #71899d; color: #eeeeee; font-family: Fira Mono;
 highlight CmdLine>* font-family: "Fira Mono";
-highlight Hint font-family: "Fira Mono"; background: #bcbcbc; color: #1c1c22;
-highlight HintActive background-color: #7e6565;
-highlight HintElem background-color: #90a996;
-highlight InfoMsg background-color: #1c1c22; color: #7e6565; font-family: "Fira Mono";
+highlight Hint font-family: "Fira Mono"; background: #eeeeee; color: #2e2e2e;
+highlight HintActive background-color: #a06e6e;
+highlight HintElem background-color: #ded997;
+highlight InfoMsg background-color: #2e2e2e; color: #a06e6e; font-family: "Fira Mono";
 
 iunmap <C-q>
 nnoremap <C-q> :js toggle_bottombar()<CR>

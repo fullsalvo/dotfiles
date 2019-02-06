@@ -5,9 +5,9 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        20
-set $oug        0
-set $hor        80
+set $ing        4
+set $oug        4
+set $hor        0
 set $ver        0
 
 set $home       /home/fullsalvo
@@ -17,17 +17,17 @@ set $background #00000055
 # Bar Warning Colour
 set $warning    #e84f4f
 # Active Window Colour
-set $border     #708ca2
+set $border     #71899d
 # Bar Text Colour
 set $bartext    #eeeeee
 # Active Workspace Color
 set $barfoc     #eeeeee
 # Unfocused Window/Workspace Colour
-set $ufocus     #313131
+set $ufocus     #4b4b4b
 # Window Decoraction Text Colour
 set $dectext    #ffffff
 # Rofi Background Colour
-set $rofibg     #1c1c22
+set $rofibg     #2e2e2e
 
 
 # Window Border Thickness
@@ -39,7 +39,7 @@ set $barfont    Fira Mono 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/Walls/Endeavor.jpeg
+set $wall       /home/fullsalvo/pictures/Walls/duality.png
 set $walltype   --bg-fill
 set $wallprog   feh
 

@@ -8,13 +8,31 @@ displays=(
 
 # If the DisplayPort is being used, rotate the monitor to a vertical position
 # and align the bottom of the laptop to the bottom of the external display.
+
+work () {
+    xrandr --output DP-2 --rotate left
+    xrandr --output eDP-1 --auto --pos 0x840 --output DP-2 --auto --pos 1920x0
+    i3-msg restart
+}
+
+play () {
+    xrandr --output eDP-1 --auto --pos 0x360 --output DP-2 --auto --pos 1920x0 --rate 120
+    i3-msg restart
+}
+
 for display in ${displays[@]}
 do
-    echo "$display"
     if [[ "$display" == "DP-2" ]]
     then
-	xrandr --output DP-2 --rotate left
-	xrandr --output eDP-1 --auto --pos 0x840 --output DP-2 --auto --pos 1920x0
-	i3-msg restart
+	resolution="$(awk '/DP-2/{print $3}' <<< $displines)"
+	resolution="${resolution%%+*}"
+	if [[ "$resolution" == "1920x1080" ]]
+	then
+	    work
+	    exit 0
+	else
+	    play
+	    exit 0
+	fi
     fi
 done

@@ -4,27 +4,40 @@ html, body {
 }
 
 body {
-    background-color: #1c1c22;
+    background-color: #272727;
     font-family: "Fira Mono";
-    color: #bcbcbc;
+    color: #eeeeee;
     font-size: 10px;
 }
 
-#content {
-    max-width: 800px;
-    min-width: 400px;
-    margin: auto;
+body:before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
     height: 100%;
-    position: relative;
+    display: block;
+    background-image: url(file:///home/fullsalvo/pictures/Walls/Abandoned.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-filter: blur(1rem);
+    -moz-filter: blur(1rem);
+    -o-filter: blur(1rem);
+    -ms-filter: blur(1rem);
+    filter: blur(1rem);
+    z-index: -1;
 }
 
 a, a:link {
-    color: #708ca2;
+    color: #71899d;
     text-decoration: none;
 }
 
 a:hover {
-    color: #7faed0;
+    color: #8da7be;
     text-decoration: none;
 }
 
@@ -48,8 +61,24 @@ ul li {
 .directory {
     overflow: hidden;
     position: absolute;
-    margin-left: 20%;
-    margin-top: 45%;
+
+    padding: 50px;
+    width: fit-content;
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: #71899d;
+
+    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.75);
+
+    background-color: #2e2e2e;
+
+    margin: auto;
+
+    top: 0px;
+    bottom: 100px;
+    right: 0px;
+    left: 0px;
 }
 
 .directory tr {
@@ -61,13 +90,9 @@ ul li {
     text-align: right;
 }
 
-.directory ul li:after {
-    color: #7e6565;
+.directory ul li:not(:last-child):after {
+    color: #a06e6e;
     content: " //";
-}
-
-.directory ul li:last-child:after {
-    content: "";
 }
 
 .mascot {

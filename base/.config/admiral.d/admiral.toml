@@ -42,15 +42,15 @@ path = "echo '   fullsalvo'"
 static = true
 
 [prim]
-path = "echo '%{B#708ca2}%{F#000000}  '"
+path = "echo '%{B#71899d}%{F#000000}  '"
 static = true
 
 [sec]
-path = "echo '%{B#a7a59c}%{F#000000}  '"
+path = "echo '%{B#b2cccd}%{F#000000}  '"
 static = true
 
 [hilite]
-path = "echo '%{B#72a89c}%{F#000000}  '"
+path = "echo '%{B#9eb2cb}%{F#000000}  '"
 static = true
 
 [endbar]
