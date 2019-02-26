@@ -5,7 +5,7 @@ items = ["left", "space", "greet", "modes", "reset", "center", "wsfw", "wsbk", "
 		 "right", "reset", "volup", "voldn", "mute", "volume",
 		 "closeclick", "closeclick", "closeclick",
 		 "separator", "todo", "calendar",
-		 "clock", "closeclick", "closeclick", "separator", "battery"]
+		 "clock", "closeclick", "closeclick", "space"]
 
 
 [workspaces]
@@ -42,15 +42,15 @@ path = "echo '   fullsalvo'"
 static = true
 
 [prim]
-path = "echo '%{B#71899d}%{F#000000}  '"
+path = "echo '%{B#63decd}%{F#353945}  '"
 static = true
 
 [sec]
-path = "echo '%{B#b2cccd}%{F#000000}  '"
+path = "echo '%{B#4591e7}%{F#353945}  '"
 static = true
 
 [hilite]
-path = "echo '%{B#9eb2cb}%{F#000000}  '"
+path = "echo '%{B#aebbd3}%{F#353945}  '"
 static = true
 
 [endbar]

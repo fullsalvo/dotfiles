@@ -24,7 +24,7 @@
     startup_notification = false
     icon_position = left
     frame_width = 1
-    frame_color = "#71899d"
+    frame_color = "#63decd"
 
 [shortcuts]
     close = mod4+x
@@ -33,16 +33,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#2e2e2e"
-    foreground = "#b2cccd"
+    background = "#353945"
+    foreground = "#4591e7"
     timeout = 5
 
 [urgency_normal]
-    background = "#2e2e2e"
-    foreground = "#71899d"
+    background = "#353945"
+    foreground = "#63decd"
     timeout = 15
 
 [urgency_critical]
-    background = "#2e2e2e"
-    foreground = "#9eb2cb"
+    background = "#353945"
+    foreground = "#aebbd3"
     timeout = 0
