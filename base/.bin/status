@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+case "$1" in
+    "datetime"|"time"|"dt"|"t")
+	notify-send "datetime" "`date \"+%D %H:%M\"`" ;;
+esac

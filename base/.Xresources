@@ -1,7 +1,7 @@
 ! Fonts
-URxvt.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+URxvt.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:Fira Mono:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+XTerm.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
 XTerm.boldFont:
 
 ! General
@@ -11,7 +11,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: -1
+*.letterSpace: -3
 
 Xft.autohint: 0
 Xft.dpi: 96
@@ -23,7 +23,7 @@ Xft.rgba: rgb
 rofi.opacity: 100
 rofi.width: 40
 rofi.lines: 3
-rofi.font: Fira Mono 9
+rofi.font: Noto Sans Mono CJK JP 9
 rofi.padding: 50
 rofi.bw: 5
 rofi.terminal: urxvt

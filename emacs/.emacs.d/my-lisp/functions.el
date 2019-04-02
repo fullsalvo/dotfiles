@@ -8,7 +8,7 @@
 (defun reload-emacs ()
   "Reload ~/.emacs."
   (interactive)
-  (load-file "/home/fullsalvo/.emacs.d/init.el")
+  (load-file user-init-file)
   (mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el"))
   (evil-leader-mode))
 

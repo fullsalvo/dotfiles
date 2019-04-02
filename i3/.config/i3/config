@@ -5,8 +5,8 @@
 
 set $mod        Mod1
 set $win        Mod4
-set $ing        4
-set $oug        4
+set $ing        12
+set $oug        0
 set $hor        0
 set $ver        0
 
@@ -39,29 +39,26 @@ set $barfont    Fira Mono 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/Walls/duality.png
+set $wall       /home/fullsalvo/pictures/wallpapers/fractals.png
 set $walltype   --bg-fill
 set $wallprog   feh
 
 set $maimbord   0.5,0.5,0.5
 
 # Workspace Labels
-set $ws1        
-set $ws2        
-set $ws3        
-set $ws4        
-set $ws5        
+set $ws1        *
+set $ws2        *
+set $ws3        *
+set $ws4        *
+set $ws5        *
 
 #######################################################################
 #                           Miscellanious                             #
 #######################################################################
 
-exec $home/.bin/disablemouse &
 focus_follows_mouse no
 exec xset s off -dpms
-exec $home/.bin/batnotif &
 exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
-exec $home/.bin/work
 for_window [class="Lxappearance"] floating enable
 
 #######################################################################
@@ -81,8 +78,8 @@ bindsym $mod+Shift+a exec --no-startup-id emacs
 bindsym $mod+n exec --no-startup-id urxvt -e ranger
 bindsym $mod+Shift+v exec vlc
 bindsym $mod+M exec --no-startup-id urxvt -e ncmpcpp
-bindsym $mod+Shift+P exec --no-startup-id feh -.Z  -Y -z -g 938x506 -D 180 -B black --zoom fill $home/pictures/FehPictures/
-bindsym $mod+Shift+T exec --no-startup-id libreoffice
+bindsym $mod+t exec --no-startup-id $home/.bin/status "dt"
+
 # Floating Instances
 for_window [instance="__special__"] floating enable
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __special__
@@ -90,26 +87,21 @@ bindsym $mod+Shift+M exec --no-startup-id urxvt -name __special__ -e ncmpcpp
 bindsym $mod+Shift+N exec --no-startup-id urxvt -name __special__ -e ranger
 # Launcher
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
-# Lock
-bindsym $win+l exec --no-startup-id $home/.bin/lock.sh &
+
 bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
 bindsym $win+p exec --no-startup-id i3-msg open
 bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
 bindsym $win+Shift+o exec --no-startup-id killall ffmpeg
-bindsym $win+Shift+Return exec --no-startup-id x-terminal-emulator
-bindsym $mod+Shift+i exec --no-startup-id $home/.bin/sc p
 
 #######################################################################
 #                         Autostart Applications                      #
 #######################################################################
 
-exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio
-exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id compton
 exec --no-startup-id dunst
 exec_always --no-startup-id $wallprog $walltype $wall
-exec xrdb $home/.XResources
+exec xrdb $home/.Xresources
 
 #######################################################################
 #                             i3 Keybindings                          #
@@ -205,17 +197,12 @@ bindsym $win+m swap container with mark swapper
 #                         Borders & Gaps                              #
 #######################################################################
 
-
 gaps inner $ing
 gaps outer $oug
 gaps horizontal $hor
 gaps vertical $ver
 
-
-
-
 for_window [class=".*"] border pixel $bordersize
-
 
 # class                 border   backgr.  text      indicator
 client.focused          $border  $border  $dectext  $border
@@ -244,60 +231,17 @@ bindsym $mod+g mode "Gaps"
 #######################################################################
 
 # Screenshot Commands
-bindsym --release Print exec --no-startup-id maim --format png /home/fullsalvo/pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
-bindsym --release Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -n --format png /home/fullsalvo/pictures/Screenshots/$(date "+%y-%b-%d_%H%M%S").png
-bindsym Ctrl+Print exec --no-startup-id "maim -s -n -c $maimbord -b 3 --format png /home/fullsalvo/pictures/Screenshots/$(date '+%y-%b-%d_%H%M%S').png"
-
-# Pulse Audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 2%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 2%-
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
-bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-bindsym Shift+XF86AudioPlay exec --no-startup-id .bin/spotify-control play
-
-# Screen Brightness Controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
-
-#######################################################################
-#                                Bar                                  #
-#######################################################################
-
-exec_always --no-startup-id $home/.config/lemonbar/startbar &
-
-# bar {
-#     i3bar_command i3bar -t
-#     status_command i3blocks
-#     position          top
-#     workspace_buttons yes
-#     strip_workspace_numbers yes
-#     binding_mode_indicator yes
-#     height $bheight
-#     tray_output none
-
-#     font pango:$barfont
-#     colors {
-#         background $background
-#         statusline $bartext
-#         separator  $background
-
-# #       class                border      background  text
-#         focused_workspace    $background $background $barfoc
-#         active_workspace     $background $background $barfoc
-#         inactive_workspace   $background $background $ufocus
-#         urgent_workspace     $background $background $warning
-#     }
-# }
+bindsym --release Print exec --no-startup-id maim --format png /home/fullsalvo/pictures/screenshots/$(date "+%y-%b-%d_%H%M%S").png
+bindsym --release Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -n --format png /home/fullsalvo/pictures/screenshots/$(date "+%y-%b-%d_%H%M%S").png
+bindsym Ctrl+Print exec --no-startup-id "maim -s -n -c $maimbord -b 3 --format png /home/fullsalvo/pictures/screenshots/$(date '+%y-%b-%d_%H%M%S').png"
 
 #######################################################################
 #                           Sleep Modes                               #
 #######################################################################
 
 mode "System" {
-    bindsym e exec --no-startup-id $home/.bin/i3exit logout, mode "default"
-    bindsym a exec --no-startup-id $home/.bin/i3exit suspend, mode "default"
-    bindsym s exec sudo poweroff
-    bindsym r exec sudo reboot
+    bindsym s exec poweroff
+    bindsym r exec reboot
 
     # Back to normal: Enter or Escape
     bindsym Return mode "default"
