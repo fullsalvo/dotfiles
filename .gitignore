@@ -30,6 +30,7 @@
 */.weechat/irc.conf*
 *.log
 *.weechatlog
+base/.weechat/sec.conf
 
 # irssi
 */.irssi/config*
