@@ -56,8 +56,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-. ~/.bash_functions
-. ~/Dev/wz-utils/autocomplete
+if [ -f ~/.bash_functions ]; then
+	. ~/.bash_functions
+fi
+
+if [ -f ~/Dev/wz-utils/autocomplete ]; then
+	. ~/Dev/wz-utils/autocomplete
+fi
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in

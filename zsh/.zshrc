@@ -73,8 +73,8 @@ if [ -f ~/dev/wz-utils/autocomplete ]; then
 fi
 
 # mpd info
-export MPD_HOST=0.0.0.0
-export MPD_PORT=6667
+export MPD_HOST=127.0.0.1
+export MPD_PORT=6600
 
 # Use fzf in zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

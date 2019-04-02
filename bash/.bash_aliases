@@ -3,8 +3,6 @@
 # Convenience
 alias c='clear'
 alias h='history'
-alias aptin='sudo apt-get install'
-alias upgrade='sudo apt-get update && sudo apt upgrade && sudo apt-get autoremove'
 alias shutdown='poweroff'
 alias apts='apt-cache search'
 alias networks='nmcli dev wifi'
@@ -14,6 +12,8 @@ alias commit='git commit -m "fullsalvo update"'
 alias rm='rm -I'
 alias unstow="stow -D"
 alias fdisk="sudo fdisk"
+alias ipython="ipython3"
+alias vim="emacs -nw" # because I'm an idiot
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'

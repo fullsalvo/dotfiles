@@ -7,10 +7,6 @@
 # Make X Terminal Emulator terms not ugly
 xrdb ~/.Xresources
 
-# MPD
-mpd
-mpdscribble
-
 # Load into a wm
 defaultwm=/usr/bin/i3
 case "$1" in
@@ -20,3 +16,7 @@ esac
 
 # Java Options
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+
+# MPD
+# mpd
+# mpdscribble

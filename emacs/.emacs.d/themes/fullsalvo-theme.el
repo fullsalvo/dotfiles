@@ -35,7 +35,7 @@
    ;; Basics
    ;; ============================
 
-   `(default ((t (:background ,background :foreground ,text :family "Fira Code" :height 80))))
+   `(default ((t (:background ,background :foreground ,text :family "Noto Sans Mono CJK JP" :height 90))))
    `(cursor ((t (:background ,input-text :foreground ,background))))
    `(highlight ((t (:background ,text-highlight))))
    `(minibuffer-prompt ((t (:foreground ,dark-blue :weight normal))))
@@ -83,11 +83,11 @@
    ;; -----
    `(font-latex-math-face ((t (:foreground ,magenta))))
    `(font-latex-string-face ((t (:foreground ,green))))
-   `(font-latex-sectioning-1-face ((t (:family "Fira Code"))))
-   `(font-latex-sectioning-2-face ((t (:family "Fira Code"))))
-   `(font-latex-sectioning-3-face ((t (:family "Fira Code"))))
-   `(font-latex-sectioning-4-face ((t (:family "Fira Code"))))
-   `(font-latex-sectioning-5-face ((t (:family "Fira Code"))))
+   `(font-latex-sectioning-1-face ((t (:family "Noto Sans Mono CJK JP"))))
+   `(font-latex-sectioning-2-face ((t (:family "Noto Sans Mono CJK JP"))))
+   `(font-latex-sectioning-3-face ((t (:family "Noto Sans Mono CJK JP"))))
+   `(font-latex-sectioning-4-face ((t (:family "Noto Sans Mono CJK JP"))))
+   `(font-latex-sectioning-5-face ((t (:family "Noto Sans Mono CJK JP"))))
    `(font-latex-warning-face ((t (:foreground "#FF0000"))))
 
    ;; Markdown

@@ -6,6 +6,7 @@
 *auto-save-list*
 *vimish-fold*
 *eshell*
+*emacs/.emacs.d/projectile*
 
 #deluge
 *deluge*
@@ -48,3 +49,4 @@
 
 # miscellanies
 *__pycache__*
+*.pyo

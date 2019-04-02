@@ -1,263 +1,241 @@
 ;; fullsalvo's emacs initialization
 ;; ====================================================================
 
-;; Allows use of MELPA
-(require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+(progn ; initial startup
+  (defvar before-user-init-time (current-time)
+    "Value of `current-time' when Emacs begins loading the init file.")
+  (package-initialize)
+  (setq package-archives
+	'(("gnu" . "https://elpa.gnu.org/packages/")
+	  ("melpa" . "https://melpa.org/packages/")))
+  (setq user-init-file "~/.emacs.d/init.el")
+  (setq user-emacs-directory (file-name-directory user-init-file))
+  (message "Loading %s..." user-init-file)
+  (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes/"))
+  (if window-system (load-theme 'fullsalvo t) (load-theme 'fsterm t))
+  (setq inhibit-startup-buffer-menu t)
+  (setq Buffer-menu-use-frame-buffer-list nil)
+  (setq inhibit-startup-screen t)
+  (fset 'yes-or-no-p 'y-or-n-p) ;; changes yes or no responses to y or n
+  (if (file-accessible-directory-p (concat user-emacs-directory "my-lisp"))
+      (mapc 'load (file-expand-wildcards (concat user-emacs-directory "my-lisp/*.el"))))
+  (setq frame-title-format "%b")
+  (setq linum-format " %d ")
+  (setq initial-scratch-message "")
+  (column-number-mode 1)
+  (global-font-lock-mode 1)
+  (set-fringe-mode 0)
+  (scroll-bar-mode -1)
+  (menu-bar-mode 0)
+  (tool-bar-mode 0)
+  (save-place-mode 1)
+  (setq-default word-wrap t)
+  (setq default-tab-width 4)
+  (global-hl-line-mode t)
+  (show-paren-mode t)
+  (add-hook 'prog-mode-hook 'linum-mode)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+  ;; automatically kills completions buffer when no longer useful
+  (add-hook 'minibuffer-exit-hook
+	    '(lambda ()
+	       (let ((buffer "*Completions*")) (and (get-buffer buffer)
+						    (kill-buffer buffer)))))
 
-;; External setting file load calls
-(if (file-accessible-directory-p "~/.emacs.d/my-lisp")
-    (mapc 'load (file-expand-wildcards "~/.emacs.d/my-lisp/*.el")))
+  ;; stop automatic file creation
+  (setq make-backup-files nil)
+  (setq auto-save-default nil)
+  (setq auto-save-timeout 0)
+  (setq auto-save-interval 0)
 
-;; Apply a custom color scheme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(if (display-graphic-p)
-    (load-theme 'fullsalvo t)
-  (load-theme 'fsterm t))
+  ;; smoother scrolling
+  (setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; one line at a time
+  (setq mouse-wheel-progressive-speed nil)            ;; don't accelerate scrolling
+  (setq mouse-wheel-follow-mouse 't)                  ;; scroll window under mouse
+  (setq scroll-step 1)                                ;; keyboard scroll one line at a time
+  (setq scroll-conservatively 100000)
+  (setq scroll-preserve-screen-position 1)
+  (setq max-mini-window-height 0.01)
 
-(let ((default-directory  "/usr/local/share/emacs/site-lisp"))
-  (setq load-path
-        (append
-         (let ((load-path  (copy-sequence load-path))) ;; Shadow
-           (normal-top-level-add-subdirs-to-load-path))
-         load-path)))
+  ;; Use UTF-8
+  (set-language-environment "UTF-8")
+  (set-default-coding-systems 'utf-8)
 
-;; add MRU buffer capabilities
-(require 'recentf)
-(require 'startify-buffer)
-(recentf-mode 1)
-(setq recentf-max-menu-items 30)
+  ;; disable bold fonts
+  (mapc (lambda (face) (set-face-attribute face nil :weight 'normal)) (face-list)))
 
-;; Add/Remove GUI Features
-;; ===========================
+;; modeline functions
+(defun evil-mode-state ()
+  (let ((str (cond ((evil-normal-state-p)   (format " NORMAL   " ))
+		   ((evil-visual-state-p)   (format " VISUAL   " ))
+		   ((evil-insert-state-p)   (format " INSERT   " ))
+		   ((evil-emacs-state-p)    (format " EMACS    " ))
+		   ((evil-operator-state-p) (format " OPERATOR " ))
+		   ((evil-motion-state-p)   (format " MOTION   " ))
+		   ((evil-replace-state-p)  (format " REPLACE  " ))
+		   )))))
 
-;; company-mode
-(add-hook 'after-init-hook 'global-company-mode)
+(defun mode-space ()
+  (let ((str (format "  ")))))
 
-;; Window title always displays current file name.
-(setq frame-title-format "%b")
+(progn ; modeline
+  (setq-default mode-line-format
+		(list " "
+		      'mode-line-buffer-identification
+		      '(:eval (evil-mode-state))
+		      '(mode-line-modified " [%+]    ")
+		      'mode-name
+		      '(:eval (mode-space))
+		      '(vc-mode vc-mode)
+		      '(line-number-mode "     %l, ")
+		      '(column-number-mode "%c   "))))
 
-;; Show column number in modeline
-(column-number-mode t)
+(progn ; use-package
+  (require 'use-package)
+  ;; (setq use-package-verbose t)
+  )
 
-;; Remove fringes from emacs edges
-(set-fringe-mode 0)
+(use-package cc-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+  (setq c-default-style "user")
+  (setq c-basic-offset 8)
+  (setq tab-width 8)
+  (setq indent-tabs-mode t)
 
-;; Show Line Numbers
-(global-linum-mode 1)
+  (defun my-c-lineup-inclass (langelem)
+    (let ((inclass (assoc 'inclass c-syntactic-context)))
+      (save-excursion
+	(goto-char (c-langelem-pos inclass))
+	(if
+	    (or (looking-at "struct")
+		(looking-at "typedef struct"))
+	    '+ '++))))
 
-;; Set Line Number Format
-(setq linum-format " %d ")
+  (c-set-offset 'substatement-open '0)
+  (c-set-offset 'inclass           '+)
+  (c-set-offset 'topmost-intro     '0)
+  (c-set-offset 'access-label      '-))
 
-;; Always Use Stylized Colors
-(global-font-lock-mode 1)
+(use-package company
+  :hook (prog-mode . global-company-mode)
+  :config
+  (setq company-idle-delay 1.0)
+  (setq company-minimum-prefix-length 3)
+  (setq company-tooltip-flip-when-above t))
 
-;; Set startup window size
-(setq default-frame-alist '((width . 80) (height . 40)))
+(use-package custom
+  :config
+  (setq custom-file (make-temp-file "emacs-custom"))
+  (when (file-exists-p custom-file)
+    (load custom-file)))
 
-;; Show only one active window when opening multiple files at the same time.
-(add-hook 'window-setup-hook 'delete-other-windows)
+(use-package evil
+  :ensure t
+  :init (evil-mode 1)
+  :config
+  (setq evil-insert-state-cursor '("#eee" (hbar . 2)))
+  (define-key evil-normal-state-map (kbd "<SPC>") nil))
 
-;; Remove trailing whitespace before saving
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(use-package evil-leader
+  :ensure t
+  :config
+  (global-evil-leader-mode t)
+  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-key
+    "f" 'find-file
+    "k" 'kill-buffer
+    "r" 'recentf-open-more-files
+    "c" 'comment-region
+    "SPC" 'execute-extended-command))
 
-;; Only type Y or N for Yes and No.
-(fset 'yes-or-no-p 'y-or-n-p)
+(use-package gnuplot
+   :config
+  (setq auto-mode-alist (append '(("\\.gp$" . gnuplot-mode)) auto-mode-alist)))
 
-;; Remove the Scrollbar
-(scroll-bar-mode -1)
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode  (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)))
 
-;; Hide the Menubar
-(menu-bar-mode 0)
+(use-package page-break-lines
+  :ensure t)
 
-;; Hide the Toolbar
-(tool-bar-mode 0)
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-global-mode))
 
-;; Highlight matching parentheses
-(show-paren-mode t)
+(use-package python
+  :mode ("\\.py\\'" . python-mode)
+  :interpreter ("python" . python-mode)
+  :config
+  (setq python-indent 4)
+  (setq python-indent-offset 4)
+  (setq python-indent-guess-indent-offset-verbose nil))
 
-;; Line Wrapping doesn't break in the middle of a word
-(setq-default word-wrap t)
+(use-package recentf
+  :config
+  (recentf-mode 1)
+  (setq recentf-max-menu-items 50)
+  (setq recentf-max-saved-items 200))
 
-;; Set Tab Width to 4
-(setq default-tab-width 4)
-
-;; Highlight the current line
-(global-hl-line-mode t)
-
-;; Do not make backup files
-(setq make-backup-files nil)
-
-;; Do not automatically save files
-(setq auto-save-default nil)
-(setq auto-save-timeout 0)
-(setq auto-save-interval 0)
-
-;; Disable bold fonts
-(mapc (lambda (face) (set-face-attribute face nil :weight 'normal)) (face-list))
-
-;; Use UTF-8
-(set-language-environment "UTF-8")
-(set-default-coding-systems 'utf-8)
-
-;; whitespace-cleanup-mode
-(require 'whitespace-cleanup-mode)
-(global-whitespace-cleanup-mode 1)
-
-;; projectile mode
-(projectile-global-mode)
-
-;; smoother scrolling
-(setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
-(setq scroll-conservatively 100000)
-(setq scroll-preserve-screen-position 1)
-
-;; Restrict minibuffer to one line
-(setq max-mini-window-height 0.01)
-
-;; Save Place
-(save-place-mode 1)
-
-;; Set startify-buffer title
-(setq startify-title "     .d88b. 88888b.d88b.  8888b.  .d8888b.d8888b
+(use-package startify-buffer
+  :after projectile
+  :requires page-break-lines
+  :config
+  (setq startify-title "     .d88b. 88888b.d88b.  8888b.  .d8888b.d8888b
     d8P  Y8b888 `888 `88b    `88bd88P'   88K
     88888888888  888  888.d888888888     `Y8888b.
     Y8b.    888  888  888888  888Y88b.        X88
-     `Y8888 888  888  888`Y888888 `Y8888P 88888P' ")
+     `Y8888 888  888  888`Y888888 `Y8888P 88888P' "))
 
-;; Modeline
-;; ===========================
+(use-package tex
+  :ensure auctex
+  :demand t :config (setq TeX-PDF-mode t)
+  (setq TeX-auto-save t)
+  (setq TeX-parse-self t)
+  (setq TeX-view-program-list '(("zathura" "zathura %o")))
+  (setq TeX-view-program-selection '((output-pdf "zathura")))
+  (setq TeX-global-PDF-mode t))
 
-(defun evil-mode-state ()
-  (let ((str (cond ((evil-normal-state-p)   (format " NORMAL   " ))
-                   ((evil-visual-state-p)   (format " VISUAL   " ))
-                   ((evil-insert-state-p)   (format " INSERT   " ))
-                   ((evil-emacs-state-p)    (format " EMACS    " ))
-                   ((evil-operator-state-p) (format " OPERATOR " ))
-                   ((evil-motion-state-p)   (format " MOTION   " ))
-                   ((evil-replace-state-p)  (format " REPLACE  " )))))
-    (propertize str 'face 'mode-line-face)))
+(use-package toml-mode)
 
-(defun mode-space ()
-  (let ((str (format "  ")))
-  (propertize str 'face 'mode-line-face)))
+(use-package yaml-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+  (add-hook 'yaml-mode-hook (lambda ()
+			      (define-key yaml-mode-map "\C-m" 'newline-and-indent))))
 
-(setq-default mode-line-format
-	      (list " "
-		    'mode-line-buffer-identification
-		    '(:eval (evil-mode-state))
-		    '(mode-line-modified " [%+]    ")
-		    'mode-name
-		    '(:eval (mode-space))
-		    '(vc-mode vc-mode)
-		    '(line-number-mode "     %l, ")
-		    '(column-number-mode "%c   ")))
+(progn ;add keybinds
+  ;; Kill all buffers except the current one.
+  (global-set-key [(control shift k)] 'kill-other-buffers)
+  ;; Toggle menu bar
+  (global-set-key [f12] 'menu-bar-mode)
+  ;; Disable clicking the minibuffer when nothing is there.
+  (define-key minibuffer-inactive-mode-map [mouse-1] nil)
+  ;; Commenting One Line
+  (global-set-key (kbd "C-x c") 'toggle-comment-on-line)
+  ;; Commenting a group of highlighted lines
+  (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+  ;; Reload Emacs On-the-fly
+  (global-set-key [f13] 'reload-emacs)
+  ;; Toggle Whitespace Mode
+  (global-set-key (kbd "C-x a") 'whitespace-mode)
+  ;; Reload file when changes have been made
+  (global-set-key (kbd "C-x n") 'revert-buf)
+  ;; Indent to a column
+  (global-set-key (kbd "C-c z") 'indent-to-column)
+  ;; Update packages (To be used in the package-list-packages buffer)
+  (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute))))
 
-;; Buffer Changes
-;; ===========================
-
-;; Doesn't open the Emacs logo screen on startup
-(setq inhibit-splash-screen t)
-
-;; Open a blank buffer when opening scratch
-(setq initial-scratch-message "")
-
-;; Open to init file by default
-;; (setq initial-buffer-choice "~")
-
-;; Close the scratch buffer when entering a programming mode
-(add-hook 'prog-mode-hook 'remove-scratch-buffer)
-
-;; Close the messages buffer on emacs startup
-(setq-default message-log-max nil)
-(if (not (eq nil (get-buffer "*Messages*"))) (kill-buffer "*Messages*"))
-
-;; Removes *Completions* from buffer after you've opened a file.
-(add-hook 'minibuffer-exit-hook
-	  '(lambda ()
-	     (let ((buffer "*Completions*"))
-	       (and (get-buffer buffer)
-		    (kill-buffer buffer)))))
-
-;; Hide the Buffer List when switching buffer.
-(setq Buffer-menu-use-frame-buffer-list nil)
-
-;; Don't show *Buffer list* when opening multiple files at the same time.
-(setq inhibit-startup-buffer-menu t)
-
-;; Language-Specific Changes
-;; ===========================
-
-;; LaTeX
-;; -----
-
-(require 'tex)
-;; (setq-default TeX-master nil)
-(setq TeX-PDF-mode t
-      TeX-auto-save t
-      TeX-parse-self t
-      TeX-view-program-list '(("zathura" "zathura %o"))
-      TeX-view-program-selection '((output-pdf "zathura"))
-      TeX-global-PDF-mode t)
-
-;; Python
-;; ------
-
-(setq-default python-indent-offset 4)
-
-;; Custom Global Keybinds
-;; ===========================
-
-;; Kill all buffers except the current one.
-(global-set-key [(control shift k)] 'kill-other-buffers)
-
-;; Toggle menu bar
-(global-set-key [f12] 'menu-bar-mode)
-
-;; Disable clicking the minibuffer when nothing is there.
-(define-key minibuffer-inactive-mode-map [mouse-1] nil)
-
-;; Commenting One Line
-(global-set-key (kbd "C-x c") 'toggle-comment-on-line)
-
-;; Commenting a group of highlighted lines
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
-
-;; Reload Emacs On-the-fly
-(global-set-key [f13] 'reload-emacs)
-
-;; Toggle Whitespace Mode
-(global-set-key (kbd "C-x a") 'whitespace-mode)
-
-;; Reload file when changes have been made
-(global-set-key (kbd "C-x n") 'revert-buf)
-
-;; Indent to a column
-(global-set-key (kbd "C-c z") 'indent-to-column)
-
-;; Update packages (To be used in the package-list-packages buffer)
-(global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute)))
-
-;; Move variables from 'customize'
-(setq custom-file (make-temp-file "emacs-custom"))
-(load custom-file)
-
-;; User-defined custom variables
-(custom-set-variables
- '(font-latex-math-environments
-   (quote
-    ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
- '(package-selected-packages
-   (quote
-    (evil-magit projectile modern-cpp-font-lock vim-empty-lines-mode company page-break-lines toml-mode evil-vimish-fold evil-leader auctex))))
-
-;; Special Functions
-;; =================
-(start-startify)
+(progn ; finish startup
+  (add-hook 'after-init-hook
+	    (lambda ()
+	      (message
+	       "Loading %s...done (%.3fs) [after-init]" user-init-file
+	       (float-time (time-subtract (current-time)
+					  before-user-init-time)))))
+  (start-startify))
