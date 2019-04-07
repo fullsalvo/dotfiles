@@ -41,6 +41,8 @@ base/.weechat/sec.conf
 # mpd
 *mpdstate*
 *.m3u
+*mpd.pid
+*mpd.db
 
 # spacemacs
 *spacemacs*
@@ -51,3 +53,6 @@ base/.weechat/sec.conf
 # miscellanies
 *__pycache__*
 *.pyo
+
+# ranger history
+base/.config/ranger/history

@@ -32,4 +32,4 @@ export XDG_VIDEOS_DIR=$HOME/videos
 export XDG_DOCUMENTS_DIR=$HOME/documents
 export GOPATH=$HOME/dev/go
 export RHISK_COMM='zenbu'
-export TERM='rxvt-256color'
+export TERM='rxvt-unicode'
