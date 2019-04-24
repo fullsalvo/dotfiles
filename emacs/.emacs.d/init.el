@@ -4,10 +4,11 @@
 (progn ; initial startup
   (defvar before-user-init-time (current-time)
     "Value of `current-time' when Emacs begins loading the init file.")
-  (package-initialize)
   (setq package-archives
 	'(("gnu" . "https://elpa.gnu.org/packages/")
-	  ("melpa" . "https://melpa.org/packages/")))
+	  ("melpa" . "https://melpa.org/packages/")
+	  ("melpa-stable" . "https://stable.melpa.org/packages/")))
+  (package-initialize)
   (setq user-init-file "~/.emacs.d/init.el")
   (setq user-emacs-directory (file-name-directory user-init-file))
   (message "Loading %s..." user-init-file)
@@ -41,6 +42,9 @@
 	       (let ((buffer "*Completions*")) (and (get-buffer buffer)
 						    (kill-buffer buffer)))))
 
+  ;; enable the x-primary clipboard
+  (setq x-select-enable-clipboard t)
+
   ;; stop automatic file creation
   (setq make-backup-files nil)
   (setq auto-save-default nil)
@@ -58,10 +62,7 @@
 
   ;; Use UTF-8
   (set-language-environment "UTF-8")
-  (set-default-coding-systems 'utf-8)
-
-  ;; disable bold fonts
-  (mapc (lambda (face) (set-face-attribute face nil :weight 'normal)) (face-list)))
+  (set-default-coding-systems 'utf-8))
 
 ;; modeline functions
 (defun evil-mode-state ()
@@ -152,6 +153,13 @@
    :config
   (setq auto-mode-alist (append '(("\\.gp$" . gnuplot-mode)) auto-mode-alist)))
 
+(use-package ivy
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-height 4)
+  (setq ivy-count-format "%d/%d "))
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
@@ -181,6 +189,10 @@
   (setq recentf-max-menu-items 50)
   (setq recentf-max-saved-items 200))
 
+(use-package rst
+  :hook
+  (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
+
 (use-package startify-buffer
   :after projectile
   :requires page-break-lines
@@ -193,7 +205,8 @@
 
 (use-package tex
   :ensure auctex
-  :demand t :config (setq TeX-PDF-mode t)
+  :demand t
+  :config (setq TeX-PDF-mode t)
   (setq TeX-auto-save t)
   (setq TeX-parse-self t)
   (setq TeX-view-program-list '(("zathura" "zathura %o")))
@@ -232,6 +245,8 @@
   (global-set-key (kbd "C-c C-g u") (lambda () (interactive) (package-menu-mark-upgrades) (package-menu-execute))))
 
 (progn ; finish startup
+  ;; disable bold fonts
+  (mapc (lambda (face) (set-face-attribute face nil :weight 'normal)) (face-list))
   (add-hook 'after-init-hook
 	    (lambda ()
 	      (message

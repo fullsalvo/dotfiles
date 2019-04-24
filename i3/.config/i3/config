@@ -59,6 +59,7 @@ set $ws5        *
 focus_follows_mouse no
 exec xset s off -dpms
 exec xset +fp /home/fullsalvo/.fonts && xset fp rehash &
+exec $home/.bin/batnotif
 for_window [class="Lxappearance"] floating enable
 
 #######################################################################

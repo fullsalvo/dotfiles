@@ -31,6 +31,8 @@
 *.log
 *.weechatlog
 base/.weechat/sec.conf
+base/.weechat/buflist.conf
+base/.weechat/script/
 
 # irssi
 */.irssi/config*
@@ -56,3 +58,4 @@ base/.weechat/sec.conf
 
 # ranger history
 base/.config/ranger/history
+base/.config/ranger/bookmarks

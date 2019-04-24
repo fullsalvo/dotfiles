@@ -93,6 +93,7 @@
    ;; Markdown
    ;; --------
    `(markdown-header-face ((t (:inherit font-lock-function-name-face))))
+   `(markdown-code-face ((t (:inherit none))))
 
    ;; Shell
    ;; -----
@@ -132,6 +133,12 @@
    `(dired-symlink ((t (:foreground ,magenta :weight normal))))
    `(dired-warning ((t (:inherit (font-lock-warning-face)))))
 
+   ;; Ivy
+   ;; ---
+   `(ivy-current-match ((t (:foreground ,background :background ,blue))))
+   `(ivy-minibuffer-match-face-2 ((t (:weight normal :background ,red))))
+   `(ivy-subdir ((t (:weight normal :foreground ,text))))
+
    ;; Lines
    ;; -----
    `(linum ((t (:foreground ,text-3  :weight light :height 0.9))))
@@ -139,7 +146,7 @@
    `(left-margin ((t (nil))))
    `(hl-line ((t (:background , linehl))))
 
-   ;; Custom
+   ;; Evil
    '(evil-mode-face ((t (:foreground ,background :background ,text))))
    )
 

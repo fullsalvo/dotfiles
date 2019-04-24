@@ -8,5 +8,5 @@ while :; do
     if [[ $ac == "0" && $level -le "20" ]]; then
 	notify-send -t 5000 "Battery Low" "Connect Charger Soon!"
     fi
-    sleep 60
+    sleep 300
 done
