@@ -3,11 +3,13 @@
 #                             Variables                               #
 #######################################################################
 
-set $mod        Mod1
-set $win        Mod4
+# note that the mod/win keys are the reverse of what they are on the
+# master branch.
+set $mod        Mod4
+set $win        Mod1
 set $ing        12
 set $oug        0
-set $hor        0
+set $hor        20
 set $ver        0
 
 set $home       /home/fullsalvo
@@ -39,8 +41,9 @@ set $barfont    Fira Mono 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/wallpapers/fractals.png
-set $walltype   --bg-fill
+set $wall       /home/fullsalvo/pictures/wallpapers/dawn.png
+# set $walltype   --bg-fill
+set $walltype   --bg-tile
 set $wallprog   feh
 
 set $maimbord   0.5,0.5,0.5
@@ -91,8 +94,6 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 bindsym $mod+Shift+w exec --no-startup-id .bin/wallview
 bindsym $win+p exec --no-startup-id i3-msg open
-bindsym $win+Shift+p exec --no-startup-id $home/.bin/screencast
-bindsym $win+Shift+o exec --no-startup-id killall ffmpeg
 
 #######################################################################
 #                         Autostart Applications                      #
@@ -144,10 +145,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $win+Left focus left
-bindsym $win+Down focus down
-bindsym $win+Up focus up
-bindsym $win+Right focus right
 
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -188,6 +185,21 @@ mode "Resize" {
 	 bindsym Escape mode "default"
 }
 
+# mode "Resize" {
+# 	 bindsym h resize shrink width 5 px or 5 ppt
+#  	 bindsym j resize grow height 5 px or 5 ppt
+# 	 bindsym k resize shrink height 5 px or 5 ppt
+# 	 bindsym l resize grow width 5 px or 5 ppt
+
+# 	 bindsym Left resize shrink width 5 px or 5 ppt
+# 	 bindsym Down resize grow height 5 px or 5 ppt
+# 	 bindsym Up resize shrink height 5 px or 5 ppt
+# 	 bindsym Right resize grow width 5 px or 5 ppt
+
+# 	 bindsym Return mode "default"
+# 	 bindsym Escape mode "default"
+# }
+
 
 bindsym $mod+r mode "Resize"
 
@@ -204,6 +216,11 @@ gaps horizontal $hor
 gaps vertical $ver
 
 for_window [class=".*"] border pixel $bordersize
+# for_window [class=".*"] floating enable
+
+# for_window [class=".*"] border normal $bordersize
+# for_window [class=".*"] title_format "  %class"
+# default_border normal
 
 # class                 border   backgr.  text      indicator
 client.focused          $border  $border  $dectext  $border
@@ -235,6 +252,13 @@ bindsym $mod+g mode "Gaps"
 bindsym --release Print exec --no-startup-id maim --format png /home/fullsalvo/pictures/screenshots/$(date "+%y-%b-%d_%H%M%S").png
 bindsym --release Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -n --format png /home/fullsalvo/pictures/screenshots/$(date "+%y-%b-%d_%H%M%S").png
 bindsym Ctrl+Print exec --no-startup-id "maim -s -n -c $maimbord -b 3 --format png /home/fullsalvo/pictures/screenshots/$(date '+%y-%b-%d_%H%M%S').png"
+
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_05_00.6.analog-stereo toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_05_00.6.analog-stereo -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_05_00.6.analog-stereo +5%
+
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 
 #######################################################################
 #                           Sleep Modes                               #

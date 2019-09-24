@@ -1,8 +1,7 @@
 ! Fonts
-URxvt.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
+URxvt.font:xft:Fira Code:pixelsize=11:antialias=True:style=Retina,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+! URxvt.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
 URxvt.boldFont:
-XTerm.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
-XTerm.boldFont:
 
 ! General
 *.scrollBar: false
@@ -11,7 +10,7 @@ XTerm.boldFont:
 *.cursorUnderline: true
 *.cursorBlink: true
 *.dynamicColors:on
-*.letterSpace: -3
+*.letterSpace: -1
 
 Xft.autohint: 0
 Xft.dpi: 96

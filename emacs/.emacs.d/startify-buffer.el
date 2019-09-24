@@ -1,6 +1,11 @@
-;; startify-buffer.el
-;;
-;; emacs-startify
+;;; startify-buffer.el --- A startup buffer with MRU files and projects
+;;;
+;;; Version: 1.0
+;;; Commentary:
+;;; Copyright (C) 2017-2019 fullsalvo
+;;; Author: fullsalvo
+
+;;; Code:
 
 (defconst startify-buffer-name "*startify*"
   "The startify buffer name")
@@ -205,4 +210,4 @@ Useful for making the home buffer the only visible buffer in the frame."
 
 (provide 'startify-buffer)
 
-;; end startify-buffer.el
+;;; startify-buffer.el ends here

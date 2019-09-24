@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo -n "Resetting wifi"
 nmcli radio wifi off
-sleep 2
+for i in $(seq 3); do
+    echo -n "."
+    sleep 1
+done
 nmcli radio wifi on
+echo -ne "done!\n"

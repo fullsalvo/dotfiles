@@ -11,16 +11,8 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.history
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories. #shopt -s globstar
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 # Change the appearance of the prompt, if applicable
 if [ -f $HOME/.prompt.sh ]; then
@@ -61,10 +53,6 @@ if [ -d $HOME/.bin ]; then
     export PATH="$PATH:$HOME/.bin:$HOME/.local/bin"
 fi
 
-# Allow for bash autocompletion
-autoload -U compaudit compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
-
 # Remove homedir coredumps
 ulimit -Sc 0
 
@@ -84,10 +72,20 @@ export STOW_DIR="$HOME/dotfiles"
 
 # Use zsh-autosuggestions
 if [ -f $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-    . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    fpath=(/home/fullsalvo/.zsh/zsh-completions/src $fpath)
+    . $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [ -d $HOME/.zsh/zsh-completions/src ]; then
+    fpath=($HOME/.zsh/zsh-completions/src $fpath)
+fi
+
+# Allow for bash autocompletion
+autoload -U compaudit compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 # interactive comments
 setopt interactivecomments

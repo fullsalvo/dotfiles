@@ -12,3 +12,5 @@ def_key "K"
 	move_sort_order_up
 def_key "d"
 	delete_playlist_items
+def_key "alt-l"
+	show_lyrics

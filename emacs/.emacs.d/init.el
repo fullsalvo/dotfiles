@@ -66,17 +66,15 @@
 
 ;; modeline functions
 (defun evil-mode-state ()
-  (let ((str (cond ((evil-normal-state-p)   (format " NORMAL   " ))
-		   ((evil-visual-state-p)   (format " VISUAL   " ))
-		   ((evil-insert-state-p)   (format " INSERT   " ))
-		   ((evil-emacs-state-p)    (format " EMACS    " ))
-		   ((evil-operator-state-p) (format " OPERATOR " ))
-		   ((evil-motion-state-p)   (format " MOTION   " ))
-		   ((evil-replace-state-p)  (format " REPLACE  " ))
-		   )))))
-
-(defun mode-space ()
-  (let ((str (format "  ")))))
+  "Determines and sets the evil mode text in the modeline"
+  (cond ((eq evil-state 'normal   )   (format "  NORMAL   " ))
+	((eq evil-state 'visual   )   (format "  VISUAL   " ))
+	((eq evil-state 'insert   )   (format "  INSERT   " ))
+	((eq evil-state 'emacs    )   (format "  EMACS    " ))
+	((eq evil-state 'operator )   (format "  OPERATOR " ))
+	((eq evil-state 'motion   )   (format "  MOTION   " ))
+	((eq evil-state 'replace  )   (format "  REPLACE  " ))
+	))
 
 (progn ; modeline
   (setq-default mode-line-format
@@ -85,7 +83,7 @@
 		      '(:eval (evil-mode-state))
 		      '(mode-line-modified " [%+]    ")
 		      'mode-name
-		      '(:eval (mode-space))
+		      '(2) ;; adds a padding
 		      '(vc-mode vc-mode)
 		      '(line-number-mode "     %l, ")
 		      '(column-number-mode "%c   "))))
@@ -207,6 +205,9 @@
   :ensure auctex
   :demand t
   :config (setq TeX-PDF-mode t)
+  (setq font-latex-math-environments
+	(quote
+	 ("display" "displaymath" "equation" "eqnarray" "gather" "math" "multline" "align" "alignat" "xalignat" "xxalignat" "flalign" "eqn")))
   (setq TeX-auto-save t)
   (setq TeX-parse-self t)
   (setq TeX-view-program-list '(("zathura" "zathura %o")))
