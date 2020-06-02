@@ -41,7 +41,7 @@ set $barfont    Fira Mono 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/wallpapers/dawn.png
+set $wall       /home/fullsalvo/pictures/wallpapers/tile/hexagonal.gif
 # set $walltype   --bg-fill
 set $walltype   --bg-tile
 set $wallprog   feh

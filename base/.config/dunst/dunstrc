@@ -29,7 +29,7 @@
 [shortcuts]
     close = mod4+x
     close_all = mod4+shift+x
-    history = ctrl+grave
+    history = ctrl+shift+y
     context = ctrl+shift+period
 
 [urgency_low]

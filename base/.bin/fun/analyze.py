@@ -4,6 +4,8 @@ import urllib.request
 import time
 import sys
 
+from collections import Counter
+
 patterns = {
     'i3': ['i3'],
     'bspwm': ['bspwm'],
@@ -26,9 +28,7 @@ patterns = {
     'fluxbox': ['fluxbox']
 }
 
-stats = {
-    'other': 0
-}
+stats = Counter()
 
 def patternize(pattern, strict_mode):
     if strict_mode:
