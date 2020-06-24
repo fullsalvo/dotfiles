@@ -97,8 +97,8 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
   (setq c-default-style "user")
-  (setq c-basic-offset 8)
-  (setq tab-width 8)
+  (setq c-basic-offset 4)
+  (setq tab-width 4)
   (setq indent-tabs-mode t)
 
   (defun my-c-lineup-inclass (langelem)

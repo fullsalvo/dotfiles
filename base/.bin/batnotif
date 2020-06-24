@@ -6,7 +6,7 @@ while :; do
     ac=$(cat /sys/class/power_supply/AC/online)
 
     if [[ $ac == "0" && $level -le "20" ]]; then
-	notify-send -t 5000 "Battery Low" "Connect Charger Soon!"
+	notify-send -t 5000 "Battery Low (${level}%)" "Connect Charger Soon!"
     fi
     sleep 300
 done

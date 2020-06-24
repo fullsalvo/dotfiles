@@ -13,6 +13,8 @@ alias unstow="stow -D"
 alias fdisk="sudo fdisk"
 alias ipython="ipython3"
 alias vim="emacs -nw" # because I'm an idiot
+alias inspect-viv="vivaldi-stable --debug-packed-apps --silent-debugger-extension-api"
+alias git-diff="git diff --cached && git diff"
 
 # Applications/Tools
 alias fsch='feh -. --zoom fill -g 1280x720'

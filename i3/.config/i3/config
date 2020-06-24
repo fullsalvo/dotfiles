@@ -1,4 +1,5 @@
 # i3 Config File
+
 #######################################################################
 #                             Variables                               #
 #######################################################################
@@ -33,17 +34,17 @@ set $rofibg     #2e2e2e
 
 
 # Window Border Thickness
-set $bordersize 5
+set $bordersize 0
 # Default Fallback Font
-set $font       Fira Code Bold 7
+set $font       Fira Code Bold 9
 # Default Bar Font
 set $barfont    Fira Mono 8
 # Bar Height
 set $bheight    18
 
-set $wall       /home/fullsalvo/pictures/wallpapers/tile/hexagonal.gif
+set $wall       /home/fullsalvo/pictures/wallpapers/rocky.jpg
 # set $walltype   --bg-fill
-set $walltype   --bg-tile
+set $walltype   --bg-fill
 set $wallprog   feh
 
 set $maimbord   0.5,0.5,0.5
@@ -100,7 +101,7 @@ bindsym $win+p exec --no-startup-id i3-msg open
 #######################################################################
 
 exec --no-startup-id pulseaudio
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id dunst
 exec_always --no-startup-id $wallprog $walltype $wall
 exec xrdb $home/.Xresources
@@ -215,12 +216,15 @@ gaps outer $oug
 gaps horizontal $hor
 gaps vertical $ver
 
-for_window [class=".*"] border pixel $bordersize
+title_align center
+for_window [class=".*"] title_format "%class"
+
+default_border pixel $bordersize
+
 # for_window [class=".*"] floating enable
 
 # for_window [class=".*"] border normal $bordersize
-# for_window [class=".*"] title_format "  %class"
-# default_border normal
+
 
 # class                 border   backgr.  text      indicator
 client.focused          $border  $border  $dectext  $border

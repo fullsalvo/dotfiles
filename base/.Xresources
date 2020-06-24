@@ -1,5 +1,5 @@
 ! Fonts
-URxvt.font:xft:Fira Code:pixelsize=11:antialias=True:style=Retina,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True
+URxvt.font:xft:Fira Code:pixelsize=11:antialias=True:style=Retina,xft:Noto Sans Mono CJK JP:pixelsize=11:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=11:antialias=True,xft:Noto Color Emoji:pixelsize=11:antialias=True
 ! URxvt.font:xft:Noto Sans Mono CJK JP:pixelsize=12:antialias=True,xft:Noto Sans Mono CJK KR:pixelsize=12:antialias=True
 URxvt.boldFont:
 

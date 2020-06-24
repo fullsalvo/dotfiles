@@ -18,16 +18,16 @@ body:before {
     width: 100%;
     height: 100%;
     display: block;
-    background-image: url(file:///home/fullsalvo/pictures/Walls/Library.jpg);
+    background-image: url(file:///home/fullsalvo/pictures/Walls/City.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    -webkit-filter: blur(1rem);
-    -moz-filter: blur(1rem);
-    -o-filter: blur(1rem);
-    -ms-filter: blur(1rem);
-    filter: blur(1rem);
+    -webkit-filter: blur(0.5rem);
+    -moz-filter: blur(0.5rem);
+    -o-filter: blur(0.5rem);
+    -ms-filter: blur(0.5rem);
+    filter: blur(0.5rem);
     z-index: -1;
 }
 
